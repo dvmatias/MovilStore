@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
@@ -6,11 +6,11 @@ apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 29
     defaultConfig {
-        applicationId "com.matias.movilstore"
         minSdkVersion 22
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -21,7 +21,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
-            applicationIdSuffix ".debug"
             debuggable true
         }
     }
@@ -29,35 +28,23 @@ android {
     productFlavors {
         dev {
             dimension 'environment'
-            applicationIdSuffix '.stg'
             versionNameSuffix '-stg'
-
-            buildConfigField 'boolean','FROM_API','false'
-            buildConfigField 'String', 'BASE_URL', '\"localhost:8080\"'
         }
         prod {
             dimension 'environment'
-            applicationIdSuffix '.prod'
             versionNameSuffix '-prod'
-
-            buildConfigField 'boolean','FROM_API','true'
-            buildConfigField 'String', 'BASE_URL', '\"https://www.movilstore.com/\"'
         }
     }
     flavorDimensions('environment')
 }
 
 dependencies {
-    implementation project(':data')
     implementation project(':domain')
     implementation project(':core')
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
