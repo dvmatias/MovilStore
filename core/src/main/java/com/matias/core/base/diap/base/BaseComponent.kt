@@ -1,0 +1,20 @@
+package com.matias.core.base.diap.base
+
+import android.app.Application
+import android.content.Context
+import com.google.gson.Gson
+import com.matias.core.base.diap.network.NetworkModule
+import dagger.Component
+import javax.inject.Singleton
+
+@Singleton
+@Component(modules = [BaseModule::class, NetworkModule::class])
+interface BaseComponent {
+
+	fun application(): Application
+
+	fun context(): Context
+
+	fun gson(): Gson
+
+}
