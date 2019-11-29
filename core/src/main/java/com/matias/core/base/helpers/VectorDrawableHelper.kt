@@ -5,11 +5,14 @@ import android.graphics.drawable.Drawable
 import android.widget.ImageView
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
+import java.lang.IllegalArgumentException
 
-fun startVectorAnimation(view: ImageView, drawable: Drawable, color: Int?) {
-	val wrappedDrawable = DrawableCompat.wrap(drawable)
-	setDrawableTint(wrappedDrawable, color)
-	animateDrawable(view, wrappedDrawable)
+fun startVectorAnimation(view: ImageView, drawable: Drawable?, color: Int?) {
+	drawable?.let {
+		val wrappedDrawable = DrawableCompat.wrap(it)
+		setDrawableTint(wrappedDrawable, color)
+		animateDrawable(view, wrappedDrawable)
+	} ?: throw IllegalArgumentException("Drawable can't be null")
 }
 
 fun startVectorAnimation(view: ImageView, color: Int) {

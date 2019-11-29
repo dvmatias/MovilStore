@@ -8,6 +8,8 @@ interface SplashActivityContract {
 
 		fun animateScreenIn()
 
+		fun animateScreenOut()
+
 	}
 
 	interface Presenter<V : View> : BaseContract.Presenter<V> {
