@@ -12,13 +12,21 @@
 		android:supportsRtl="true"
 		android:theme="@style/AppTheme"
 		tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-		<activity android:name=".MainActivity">
+
+		<!-- Splash Activity -->
+		<activity
+			android:name="com.matias.features.splash.ui.splash.SplashActivity"
+			android:label="@string/title_activity_splash"
+			android:theme="@style/AppTheme.NoActionBar">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
+
+		<!-- Main Activity -->
+		<activity android:name=".MainActivity" />
 	</application>
 
 </manifest>

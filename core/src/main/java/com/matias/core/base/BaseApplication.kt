@@ -13,14 +13,14 @@ abstract class BaseApplication : Application() {
 
 	override fun onCreate() {
 		super.onCreate()
-
+		initInjector()
 	}
 
 	private fun initInjector() {
-		baseComponent = DaggerBaseComponent.
-			builder().
-			baseModule(BaseModule(this)).
-			build()
+		baseComponent = DaggerBaseComponent
+			.builder()
+			.baseModule(BaseModule(this))
+			.build()
 	}
 
 }
