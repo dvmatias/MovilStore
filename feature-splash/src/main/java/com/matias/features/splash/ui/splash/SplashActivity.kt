@@ -25,12 +25,21 @@ class SplashActivity :
 		setContentView(R.layout.activity_splash)
 		super.applyImmersiveFullScreen()
 
-		val wrappedDrawable = DrawableCompat.wrap(imageTopLeftFigure.drawable)
+		val wrappedDrawableTop = DrawableCompat.wrap(imageTopLeftFigure.drawable)
 		//DrawableCompat.setTint(wrappedDrawable, _iconColor!!)
-		imageTopLeftFigure.setImageDrawable(wrappedDrawable)
-		val d = imageTopLeftFigure.drawable
-		if (d is AnimatedVectorDrawableCompat) d.start()
-		else if (d is AnimatedVectorDrawable) d.start()
+		imageTopLeftFigure.setImageDrawable(wrappedDrawableTop)
+		val d1 = imageTopLeftFigure.drawable
+		if (d1 is AnimatedVectorDrawableCompat) d1.start()
+		else if (d1 is AnimatedVectorDrawable) d1.start()
+
+
+
+		val wrappedDrawableBottom = DrawableCompat.wrap(imageBottomRightFigure.drawable)
+		//DrawableCompat.setTint(wrappedDrawable, _iconColor!!)
+		imageBottomRightFigure.setImageDrawable(wrappedDrawableBottom)
+		val d2 = imageBottomRightFigure.drawable
+		if (d2 is AnimatedVectorDrawableCompat) d2.start()
+		else if (d2 is AnimatedVectorDrawable) d2.start()
 	}
 
 }

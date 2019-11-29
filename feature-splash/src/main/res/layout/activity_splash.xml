@@ -10,15 +10,15 @@
 	<ImageView
 		android:id="@+id/imageTopLeftFigure"
 		android:layout_width="0dp"
-		android:layout_height="wrap_content"
+		android:layout_height="0dp"
 		android:adjustViewBounds="true"
-		android:background="#ff9800"
 		android:contentDescription="@null"
-		android:scaleType="centerInside"
-		android:src="@drawable/vda_splash_top_left_figure"
+		android:scaleType="fitCenter"
+		android:src="@drawable/vda_splash_top_left_figure_2"
+		app:layout_constraintDimensionRatio="1:1"
+		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent"
-		app:layout_constraintWidth_percent="0.8" />
+		app:layout_constraintTop_toTopOf="parent" />
 
 	<ImageView
 		android:id="@+id/imageView"
@@ -33,5 +33,17 @@
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
+
+	<ImageView
+		android:id="@+id/imageBottomRightFigure"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:adjustViewBounds="true"
+		android:contentDescription="@null"
+		android:scaleType="centerInside"
+		android:src="@drawable/vda_splash_bottom_right_figure_2"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintDimensionRatio="1:1"
+		app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,7 +16,6 @@
 		<!-- Splash Activity -->
 		<activity
 			android:name="com.matias.features.splash.ui.splash.SplashActivity"
-			android:label="@string/title_activity_splash"
 			android:screenOrientation="portrait"
 			android:theme="@style/SplashActivityTheme">
 			<intent-filter>
