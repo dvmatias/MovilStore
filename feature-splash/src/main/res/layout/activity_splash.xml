@@ -21,13 +21,30 @@
 		app:layout_constraintTop_toTopOf="parent" />
 
 	<ImageView
-		android:id="@+id/imageView"
+		android:id="@+id/imageLogoName"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:adjustViewBounds="true"
+		android:contentDescription="@null"
+		android:elevation="1dp"
+		android:scaleType="centerInside"
+		android:src="@drawable/image_splash_logo_vector"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintWidth_percent="0.9"
+		app:layout_constraintDimensionRatio="16:9"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<ImageView
+		android:id="@+id/imageLogoBackground"
 		android:layout_width="0dp"
 		android:layout_height="0dp"
 		android:adjustViewBounds="true"
 		android:contentDescription="@null"
 		android:scaleType="centerInside"
-		android:src="@drawable/image_splash_logo_vector"
+		android:src="@drawable/vda_splash_logo_bgr"
+		app:layout_constraintWidth_percent="0.9"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintDimensionRatio="16:9"
 		app:layout_constraintEnd_toEndOf="parent"

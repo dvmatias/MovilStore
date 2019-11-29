@@ -10,6 +10,7 @@
 		<item name="android:windowLightStatusBar">true</item>
 		<item name="windowActionBar">false</item>
 		<item name="windowNoTitle">true</item>
+		<item name="android:windowBackground">@color/colorSplashBackground</item>
 		<item name="android:statusBarColor">@color/colorTransparent</item>
 	</style>
 </resources>

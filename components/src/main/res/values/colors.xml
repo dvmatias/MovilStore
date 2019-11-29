@@ -10,5 +10,5 @@
 	<color name="colorTransparent">#00000000</color>
 
 	<!-- Splash Activity -->
-	<color name="colorSplashBackground">#DD3A3A</color>
+	<color name="colorSplashBackground">#0F0F0F</color>
 </resources>

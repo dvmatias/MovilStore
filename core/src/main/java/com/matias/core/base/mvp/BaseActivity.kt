@@ -54,6 +54,9 @@ abstract class BaseActivity<
 				// Hide the nav bar and status bar
 				or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
 				or View.SYSTEM_UI_FLAG_FULLSCREEN)
+		window.decorView.setOnSystemUiVisibilityChangeListener {
+			checkSystemUiVisibilityFullScreen(it)
+		}
 	}
 
 	// Shows the system bars by removing all the flags
@@ -68,12 +71,7 @@ abstract class BaseActivity<
 		if (visibility == View.VISIBLE)
 			Handler().postDelayed(
 				{
-					window.decorView.systemUiVisibility =
-						View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
-								View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or
-								View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
-								View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
-								View.SYSTEM_UI_FLAG_IMMERSIVE
+					applyImmersiveFullScreen()
 				}, 0
 			)
 	}
