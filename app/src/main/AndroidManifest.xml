@@ -17,7 +17,8 @@
 		<activity
 			android:name="com.matias.features.splash.ui.splash.SplashActivity"
 			android:label="@string/title_activity_splash"
-			android:theme="@style/AppTheme.NoActionBar">
+			android:screenOrientation="portrait"
+			android:theme="@style/SplashActivityTheme">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 

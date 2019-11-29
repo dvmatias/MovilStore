@@ -55,4 +55,5 @@ dependencies {implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     api project(':data')
     api project(':domain')
+    api project(':components')
 }
