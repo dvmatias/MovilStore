@@ -21,6 +21,14 @@ fun startVectorAnimation(view: ImageView, color: Int) {
 	animateDrawable(view, wrappedDrawable)
 }
 
+fun startVectorAnimation(view: ImageView, drawable: Drawable?) {
+	if (drawable != null) {
+		val wrappedDrawable = DrawableCompat.wrap(drawable)
+		setDrawableTint(wrappedDrawable, null)
+		animateDrawable(view, wrappedDrawable)
+	}
+}
+
 fun startVectorAnimation(view: ImageView) {
 	val wrappedDrawable = DrawableCompat.wrap(view.drawable)
 	animateDrawable(view, wrappedDrawable)

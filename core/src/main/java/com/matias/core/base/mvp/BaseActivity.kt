@@ -72,7 +72,7 @@ abstract class BaseActivity<
 			Handler().postDelayed(
 				{
 					applyImmersiveFullScreen()
-				}, 0
+				}, 200
 			)
 	}
 
