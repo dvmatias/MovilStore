@@ -29,10 +29,14 @@ android {
         dev {
             dimension 'environment'
             versionNameSuffix '-stg'
+
+            buildConfigField 'String', 'BASE_URL', '\"localhost:8080\"'
         }
         prod {
             dimension 'environment'
             versionNameSuffix '-prod'
+
+            buildConfigField 'String', 'BASE_URL', '\"localhost:8080\"'
         }
     }
     flavorDimensions('environment')
@@ -52,6 +56,10 @@ dependencies {implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation libs.gson
     // Kotlin
     implementation libs.kotlin
+    // Retrofit
+    implementation libs.retrofit
+    implementation libs.retrofitLogging
+    implementation libs.retrofitJsonConverter
 
     api project(':data')
     api project(':domain')

@@ -8,6 +8,7 @@ import com.matias.core.base.diap.storage.StorageModule
 import com.matias.data.cache.splash.SplashCache
 import com.matias.data.platform.NetworkHandler
 import dagger.Component
+import retrofit2.Retrofit
 import javax.inject.Singleton
 
 @Singleton
@@ -27,5 +28,7 @@ interface BaseComponent {
     fun networkHandler(): NetworkHandler
 
     fun splashCache(): SplashCache
+
+//    fun retrofit(): Retrofit
 
 }

@@ -15,7 +15,7 @@ class SplashModule {
 
     @Provides
     @SplashScope
-    fun provideSplashApi(retrofit: Retrofit): SplashApi = SplashService(retrofit)
+    fun provideSplashApi(): SplashApi = SplashService()
 
     @Provides
     @SplashScope
