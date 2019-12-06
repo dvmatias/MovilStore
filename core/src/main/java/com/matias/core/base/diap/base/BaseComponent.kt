@@ -29,6 +29,6 @@ interface BaseComponent {
 
     fun splashCache(): SplashCache
 
-//    fun retrofit(): Retrofit
+    fun retrofit(): Retrofit
 
 }
