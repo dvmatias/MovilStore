@@ -8,7 +8,7 @@ import com.matias.features.splash.di.SplashModule
 internal class SplashUiComponent {
 
 	companion object {
-		internal val component: SplashComponent? by lazy(mode = LazyThreadSafetyMode.NONE) {
+		internal val component: SplashComponent by lazy(mode = LazyThreadSafetyMode.NONE) {
 			createComponent()
 		}
 
