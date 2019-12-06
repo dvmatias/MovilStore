@@ -3,6 +3,7 @@ package com.matias.core.base.diap.base
 import android.app.Application
 import android.content.Context
 import com.matias.core.base.BaseApplication
+import com.matias.data.cache.splash.SplashCache
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

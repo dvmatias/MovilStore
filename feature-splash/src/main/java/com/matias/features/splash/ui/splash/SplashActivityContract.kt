@@ -10,9 +10,17 @@ interface SplashActivityContract {
 
 		fun animateScreenOut()
 
+		fun goToMainScreen()
+
+		fun goToLoginScreen()
+
 	}
 
 	interface Presenter<V : View> : BaseContract.Presenter<V> {
+
+		fun fetchGlobalConfig()
+
+		fun checkUserLoginStatus()
 
 	}
 

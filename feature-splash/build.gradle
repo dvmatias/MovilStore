@@ -55,6 +55,9 @@ dependencies {
     kapt libs.daggerCompiler
     implementation libs.dagger2
     annotationProcessor libs.daggerAnnotation
+    // Retrofit
+    implementation libs.retrofit
+    implementation libs.retrofitJsonConverter
 
     implementation project(':core')
 }

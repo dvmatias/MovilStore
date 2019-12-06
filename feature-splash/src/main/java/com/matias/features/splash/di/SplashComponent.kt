@@ -1,7 +1,7 @@
 package com.matias.features.splash.di
 
 import com.matias.core.base.diap.base.BaseComponent
-import com.matias.features.splash.di.splash.SplashActivityComponent
+import com.matias.features.splash.di.splash.SplashActivitySubComponent
 import com.matias.features.splash.di.splash.SplashActivityModule
 import dagger.Component
 
@@ -9,6 +9,6 @@ import dagger.Component
 @SplashScope
 interface SplashComponent {
 
-	fun plus(splashActivityModule: SplashActivityModule): SplashActivityComponent
+	fun plus(splashActivityModule: SplashActivityModule): SplashActivitySubComponent
 
 }
