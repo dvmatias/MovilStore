@@ -29,10 +29,10 @@ android {
     }
 
     productFlavors {
-        dev {
+        QA {
             dimension 'environment'
         }
-        prod {
+        PRODUCTION {
             dimension 'environment'
         }
     }
@@ -51,6 +51,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     // Kotlin
     implementation libs.kotlin
+    implementation libs.kotlinx
     // Dagger2
     kapt libs.daggerCompiler
     implementation libs.dagger2

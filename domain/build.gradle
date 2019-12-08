@@ -26,13 +26,13 @@ android {
     }
 
     productFlavors {
-        dev {
+        QA {
             dimension 'environment'
-            versionNameSuffix '-stg'
+            versionNameSuffix '-qa'
         }
-        prod {
+        PRODUCTION {
             dimension 'environment'
-            versionNameSuffix '-prod'
+            versionNameSuffix '-production'
         }
     }
     flavorDimensions('environment')

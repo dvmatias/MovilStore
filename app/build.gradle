@@ -27,21 +27,21 @@ android {
     }
 
     productFlavors {
-        dev {
+        QA {
             dimension 'environment'
-            applicationIdSuffix '.stg'
-            versionNameSuffix '-stg'
+            applicationIdSuffix '.qa'
+            versionNameSuffix '-qa'
 
             buildConfigField 'boolean', 'FROM_API', 'false'
-            buildConfigField 'String', 'BASE_URL', '\"localhost:8080\"'
+            buildConfigField 'String', 'BASE_URL', '\"http://localhost:8080/movilstore-api/\"'
         }
-        prod {
+        PRODUCTION {
             dimension 'environment'
-            applicationIdSuffix '.prod'
-            versionNameSuffix '-prod'
+            applicationIdSuffix '.production'
+            versionNameSuffix '-production'
 
             buildConfigField 'boolean', 'FROM_API', 'true'
-            buildConfigField 'String', 'BASE_URL', '\"https://www.movilstore.com/\"'
+            buildConfigField 'String', 'BASE_URL', '\"http://localhost:8080/movilstore-api/\"'
         }
     }
     flavorDimensions('environment')

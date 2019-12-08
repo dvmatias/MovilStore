@@ -1,6 +1,7 @@
 package com.matias.features.splash.ui.splash
 
 import com.matias.core.base.mvp.BaseContract
+import com.matias.domain.models.splash.GlobalConfigResponseModel
 
 interface SplashActivityContract {
 
@@ -21,6 +22,8 @@ interface SplashActivityContract {
 		fun fetchGlobalConfig()
 
 		fun checkUserLoginStatus()
+
+		fun handleGlobalConfig(globalConfigResponseModel: GlobalConfigResponseModel)
 
 	}
 

@@ -3,6 +3,7 @@ package com.matias.core.base.diap.base
 import android.app.Application
 import android.content.Context
 import com.google.gson.Gson
+import com.matias.core.base.diap.coroutineDispatcher.CoroutineModule
 import com.matias.core.base.diap.network.NetworkModule
 import com.matias.core.base.diap.storage.StorageModule
 import com.matias.data.cache.splash.SplashCache
@@ -15,7 +16,8 @@ import javax.inject.Singleton
 @Component(modules = [
     BaseModule::class,
     NetworkModule::class,
-    StorageModule::class
+    StorageModule::class,
+    CoroutineModule::class
 ])
 interface BaseComponent {
 
