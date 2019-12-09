@@ -7,7 +7,7 @@ import com.matias.data.provider.NetworkProvider
 import com.matias.data.service.splash.SplashApi
 import com.matias.domain.base.exception.FailureType
 import com.matias.domain.base.functional.Either
-import com.matias.domain.models.splash.GlobalConfigResponseModel
+import com.matias.domain.models.splash.GlobalConfigModel
 import com.matias.domain.provider.splash.SplashProvider
 
 class SplashProviderImpl(
@@ -16,9 +16,10 @@ class SplashProviderImpl(
         networkHandler: NetworkHandler
 ) : SplashProvider, NetworkProvider(networkHandler) {
 
-    override fun fetchGlobalConfig(arg: Any): Either<FailureType, GlobalConfigResponseModel> =
+    override fun fetchGlobalConfig(arg: Any): Either<FailureType, GlobalConfigModel> =
             request(splashApi.fetchGlobalConfig()) {
                 GlobalConfigMapper().transformEntityToModel(it)
+
             }
 
 }

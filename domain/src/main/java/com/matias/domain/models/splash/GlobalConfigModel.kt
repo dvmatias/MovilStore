@@ -1,5 +1,5 @@
 package com.matias.domain.models.splash
 
-class GlobalConfigResponseModel(
+class GlobalConfigModel(
         val splashAnimationType: String
 )

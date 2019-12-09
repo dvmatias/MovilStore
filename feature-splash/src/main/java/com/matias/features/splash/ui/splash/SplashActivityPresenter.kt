@@ -1,9 +1,10 @@
 package com.matias.features.splash.ui.splash
 
 import android.util.Log
+import com.matias.core.base.BaseApplication
 import com.matias.core.base.mvp.BasePresenter
 import com.matias.domain.base.exception.FailureType
-import com.matias.domain.models.splash.GlobalConfigResponseModel
+import com.matias.domain.models.splash.GlobalConfigModel
 import com.matias.domain.usecases.splash.FetchGlobalConfigUseCase
 import javax.inject.Inject
 
@@ -22,11 +23,8 @@ class SplashActivityPresenter @Inject constructor(
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun handleGlobalConfig(globalConfigResponseModel: GlobalConfigResponseModel) {
-        view?.let {
-            it.animateScreenOut()
-            it.goToMainScreen()
-        }
+    override fun handleGlobalConfig(globalConfigModel: GlobalConfigModel) {
+
     }
 
     override fun handleError(error: FailureType) {
