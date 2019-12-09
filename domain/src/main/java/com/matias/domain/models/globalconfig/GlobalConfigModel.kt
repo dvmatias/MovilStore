@@ -1,4 +1,4 @@
-package com.matias.domain.models.splash
+package com.matias.domain.models.globalconfig
 
 class GlobalConfigModel(
         val splashAnimationType: String

@@ -1,8 +1,8 @@
-package com.matias.data.mappers.splash
+package com.matias.data.mappers.globalconfig
 
 import com.matias.data.entities.splash.GlobalConfigResponseEntity
 import com.matias.domain.mapper.Mapper
-import com.matias.domain.models.splash.GlobalConfigModel
+import com.matias.domain.models.globalconfig.GlobalConfigModel
 
 const val SPLASH_ANIMATION_TYPE = "ONE"
 

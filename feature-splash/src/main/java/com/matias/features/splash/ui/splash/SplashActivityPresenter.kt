@@ -1,10 +1,9 @@
 package com.matias.features.splash.ui.splash
 
 import android.util.Log
-import com.matias.core.base.BaseApplication
 import com.matias.core.base.mvp.BasePresenter
 import com.matias.domain.base.exception.FailureType
-import com.matias.domain.models.splash.GlobalConfigModel
+import com.matias.domain.models.globalconfig.GlobalConfigModel
 import com.matias.domain.usecases.splash.FetchGlobalConfigUseCase
 import javax.inject.Inject
 

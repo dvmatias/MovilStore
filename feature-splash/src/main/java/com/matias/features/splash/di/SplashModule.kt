@@ -1,6 +1,6 @@
 package com.matias.features.splash.di
 
-import com.matias.data.cache.splash.SplashCache
+import com.matias.data.cache.featureflag.FeatureFlaghCache
 import com.matias.data.platform.NetworkHandler
 import com.matias.data.provider.splash.SplashProviderImpl
 import com.matias.data.service.splash.SplashApi
@@ -21,9 +21,9 @@ class SplashModule {
     @SplashScope
     fun provideSplashProvider(
             splashApi: SplashApi,
-            splashCache: SplashCache,
+            featureFlaghCache: FeatureFlaghCache,
             networkHandler: NetworkHandler
     ): SplashProvider =
-            SplashProviderImpl(splashApi, splashCache, networkHandler)
+            SplashProviderImpl(splashApi, featureFlaghCache, networkHandler)
 
 }

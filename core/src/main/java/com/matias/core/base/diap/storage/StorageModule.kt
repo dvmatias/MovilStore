@@ -1,7 +1,7 @@
 package com.matias.core.base.diap.storage
 
-import com.matias.data.cache.splash.SplashCache
-import com.matias.data.cache.splash.SplashCacheImpl
+import com.matias.data.cache.featureflag.FeatureFlaghCache
+import com.matias.data.cache.featureflag.FeatureFlaghCacheImpl
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -11,6 +11,6 @@ class StorageModule {
 
     @Provides
     @Singleton
-    fun provideSplashCache(): SplashCache = SplashCacheImpl()
+    fun provideFeatureFlaghCache(): FeatureFlaghCache = FeatureFlaghCacheImpl()
 
 }

@@ -1,7 +1,7 @@
 package com.matias.features.splash.ui.splash
 
 import com.matias.core.base.mvp.BaseContract
-import com.matias.domain.models.splash.GlobalConfigModel
+import com.matias.domain.models.globalconfig.GlobalConfigModel
 
 interface SplashActivityContract {
 
