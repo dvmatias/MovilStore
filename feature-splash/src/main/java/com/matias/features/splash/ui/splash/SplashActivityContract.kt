@@ -1,6 +1,7 @@
 package com.matias.features.splash.ui.splash
 
 import com.matias.core.base.mvp.BaseContract
+import com.matias.domain.base.exception.FailureType
 import com.matias.domain.models.globalconfig.GlobalConfigModel
 
 interface SplashActivityContract {
@@ -15,15 +16,27 @@ interface SplashActivityContract {
 
 		fun goToLoginScreen()
 
+		fun goToRegisterScreen()
+
 	}
 
 	interface Presenter<V : View> : BaseContract.Presenter<V> {
 
 		fun fetchGlobalConfig()
 
+		fun globalConfigFetchSuccess(globalConfigModel: GlobalConfigModel)
+
+		fun globalConfigFetchFail(e: FailureType)
+
 		fun checkUserLoginStatus()
 
-		fun handleGlobalConfig(globalConfigModel: GlobalConfigModel)
+		fun onUserLoggedIn()
+
+		fun onUserLoggedOut()
+
+		fun onUserNotExistent()
+
+
 
 	}
 

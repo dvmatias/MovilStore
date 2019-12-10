@@ -26,8 +26,8 @@ class SplashActivity :
 
     override fun onResume() {
         super.onResume()
-        presenter.fetchGlobalConfig()
         animateScreenIn()
+        presenter.fetchGlobalConfig()
     }
 
     /*******************************************************************************************************************
@@ -45,11 +45,16 @@ class SplashActivity :
 
     override fun goToMainScreen() {
         super.showToast("Go to main screen.")
-        // TODO wait to out animation ends before go to Main Screen
+        // TODO wait to out animation ends
     }
 
     override fun goToLoginScreen() {
         super.showToast("Go to login screen.")
+        // TODO wait to out animation ends
     }
 
+    override fun goToRegisterScreen() {
+        super.showToast("Go to register screen.")
+        // TODO wait to out animation ends
+    }
 }

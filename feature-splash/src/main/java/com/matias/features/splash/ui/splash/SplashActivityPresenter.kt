@@ -1,6 +1,5 @@
 package com.matias.features.splash.ui.splash
 
-import android.util.Log
 import com.matias.core.base.mvp.BasePresenter
 import com.matias.domain.base.exception.FailureType
 import com.matias.domain.models.globalconfig.GlobalConfigModel
@@ -13,21 +12,41 @@ class SplashActivityPresenter @Inject constructor(
 
     override fun fetchGlobalConfig() {
         fetchGlobalConfigUseCase(
-                { it.either(::handleError, ::handleGlobalConfig) },
+                { it.either(::handleError, ::globalConfigFetchSuccess) },
                 FetchGlobalConfigUseCase.Params("")
         )
     }
 
-    override fun checkUserLoginStatus() {
+    override fun globalConfigFetchSuccess(globalConfigModel: GlobalConfigModel) {
+        checkUserLoginStatus()
+    }
+
+    override fun globalConfigFetchFail(e: FailureType) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun handleGlobalConfig(globalConfigModel: GlobalConfigModel) {
+    override fun checkUserLoginStatus() {
 
     }
 
-    override fun handleError(error: FailureType) {
-        Log.d("SplashActivityPresenter", "handleError()")
+    override fun onUserLoggedIn() {
+        view?.apply {
+            animateScreenOut()
+            goToMainScreen()
+        }
     }
 
+    override fun onUserLoggedOut() {
+        view?.apply {
+            animateScreenOut()
+            goToLoginScreen()
+        }
+    }
+
+    override fun onUserNotExistent() {
+        view?.apply {
+            animateScreenOut()
+            goToLoginScreen()
+        }
+    }
 }
