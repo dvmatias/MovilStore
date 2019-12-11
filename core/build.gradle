@@ -26,21 +26,23 @@ android {
     }
 
     productFlavors {
-        dev {
+        QA {
             dimension 'environment'
-            versionNameSuffix '-stg'
+            versionNameSuffix '-qa'
+
+            buildConfigField 'String', 'BASE_URL', '\"http://localhost:8080/movilstore-api/\"'
         }
-        prod {
+        PRODUCTION {
             dimension 'environment'
-            versionNameSuffix '-prod'
+            versionNameSuffix '-production'
+
+            buildConfigField 'String', 'BASE_URL', '\"http://localhost:8080/movilstore-api/\"'
         }
     }
     flavorDimensions('environment')
 }
 
 dependencies {
-    implementation project(':domain')
-
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'androidx.appcompat:appcompat:1.1.0'
@@ -53,4 +55,15 @@ dependencies {
     annotationProcessor libs.daggerAnnotation
     // Gson
     implementation libs.gson
+    // Kotlin
+    implementation libs.kotlin
+    implementation libs.kotlinx
+    // Retrofit
+    implementation libs.retrofit
+    implementation libs.retrofitLogging
+    implementation libs.retrofitJsonConverter
+
+    api project(':data')
+    api project(':domain')
+    api project(':components')
 }
