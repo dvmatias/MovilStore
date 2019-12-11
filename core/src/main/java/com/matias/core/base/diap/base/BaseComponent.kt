@@ -6,6 +6,7 @@ import com.google.gson.Gson
 import com.matias.core.base.diap.coroutineDispatcher.CoroutineModule
 import com.matias.core.base.diap.network.NetworkModule
 import com.matias.core.base.diap.storage.StorageModule
+import com.matias.core.navigator.Navigator
 import com.matias.data.cache.featureflag.FeatureFlaghCache
 import com.matias.data.cache.loginstatus.SharedPreferencesCache
 import com.matias.data.platform.NetworkHandler
@@ -31,6 +32,8 @@ interface BaseComponent {
     fun retrofit(): Retrofit
 
     fun networkHandler(): NetworkHandler
+
+    fun navigator(): Navigator
 
     fun featureFlaghCache(): FeatureFlaghCache
 

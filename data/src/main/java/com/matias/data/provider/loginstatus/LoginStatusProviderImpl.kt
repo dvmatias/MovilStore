@@ -10,7 +10,7 @@ class LoginStatusProviderImpl(
 ) : LoginStatusProvider {
 
     override fun getLoginStatus(): Either<FailureType, Boolean> =
-            if (true) Either.Right(true) else Either.Left(FailureType.LocalError())
+            if (false) Either.Right(true) else Either.Left(FailureType.LocalError())
     // TODO implement right logic to get login status
 
 }

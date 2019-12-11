@@ -6,34 +6,32 @@ import com.matias.domain.models.globalconfig.GlobalConfigModel
 
 interface SplashActivityContract {
 
-	interface View : BaseContract.View {
+    interface View : BaseContract.View {
 
-		fun animateScreenIn()
+        fun animateScreenIn()
 
-		fun animateScreenOut()
+        fun animateScreenOut()
 
-		fun goToMainScreen()
+        fun goToMainScreen()
 
-		fun goToLoginScreen()
+        fun goToLoginScreen()
 
-		fun goToRegisterScreen()
+    }
 
-	}
+    interface Presenter<V : View> : BaseContract.Presenter<V> {
 
-	interface Presenter<V : View> : BaseContract.Presenter<V> {
+        fun fetchGlobalConfig()
 
-		fun fetchGlobalConfig()
+        fun globalConfigFetchSuccess(globalConfigModel: GlobalConfigModel)
 
-		fun globalConfigFetchSuccess(globalConfigModel: GlobalConfigModel)
+        fun globalConfigFetchFail(e: FailureType)
 
-		fun globalConfigFetchFail(e: FailureType)
+        fun checkUserLoginStatus()
 
-		fun checkUserLoginStatus()
+        fun onUserLoggedIn(isUserLoggedIn: Boolean)
 
-		fun onUserLoggedIn(isUserLoggedIn: Boolean)
+        fun onUserLoggedOut(e: FailureType)
 
-		fun onUserLoggedOut(e: FailureType)
-
-	}
+    }
 
 }

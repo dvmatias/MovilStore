@@ -1,4 +1,4 @@
-package com.matias.featurelogin;
+package com.matias.features;
 
 import org.junit.Test;
 

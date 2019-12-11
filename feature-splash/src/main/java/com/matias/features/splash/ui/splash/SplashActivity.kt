@@ -1,6 +1,7 @@
 package com.matias.features.splash.ui.splash
 
 import android.os.Bundle
+import android.os.Handler
 import com.matias.core.base.helpers.startVectorAnimation
 import com.matias.core.base.mvp.BasePresenterActivity
 import com.matias.feature_splash.R
@@ -27,7 +28,7 @@ class SplashActivity :
     override fun onResume() {
         super.onResume()
         animateScreenIn()
-        presenter.fetchGlobalConfig()
+        Handler().postDelayed({ presenter.fetchGlobalConfig() }, 1100)
     }
 
     /*******************************************************************************************************************
@@ -45,16 +46,11 @@ class SplashActivity :
 
     override fun goToMainScreen() {
         super.showToast("Go to main screen.")
-        // TODO wait to out animation ends
     }
 
     override fun goToLoginScreen() {
         super.showToast("Go to login screen.")
-        // TODO wait to out animation ends
+        Handler().postDelayed({ navigator.toLoginScreen(this) }, 1500)
     }
 
-    override fun goToRegisterScreen() {
-        super.showToast("Go to register screen.")
-        // TODO wait to out animation ends
-    }
 }

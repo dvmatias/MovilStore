@@ -1,4 +1,4 @@
-package com.matias.featurelogin;
+package com.matias.features;
 
 import android.content.Context;
 import androidx.test.InstrumentationRegistry;
