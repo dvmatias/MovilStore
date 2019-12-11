@@ -3,11 +3,13 @@ package com.matias.features.splash.ui.splash
 import com.matias.core.base.mvp.BasePresenter
 import com.matias.domain.base.exception.FailureType
 import com.matias.domain.models.globalconfig.GlobalConfigModel
-import com.matias.domain.usecases.splash.FetchGlobalConfigUseCase
+import com.matias.domain.usecases.globalconfig.FetchGlobalConfigUseCase
+import com.matias.domain.usecases.loginstatus.LoginStatusUseCase
 import javax.inject.Inject
 
 class SplashActivityPresenter @Inject constructor(
-        private val fetchGlobalConfigUseCase: FetchGlobalConfigUseCase
+        private val fetchGlobalConfigUseCase: FetchGlobalConfigUseCase,
+        private val loginStatusUseCase: LoginStatusUseCase
 ) : BasePresenter<SplashActivityContract.View>(), SplashActivityContract.Presenter<SplashActivityContract.View> {
 
     override fun fetchGlobalConfig() {
@@ -26,27 +28,26 @@ class SplashActivityPresenter @Inject constructor(
     }
 
     override fun checkUserLoginStatus() {
-
+        view?.apply {
+            loginStatusUseCase(
+                    { it.either(::onUserLoggedOut, ::onUserLoggedIn) },
+                    LoginStatusUseCase.Params("")
+            )
+        }
     }
 
-    override fun onUserLoggedIn() {
+    override fun onUserLoggedIn(isUserLoggedIn: Boolean) {
         view?.apply {
             animateScreenOut()
             goToMainScreen()
         }
     }
 
-    override fun onUserLoggedOut() {
+    override fun onUserLoggedOut(e: FailureType) {
         view?.apply {
             animateScreenOut()
             goToLoginScreen()
         }
     }
 
-    override fun onUserNotExistent() {
-        view?.apply {
-            animateScreenOut()
-            goToLoginScreen()
-        }
-    }
 }

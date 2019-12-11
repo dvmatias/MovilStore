@@ -30,13 +30,9 @@ interface SplashActivityContract {
 
 		fun checkUserLoginStatus()
 
-		fun onUserLoggedIn()
+		fun onUserLoggedIn(isUserLoggedIn: Boolean)
 
-		fun onUserLoggedOut()
-
-		fun onUserNotExistent()
-
-
+		fun onUserLoggedOut(e: FailureType)
 
 	}
 

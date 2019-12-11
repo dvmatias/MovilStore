@@ -7,6 +7,7 @@ import com.matias.core.base.diap.coroutineDispatcher.CoroutineModule
 import com.matias.core.base.diap.network.NetworkModule
 import com.matias.core.base.diap.storage.StorageModule
 import com.matias.data.cache.featureflag.FeatureFlaghCache
+import com.matias.data.cache.loginstatus.SharedPreferencesCache
 import com.matias.data.platform.NetworkHandler
 import dagger.Component
 import retrofit2.Retrofit
@@ -27,10 +28,12 @@ interface BaseComponent {
 
     fun gson(): Gson
 
+    fun retrofit(): Retrofit
+
     fun networkHandler(): NetworkHandler
 
     fun featureFlaghCache(): FeatureFlaghCache
 
-    fun retrofit(): Retrofit
+    fun sharedPreferencesCache(): SharedPreferencesCache
 
 }
