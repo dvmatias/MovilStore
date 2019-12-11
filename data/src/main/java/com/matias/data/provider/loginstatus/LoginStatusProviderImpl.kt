@@ -5,12 +5,12 @@ import com.matias.domain.base.exception.FailureType
 import com.matias.domain.base.functional.Either
 import com.matias.domain.provider.loginstatus.LoginStatusProvider
 
-class LoginStatusProviderImpl (
+class LoginStatusProviderImpl(
         private val sharedPreferencesCache: SharedPreferencesCache
 ) : LoginStatusProvider {
 
     override fun getLoginStatus(): Either<FailureType, Boolean> =
-        if (true) Either.Right(true) else Either.Left(FailureType.LocalError())
+            if (true) Either.Right(true) else Either.Left(FailureType.LocalError())
     // TODO implement right logic to get login status
 
 }

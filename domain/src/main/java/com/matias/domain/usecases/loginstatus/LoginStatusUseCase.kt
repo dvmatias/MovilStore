@@ -10,7 +10,7 @@ class LoginStatusUseCase(
 ) : UseCase<Boolean, LoginStatusUseCase.Params>() {
 
     override suspend fun run(params: Params): Either<FailureType, Boolean> =
-        loginStatusProvider.getLoginStatus()
+            loginStatusProvider.getLoginStatus()
 
     data class Params(val any: Any)
 

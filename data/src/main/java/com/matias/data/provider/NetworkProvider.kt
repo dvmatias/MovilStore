@@ -4,7 +4,6 @@ import com.matias.data.platform.NetworkHandler
 import com.matias.domain.base.exception.FailureType
 import com.matias.domain.base.functional.Either
 import retrofit2.Call
-import java.lang.Exception
 
 open class NetworkProvider(protected val networkHandler: NetworkHandler) {
 
