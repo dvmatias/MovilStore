@@ -69,4 +69,17 @@ abstract class BaseActivity<
             )
     }
     
+    /**
+     * Draw full screen with navitgation bar.
+     */
+    fun applyFullScreen() {
+        window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_IMMERSIVE
+                or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                )
+        window.decorView.setOnSystemUiVisibilityChangeListener {
+            checkSystemUiVisibilityFullScreen(it)
+        }
+    }
+    
 }
