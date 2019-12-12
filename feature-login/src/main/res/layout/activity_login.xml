@@ -8,14 +8,16 @@
     android:background="#000"
     tools:context="com.matias.features.login.ui.login.LoginActivity">
 
-    <ImageView
+    <!-- BACKGROUND IMAGE -->
+    <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="@null"
         android:scaleType="centerCrop"
         android:src="@drawable/asdasdasdsad"/>
 
-    <ImageView
+    <!-- IMAGE NAME LOGO -->
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageLogoName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -31,5 +33,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.37"/>
+
+
+    <!--<com.google.android.material.tabs.TabLayout-->
+    <!--android:id="@+id/tabLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="24dp"-->
+    <!--android:background="#2FFF00"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@id/imageLogoName"/>-->
+
+    <!-- TABS -->
+    <com.matias.components.tablayout.LoginTabLayout
+        android:id="@+id/tabs"
+        style="@style/TabLayoutStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageLogoName"/>
+
+    <!-- PAGER -->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#ff9800"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabs"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
