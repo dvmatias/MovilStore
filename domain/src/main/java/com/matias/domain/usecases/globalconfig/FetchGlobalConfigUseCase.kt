@@ -9,10 +9,10 @@ import com.matias.domain.provider.globalconfig.GlobalConfigProvider
 class FetchGlobalConfigUseCase(
         private val globalConfigProvider: GlobalConfigProvider
 ) : UseCase<GlobalConfigModel, FetchGlobalConfigUseCase.Params>() {
-
+    
     override suspend fun run(params: Params): Either<FailureType, GlobalConfigModel> =
             globalConfigProvider.fetchGlobalConfig(params.arg)
-
+    
     data class Params(val arg: Any)
-
+    
 }

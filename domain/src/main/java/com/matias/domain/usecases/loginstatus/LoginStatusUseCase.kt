@@ -8,10 +8,10 @@ import com.matias.domain.provider.loginstatus.LoginStatusProvider
 class LoginStatusUseCase(
         private val loginStatusProvider: LoginStatusProvider
 ) : UseCase<Boolean, LoginStatusUseCase.Params>() {
-
+    
     override suspend fun run(params: Params): Either<FailureType, Boolean> =
             loginStatusProvider.getLoginStatus()
-
+    
     data class Params(val any: Any)
-
+    
 }

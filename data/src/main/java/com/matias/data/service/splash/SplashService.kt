@@ -7,9 +7,9 @@ import javax.inject.Singleton
 
 @Singleton
 class SplashService constructor(retrofit: Retrofit) : SplashApi {
-
+    
     private val splashApi: SplashApi by lazy { retrofit.create(SplashApi::class.java) }
-
+    
     override fun fetchGlobalConfig(): Call<GlobalConfigResponseEntity> = splashApi.fetchGlobalConfig()
-
+    
 }

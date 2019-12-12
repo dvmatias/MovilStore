@@ -15,37 +15,25 @@ val ROOT: Nothing? = null
 abstract class BaseActivity<
         in V : BaseContract.View,
         out C : ViewComponent<V>> : AppCompatActivity() {
-
+    
     @Inject
     protected lateinit var navigator: Navigator
-
+    
     protected abstract fun bindComponent(): C
-
+    
     protected abstract fun bindLayout(): Int
-
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         @Suppress("UNCHECKED_CAST")
         bindComponent().inject(this as V)
         setContentView(layoutInflater.inflate(bindLayout(), ROOT))
     }
-
-    override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(newBase)
-    }
-
-    override fun onResume() {
-        super.onResume()
-    }
-
-    override fun onPause() {
-        super.onPause()
-    }
-
+    
     protected fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
-
+    
     fun applyImmersiveFullScreen() {
         // Enables regular immersive mode.
         // For "lean back" mode, remove SYSTEM_UI_FLAG_IMMERSIVE.
@@ -63,7 +51,7 @@ abstract class BaseActivity<
             checkSystemUiVisibilityFullScreen(it)
         }
     }
-
+    
     // Shows the system bars by removing all the flags
     // except for the ones that make the content appear under the system bars.
     private fun showSystemUI() {
@@ -71,7 +59,7 @@ abstract class BaseActivity<
                 or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
     }
-
+    
     private fun checkSystemUiVisibilityFullScreen(visibility: Int) {
         if (visibility == View.VISIBLE)
             Handler().postDelayed(
@@ -80,5 +68,5 @@ abstract class BaseActivity<
                     }, 200
             )
     }
-
+    
 }

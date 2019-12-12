@@ -7,15 +7,15 @@ import androidx.appcompat.app.AppCompatActivity
 import com.matias.features.R
 
 class LoginActivity : AppCompatActivity() {
-
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
+        
         // TODO Move to BaseActivity
         applyInmersive()
     }
-
+    
     // TODO Move to BaseActivity (already present there)
     private fun checkSystemUiVisibilityFullScreen(visibility: Int) {
         if (visibility == View.VISIBLE)
@@ -25,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
                     }, 200
             )
     }
-
+    
     // TODO Move to BaseActivity
     private fun applyInmersive() {
         window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_IMMERSIVE
@@ -42,5 +42,5 @@ class LoginActivity : AppCompatActivity() {
             checkSystemUiVisibilityFullScreen(it)
         }
     }
-
+    
 }

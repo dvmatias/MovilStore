@@ -16,13 +16,13 @@ import javax.inject.Singleton
 
 @Module
 class NetworkModule {
-
+    
     companion object {
         private const val CONNECT_TIMEOUT_VALUE = 45L
         private const val READ_TIMEOUT_VALUE = 45L
         private const val WRITE_TIMEOUT_VALUE = 45L
     }
-
+    
     @Provides
     @Singleton
     fun provideRetrofit(gson: Gson): Retrofit =
@@ -31,7 +31,7 @@ class NetworkModule {
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .client(createRetrofitClient())
                     .build()
-
+    
     private fun createRetrofitClient(): OkHttpClient {
         val interceptor = HttpLoggingInterceptor()
         interceptor.level = HttpLoggingInterceptor.Level.BODY
@@ -42,13 +42,13 @@ class NetworkModule {
                 .addInterceptor(interceptor)
         return okHttpClient.build()
     }
-
+    
     @Singleton
     @Provides
     fun provideGson(): Gson = GsonBuilder().disableHtmlEscaping().create()
-
+    
     @Singleton
     @Provides
     fun provideNetworkHandler(context: Context): NetworkHandler = NetworkHandler(context)
-
+    
 }

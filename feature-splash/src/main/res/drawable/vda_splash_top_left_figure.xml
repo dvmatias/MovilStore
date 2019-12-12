@@ -11,21 +11,21 @@
             <path
                 android:name="path"
                 android:pathData="M 371 0 C 371.7 9.2 372 18.4 372 27.8 C 372 228.1 209.6 390.5 9.3 390.5 C 6.2 390.5 3.1 390.5 0 390.4"
-                android:strokeColor="#96D9E2"
                 android:strokeWidth="120"
+                android:strokeColor="#96D9E2"
                 android:strokeMiterLimit="10"/>
         </vector>
     </aapt:attr>
     <target android:name="path">
         <aapt:attr name="android:animation">
             <objectAnimator
-                android:startOffset="100"
-                android:propertyName="trimPathStart"
                 android:duration="500"
+                android:interpolator="@android:anim/decelerate_interpolator"
+                android:propertyName="trimPathStart"
+                android:startOffset="100"
                 android:valueFrom="1"
                 android:valueTo="0"
-                android:valueType="floatType"
-                android:interpolator="@android:anim/decelerate_interpolator"/>
+                android:valueType="floatType"/>
         </aapt:attr>
     </target>
 </animated-vector>

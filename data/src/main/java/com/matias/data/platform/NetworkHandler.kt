@@ -10,10 +10,10 @@ import javax.inject.Singleton
 @Singleton
 @Mockable
 class NetworkHandler @Inject constructor(private val context: Context) {
-
+    
     val isConnected
         get() = context.networkInfo?.isConnectedOrConnecting
-
+    
 }
 
 val Context.networkInfo: NetworkInfo?

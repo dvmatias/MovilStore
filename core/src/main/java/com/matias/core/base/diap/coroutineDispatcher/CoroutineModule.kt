@@ -10,12 +10,12 @@ import javax.inject.Singleton
 
 @Module
 class CoroutineModule {
-
+    
     companion object {
         const val DISPATCHER_BG_UI = "DISPATCHER_BG_UI"
         const val DISPATCHER_BG_BG = "DISPATCHER_BG_BG"
     }
-
+    
     @Provides
     @Singleton
     @Named(DISPATCHER_BG_UI)
@@ -24,7 +24,7 @@ class CoroutineModule {
                 override fun provideExecutor(): CoroutineDispatcher = Dispatchers.Default
                 override fun provideDispatcher(): CoroutineDispatcher = Dispatchers.Main
             }
-
+    
     @Provides
     @Singleton
     @Named(DISPATCHER_BG_BG)
@@ -33,5 +33,5 @@ class CoroutineModule {
                 override fun provideExecutor(): CoroutineDispatcher = Dispatchers.Default
                 override fun provideDispatcher(): CoroutineDispatcher = Dispatchers.Default
             }
-
+    
 }

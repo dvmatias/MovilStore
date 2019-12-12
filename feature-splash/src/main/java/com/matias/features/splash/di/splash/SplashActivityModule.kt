@@ -9,13 +9,13 @@ import dagger.Provides
 
 @Module
 class SplashActivityModule {
-
+    
     @Provides
     fun provideFetchGlobalConfigUseCase(globalConfigProvider: GlobalConfigProvider): FetchGlobalConfigUseCase =
             FetchGlobalConfigUseCase(globalConfigProvider)
-
+    
     @Provides
     fun provideLoginStatusUseCase(loginStatusProvider: LoginStatusProvider): LoginStatusUseCase =
             LoginStatusUseCase(loginStatusProvider)
-
+    
 }

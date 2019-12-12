@@ -6,7 +6,7 @@ import com.matias.domain.base.functional.Either
 import retrofit2.Call
 
 open class NetworkProvider(protected val networkHandler: NetworkHandler) {
-
+    
     open fun <T, R> request(call: Call<T>, transform: (T) -> R): Either<FailureType, R> {
         return try {
             when (networkHandler.isConnected) {
@@ -27,7 +27,7 @@ open class NetworkProvider(protected val networkHandler: NetworkHandler) {
             Either.Left(FailureType.ServerError())
         }
     }
-
+    
     // TODO
-
+    
 }

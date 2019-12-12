@@ -10,17 +10,17 @@ import javax.inject.Singleton
 
 @Module
 class BaseModule(private val app: BaseApplication) {
-
+    
     @Provides
     @Singleton
     fun provideApplication(): Application = app
-
+    
     @Provides
     @Singleton
     fun provideContext(): Context = app
-
+    
     @Provides
     @Singleton
     fun provideNavigator(): Navigator = BaseApplication.navigator
-
+    
 }

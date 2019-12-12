@@ -22,21 +22,21 @@ import javax.inject.Singleton
     CoroutineModule::class
 ])
 interface BaseComponent {
-
+    
     fun application(): Application
-
+    
     fun context(): Context
-
+    
     fun gson(): Gson
-
+    
     fun retrofit(): Retrofit
-
+    
     fun networkHandler(): NetworkHandler
-
+    
     fun navigator(): Navigator
-
+    
     fun featureFlaghCache(): FeatureFlaghCache
-
+    
     fun sharedPreferencesCache(): SharedPreferencesCache
-
+    
 }

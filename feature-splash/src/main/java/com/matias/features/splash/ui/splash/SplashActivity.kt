@@ -14,60 +14,60 @@ import kotlinx.android.synthetic.main.activity_splash.*
 
 
 class SplashActivity :
-	BasePresenterActivity<SplashActivity, SplashActivityPresenter, SplashActivitySubComponent>(),
-	SplashActivityContract.View {
-
-	override fun bindComponent(): SplashActivitySubComponent =
-		SplashUiComponent.component.plus(SplashActivityModule())
-
-	override fun bindLayout(): Int = R.layout.activity_splash
-
-	override fun onCreate(savedInstanceState: Bundle?) {
-		super.onCreate(savedInstanceState)
-		setContentView(R.layout.activity_splash)
-		super.applyImmersiveFullScreen()
-	}
-
-	override fun onResume() {
-		super.onResume()
-		animateScreenIn()
-		Handler().postDelayed({ presenter.fetchGlobalConfig() }, 1100)
-	}
-
-	/*******************************************************************************************************************
-	 * [SplashActivityContract.View] implementation
-	 */
-	override fun animateScreenIn() {
-		startVectorAnimation(
-			imageTopLeftFigure,
-			getDrawable(R.drawable.vd_splash_top_left_figure_anim_in_3)
-		)
-		startVectorAnimation(
-			imageBottomRightFigure,
-			getDrawable(R.drawable.vd_splash_bottom_right_figure_anim_in_3)
-		)
-	}
-
-	override fun animateScreenOut() {
-		startVectorAnimation(
-			imageTopLeftFigure,
-			getDrawable(R.drawable.vd_splash_top_left_figure_anim_out_3)
-		)
-		startVectorAnimation(
-			imageBottomRightFigure,
-			getDrawable(R.drawable.vd_splash_bottom_right_figure_anim_out_3)
-		)
-	}
-
-	override fun goToMainScreen() {
-		super.showToast("Go to main screen.")
-	}
-
-	override fun goToLoginScreen() {
-		super.showToast("Go to login screen.")
-		val options = ActivityOptionsCompat
-			.makeSceneTransitionAnimation(this, imageLogoName as View, "image_logo_name")
-		Handler().postDelayed({ navigator.toLoginScreen(this, options) }, 1500)
-	}
-
+        BasePresenterActivity<SplashActivity, SplashActivityPresenter, SplashActivitySubComponent>(),
+        SplashActivityContract.View {
+    
+    override fun bindComponent(): SplashActivitySubComponent =
+            SplashUiComponent.component.plus(SplashActivityModule())
+    
+    override fun bindLayout(): Int = R.layout.activity_splash
+    
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_splash)
+        super.applyImmersiveFullScreen()
+    }
+    
+    override fun onResume() {
+        super.onResume()
+        animateScreenIn()
+        Handler().postDelayed({ presenter.fetchGlobalConfig() }, 1100)
+    }
+    
+    /*******************************************************************************************************************
+     * [SplashActivityContract.View] implementation
+     */
+    override fun animateScreenIn() {
+        startVectorAnimation(
+                imageTopLeftFigure,
+                getDrawable(R.drawable.vd_splash_top_left_figure_anim_in_3)
+        )
+        startVectorAnimation(
+                imageBottomRightFigure,
+                getDrawable(R.drawable.vd_splash_bottom_right_figure_anim_in_3)
+        )
+    }
+    
+    override fun animateScreenOut() {
+        startVectorAnimation(
+                imageTopLeftFigure,
+                getDrawable(R.drawable.vd_splash_top_left_figure_anim_out_3)
+        )
+        startVectorAnimation(
+                imageBottomRightFigure,
+                getDrawable(R.drawable.vd_splash_bottom_right_figure_anim_out_3)
+        )
+    }
+    
+    override fun goToMainScreen() {
+        super.showToast("Go to main screen.")
+    }
+    
+    override fun goToLoginScreen() {
+        super.showToast("Go to login screen.")
+        val options = ActivityOptionsCompat
+                .makeSceneTransitionAnimation(this, imageLogoName as View, "image_logo_name")
+        Handler().postDelayed({ navigator.toLoginScreen(this, options) }, 1500)
+    }
+    
 }

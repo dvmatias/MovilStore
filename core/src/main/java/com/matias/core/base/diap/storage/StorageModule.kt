@@ -10,13 +10,13 @@ import javax.inject.Singleton
 
 @Module
 class StorageModule {
-
+    
     @Provides
     @Singleton
     fun provideFeatureFlaghCache(): FeatureFlaghCache = FeatureFlaghCacheImpl()
-
+    
     @Provides
     @Singleton
     fun provideSharedPreferencesCache(): SharedPreferencesCache = SharedPreferencesCacheImpl()
-
+    
 }
