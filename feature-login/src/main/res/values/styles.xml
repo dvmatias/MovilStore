@@ -7,6 +7,7 @@
 	<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 	<style name="LoginActivityTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+		<item name="android:windowContentTransitions">true</item>
 		<item name="android:windowLightStatusBar">false</item>
 		<item name="windowActionBar">false</item>
 		<item name="windowNoTitle">true</item>

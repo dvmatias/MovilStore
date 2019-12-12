@@ -27,13 +27,14 @@
 		android:contentDescription="@null"
 		android:elevation="1dp"
 		android:scaleType="centerInside"
-		android:src="@drawable/image_splash_logo_vector"
+		android:transitionName="image_logo_name"
+		android:src="@drawable/logo_name_splash_activity_vector"
 		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintWidth_percent="1.0"
 		app:layout_constraintDimensionRatio="16:10"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent" />
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintWidth_percent="1.0" />
 
 	<ImageView
 		android:id="@+id/imageBottomRightFigure"
