@@ -5,7 +5,4 @@ import javax.inject.Inject
 
 class LoginActivityPresenter @Inject constructor(
 
-) : BasePresenter<LoginActivityContract.View>(), LoginActivityContract.Presenter<LoginActivityContract.View> {
-
-
-}
+) : BasePresenter<LoginActivityContract.View>(), LoginActivityContract.Presenter<LoginActivityContract.View>

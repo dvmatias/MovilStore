@@ -4,16 +4,8 @@ import com.matias.core.base.mvp.BaseContract
 
 interface LoginActivityContract {
     
-    interface View : BaseContract.View {
+    interface View : BaseContract.View
     
-    
-    
-    }
-    
-    interface Presenter<V : View> : BaseContract.Presenter<V> {
-    
-    
-    
-    }
+    interface Presenter<V : View> : BaseContract.Presenter<V>
     
 }

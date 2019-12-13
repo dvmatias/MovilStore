@@ -17,11 +17,9 @@ class SplashActivity :
         BasePresenterActivity<SplashActivity, SplashActivityPresenter, SplashActivitySubComponent>(),
         SplashActivityContract.View {
     
-    override fun bindComponent(): SplashActivitySubComponent =
-            SplashUiComponent.component.plus(SplashActivityModule())
+    override fun bindComponent(): SplashActivitySubComponent = SplashUiComponent.component.plus(SplashActivityModule())
     
-    override fun bindLayout(): Int =
-            R.layout.activity_splash
+    override fun bindLayout(): Int = R.layout.activity_splash
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -68,7 +66,7 @@ class SplashActivity :
         super.showToast("Go to login screen.")
         val options = ActivityOptionsCompat
                 .makeSceneTransitionAnimation(this, imageLogoName as View, "image_logo_name")
-        Handler().postDelayed({ navigator.toLoginScreen(this, options) }, 1500)
+        Handler().postDelayed({ navigator.toLoginScreen(this, options) }, 500)
     }
     
 }

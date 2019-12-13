@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Core</string>
+
+    <string name="tab_sign_in_label">SIGN IN</string>
+    <string name="tab_sign_up_label">SIGN UP</string>
 </resources>
