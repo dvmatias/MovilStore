@@ -80,10 +80,12 @@ class LoginTabLayout : TabLayout {
     
     private fun createCustomFontTextViewForTab(): AppCompatTextView {
         val customFontTextView = AppCompatTextView(context)
-        customFontTextView.gravity = Gravity.CENTER
-        customFontTextView.width = 300
-        customFontTextView.setLines(1)
-        TextViewCompat.setTextAppearance(customFontTextView, R.style.TabTitleStyle)
+        customFontTextView.let {
+            it.gravity = Gravity.CENTER
+            it.width = 300
+            it.setLines(1)
+            TextViewCompat.setTextAppearance(it, R.style.TabTitleStyle)
+        }
         return customFontTextView
     }
     
@@ -97,9 +99,10 @@ class LoginTabLayout : TabLayout {
         this.titles.addAll(titles)
         for (i in 0 until tabCount) {
             val tab = getTabAt(i)
-            if (tab != null) {
-                val view = tab.customView
+            tab?.let {
+                val view = it.customView
                 if (view is AppCompatTextView) {
+                    view.typeface = if (i == 0) typeFaceSelected else typeFaceUnselected
                     view.text = this.titles[i]
                 }
             }
