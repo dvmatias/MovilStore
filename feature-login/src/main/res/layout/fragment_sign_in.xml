@@ -130,7 +130,11 @@
 		android:layout_height="@dimen/dimen_52dp"
 		android:layout_marginBottom="@dimen/dimen_8dp"
 		android:text="@string/btn_sign_in_label"
+		android:backgroundTint="@color/colorAccent"
+		android:textColor="@color/colorBlack"
 		android:theme="@style/Theme.AppCompat"
+		android:fontFamily="@font/open_sans_bold"
+		android:textSize="@dimen/text_16sp"
 		app:layout_constraintBottom_toTopOf="@id/textDontHaveAccount"
 		tools:layout_editor_absoluteX="@dimen/dimen_36dp" />
 
