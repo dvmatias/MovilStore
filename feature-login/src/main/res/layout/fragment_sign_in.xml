@@ -92,7 +92,7 @@
 	<!-- INPUT FIELD USER NAME -->
 	<androidx.appcompat.widget.AppCompatEditText
 		android:id="@+id/inputUserName"
-		style="@style/SignInEditText"
+		style="@style/SignInEditTextStyle"
 		android:layout_width="match_parent"
 		android:layout_height="@dimen/dimen_42dp"
 		android:layout_marginTop="@dimen/dimen_26dp"
@@ -103,7 +103,7 @@
 	<!-- INPUT FIELD PASSWORD -->
 	<androidx.appcompat.widget.AppCompatEditText
 		android:id="@+id/inputPassword"
-		style="@style/SignInEditText"
+		style="@style/SignInEditTextStyle"
 		android:layout_width="match_parent"
 		android:layout_height="@dimen/dimen_42dp"
 		android:layout_marginTop="@dimen/dimen_14dp"
@@ -118,9 +118,7 @@
 		android:layout_height="wrap_content"
 		android:layout_marginTop="@dimen/dimen_14dp"
 		android:text="@string/switch_stay_signed_in_label"
-		android:textColor="@color/colorWhite"
-		android:textSize="@dimen/text_14sp"
-		android:theme="@style/Theme.AppCompat"
+		style="@style/SignInSwitchStyle"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/inputPassword"
 		app:switchPadding="@dimen/dimen_8dp" />
@@ -129,7 +127,7 @@
 	<androidx.appcompat.widget.AppCompatButton
 		android:id="@+id/btnSignIn"
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
+		android:layout_height="@dimen/dimen_52dp"
 		android:layout_marginBottom="@dimen/dimen_8dp"
 		android:text="@string/btn_sign_in_label"
 		android:theme="@style/Theme.AppCompat"

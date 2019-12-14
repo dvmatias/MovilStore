@@ -24,7 +24,7 @@
         <item name="android:textSize">@dimen/text_14sp</item>
     </style>
 
-    <style name="SignInEditText" parent="@style/Widget.AppCompat.EditText">
+    <style name="SignInEditTextStyle" parent="@style/Widget.AppCompat.EditText">
         <item name="android:padding">2dp</item>
         <item name="android:paddingStart">24dp</item>
         <item name="android:background">@drawable/bgr_edit_text_sign_in</item>
@@ -34,6 +34,28 @@
         <item name="android:maxLength">100</item>
         <item name="android:autoText">true</item>
         <item name="android:gravity">center_vertical</item>
+        <item name="android:theme">@style/SignInEditTextTheme</item>
+    </style>
+
+    <style name="SignInEditTextTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:colorControlNormal">@color/colorAccent</item>
+        <item name="android:colorControlActivated">@color/colorAccent</item>
+        <item name="android:colorControlHighlight">@color/colorAccent</item>
+    </style>
+
+    <style name="SignInSwitchStyle" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/text_14sp</item>
+        <item name="android:theme">@style/SignInSwitchTheme</item>
+    </style>
+
+    <style name="SignInSwitchTheme" parent="Theme.AppCompat.Light">
+        <item name="android:colorControlNormal">@color/colorAccent</item>
+        <item name="android:colorControlActivated">@color/colorAccent</item>
+        <item name="android:colorControlHighlight">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorSwitchThumbNormal">@color/colorWhite</item>
+        <item name="android:colorForeground">#BEBEBE</item>
     </style>
 
 </resources>
