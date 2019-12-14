@@ -25,7 +25,7 @@
         <item name="android:textSize">@dimen/text_14sp</item>
     </style>
 
-    <!-- EDIT TEXT - INPUT FIELDS -->
+    <!-- SIGN IN EDIT TEXT - INPUT FIELDS -->
     <style name="SignInEditTextStyle" parent="@style/Widget.AppCompat.EditText">
         <item name="android:padding">2dp</item>
         <item name="android:paddingStart">24dp</item>
@@ -67,6 +67,22 @@
         <item name="android:textColor">@color/colorBtnTextLabel</item>
         <item name="android:textSize">@dimen/text_14sp</item>
         <item name="android:fontFamily">@font/open_sans_semi_bold</item>
+    </style>
+
+
+
+    <!-- SIGN UP EDIT TEXT - INPUT FIELDS -->
+    <style name="SignUpEditTextStyle" parent="@style/Widget.AppCompat.EditText">
+        <item name="android:padding">2dp</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:background">@drawable/bgr_edit_text_sign_up</item>
+        <item name="android:textColorHint">@color/coloEditTextHint</item>
+        <item name="android:textColor">@color/coloEditTextInput</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:maxLength">100</item>
+        <item name="android:autoText">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:theme">@style/SignInEditTextTheme</item>
     </style>
 
 </resources>

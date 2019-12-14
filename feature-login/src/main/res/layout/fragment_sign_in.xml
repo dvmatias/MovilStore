@@ -7,7 +7,7 @@
 	android:paddingStart="@dimen/dimen_36dp"
 	android:paddingEnd="@dimen/dimen_36dp"
 	tools:background="@color/colorLoginActivityBackground"
-	tools:context=".login.ui.fragments.SignInFragment">
+	tools:context=".login.ui.fragments.signin.SignInFragment">
 
 	<!-- FCEBOOK BUTTON -->
 	<androidx.constraintlayout.widget.ConstraintLayout
@@ -32,10 +32,10 @@
 
 		<androidx.appcompat.widget.AppCompatTextView
 			android:id="@+id/appCompatTextView"
+			style="@style/TextSignInSocialNetwork"
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
 			android:text="@string/text_sign_in_facebook_label"
-			style="@style/TextSignInSocialNetwork"
 			app:layout_constraintBottom_toBottomOf="@id/icFacebook"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintStart_toEndOf="@+id/icFacebook"
@@ -65,10 +65,10 @@
 
 		<androidx.appcompat.widget.AppCompatTextView
 			android:id="@+id/appCompatTextView2"
+			style="@style/TextSignInSocialNetwork"
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
 			android:text="@string/text_sign_in_google_label"
-			style="@style/TextSignInSocialNetwork"
 			app:layout_constraintBottom_toBottomOf="@id/icGoogle"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintStart_toEndOf="@+id/icGoogle"
@@ -79,11 +79,11 @@
 	<!-- OR -->
 	<androidx.appcompat.widget.AppCompatTextView
 		android:id="@+id/textOr"
+		style="@style/LabelTextStyle"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="@dimen/dimen_8dp"
 		android:text="@string/text_or_label"
-		style="@style/LabelTextStyle"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/btnGoogle" />
@@ -95,7 +95,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="@dimen/dimen_42dp"
 		android:layout_marginTop="@dimen/dimen_26dp"
-		android:hint="@string/edit_inpuit_user_name_hint"
+		android:hint="@string/edit_sing_in_input_user_name_hint"
 		android:inputType="textPersonName|textEmailAddress|text"
 		app:layout_constraintTop_toBottomOf="@id/textOr" />
 
@@ -106,7 +106,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="@dimen/dimen_42dp"
 		android:layout_marginTop="@dimen/dimen_14dp"
-		android:hint="@string/edit_inpuit_password_hint"
+		android:hint="@string/edit_sing_in_input_password_hint"
 		android:inputType="textPassword|textWebPassword"
 		app:layout_constraintTop_toBottomOf="@id/inputUserName" />
 
@@ -128,34 +128,34 @@
 		android:layout_width="match_parent"
 		android:layout_height="@dimen/dimen_52dp"
 		android:layout_marginBottom="@dimen/dimen_8dp"
-		android:text="@string/btn_sign_in_label"
 		android:backgroundTint="@color/colorAccent"
-		android:textColor="@color/colorBlack"
-		android:theme="@style/Theme.AppCompat"
 		android:fontFamily="@font/open_sans_bold"
+		android:text="@string/btn_sign_in_label"
+		android:textColor="@color/colorBlack"
 		android:textSize="@dimen/text_16sp"
+		android:theme="@style/Theme.AppCompat"
 		app:layout_constraintBottom_toTopOf="@id/textDontHaveAccount"
 		tools:layout_editor_absoluteX="@dimen/dimen_36dp" />
 
 	<!-- BUTTON TEXT FORGOT PASSWORD -->
 	<androidx.appcompat.widget.AppCompatTextView
 		android:id="@+id/textForgotPassword"
+		style="@style/LabelTextStyle"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginBottom="@dimen/dimen_14dp"
 		android:text="@string/text_forgot_password_label"
-		style="@style/LabelTextStyle"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintStart_toStartOf="parent" />
 
 	<!-- BUTTON TEXT DON'T HAVE ACCOUNT -->
 	<androidx.appcompat.widget.AppCompatTextView
 		android:id="@+id/textDontHaveAccount"
+		style="@style/LabelTextStyle"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginBottom="@dimen/dimen_14dp"
 		android:text="@string/text_dont_have_account_label"
-		style="@style/LabelTextStyle"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent" />
 

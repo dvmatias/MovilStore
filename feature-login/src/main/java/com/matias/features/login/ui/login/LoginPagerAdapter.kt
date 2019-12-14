@@ -3,8 +3,8 @@ package com.matias.features.login.ui.login
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import com.matias.features.login.ui.fragments.SignInFragment
-import com.matias.features.login.ui.fragments.SignUpFragment
+import com.matias.features.login.ui.fragments.signin.SignInFragment
+import com.matias.features.login.ui.fragments.signup.SignUpFragment
 
 
 class LoginPagerAdapter(fm: FragmentManager, behavior: Int) : FragmentStatePagerAdapter(fm, behavior) {

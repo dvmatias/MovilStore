@@ -26,4 +26,5 @@
     <color name="colorBtnTextLabel">#FFF</color>
     <color name="coloEditTextHint">#898989</color>
     <color name="coloEditTextInput">#F3F3F3</color>
+    <color name="coloSeparatoSignUpBackground">#898989</color>
 </resources>
