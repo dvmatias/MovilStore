@@ -14,7 +14,8 @@
         android:layout_height="match_parent"
         android:contentDescription="@null"
         android:scaleType="centerCrop"
-        android:src="@drawable/asdasdasdsad"/>
+        android:alpha="0.4"
+        android:src="@drawable/bgr_login_activity"/>
 
     <!-- IMAGE NAME LOGO -->
     <androidx.appcompat.widget.AppCompatImageView
@@ -34,24 +35,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.37"/>
 
-
-    <!--<com.google.android.material.tabs.TabLayout-->
-    <!--android:id="@+id/tabLayout"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginTop="24dp"-->
-    <!--android:background="#2FFF00"-->
-    <!--app:layout_constraintStart_toStartOf="parent"-->
-    <!--app:layout_constraintEnd_toEndOf="parent"-->
-    <!--app:layout_constraintTop_toBottomOf="@id/imageLogoName"/>-->
-
     <!-- TABS -->
     <com.matias.components.tablayout.LoginTabLayout
         android:id="@+id/tabs"
         style="@style/TabLayoutStyle"
         android:layout_width="wrap_content"
-        android:layout_height="?attr/actionBarSize"
-        android:layout_marginTop="24dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageLogoName"/>
@@ -61,7 +51,6 @@
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="#4BFF9800"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

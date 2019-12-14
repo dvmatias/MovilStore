@@ -15,6 +15,7 @@ class LoginTabLayout : TabLayout {
     private val titles: MutableList<String> = arrayListOf()
     
     private var typeFaceUnselected: Typeface? = null
+    private var typeFaceSelected: Typeface? = null
     
     constructor(context: Context) : super(context) {
         init(context, null)
@@ -30,7 +31,8 @@ class LoginTabLayout : TabLayout {
     
     @Suppress("UNUSED_PARAMETER")
     private fun init(context: Context, attrs: AttributeSet?) {
-        typeFaceUnselected = Typeface.createFromAsset(context.assets,"font/open_sans_semi_bold.ttf")
+        typeFaceUnselected = Typeface.createFromAsset(context.assets, "font/open_sans_bold.ttf")
+        typeFaceSelected = Typeface.createFromAsset(context.assets, "font/open_sans_bold.ttf")
         addOnTabSelectedListener()
     }
     
@@ -49,7 +51,7 @@ class LoginTabLayout : TabLayout {
             override fun onTabSelected(tab: Tab?) {
                 val view = tab?.customView
                 if (view is AppCompatTextView) {
-                    view.setTypeface(view.typeface, Typeface.BOLD)
+                    view.typeface = typeFaceSelected
                 }
             }
         })
@@ -69,7 +71,7 @@ class LoginTabLayout : TabLayout {
                     if (typeFaceUnselected == null) {
                         typeFaceUnselected = customFontTextView.typeface
                     }
-                    customFontTextView.setTypeface(customFontTextView.typeface, Typeface.BOLD)
+                    customFontTextView.setTypeface(customFontTextView.typeface, Typeface.NORMAL)
                 }
                 tab.customView = customFontTextView
             }

@@ -3,4 +3,7 @@
 
     <string name="tab_sign_in_label">SIGN IN</string>
     <string name="tab_sign_up_label">SIGN UP</string>
+
+    <string name="text_sign_in_facebook_label">LOG IN WITH FACEBOOK</string>
+    <string name="text_sign_in_google_label">LOG IN WITH GOGLE</string>
 </resources>

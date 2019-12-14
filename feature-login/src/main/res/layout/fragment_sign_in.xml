@@ -1,16 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#90002AFF"
-    tools:context=".login.ui.fragments.SignInFragment">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:paddingStart="36dp"
+	android:paddingEnd="36dp"
+	tools:background="#D2000000"
+	tools:context=".login.ui.fragments.SignInFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Sign in Fragment"/>
+	<!-- FCEBOOK BUTTON -->
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/btnFacebook"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="36dp"
+		app:layout_constraintStart_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+		<androidx.appcompat.widget.AppCompatImageView
+			android:id="@+id/icFacebook"
+			android:layout_width="36dp"
+			android:layout_height="36dp"
+			android:contentDescription="@null"
+			android:src="@drawable/ic_facebook_24_vector"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toStartOf="@+id/appCompatTextView"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintHorizontal_chainStyle="packed"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/appCompatTextView"
+			android:layout_width="wrap_content"
+			android:layout_height="18dp"
+			android:layout_marginStart="14dp"
+			android:fontFamily="@font/mark_medium"
+			android:lineSpacingMultiplier="0.9"
+			android:text="@string/text_sign_in_facebook_label"
+			android:textColor="#E0E0E0"
+			android:textSize="16sp"
+			app:layout_constraintBottom_toBottomOf="@id/icFacebook"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintHorizontal_chainStyle="packed"
+			app:layout_constraintStart_toEndOf="@+id/icFacebook"
+			app:layout_constraintTop_toTopOf="@id/icFacebook" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+	<!-- GOOGLE BUTTON -->
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/btnGoogle"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="14dp"
+		app:layout_constraintStart_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/btnFacebook">
+
+		<androidx.appcompat.widget.AppCompatImageView
+			android:id="@+id/icGoogle"
+			android:layout_width="36dp"
+			android:layout_height="36dp"
+			android:contentDescription="@null"
+			android:src="@drawable/ic_google_24_vector"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toStartOf="@+id/appCompatTextView2"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintHorizontal_chainStyle="packed"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/appCompatTextView2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="14dp"
+			android:fontFamily="@font/mark_medium"
+			android:lineSpacingMultiplier="0.9"
+			android:text="@string/text_sign_in_google_label"
+			android:textColor="#E0E0E0"
+			android:textSize="16sp"
+			app:layout_constraintBottom_toBottomOf="@id/icGoogle"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintHorizontal_chainStyle="packed"
+			app:layout_constraintStart_toEndOf="@+id/icGoogle"
+			app:layout_constraintTop_toTopOf="@id/icGoogle" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+	<!-- OR -->
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/textOr"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="24dp"
+		android:text="OR"
+		android:textColor="#E0E0E0"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.5"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/btnGoogle" />
+
+	<!-- INPUT FIELD USER NAME -->
+	<androidx.appcompat.widget.AppCompatEditText
+		android:id="@+id/inputUserName"
+		style="@style/SignInEditText"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		android:layout_marginTop="24dp"
+		android:hint="Username"
+		android:inputType="textPersonName|textEmailAddress|text"
+		app:layout_constraintTop_toBottomOf="@id/textOr" />
+
+	<!-- INPUT FIELD PASSWORD -->
+	<androidx.appcompat.widget.AppCompatEditText
+		android:id="@+id/inputPassword"
+		style="@style/SignInEditText"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		android:layout_marginTop="14dp"
+		android:hint="Password"
+		android:inputType="textPassword|textWebPassword"
+		app:layout_constraintTop_toBottomOf="@id/inputUserName" />
+
+	<androidx.appcompat.widget.SwitchCompat
+		android:id="@+id/switchStaySignedIn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="14dp"
+		android:text="Stay signed in?"
+		android:textColor="#fff"
+		android:textSize="14sp"
+		android:theme="@style/Theme.AppCompat"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/inputPassword"
+		app:switchPadding="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
