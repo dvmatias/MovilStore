@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000"
+    android:background="@color/colorLoginActivityBackground"
     tools:context="com.matias.features.login.ui.login.LoginActivity">
 
     <!-- BACKGROUND IMAGE -->
@@ -22,11 +22,11 @@
         android:id="@+id/imageLogoName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="@dimen/dimen_42dp"
         android:adjustViewBounds="true"
         android:alpha="0.8"
         android:contentDescription="@null"
-        android:elevation="1dp"
+        android:elevation="@dimen/elevation_1dp"
         android:scaleType="centerInside"
         android:src="@drawable/logo_name_login_activity_vector"
         android:transitionName="image_logo_name"
@@ -41,7 +41,7 @@
         style="@style/TabLayoutStyle"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="@dimen/dimen_14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageLogoName"/>

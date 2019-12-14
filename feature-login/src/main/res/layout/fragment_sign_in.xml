@@ -4,9 +4,9 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:paddingStart="36dp"
-	android:paddingEnd="36dp"
-	tools:background="#D2000000"
+	android:paddingStart="@dimen/dimen_36dp"
+	android:paddingEnd="@dimen/dimen_36dp"
+	tools:background="@color/colorLoginActivityBackground"
 	tools:context=".login.ui.fragments.SignInFragment">
 
 	<!-- FCEBOOK BUTTON -->
@@ -14,38 +14,30 @@
 		android:id="@+id/btnFacebook"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_marginTop="36dp"
+		android:layout_marginTop="@dimen/dimen_36dp"
 		app:layout_constraintStart_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent">
 
 		<androidx.appcompat.widget.AppCompatImageView
 			android:id="@+id/icFacebook"
-			android:layout_width="36dp"
-			android:layout_height="36dp"
+			android:layout_width="@dimen/dimen_32dp"
+			android:layout_height="@dimen/dimen_32dp"
 			android:contentDescription="@null"
 			android:src="@drawable/ic_facebook_24_vector"
 			app:layout_constraintBottom_toBottomOf="parent"
 			app:layout_constraintEnd_toStartOf="@+id/appCompatTextView"
-			app:layout_constraintHorizontal_bias="0.5"
-			app:layout_constraintHorizontal_chainStyle="packed"
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintTop_toTopOf="parent" />
 
 		<androidx.appcompat.widget.AppCompatTextView
 			android:id="@+id/appCompatTextView"
-			android:layout_width="wrap_content"
-			android:layout_height="18dp"
-			android:layout_marginStart="14dp"
-			android:fontFamily="@font/mark_medium"
-			android:lineSpacingMultiplier="0.9"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
 			android:text="@string/text_sign_in_facebook_label"
-			android:textColor="#E0E0E0"
-			android:textSize="16sp"
+			style="@style/TextSignInSocialNetwork"
 			app:layout_constraintBottom_toBottomOf="@id/icFacebook"
 			app:layout_constraintEnd_toEndOf="parent"
-			app:layout_constraintHorizontal_bias="0.5"
-			app:layout_constraintHorizontal_chainStyle="packed"
 			app:layout_constraintStart_toEndOf="@+id/icFacebook"
 			app:layout_constraintTop_toTopOf="@id/icFacebook" />
 
@@ -56,38 +48,29 @@
 		android:id="@+id/btnGoogle"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_marginTop="14dp"
+		android:layout_marginTop="@dimen/dimen_8dp"
 		app:layout_constraintStart_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/btnFacebook">
 
 		<androidx.appcompat.widget.AppCompatImageView
 			android:id="@+id/icGoogle"
-			android:layout_width="36dp"
-			android:layout_height="36dp"
+			android:layout_width="@dimen/dimen_32dp"
+			android:layout_height="@dimen/dimen_32dp"
 			android:contentDescription="@null"
 			android:src="@drawable/ic_google_24_vector"
 			app:layout_constraintBottom_toBottomOf="parent"
-			app:layout_constraintEnd_toStartOf="@+id/appCompatTextView2"
-			app:layout_constraintHorizontal_bias="0.5"
-			app:layout_constraintHorizontal_chainStyle="packed"
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintTop_toTopOf="parent" />
 
 		<androidx.appcompat.widget.AppCompatTextView
 			android:id="@+id/appCompatTextView2"
-			android:layout_width="wrap_content"
+			android:layout_width="0dp"
 			android:layout_height="wrap_content"
-			android:layout_marginStart="14dp"
-			android:fontFamily="@font/mark_medium"
-			android:lineSpacingMultiplier="0.9"
 			android:text="@string/text_sign_in_google_label"
-			android:textColor="#E0E0E0"
-			android:textSize="16sp"
+			style="@style/TextSignInSocialNetwork"
 			app:layout_constraintBottom_toBottomOf="@id/icGoogle"
 			app:layout_constraintEnd_toEndOf="parent"
-			app:layout_constraintHorizontal_bias="0.5"
-			app:layout_constraintHorizontal_chainStyle="packed"
 			app:layout_constraintStart_toEndOf="@+id/icGoogle"
 			app:layout_constraintTop_toTopOf="@id/icGoogle" />
 
@@ -98,11 +81,11 @@
 		android:id="@+id/textOr"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginTop="24dp"
-		android:text="OR"
-		android:textColor="#E0E0E0"
+		android:layout_marginTop="@dimen/dimen_8dp"
+		android:text="@string/text_or_label"
+		android:textColor="@color/colorWhite"
+		android:textSize="@dimen/text_14sp"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintHorizontal_bias="0.5"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/btnGoogle" />
 
@@ -111,9 +94,9 @@
 		android:id="@+id/inputUserName"
 		style="@style/SignInEditText"
 		android:layout_width="match_parent"
-		android:layout_height="48dp"
-		android:layout_marginTop="24dp"
-		android:hint="Username"
+		android:layout_height="@dimen/dimen_42dp"
+		android:layout_marginTop="@dimen/dimen_26dp"
+		android:hint="@string/edit_inpuit_user_name_hint"
 		android:inputType="textPersonName|textEmailAddress|text"
 		app:layout_constraintTop_toBottomOf="@id/textOr" />
 
@@ -122,23 +105,59 @@
 		android:id="@+id/inputPassword"
 		style="@style/SignInEditText"
 		android:layout_width="match_parent"
-		android:layout_height="48dp"
-		android:layout_marginTop="14dp"
-		android:hint="Password"
+		android:layout_height="@dimen/dimen_42dp"
+		android:layout_marginTop="@dimen/dimen_14dp"
+		android:hint="@string/edit_inpuit_password_hint"
 		android:inputType="textPassword|textWebPassword"
 		app:layout_constraintTop_toBottomOf="@id/inputUserName" />
 
+	<!-- SWITCH STAY SIGNED IN -->
 	<androidx.appcompat.widget.SwitchCompat
 		android:id="@+id/switchStaySignedIn"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginTop="14dp"
-		android:text="Stay signed in?"
-		android:textColor="#fff"
-		android:textSize="14sp"
+		android:layout_marginTop="@dimen/dimen_14dp"
+		android:text="@string/switch_stay_signed_in_label"
+		android:textColor="@color/colorWhite"
+		android:textSize="@dimen/text_14sp"
 		android:theme="@style/Theme.AppCompat"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/inputPassword"
-		app:switchPadding="8dp" />
+		app:switchPadding="@dimen/dimen_8dp" />
+
+	<!-- BUTTON SIGN IN -->
+	<androidx.appcompat.widget.AppCompatButton
+		android:id="@+id/btnSignIn"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="@dimen/dimen_8dp"
+		android:text="@string/btn_sign_in_label"
+		android:theme="@style/Theme.AppCompat"
+		app:layout_constraintBottom_toTopOf="@id/textDontHaveAccount"
+		tools:layout_editor_absoluteX="@dimen/dimen_36dp" />
+
+	<!-- BUTTON TEXT FORGOT PASSWORD -->
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/textForgotPassword"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="@dimen/dimen_14dp"
+		android:text="@string/text_forgot_password_label"
+		android:textColor="@color/colorWhite"
+		android:textSize="@dimen/text_14sp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<!-- BUTTON TEXT DON'T HAVE ACCOUNT -->
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/textDontHaveAccount"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="@dimen/dimen_14dp"
+		android:text="@string/text_dont_have_account_label"
+		android:textColor="@color/colorWhite"
+		android:textSize="@dimen/text_14sp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

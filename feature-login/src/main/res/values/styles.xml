@@ -16,6 +16,14 @@
         <item name="android:statusBarColor">@color/colorTransparent</item>
     </style>
 
+    <style name="TextSignInSocialNetwork" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_marginStart">@dimen/dimen_14dp</item>
+        <item name="android:fontFamily">@font/mark_bold</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textColor">@color/colorSocialNetworkLabel</item>
+        <item name="android:textSize">@dimen/text_14sp</item>
+    </style>
+
     <style name="SignInEditText" parent="@style/Widget.AppCompat.EditText">
         <item name="android:padding">2dp</item>
         <item name="android:paddingStart">24dp</item>
@@ -27,4 +35,5 @@
         <item name="android:autoText">true</item>
         <item name="android:gravity">center_vertical</item>
     </style>
+
 </resources>

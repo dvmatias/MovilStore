@@ -18,5 +18,6 @@
     <color name="colorBottomFigure">#A6D390</color>
 
     <!-- LOGIN ACTIVITY -->
-    <color name="colorLoginActivityBackground">#202022</color>
+    <color name="colorLoginActivityBackground">#000000</color>
+    <color name="colorSocialNetworkLabel">#E0E0E0</color>
 </resources>
