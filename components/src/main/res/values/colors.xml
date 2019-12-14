@@ -9,6 +9,9 @@
     <color name="colorBlack">#FF000000</color>
     <color name="colorTransparent">#00000000</color>
 
+    <!-- TEXT -->
+    <color name="labelBtnLight">#E0E0E0</color>
+
     <!-- LOGIN TAB -->
     <color name="colorTextTabLight">#FFFFFF</color>
 
@@ -19,5 +22,8 @@
 
     <!-- LOGIN ACTIVITY -->
     <color name="colorLoginActivityBackground">#000000</color>
-    <color name="colorSocialNetworkLabel">#E0E0E0</color>
+    <color name="colorSocialNetworkLabel">@color/labelBtnLight</color>
+    <color name="colorBtnTextLabel">#FFF</color>
+    <color name="coloEditTextHint">#898989</color>
+    <color name="coloEditTextInput">#F3F3F3</color>
 </resources>

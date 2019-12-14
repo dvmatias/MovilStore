@@ -16,20 +16,22 @@
         <item name="android:statusBarColor">@color/colorTransparent</item>
     </style>
 
+    <!-- SOCIAL NETWORK BUTTONS -->
     <style name="TextSignInSocialNetwork" parent="Widget.AppCompat.TextView">
         <item name="android:layout_marginStart">@dimen/dimen_14dp</item>
         <item name="android:fontFamily">@font/mark_bold</item>
-        <item name="android:letterSpacing">0.1</item>
+        <item name="android:letterSpacing">0.07</item>
         <item name="android:textColor">@color/colorSocialNetworkLabel</item>
         <item name="android:textSize">@dimen/text_14sp</item>
     </style>
 
+    <!-- EDIT TEXT - INPUT FIELDS -->
     <style name="SignInEditTextStyle" parent="@style/Widget.AppCompat.EditText">
         <item name="android:padding">2dp</item>
         <item name="android:paddingStart">24dp</item>
         <item name="android:background">@drawable/bgr_edit_text_sign_in</item>
-        <item name="android:textColorHint">#898989</item>
-        <item name="android:textColor">#F3F3F3</item>
+        <item name="android:textColorHint">@color/coloEditTextHint</item>
+        <item name="android:textColor">@color/coloEditTextInput</item>
         <item name="android:maxLines">1</item>
         <item name="android:maxLength">100</item>
         <item name="android:autoText">true</item>
@@ -43,9 +45,11 @@
         <item name="android:colorControlHighlight">@color/colorAccent</item>
     </style>
 
+    <!-- SWITCH -->
     <style name="SignInSwitchStyle" parent="Widget.AppCompat.CompoundButton.Switch">
-        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textColor">@color/colorBtnTextLabel</item>
         <item name="android:textSize">@dimen/text_14sp</item>
+        <item name="android:fontFamily">@font/open_sans_semi_bold</item>
         <item name="android:theme">@style/SignInSwitchTheme</item>
     </style>
 
@@ -56,6 +60,13 @@
         <item name="colorControlActivated">@color/colorAccent</item>
         <item name="colorSwitchThumbNormal">@color/colorWhite</item>
         <item name="android:colorForeground">#BEBEBE</item>
+    </style>
+
+    <!-- LABELS -->
+    <style name="LabelTextStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/colorBtnTextLabel</item>
+        <item name="android:textSize">@dimen/text_14sp</item>
+        <item name="android:fontFamily">@font/open_sans_semi_bold</item>
     </style>
 
 </resources>

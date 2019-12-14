@@ -83,8 +83,7 @@
 		android:layout_height="wrap_content"
 		android:layout_marginTop="@dimen/dimen_8dp"
 		android:text="@string/text_or_label"
-		android:textColor="@color/colorWhite"
-		android:textSize="@dimen/text_14sp"
+		style="@style/LabelTextStyle"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/btnGoogle" />
@@ -114,14 +113,14 @@
 	<!-- SWITCH STAY SIGNED IN -->
 	<androidx.appcompat.widget.SwitchCompat
 		android:id="@+id/switchStaySignedIn"
+		style="@style/SignInSwitchStyle"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="@dimen/dimen_14dp"
 		android:text="@string/switch_stay_signed_in_label"
-		style="@style/SignInSwitchStyle"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/inputPassword"
-		app:switchPadding="@dimen/dimen_8dp" />
+		app:switchPadding="@dimen/dimen_6dp" />
 
 	<!-- BUTTON SIGN IN -->
 	<androidx.appcompat.widget.AppCompatButton
@@ -145,8 +144,7 @@
 		android:layout_height="wrap_content"
 		android:layout_marginBottom="@dimen/dimen_14dp"
 		android:text="@string/text_forgot_password_label"
-		android:textColor="@color/colorWhite"
-		android:textSize="@dimen/text_14sp"
+		style="@style/LabelTextStyle"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintStart_toStartOf="parent" />
 
@@ -157,8 +155,7 @@
 		android:layout_height="wrap_content"
 		android:layout_marginBottom="@dimen/dimen_14dp"
 		android:text="@string/text_dont_have_account_label"
-		android:textColor="@color/colorWhite"
-		android:textSize="@dimen/text_14sp"
+		style="@style/LabelTextStyle"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent" />
 
