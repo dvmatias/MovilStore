@@ -11,6 +11,7 @@
     <string name="edit_sing_in_input_password_hint">Password</string>
     <string name="switch_stay_signed_in_label">Stay signed in?</string>
     <string name="btn_sign_in_label">SIGN IN</string>
+    <string name="btn_sign_up_label">SIGN UP</string>
     <string name="text_forgot_password_label">Forgot password?</string>
     <string name="text_dont_have_account_label">Don\'t have account?</string>
 

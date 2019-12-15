@@ -27,4 +27,6 @@
     <color name="coloEditTextHint">#898989</color>
     <color name="coloEditTextInput">#F3F3F3</color>
     <color name="coloSeparatoSignUpBackground">#898989</color>
+    <color name="colorEditTextSignUpIcon">#C3FFFFFF</color>
+    <color name="colorFlowButtonLabel">#1A1A1A</color>
 </resources>

@@ -69,12 +69,9 @@
         <item name="android:fontFamily">@font/open_sans_semi_bold</item>
     </style>
 
-
-
     <!-- SIGN UP EDIT TEXT - INPUT FIELDS -->
     <style name="SignUpEditTextStyle" parent="@style/Widget.AppCompat.EditText">
         <item name="android:padding">2dp</item>
-        <item name="android:paddingStart">24dp</item>
         <item name="android:background">@drawable/bgr_edit_text_sign_up</item>
         <item name="android:textColorHint">@color/coloEditTextHint</item>
         <item name="android:textColor">@color/coloEditTextInput</item>
@@ -83,6 +80,19 @@
         <item name="android:autoText">true</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:theme">@style/SignInEditTextTheme</item>
+        <item name="android:drawablePadding">@dimen/dimen_12dp</item>
+        <item name="android:paddingStart">@dimen/dimen_12dp</item>
+        <item name="android:paddingEnd">@dimen/dimen_16dp</item>
+    </style>
+
+    <!-- FLOW BUTTONS -->
+    <style name="LoginButtonStyle" parent="Widget.AppCompat.Button" >
+        <item name="android:backgroundTint">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/open_sans_bold</item>
+        <item name="android:textColor">@color/colorFlowButtonLabel</item>
+        <item name="android:textSize">@dimen/text_16sp</item>
+        <item name="android:theme">@style/Theme.AppCompat</item>
+        <item name="android:clickable">true</item>
     </style>
 
 </resources>

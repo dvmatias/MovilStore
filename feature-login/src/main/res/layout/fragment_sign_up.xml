@@ -16,11 +16,10 @@
 		android:layout_width="match_parent"
 		android:layout_height="@dimen/dimen_42dp"
 		android:layout_marginTop="26dp"
-		android:drawableStart="@drawable/ic_google_24_vector"
-		android:drawablePadding="12dp"
+		android:drawableStart="@drawable/ic_email_24"
 		android:hint="@string/edit_sign_up_input_email_hint"
-		android:paddingStart="12dp"
-		android:paddingEnd="16dp"
+		android:imeOptions="actionNext"
+		android:inputType="textEmailAddress"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
@@ -38,7 +37,10 @@
 		style="@style/SignUpEditTextStyle"
 		android:layout_width="match_parent"
 		android:layout_height="@dimen/dimen_42dp"
+		android:drawableStart="@drawable/ic_password_24"
 		android:hint="@string/edit_sign_up_input_password_hint"
+		android:imeOptions="actionNext"
+		android:inputType="textPassword|textWebPassword"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/separatorEmail" />
@@ -56,7 +58,10 @@
 		style="@style/SignUpEditTextStyle"
 		android:layout_width="match_parent"
 		android:layout_height="@dimen/dimen_42dp"
+		android:drawableStart="@drawable/ic_username_24"
 		android:hint="@string/edit_sign_up_input_username_hint"
+		android:imeOptions="actionNext"
+		android:inputType="textPersonName"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/separatorPassword" />
@@ -74,7 +79,10 @@
 		style="@style/SignUpEditTextStyle"
 		android:layout_width="match_parent"
 		android:layout_height="@dimen/dimen_42dp"
+		android:drawableStart="@drawable/ic_date_of_birth_24"
 		android:hint="@string/edit_sign_up_input_date_of_birth_hint"
+		android:imeOptions="actionNext"
+		android:inputType="date"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/separatorUsername" />
@@ -92,7 +100,10 @@
 		style="@style/SignUpEditTextStyle"
 		android:layout_width="match_parent"
 		android:layout_height="@dimen/dimen_42dp"
+		android:drawableStart="@drawable/ic_phone_24"
 		android:hint="@string/edit_sign_up_input_phone_hint"
+		android:imeOptions="actionNext"
+		android:inputType="phone"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/separatorDateOfBirth" />
@@ -110,9 +121,23 @@
 		style="@style/SignUpEditTextStyle"
 		android:layout_width="match_parent"
 		android:layout_height="@dimen/dimen_42dp"
+		android:drawableStart="@drawable/ic_gender_24"
 		android:hint="@string/edit_sign_up_input_gender_hint"
+		android:imeOptions="actionDone"
+		android:inputType="text"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/separatorPhone" />
+
+	<!-- BUTTON SIGN IN -->
+	<androidx.appcompat.widget.AppCompatButton
+		android:id="@+id/btnSignUp"
+		style="@style/LoginButtonStyle"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/dimen_52dp"
+		android:layout_marginBottom="@dimen/dimen_42dp"
+		android:text="@string/btn_sign_up_label"
+		app:layout_constraintBottom_toBottomOf="parent"
+		tools:layout_editor_absoluteX="@dimen/dimen_36dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

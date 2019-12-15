@@ -96,6 +96,7 @@
 		android:layout_height="@dimen/dimen_42dp"
 		android:layout_marginTop="@dimen/dimen_26dp"
 		android:hint="@string/edit_sing_in_input_user_name_hint"
+		android:imeOptions="actionNext"
 		android:inputType="textPersonName|textEmailAddress|text"
 		app:layout_constraintTop_toBottomOf="@id/textOr" />
 
@@ -107,6 +108,7 @@
 		android:layout_height="@dimen/dimen_42dp"
 		android:layout_marginTop="@dimen/dimen_14dp"
 		android:hint="@string/edit_sing_in_input_password_hint"
+		android:imeOptions="actionDone"
 		android:inputType="textPassword|textWebPassword"
 		app:layout_constraintTop_toBottomOf="@id/inputUserName" />
 
@@ -125,17 +127,12 @@
 	<!-- BUTTON SIGN IN -->
 	<androidx.appcompat.widget.AppCompatButton
 		android:id="@+id/btnSignIn"
+		style="@style/LoginButtonStyle"
 		android:layout_width="match_parent"
 		android:layout_height="@dimen/dimen_52dp"
-		android:layout_marginBottom="@dimen/dimen_8dp"
-		android:backgroundTint="@color/colorAccent"
-		android:fontFamily="@font/open_sans_bold"
+		android:layout_marginBottom="@dimen/dimen_42dp"
 		android:text="@string/btn_sign_in_label"
-		android:textColor="@color/colorBlack"
-		android:textSize="@dimen/text_16sp"
-		android:theme="@style/Theme.AppCompat"
-		app:layout_constraintBottom_toTopOf="@id/textDontHaveAccount"
-		tools:layout_editor_absoluteX="@dimen/dimen_36dp" />
+		app:layout_constraintBottom_toBottomOf="parent" />
 
 	<!-- BUTTON TEXT FORGOT PASSWORD -->
 	<androidx.appcompat.widget.AppCompatTextView
@@ -143,10 +140,10 @@
 		style="@style/LabelTextStyle"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginBottom="@dimen/dimen_14dp"
 		android:text="@string/text_forgot_password_label"
 		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintStart_toStartOf="parent" />
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/btnSignIn" />
 
 	<!-- BUTTON TEXT DON'T HAVE ACCOUNT -->
 	<androidx.appcompat.widget.AppCompatTextView
@@ -154,9 +151,9 @@
 		style="@style/LabelTextStyle"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginBottom="@dimen/dimen_14dp"
 		android:text="@string/text_dont_have_account_label"
 		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent" />
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/btnSignIn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
