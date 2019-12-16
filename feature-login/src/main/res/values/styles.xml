@@ -62,11 +62,18 @@
         <item name="android:colorForeground">#BEBEBE</item>
     </style>
 
-    <!-- LABELS -->
+    <!-- LABEL -->
     <style name="LabelTextStyle" parent="Widget.AppCompat.TextView">
         <item name="android:textColor">@color/colorBtnTextLabel</item>
         <item name="android:textSize">@dimen/text_14sp</item>
         <item name="android:fontFamily">@font/open_sans_semi_bold</item>
+    </style>
+
+    <!-- TITLE -->
+    <style name="TitleTextStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/colorBtnTextLabel</item>
+        <item name="android:textSize">@dimen/text_26sp</item>
+        <item name="android:fontFamily">@font/mark_book</item>
     </style>
 
     <!-- SIGN UP EDIT TEXT - INPUT FIELDS -->

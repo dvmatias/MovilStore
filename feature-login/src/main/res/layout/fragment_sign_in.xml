@@ -9,15 +9,26 @@
 	tools:background="@color/colorLoginActivityBackground"
 	tools:context=".login.ui.fragments.signin.SignInFragment">
 
+	<!-- TITLE -->
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/textTitle"
+		style="@style/TitleTextStyle"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dimen_18dp"
+		android:text="@string/text_sign_in_title"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
 	<!-- FCEBOOK BUTTON -->
 	<androidx.constraintlayout.widget.ConstraintLayout
 		android:id="@+id/btnFacebook"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_marginTop="@dimen/dimen_36dp"
+		android:layout_marginTop="@dimen/dimen_18dp"
 		app:layout_constraintStart_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent">
+		app:layout_constraintTop_toBottomOf="@id/textTitle">
 
 		<androidx.appcompat.widget.AppCompatImageView
 			android:id="@+id/icFacebook"
@@ -130,7 +141,7 @@
 		style="@style/LoginButtonStyle"
 		android:layout_width="match_parent"
 		android:layout_height="@dimen/dimen_52dp"
-		android:layout_marginBottom="@dimen/dimen_42dp"
+		android:layout_marginBottom="@dimen/dimen_26dp"
 		android:text="@string/btn_sign_in_label"
 		app:layout_constraintBottom_toBottomOf="parent" />
 

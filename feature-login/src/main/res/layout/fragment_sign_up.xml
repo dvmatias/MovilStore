@@ -9,20 +9,31 @@
 	tools:background="@color/colorLoginActivityBackground"
 	tools:context=".login.ui.fragments.signup.SignUpFragment">
 
+	<!-- TITLE -->
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/textTitle"
+		style="@style/TitleTextStyle"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dimen_18dp"
+		android:text="@string/text_sign_up_title"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
 	<!-- INPUT FIELD EMAIL -->
 	<androidx.appcompat.widget.AppCompatEditText
 		android:id="@+id/inputEmail"
 		style="@style/SignUpEditTextStyle"
 		android:layout_width="match_parent"
 		android:layout_height="@dimen/dimen_42dp"
-		android:layout_marginTop="26dp"
+		android:layout_marginTop="@dimen/dimen_18dp"
 		android:drawableStart="@drawable/ic_email_24"
 		android:hint="@string/edit_sign_up_input_email_hint"
 		android:imeOptions="actionNext"
 		android:inputType="textEmailAddress"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent" />
+		app:layout_constraintTop_toBottomOf="@id/textTitle" />
 
 	<View
 		android:id="@+id/separatorEmail"
@@ -135,7 +146,7 @@
 		style="@style/LoginButtonStyle"
 		android:layout_width="match_parent"
 		android:layout_height="@dimen/dimen_52dp"
-		android:layout_marginBottom="@dimen/dimen_42dp"
+		android:layout_marginBottom="@dimen/dimen_26dp"
 		android:text="@string/btn_sign_up_label"
 		app:layout_constraintBottom_toBottomOf="parent"
 		tools:layout_editor_absoluteX="@dimen/dimen_36dp" />
