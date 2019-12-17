@@ -20,7 +20,8 @@ class SplashActivity :
 	override fun bindComponent(): SplashActivitySubComponent =
 		SplashUiComponent.component.plus(SplashActivityModule())
 
-	override fun bindLayout(): Int = R.layout.activity_splash
+	override fun bindLayout(): Int =
+		R.layout.activity_splash
 
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)

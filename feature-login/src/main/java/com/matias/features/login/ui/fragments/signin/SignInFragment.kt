@@ -5,17 +5,28 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import com.matias.core.base.mvp.BasePresenterFragment
 import com.matias.features.R
+import com.matias.features.login.di.fragments.signin.SignInFragmentModule
+import com.matias.features.login.di.fragments.signin.SignInFragmentSubcomponent
+import com.matias.features.login.ui.LoginUiComponent
 
-class SignInFragment : Fragment() {
+class SignInFragment :
+	BasePresenterFragment<SignInFragment, SignInFragmentPresenter, SignInFragmentSubcomponent>(),
+	SignInFragmentContract.View {
+
+	override fun bindComponent(): SignInFragmentSubcomponent =
+		LoginUiComponent.component.plus(SignInFragmentModule())
+
+	override fun bindLayout(): Int =
+		R.layout.fragment_sign_in
 
 	private var listener: OnFragmentInteractionListener? = null
 
 	override fun onCreateView(
-			inflater: LayoutInflater,
-			container: ViewGroup?,
-			savedInstanceState: Bundle?
+		inflater: LayoutInflater,
+		container: ViewGroup?,
+		savedInstanceState: Bundle?
 	): View? = inflater.inflate(R.layout.fragment_sign_in, container, false)
 
 	fun onButtonPressed(uri: Uri) {
@@ -34,7 +45,7 @@ class SignInFragment : Fragment() {
 	companion object {
 		@JvmStatic
 		fun newInstance(): SignInFragment =
-				SignInFragment()
+			SignInFragment()
 	}
 
 }
