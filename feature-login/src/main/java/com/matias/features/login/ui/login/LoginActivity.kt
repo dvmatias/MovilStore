@@ -1,6 +1,7 @@
 package com.matias.features.login.ui.login
 
 import android.os.Bundle
+import android.os.Handler
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.matias.core.base.mvp.BasePresenterActivity
 import com.matias.core.helpers.HtmlHelper
@@ -13,10 +14,13 @@ import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.bottom_sheet_error.*
 import javax.inject.Inject
 
-
 class LoginActivity :
 	BasePresenterActivity<LoginActivity, LoginActivityPresenter, LoginActivitySubComponent>(),
 	LoginActivityContract.View, LoginActivityContract.SignInFragmentInteractionListener {
+
+	companion object {
+		private const val HIDE_SIGN_IN_ERROR_DELAY = 5000L
+	}
 
 	@Inject
 	lateinit var pagerAdapter: LoginPagerAdapter
@@ -62,6 +66,7 @@ class LoginActivity :
 		bottomSheetBehavior = BottomSheetBehavior.from(clBottomSheet)
 		tvBottomSheetErrorMessage.text = htmlHelper.fromHtml(errorMsgResource)
 		bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+		Handler().postDelayed( {hideSignInError()}, HIDE_SIGN_IN_ERROR_DELAY )
 	}
 
 	override fun hideSignInError() {
