@@ -6,6 +6,15 @@ interface SignInFragmentContract {
 
 	interface View: BaseContract.View {
 
+		fun onUserClickLoginWithFacebook()
+
+		fun onUserClickLoginWithGoogle()
+
+		fun onUserClickForgotPassword()
+
+		fun onUserClickDontHaveAccount()
+
+		fun onUserClickSignIn()
 
 	}
 

@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 class LoginActivity :
 	BasePresenterActivity<LoginActivity, LoginActivityPresenter, LoginActivitySubComponent>(),
-	LoginActivityContract.View {
+	LoginActivityContract.View, LoginActivityContract.SignInFragmentInteractionListener {
 
 	@Inject
 	lateinit var pagerAdapter: LoginPagerAdapter
@@ -44,4 +44,47 @@ class LoginActivity :
 		tabs.setTitlesAtTabs(tabTitles)
 	}
 
+	/**
+	 * [LoginActivityContract.View] implementation
+	 */
+
+	override fun showSignInError(errorMsg: String) {
+		TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+	}
+
+	/**
+	 * [LoginActivityContract.SignInFragmentInteractionListener] implementation
+	 */
+
+	override fun onUserClickLoginWithFacebook() {
+		super.showToast("user click login with facebook")
+	}
+
+	override fun onUserClickLoginWithGoogle() {
+		super.showToast("user click login with google")
+	}
+
+	override fun onUserClickForgotPassword() {
+		super.showToast("user click forgot pass")
+	}
+
+	override fun onUserClickDontHaveAccount() {
+		super.showToast("user click don't have account")
+	}
+
+	override fun onUserClickSignIn() {
+		super.showToast("user click sign in")
+	}
+
+	override fun goToMainScreen() {
+		super.showToast("go to main screen")
+	}
+
+	override fun showErrorBadCredentials() {
+		super.showToast("show error bad crecentials")
+	}
+
+	override fun showMessagePasswordSent() {
+		super.showToast("show message password sent")
+	}
 }
