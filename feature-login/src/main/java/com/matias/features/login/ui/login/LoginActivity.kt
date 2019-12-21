@@ -58,8 +58,14 @@ class LoginActivity :
 	 * [LoginActivityContract.View] implementation
 	 */
 
-	override fun showSignInError(errorMsg: String) {
-		TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+	override fun showSignInError(errorMsgResource: Int) {
+		bottomSheetBehavior = BottomSheetBehavior.from(clBottomSheet)
+		tvBottomSheetErrorMessage.text = htmlHelper.fromHtml(errorMsgResource)
+		bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+	}
+
+	override fun hideSignInError() {
+		bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
 	}
 
 	override fun goToMainScreen() {
@@ -70,12 +76,16 @@ class LoginActivity :
 	 * [LoginActivityContract.SignInFragmentInteractionListener] implementation
 	 */
 
-	override fun showErrorBadCredentials(errorMessageResource: Int) {
-		super.showToast("show error bad crecentials")
+	override fun showErrorBadCredentials(errorMsgResource: Int) {
+		showSignInError(errorMsgResource)
+	}
+
+	override fun showEmptyCredentialsError(errorMsgResource: Int) {
+		showSignInError(errorMsgResource)
 	}
 
 	override fun showMessagePasswordSent() {
-		super.showToast("show message password sent")
+		TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
 	}
 
 	override fun onSignInSuccess(userModel: UserModel) {
@@ -85,14 +95,8 @@ class LoginActivity :
 		goToMainScreen()
 	}
 
-	override fun showEmptyCredentialsError() {
-		bottomSheetBehavior = BottomSheetBehavior.from(clBottomSheet)
-		tvBottomSheetErrorMessage.text = htmlHelper.fromHtml(R.string.error_empty_credentials_sign_in)
-		bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
-	}
-
-	override fun hideError() {
-		bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
+	override fun hideCredentialsError() {
+		hideSignInError()
 	}
 
 }

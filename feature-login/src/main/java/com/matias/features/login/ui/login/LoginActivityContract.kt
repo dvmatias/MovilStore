@@ -14,7 +14,9 @@ interface LoginActivityContract {
 	 */
 	interface View : BaseContract.View {
 
-		fun showSignInError(errorMsg: String)
+		fun showSignInError(errorMsgResource: Int)
+
+		fun hideSignInError()
 
 		fun goToMainScreen()
 
@@ -32,15 +34,15 @@ interface LoginActivityContract {
 	 */
 	interface SignInFragmentInteractionListener {
 
-		fun showErrorBadCredentials(errorMessageResource: Int)
+		fun showEmptyCredentialsError(errorMsgResource: Int)
+
+		fun showErrorBadCredentials(errorMsgResource: Int)
+
+		fun hideCredentialsError()
 
 		fun showMessagePasswordSent()
 
 		fun onSignInSuccess(userModel: UserModel)
-
-		fun showEmptyCredentialsError()
-
-		fun hideError()
 
 	}
 
