@@ -4,7 +4,7 @@ import com.matias.core.base.mvp.BaseContract
 
 interface SignInFragmentContract {
 
-	interface View: BaseContract.View {
+	interface View : BaseContract.View {
 
 		fun onUserClickLoginWithFacebook()
 
@@ -19,7 +19,6 @@ interface SignInFragmentContract {
 	}
 
 	interface Presenter<V : View> : BaseContract.Presenter<V> {
-
 
 
 	}

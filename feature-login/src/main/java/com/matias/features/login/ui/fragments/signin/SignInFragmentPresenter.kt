@@ -9,5 +9,4 @@ class SignInFragmentPresenter @Inject constructor(
 	SignInFragmentContract.Presenter<SignInFragmentContract.View> {
 
 
-
 }

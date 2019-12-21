@@ -1,6 +1,8 @@
 package com.matias.features.login.ui.login
 
 import com.matias.core.base.mvp.BaseContract
+import com.matias.domain.base.exception.FailureType
+import com.matias.domain.models.user.UserModel
 import com.matias.features.login.ui.fragments.signin.SignInFragment
 
 /**
@@ -13,7 +15,11 @@ interface LoginActivityContract {
 	 */
 	interface View : BaseContract.View {
 
+		fun showEmptyCredentialsError(show: Boolean)
+
 		fun showSignInError(errorMsg: String)
+
+		fun goToMainScreen()
 
 	}
 
@@ -28,10 +34,10 @@ interface LoginActivityContract {
 
 		fun signIn(usernName: String?, password: String?)
 
-		fun handleSignInSuccess()
-		
-		fun handleSignInError()
-		
+		fun handleSignInSuccess(userModel: UserModel)
+
+		fun handleSignInError(failureType: FailureType)
+
 		fun staySignedIn()
 
 	}
@@ -51,13 +57,13 @@ interface LoginActivityContract {
 
 		fun onUserClickDontHaveAccount()
 
-		fun onUserClickSignIn()
-
-		fun goToMainScreen()
+		fun onUserClickSignIn(usernName: String?, password: String?)
 
 		fun showErrorBadCredentials()
 
 		fun showMessagePasswordSent()
+
+		fun hideEmptyCredentialsError()
 
 	}
 

@@ -8,14 +8,14 @@ import com.matias.features.login.di.login.LoginActivitySubComponent
 import dagger.Component
 
 @Component(
-        dependencies = [(BaseComponent::class)],
-        modules = [(LoginModule::class)]
+	dependencies = [(BaseComponent::class)],
+	modules = [(LoginModule::class)]
 )
 @LoginScope
 interface LoginComponent {
-    
-    fun plus(loginActivityModule: LoginActivityModule): LoginActivitySubComponent
 
-    fun plus(signInFragmentModule: SignInFragmentModule): SignInFragmentSubcomponent
-    
+	fun plus(loginActivityModule: LoginActivityModule): LoginActivitySubComponent
+
+	fun plus(signInFragmentModule: SignInFragmentModule): SignInFragmentSubcomponent
+
 }

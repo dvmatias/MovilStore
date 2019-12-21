@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.matias.core.base.mvp.BasePresenterFragment
+import com.matias.core.helpers.SimpleTextWatcher
 import com.matias.features.R
 import com.matias.features.login.di.fragments.signin.SignInFragmentModule
 import com.matias.features.login.di.fragments.signin.SignInFragmentSubcomponent
@@ -45,6 +46,18 @@ class SignInFragment :
 		textForgotPassword.setOnClickListener { onUserClickForgotPassword() }
 		textDontHaveAccount.setOnClickListener { onUserClickDontHaveAccount() }
 		btnSignIn.setOnClickListener { onUserClickSignIn() }
+		inputUserName.addTextChangedListener(object : SimpleTextWatcher() {
+			override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+				super.onTextChanged(s, start, before, count)
+				if (start == 0 && before == 0 && count == 1) listener?.hideEmptyCredentialsError()
+			}
+		})
+		inputPassword.addTextChangedListener(object : SimpleTextWatcher() {
+			override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+				super.onTextChanged(s, start, before, count)
+				if (start == 0 && before == 0 && count == 1) listener?.hideEmptyCredentialsError()
+			}
+		})
 	}
 
 	/**
@@ -85,7 +98,7 @@ class SignInFragment :
 	}
 
 	override fun onUserClickSignIn() {
-		listener?.onUserClickSignIn()
+		listener?.onUserClickSignIn(inputUserName.text.toString(), inputPassword.text.toString())
 	}
 
 }

@@ -1,12 +1,14 @@
 package com.matias.features.login.ui.login
 
 import android.os.Bundle
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.matias.core.base.mvp.BasePresenterActivity
 import com.matias.features.R
 import com.matias.features.login.di.login.LoginActivityModule
 import com.matias.features.login.di.login.LoginActivitySubComponent
 import com.matias.features.login.ui.LoginUiComponent
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.bottom_sheet_error.*
 import javax.inject.Inject
 
 
@@ -18,6 +20,8 @@ class LoginActivity :
 	lateinit var pagerAdapter: LoginPagerAdapter
 
 	private lateinit var tabTitles: List<String>
+
+	private lateinit var bottomSheetBehavior: BottomSheetBehavior<*>
 
 	override fun bindComponent(): LoginActivitySubComponent =
 		LoginUiComponent.component.plus(LoginActivityModule(this))
@@ -31,6 +35,7 @@ class LoginActivity :
 
 		setupPager()
 		setupTabLayout()
+		bottomSheetBehavior = BottomSheetBehavior.from(clBottomSheet)
 	}
 
 	private fun setupPager() {
@@ -48,8 +53,19 @@ class LoginActivity :
 	 * [LoginActivityContract.View] implementation
 	 */
 
+	override fun showEmptyCredentialsError(show: Boolean) {
+		bottomSheetBehavior = BottomSheetBehavior.from(clBottomSheet)
+//		tvBottomSheetErrorMessage.text = htmlHelper.fromHtml(stringResource)
+		bottomSheetBehavior.state =
+			if (show) BottomSheetBehavior.STATE_EXPANDED else BottomSheetBehavior.STATE_COLLAPSED
+	}
+
 	override fun showSignInError(errorMsg: String) {
 		TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+	}
+
+	override fun goToMainScreen() {
+		super.showToast("go to main screen")
 	}
 
 	/**
@@ -72,12 +88,8 @@ class LoginActivity :
 		super.showToast("user click don't have account")
 	}
 
-	override fun onUserClickSignIn() {
-		super.showToast("user click sign in")
-	}
-
-	override fun goToMainScreen() {
-		super.showToast("go to main screen")
+	override fun onUserClickSignIn(usernName: String?, password: String?) {
+		presenter.signIn(usernName, password)
 	}
 
 	override fun showErrorBadCredentials() {
@@ -86,5 +98,9 @@ class LoginActivity :
 
 	override fun showMessagePasswordSent() {
 		super.showToast("show message password sent")
+	}
+
+	override fun hideEmptyCredentialsError() {
+		showEmptyCredentialsError(false)
 	}
 }

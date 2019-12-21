@@ -8,15 +8,15 @@ import dagger.Provides
 
 @Module
 class LoginActivityModule(private var activity: AppCompatActivity) {
-    
-    @Provides
-    fun provideActivity(): AppCompatActivity = activity
-    
-    @Provides
-    fun provideFragmentManager(activity: AppCompatActivity): FragmentManager =
-            activity.supportFragmentManager
-    
-    @Provides
-    fun provideLoginPagerAdapter(fm: FragmentManager): LoginPagerAdapter = LoginPagerAdapter(fm, 0)
-    
+
+	@Provides
+	fun provideActivity(): AppCompatActivity = activity
+
+	@Provides
+	fun provideFragmentManager(activity: AppCompatActivity): FragmentManager =
+		activity.supportFragmentManager
+
+	@Provides
+	fun provideLoginPagerAdapter(fm: FragmentManager): LoginPagerAdapter = LoginPagerAdapter(fm, 0)
+
 }

@@ -13,9 +13,9 @@ class SignUpFragment : Fragment() {
 	private var listener: OnFragmentInteractionListener? = null
 
 	override fun onCreateView(
-			inflater: LayoutInflater,
-			container: ViewGroup?,
-			savedInstanceState: Bundle?
+		inflater: LayoutInflater,
+		container: ViewGroup?,
+		savedInstanceState: Bundle?
 	): View? = inflater.inflate(R.layout.fragment_sign_up, container, false)
 
 	fun onButtonPressed(uri: Uri) {
@@ -34,7 +34,7 @@ class SignUpFragment : Fragment() {
 	companion object {
 		@JvmStatic
 		fun newInstance(): SignUpFragment =
-				SignUpFragment()
+			SignUpFragment()
 	}
 
 }
