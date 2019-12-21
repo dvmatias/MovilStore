@@ -1,7 +1,6 @@
 package com.matias.features.login.ui.login
 
 import com.matias.core.base.mvp.BaseContract
-import com.matias.domain.base.exception.FailureType
 import com.matias.domain.models.user.UserModel
 import com.matias.features.login.ui.fragments.signin.SignInFragment
 
@@ -15,8 +14,6 @@ interface LoginActivityContract {
 	 */
 	interface View : BaseContract.View {
 
-		fun showEmptyCredentialsError(show: Boolean)
-
 		fun showSignInError(errorMsg: String)
 
 		fun goToMainScreen()
@@ -26,21 +23,7 @@ interface LoginActivityContract {
 	/**
 	 * @see LoginActivityPresenter client
 	 */
-	interface Presenter<V : View> : BaseContract.Presenter<V> {
-
-		fun loginWithFacebook()
-
-		fun loginWithGoogle()
-
-		fun signIn(usernName: String?, password: String?)
-
-		fun handleSignInSuccess(userModel: UserModel)
-
-		fun handleSignInError(failureType: FailureType)
-
-		fun staySignedIn()
-
-	}
+	interface Presenter<V : View> : BaseContract.Presenter<V>
 
 	/**
 	 * Interface to communicate user events from [SignInFragment] to [LoginActivity].
@@ -49,21 +32,15 @@ interface LoginActivityContract {
 	 */
 	interface SignInFragmentInteractionListener {
 
-		fun onUserClickLoginWithFacebook()
-
-		fun onUserClickLoginWithGoogle()
-
-		fun onUserClickForgotPassword()
-
-		fun onUserClickDontHaveAccount()
-
-		fun onUserClickSignIn(usernName: String?, password: String?)
-
-		fun showErrorBadCredentials()
+		fun showErrorBadCredentials(errorMessageResource: Int)
 
 		fun showMessagePasswordSent()
 
-		fun hideEmptyCredentialsError()
+		fun onSignInSuccess(userModel: UserModel)
+
+		fun showEmptyCredentialsError()
+
+		fun hideError()
 
 	}
 

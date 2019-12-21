@@ -8,7 +8,7 @@ import retrofit2.http.Query
 interface SignInApi {
 
 	companion object {
-		private const val CONTROLLER_SIGNIN = "users/"
+		private const val CONTROLLER_SIGNIN = "user/"
 
 		private const val EP_SIGN_IN = "${CONTROLLER_SIGNIN}signin"
 

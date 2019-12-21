@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import androidx.core.app.ActivityOptionsCompat
-import com.matias.core.base.helpers.startVectorAnimation
+import com.matias.core.helpers.startVectorAnimation
 import com.matias.core.base.mvp.BasePresenterActivity
 import com.matias.feature_splash.R
 import com.matias.features.splash.di.splash.SplashActivityModule

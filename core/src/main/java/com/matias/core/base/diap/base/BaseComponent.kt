@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import com.google.gson.Gson
 import com.matias.core.base.diap.coroutineDispatcher.CoroutineModule
+import com.matias.core.base.diap.helpers.HelpersModule
 import com.matias.core.base.diap.network.NetworkModule
 import com.matias.core.base.diap.storage.StorageModule
 import com.matias.core.navigator.Navigator
@@ -18,6 +19,7 @@ import javax.inject.Singleton
 @Component(modules = [
     BaseModule::class,
     NetworkModule::class,
+    HelpersModule::class,
     StorageModule::class,
     CoroutineModule::class
 ])

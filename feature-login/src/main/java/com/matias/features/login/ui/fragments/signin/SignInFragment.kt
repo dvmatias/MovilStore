@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.matias.core.base.mvp.BasePresenterFragment
 import com.matias.core.helpers.SimpleTextWatcher
+import com.matias.domain.models.user.UserModel
 import com.matias.features.R
 import com.matias.features.login.di.fragments.signin.SignInFragmentModule
 import com.matias.features.login.di.fragments.signin.SignInFragmentSubcomponent
@@ -49,13 +50,13 @@ class SignInFragment :
 		inputUserName.addTextChangedListener(object : SimpleTextWatcher() {
 			override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
 				super.onTextChanged(s, start, before, count)
-				if (start == 0 && before == 0 && count == 1) listener?.hideEmptyCredentialsError()
+				if (start == 0 && before == 0 && count == 1) onEmptyCredentialsError()
 			}
 		})
 		inputPassword.addTextChangedListener(object : SimpleTextWatcher() {
 			override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
 				super.onTextChanged(s, start, before, count)
-				if (start == 0 && before == 0 && count == 1) listener?.hideEmptyCredentialsError()
+				if (start == 0 && before == 0 && count == 1) onEmptyCredentialsError()
 			}
 		})
 	}
@@ -82,23 +83,40 @@ class SignInFragment :
 	 */
 
 	override fun onUserClickLoginWithFacebook() {
-		listener?.onUserClickLoginWithFacebook()
+		presenter.loginWithFacebook()
 	}
 
 	override fun onUserClickLoginWithGoogle() {
-		listener?.onUserClickLoginWithGoogle()
+		presenter.loginWithGoogle()
 	}
 
 	override fun onUserClickForgotPassword() {
-		listener?.onUserClickForgotPassword()
+		// TODO()
 	}
 
 	override fun onUserClickDontHaveAccount() {
-		listener?.onUserClickDontHaveAccount()
+		// TODO()
 	}
 
 	override fun onUserClickSignIn() {
-		listener?.onUserClickSignIn(inputUserName.text.toString(), inputPassword.text.toString())
+		presenter.signIn(inputUserName.text.toString(), inputPassword.text.toString())
+	}
+
+	override fun onSignInSuccess(userModel: UserModel) {
+		listener?.onSignInSuccess(userModel)
+	}
+
+	override fun onEmptyCredentialsError() {
+		listener?.showEmptyCredentialsError()
+	}
+
+	override fun onWrongCredentialsError(errorCode: Int) {
+		val errorMessageResource: Int = when (errorCode) {
+			404 -> R.string.error_user_not_found_sign_in
+			401 -> R.string.error_wrong_password_sign_in
+			else -> -1
+		}
+		listener?.showErrorBadCredentials(errorMessageResource)
 	}
 
 }

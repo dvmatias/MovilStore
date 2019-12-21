@@ -1,6 +1,7 @@
 <resources>
 	<string name="app_name">Feature Login</string>
 
-	<!-- TODO: Remove or change this placeholder text -->
-	<string name="hello_blank_fragment">Hello blank fragment</string>
+	<string name="error_empty_credentials_sign_in">You must provide a user mail or email and a password to enter.</string>
+	<string name="error_user_not_found_sign_in">We can not find the user. Please check if you are using the correct email or username.</string>
+	<string name="error_wrong_password_sign_in">Wrong password. Please check the password you entered and try again.</string>
 </resources>
