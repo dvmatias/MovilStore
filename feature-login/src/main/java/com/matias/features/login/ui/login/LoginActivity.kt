@@ -2,6 +2,7 @@ package com.matias.features.login.ui.login
 
 import android.os.Bundle
 import android.os.Handler
+import android.view.View
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.matias.core.base.mvp.BasePresenterActivity
 import com.matias.core.helpers.HtmlHelper
@@ -63,18 +64,36 @@ class LoginActivity :
 	 */
 
 	override fun showSignInError(errorMsgResource: Int) {
+		clBottomSheet.requestFocus()
 		bottomSheetBehavior = BottomSheetBehavior.from(clBottomSheet)
 		tvBottomSheetErrorMessage.text = htmlHelper.fromHtml(errorMsgResource)
 		bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
-		Handler().postDelayed( {hideSignInError()}, HIDE_SIGN_IN_ERROR_DELAY )
+		Handler().postDelayed({ hideSignInError() }, HIDE_SIGN_IN_ERROR_DELAY)
 	}
 
 	override fun hideSignInError() {
+		clBottomSheet.clearFocus()
 		bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
 	}
 
 	override fun goToMainScreen() {
 		super.showToast("go to main screen")
+	}
+
+	override fun showLoading(show: Boolean) {
+		viewLoading.apply {
+			visibility = if (show) View.VISIBLE else View.GONE
+			requestFocus()
+		}
+	}
+
+	override fun onStop() {
+		super.onStop()
+		finish()
+	}
+
+	override fun onBackPressed() {
+		finish()
 	}
 
 	/**

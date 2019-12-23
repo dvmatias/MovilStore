@@ -15,7 +15,7 @@
 		<androidx.appcompat.widget.AppCompatImageView
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
-			android:alpha="0.4"
+			android:alpha="@dimen/loginActivityBgrImgAlpha"
 			android:contentDescription="@null"
 			android:scaleType="centerCrop"
 			android:src="@drawable/bgr_login_activity" />
@@ -27,7 +27,7 @@
 			android:layout_height="wrap_content"
 			android:layout_marginTop="@dimen/dimen_42dp"
 			android:adjustViewBounds="true"
-			android:alpha="0.8"
+			android:alpha="@dimen/loginActivityLogoImgAlpha"
 			android:contentDescription="@null"
 			android:elevation="@dimen/elevation_1dp"
 			android:scaleType="centerInside"
@@ -43,8 +43,8 @@
 			android:id="@+id/tabs"
 			style="@style/TabLayoutStyle"
 			android:layout_width="wrap_content"
-			android:layout_height="32dp"
-			android:layout_marginTop="42dp"
+			android:layout_height="@dimen/dimen_32dp"
+			android:layout_marginTop="@dimen/dimen_42dp"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintTop_toBottomOf="@id/imageLogoName" />
@@ -61,8 +61,16 @@
 
 	</androidx.constraintlayout.widget.ConstraintLayout>
 
-	<!-- Error bottom sheet -->
+	<!-- BOTTOM SHEET SIGN IN ERROR -->
 	<include layout="@layout/bottom_sheet_error" />
+
+	<!-- LOADING VIEW -->
+	<com.matias.components.loading.StylingLoadingHorizontal
+		android:id="@+id/viewLoading"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginTop="@dimen/dimen_24dp"
+		android:visibility="gone" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

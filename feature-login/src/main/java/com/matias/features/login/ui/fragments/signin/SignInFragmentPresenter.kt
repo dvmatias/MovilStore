@@ -20,6 +20,7 @@ class SignInFragmentPresenter @Inject constructor(
 	}
 
 	override fun signIn(usernName: String?, password: String?) {
+		view?.showLoading(true)
 		if (usernName.isNullOrEmpty() || password.isNullOrEmpty()) {
 			handleSignInError(FailureType.SignInEmptyCredentialsError())
 			return
@@ -31,6 +32,7 @@ class SignInFragmentPresenter @Inject constructor(
 	}
 
 	override fun handleSignInSuccess(userModel: UserModel) {
+		view?.showLoading(false)
 		view?.onSignInSuccess(userModel)
 	}
 
@@ -40,6 +42,7 @@ class SignInFragmentPresenter @Inject constructor(
 				is FailureType.SignInEmptyCredentialsError -> { onEmptyCredentialsError() }
 				is FailureType.ServerError -> { onWrongCredentialsError(failureType.errorCode) }
 			}
+			showLoading(false)
 		}
 	}
 

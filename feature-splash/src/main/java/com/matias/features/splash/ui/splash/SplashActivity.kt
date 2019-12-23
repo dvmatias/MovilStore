@@ -62,12 +62,16 @@ class SplashActivity :
 
 	override fun goToMainScreen() {
 		super.showToast("Go to main screen.")
+		finish()
 	}
 
 	override fun goToLoginScreen() {
 		val options = ActivityOptionsCompat
 			.makeSceneTransitionAnimation(this, imageLogoName as View, "image_logo_name")
-		Handler().postDelayed({ navigator.toLoginScreen(this, options) }, 500)
+		Handler().postDelayed({
+			navigator.toLoginScreen(this, options)
+			finish()
+		}, 500)
 	}
 
 }

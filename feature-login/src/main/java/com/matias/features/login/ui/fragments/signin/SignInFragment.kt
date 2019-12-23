@@ -50,13 +50,13 @@ class SignInFragment :
 		inputUserName.addTextChangedListener(object : SimpleTextWatcher() {
 			override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
 				super.onTextChanged(s, start, before, count)
-				if (start == 0 && before == 0 && count == 1) listener?.hideCredentialsError()
+				listener?.hideCredentialsError()
 			}
 		})
 		inputPassword.addTextChangedListener(object : SimpleTextWatcher() {
 			override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
 				super.onTextChanged(s, start, before, count)
-				if (start == 0 && before == 0 && count == 1) listener?.hideCredentialsError()
+				listener?.hideCredentialsError()
 			}
 		})
 	}
@@ -119,4 +119,7 @@ class SignInFragment :
 		listener?.showErrorBadCredentials(errorMessageResource)
 	}
 
+	override fun showLoading(show: Boolean) {
+		listener?.showLoading(show)
+	}
 }

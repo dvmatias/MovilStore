@@ -20,6 +20,8 @@ interface LoginActivityContract {
 
 		fun goToMainScreen()
 
+		fun showLoading(show: Boolean)
+
 	}
 
 	/**
@@ -43,6 +45,8 @@ interface LoginActivityContract {
 		fun showMessagePasswordSent()
 
 		fun onSignInSuccess(userModel: UserModel)
+
+		fun showLoading(show: Boolean)
 
 	}
 

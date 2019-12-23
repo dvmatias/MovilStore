@@ -24,6 +24,8 @@ interface SignInFragmentContract {
 
 		fun onWrongCredentialsError(errorCode: Int)
 
+		fun showLoading(show: Boolean)
+
 	}
 
 	interface Presenter<V : View> : BaseContract.Presenter<V> {
