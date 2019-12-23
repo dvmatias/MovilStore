@@ -20,9 +20,10 @@
 	<style name="TextSignInSocialNetwork" parent="Widget.AppCompat.TextView">
 		<item name="android:layout_marginStart">@dimen/dimen_14dp</item>
 		<item name="android:fontFamily">@font/mark_bold</item>
-		<item name="android:letterSpacing">0.07</item>
+		<item name="android:letterSpacing">0.03</item>
 		<item name="android:textColor">@color/colorSocialNetworkLabel</item>
 		<item name="android:textSize">@dimen/text_14sp</item>
+		<item name="android:gravity">center</item>
 	</style>
 
 	<!-- SIGN IN EDIT TEXT - INPUT FIELDS -->
@@ -72,7 +73,7 @@
 	<!-- TITLE -->
 	<style name="TitleTextStyle" parent="Widget.AppCompat.TextView">
 		<item name="android:textColor">@color/colorBtnTextLabel</item>
-		<item name="android:textSize">@dimen/text_26sp</item>
+		<item name="android:textSize">@dimen/text_30sp</item>
 		<item name="android:fontFamily">@font/mark_book</item>
 	</style>
 

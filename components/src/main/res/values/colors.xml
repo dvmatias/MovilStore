@@ -21,7 +21,7 @@
 
     <!-- LOGIN ACTIVITY -->
     <color name="colorLoginActivityBackground">#000000</color>
-    <color name="colorSocialNetworkLabel">#CECECE</color>
+    <color name="colorSocialNetworkLabel">#1A1A1A</color>
     <color name="colorBtnTextLabel">#FFF</color>
     <color name="coloEditTextHint">#898989</color>
     <color name="coloEditTextInput">#F3F3F3</color>
