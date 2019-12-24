@@ -12,11 +12,11 @@ class SignInFragmentPresenter @Inject constructor(
 	SignInFragmentContract.Presenter<SignInFragmentContract.View> {
 
 	override fun loginWithFacebook() {
-		TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+		// TODO
 	}
 
 	override fun loginWithGoogle() {
-		TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+		// TODO
 	}
 
 	override fun signIn(usernName: String?, password: String?) {

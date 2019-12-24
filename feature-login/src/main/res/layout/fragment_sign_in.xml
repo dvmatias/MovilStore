@@ -166,14 +166,14 @@
 		app:switchPadding="@dimen/dimen_6dp" />
 
 	<!-- BUTTON SIGN IN -->
-	<androidx.appcompat.widget.AppCompatButton
+	<com.matias.components.button.flowbutton.StylingFlowButton
 		android:id="@+id/btnSignIn"
-		style="@style/LoginButtonStyle"
-		android:layout_width="match_parent"
-		android:layout_height="@dimen/dimen_52dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="2dp"
 		android:layout_marginBottom="@dimen/dimen_26dp"
-		android:text="@string/btn_sign_in_label"
-		app:layout_constraintBottom_toBottomOf="parent" />
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"/>
 
 	<!-- BUTTON TEXT FORGOT PASSWORD -->
 	<androidx.appcompat.widget.AppCompatTextView
