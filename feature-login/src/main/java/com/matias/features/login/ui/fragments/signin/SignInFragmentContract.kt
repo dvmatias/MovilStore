@@ -26,6 +26,8 @@ interface SignInFragmentContract {
 
 		fun showLoading(show: Boolean)
 
+		fun showPassword(show: Boolean)
+
 	}
 
 	interface Presenter<V : View> : BaseContract.Presenter<V> {

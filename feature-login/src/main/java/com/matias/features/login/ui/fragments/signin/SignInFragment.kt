@@ -2,6 +2,7 @@ package com.matias.features.login.ui.fragments.signin
 
 import android.content.Context
 import android.os.Bundle
+import android.text.method.PasswordTransformationMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,6 +21,8 @@ class SignInFragment :
 	SignInFragmentContract.View {
 
 	private var listener: LoginActivityContract.SignInFragmentInteractionListener? = null
+
+	private var showPassword = false
 
 	companion object {
 		@JvmStatic
@@ -59,6 +62,22 @@ class SignInFragment :
 				listener?.hideCredentialsError()
 			}
 		})
+		btnShowHidePassword.setOnClickListener{ handleBtnShowHidePasswordClick() }
+	}
+
+	private fun handleBtnShowHidePasswordClick() {
+		if (!inputPassword.text.isNullOrEmpty()) {
+			showPassword = !showPassword
+			val imageResource = when (showPassword) {
+				true -> { R.drawable.ic_show_password_24 }
+				false -> { R.drawable.ic_hide_password_24 }
+			}
+			btnShowHidePassword.setImageResource(imageResource)
+		} else {
+			showPassword = false
+			btnShowHidePassword.setImageResource(R.drawable.ic_hide_password_24)
+		}
+		showPassword(showPassword)
 	}
 
 	/**
@@ -121,5 +140,9 @@ class SignInFragment :
 
 	override fun showLoading(show: Boolean) {
 		listener?.showLoading(show)
+	}
+
+	override fun showPassword(show: Boolean) {
+		inputPassword.transformationMethod = if (show) null else PasswordTransformationMethod()
 	}
 }

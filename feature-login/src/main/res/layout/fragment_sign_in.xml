@@ -149,8 +149,17 @@
 		android:imeOptions="actionDone"
 		android:inputType="textPassword|textWebPassword"
 		app:layout_constraintBottom_toTopOf="@+id/switchStaySignedIn"
-		app:layout_constraintTop_toBottomOf="@+id/inputUserName"
-		tools:layout_editor_absoluteX="36dp" />
+		app:layout_constraintTop_toBottomOf="@+id/inputUserName" />
+
+	<androidx.appcompat.widget.AppCompatImageView
+		android:id="@+id/btnShowHidePassword"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/ic_hide_password_24"
+		app:layout_constraintEnd_toEndOf="@id/inputPassword"
+		app:layout_constraintTop_toTopOf="@id/inputPassword"
+		app:layout_constraintBottom_toBottomOf="@id/inputPassword"
+		android:layout_marginEnd="@dimen/dimen_12dp"/>
 
 	<!-- SWITCH STAY SIGNED IN -->
 	<androidx.appcompat.widget.SwitchCompat
