@@ -49,13 +49,13 @@ class LoginActivity :
 	}
 
 	private fun setupPager() {
-		viewPager.adapter = pagerAdapter
+		pager.adapter = pagerAdapter
 	}
 
 	private fun setupTabLayout() {
 		tabTitles =
 			listOf(getString(R.string.tab_sign_in_label), getString(R.string.tab_sign_up_label))
-		tabs.setupWithViewPager(viewPager)
+		tabs.setupWithViewPager(pager)
 		tabs.setTitlesAtTabs(tabTitles)
 	}
 
@@ -93,7 +93,10 @@ class LoginActivity :
 	}
 
 	override fun onBackPressed() {
-		finish()
+		when (LoginPagerAdapter.PAGE.SIGN_IN.position == pager.currentItem) {
+			true -> pager.currentItem = LoginPagerAdapter.PAGE.SIGN_IN.position
+			else -> finish()
+		}
 	}
 
 	/**
@@ -115,7 +118,7 @@ class LoginActivity :
 	override fun onSignInSuccess(userModel: UserModel) {
 		super.showToast("onSignInSuccess :: $userModel")
 		// TODO() mannage 'stay signed in' option.
-		// TODO() Hide loading
+		showLoading(false)
 		goToMainScreen()
 	}
 
