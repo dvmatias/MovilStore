@@ -10,12 +10,12 @@ import com.matias.movilstore.MainActivity
 
 class NavigatorImpl : Navigator {
 
-    override fun toMainScreen(activityOrigin: Activity, options: ActivityOptionsCompat?) {
-        activityOrigin.navigateTo<MainActivity>(null, options)
-    }
+	override fun toMainScreen(activityOrigin: Activity, bundle: Bundle?, options: ActivityOptionsCompat?) {
+		activityOrigin.navigateTo<MainActivity>(bundle, options)
+	}
 
-    override fun toLoginScreen(activityOrigin: Activity, options: ActivityOptionsCompat?) {
-        activityOrigin.navigateTo<LoginActivity>(null, options)
-    }
+	override fun toLoginScreen(activityOrigin: Activity, bundle: Bundle?, options: ActivityOptionsCompat?) {
+		activityOrigin.navigateTo<LoginActivity>(bundle, options)
+	}
 
 }

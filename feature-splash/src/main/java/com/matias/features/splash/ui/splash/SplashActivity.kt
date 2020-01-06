@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import androidx.core.app.ActivityOptionsCompat
-import com.matias.core.helpers.startVectorAnimation
 import com.matias.core.base.mvp.BasePresenterActivity
+import com.matias.core.helpers.startVectorAnimation
 import com.matias.feature_splash.R
 import com.matias.features.splash.di.splash.SplashActivityModule
 import com.matias.features.splash.di.splash.SplashActivitySubComponent
@@ -69,7 +69,7 @@ class SplashActivity :
 		val options = ActivityOptionsCompat
 			.makeSceneTransitionAnimation(this, imageLogoName as View, "image_logo_name")
 		Handler().postDelayed({
-			navigator.toLoginScreen(this, options)
+			navigator.toLoginScreen(this, null, options)
 			finish()
 		}, 500)
 	}

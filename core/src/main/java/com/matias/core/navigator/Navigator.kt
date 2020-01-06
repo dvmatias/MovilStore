@@ -1,12 +1,13 @@
 package com.matias.core.navigator
 
 import android.app.Activity
+import android.os.Bundle
 import androidx.core.app.ActivityOptionsCompat
 
 interface Navigator {
-    
-    fun toMainScreen(activityOrigin: Activity, options: ActivityOptionsCompat?)
-    
-    fun toLoginScreen(activityOrigin: Activity, options: ActivityOptionsCompat?)
-    
+
+	fun toMainScreen(activityOrigin: Activity, bundle: Bundle?, options: ActivityOptionsCompat?)
+
+	fun toLoginScreen(activityOrigin: Activity, bundle: Bundle?, options: ActivityOptionsCompat?)
+
 }

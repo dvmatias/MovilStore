@@ -6,14 +6,9 @@ import android.os.Bundle
 import androidx.core.app.ActivityCompat
 import androidx.core.app.ActivityOptionsCompat
 
-inline fun <reified T : Activity> Activity.navigateTo(
-        bundle: Bundle?,
-        options: ActivityOptionsCompat?
-) {
+inline fun <reified T : Activity> Activity.navigateTo(bundle: Bundle?, options: ActivityOptionsCompat?) {
     val intent = Intent(this, T::class.java)
-    bundle?.let {
-        intent.putExtras(bundle)
-    }
+    bundle?.let { intent.putExtras(bundle) }
     overridePendingTransition(0, 0)
     ActivityCompat.startActivity(this, intent, options?.toBundle())
 }
