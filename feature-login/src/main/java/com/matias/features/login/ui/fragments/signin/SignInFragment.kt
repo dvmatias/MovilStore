@@ -118,7 +118,7 @@ class SignInFragment :
 	}
 
 	override fun onUserClickSignIn() {
-		presenter.signIn(inputUserName.text.toString(), inputPassword.text.toString())
+		presenter.signIn(inputUserName.text.toString(), inputPassword.text.toString(), switchStaySignedIn.isChecked)
 	}
 
 	override fun onSignInSuccess(userModel: UserModel) {

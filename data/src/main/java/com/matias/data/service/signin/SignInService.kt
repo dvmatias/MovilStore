@@ -10,7 +10,7 @@ class SignInService constructor(retrofit: Retrofit): SignInApi {
 	
 	private val signInApi by lazy { retrofit.create(SignInApi::class.java) }
 	
-	override fun signIn(username: String, password: String): Call<UserEntity> =
-			signInApi.signIn(username, password)
+	override fun signIn(username: String, password: String, staySignedIn: Boolean): Call<UserEntity> =
+			signInApi.signIn(username, password, staySignedIn)
 		
 }

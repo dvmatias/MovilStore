@@ -13,6 +13,7 @@ import com.matias.features.login.di.login.LoginActivitySubComponent
 import com.matias.features.login.ui.LoginUiComponent
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.bottom_sheet_error.*
+import kotlinx.android.synthetic.main.fragment_sign_in.*
 import javax.inject.Inject
 
 class LoginActivity :
@@ -116,8 +117,6 @@ class LoginActivity :
 	}
 
 	override fun onSignInSuccess(userModel: UserModel) {
-		super.showToast("onSignInSuccess :: $userModel")
-		// TODO() mannage 'stay signed in' option.
 		showLoading(false)
 		goToMainScreen()
 	}

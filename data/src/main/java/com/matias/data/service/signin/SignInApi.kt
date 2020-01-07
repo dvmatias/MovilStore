@@ -14,12 +14,14 @@ interface SignInApi {
 
 		private const val QUERY_USERNAME = "username"
 		private const val QUERY_PASSWORD = "password"
+		private const val QUERY_STAY_SIGNED_IN = "stay_signed_in"
 	}
 
 	@POST(EP_SIGN_IN)
 	fun signIn(
 		@Query(QUERY_USERNAME) username: String,
-		@Query(QUERY_PASSWORD) password: String
+		@Query(QUERY_PASSWORD) password: String,
+		@Query(QUERY_STAY_SIGNED_IN) staySignedIn: Boolean
 	): Call<UserEntity>
 
 }

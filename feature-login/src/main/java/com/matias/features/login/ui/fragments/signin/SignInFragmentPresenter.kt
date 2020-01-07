@@ -19,7 +19,7 @@ class SignInFragmentPresenter @Inject constructor(
 		// TODO
 	}
 
-	override fun signIn(usernName: String?, password: String?) {
+	override fun signIn(usernName: String?, password: String?, staySignedIn: Boolean) {
 		view?.showLoading(true)
 		if (usernName.isNullOrEmpty() || password.isNullOrEmpty()) {
 			handleSignInError(FailureType.SignInEmptyCredentialsError())
@@ -27,7 +27,7 @@ class SignInFragmentPresenter @Inject constructor(
 		}
 		signInUseCase(
 			{ it.either(::handleSignInError, ::handleSignInSuccess) },
-			SignInUseCase.Params(usernName, password)
+			SignInUseCase.Params(usernName, password, staySignedIn)
 		)
 	}
 

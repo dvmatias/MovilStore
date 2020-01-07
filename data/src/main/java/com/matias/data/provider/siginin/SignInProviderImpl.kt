@@ -14,8 +14,8 @@ class SignInProviderImpl(
 		networkHandler: NetworkHandler
 ) : SignInProvider, NetworkProvider(networkHandler) {
 	
-	override fun signIn(username: String, password: String): Either<FailureType, UserModel> =
-			request(signInApi.signIn(username, password)) {
+	override fun signIn(username: String, password: String, staySignedIn: Boolean): Either<FailureType, UserModel> =
+			request(signInApi.signIn(username, password, staySignedIn)) {
 				UserMapper().transformEntityToModel(it)
 			}
 	

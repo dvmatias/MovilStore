@@ -36,7 +36,7 @@ interface SignInFragmentContract {
 
 		fun loginWithGoogle()
 
-		fun signIn(usernName: String?, password: String?)
+		fun signIn(usernName: String?, password: String?, staySignedIn: Boolean)
 
 		fun handleSignInSuccess(userModel: UserModel)
 
