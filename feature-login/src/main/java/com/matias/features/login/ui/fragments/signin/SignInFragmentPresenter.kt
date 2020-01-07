@@ -20,30 +20,32 @@ class SignInFragmentPresenter @Inject constructor(
 	}
 
 	override fun signIn(usernName: String?, password: String?, staySignedIn: Boolean) {
-		view?.showLoading(true)
-		if (usernName.isNullOrEmpty() || password.isNullOrEmpty()) {
-			handleSignInError(FailureType.SignInEmptyCredentialsError())
-			return
+		when (usernName.isNullOrEmpty() || password.isNullOrEmpty()) {
+			true -> handleSignInError(FailureType.SignInEmptyCredentialsError())
+			false -> {
+				view?.apply { showLoading(true); showPassword(false) }
+				signInUseCase(
+					{ it.either(::handleSignInError, ::handleSignInSuccess) },
+					SignInUseCase.Params(usernName, password, staySignedIn)
+				)
+			}
 		}
-		signInUseCase(
-			{ it.either(::handleSignInError, ::handleSignInSuccess) },
-			SignInUseCase.Params(usernName, password, staySignedIn)
-		)
 	}
 
 	override fun handleSignInSuccess(userModel: UserModel) {
-		view?.showLoading(false)
-		view?.onSignInSuccess(userModel)
+		view?.apply {
+			showLoading(false)
+			onSignInSuccess(userModel)
+		}
 	}
 
 	override fun handleSignInError(failureType: FailureType) {
 		view?.apply {
 			when (failureType) {
-				is FailureType.SignInEmptyCredentialsError -> { onEmptyCredentialsError() }
-				is FailureType.ServerError -> { onWrongCredentialsError(failureType.errorCode) }
+				is FailureType.SignInEmptyCredentialsError -> onEmptyCredentialsError()
+				is FailureType.ServerError -> onWrongCredentialsError(failureType.errorCode)
 			}
 			showLoading(false)
 		}
 	}
-
 }

@@ -22,7 +22,7 @@ class SignInFragment :
 
 	private var listener: LoginActivityContract.SignInFragmentInteractionListener? = null
 
-	private var showPassword = false
+	private var isPasswordVisible = false
 
 	companion object {
 		@JvmStatic
@@ -66,18 +66,11 @@ class SignInFragment :
 	}
 
 	private fun handleBtnShowHidePasswordClick() {
-		if (!inputPassword.text.isNullOrEmpty()) {
-			showPassword = !showPassword
-			val imageResource = when (showPassword) {
-				true -> { R.drawable.ic_show_password_24 }
-				false -> { R.drawable.ic_hide_password_24 }
-			}
-			btnShowHidePassword.setImageResource(imageResource)
-		} else {
-			showPassword = false
-			btnShowHidePassword.setImageResource(R.drawable.ic_hide_password_24)
+		when (!inputPassword.text.isNullOrEmpty()) {
+			true -> { showPassword(!isPasswordVisible) }
+			false -> { showPassword(false) }
 		}
-		showPassword(showPassword)
+
 	}
 
 	/**
@@ -143,6 +136,12 @@ class SignInFragment :
 	}
 
 	override fun showPassword(show: Boolean) {
-		inputPassword.transformationMethod = if (show) null else PasswordTransformationMethod()
+		isPasswordVisible = show
+		val imageResource = when (isPasswordVisible) {
+			true -> R.drawable.ic_show_password_24
+			false -> R.drawable.ic_hide_password_24
+		}
+		btnShowHidePassword.setImageResource(imageResource)
+		inputPassword.transformationMethod = if (isPasswordVisible) null else PasswordTransformationMethod()
 	}
 }
