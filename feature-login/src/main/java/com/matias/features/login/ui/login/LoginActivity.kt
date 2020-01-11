@@ -94,7 +94,7 @@ class LoginActivity :
 	}
 
 	override fun onBackPressed() {
-		when (LoginPagerAdapter.PAGE.SIGN_IN.position == pager.currentItem) {
+		when (LoginPagerAdapter.PAGE.SIGN_IN.position != pager.currentItem) {
 			true -> pager.currentItem = LoginPagerAdapter.PAGE.SIGN_IN.position
 			else -> finish()
 		}
