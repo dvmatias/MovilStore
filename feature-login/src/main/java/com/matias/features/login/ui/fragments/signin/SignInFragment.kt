@@ -17,10 +17,13 @@ import com.matias.features.login.ui.login.LoginActivityContract
 import kotlinx.android.synthetic.main.fragment_sign_in.*
 
 class SignInFragment :
-	BasePresenterFragment<SignInFragment, SignInFragmentPresenter, SignInFragmentSubcomponent>(),
+	BasePresenterFragment<
+			SignInFragment,
+			SignInFragmentPresenter,
+			SignInFragmentSubcomponent>(),
 	SignInFragmentContract.View {
 
-	private var listener: LoginActivityContract.SignInFragmentInteractionListener? = null
+	private var listener: LoginActivityContract.FragmentInteractionListener? = null
 
 	private var isPasswordVisible = false
 
@@ -73,16 +76,12 @@ class SignInFragment :
 
 	}
 
-	/**
-	 * Called when a fragment is first attached to its context.
-	 * [.onCreate] will be called after this.
-	 */
 	override fun onAttach(context: Context) {
 		super.onAttach(context)
-		if (context is LoginActivityContract.SignInFragmentInteractionListener)
+		if (context is LoginActivityContract.FragmentInteractionListener)
 			listener = context
 		else
-			throw IllegalAccessException("Context $context should be implement LoginActivityContract.SignInFragmentInteractionListener")
+			throw IllegalAccessException("Context $context should be implement LoginActivityContract.FragmentInteractionListener")
 	}
 
 	override fun onDetach() {

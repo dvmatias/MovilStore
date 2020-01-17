@@ -2,8 +2,9 @@ package com.matias.features.login.ui.fragments.signin
 
 import com.matias.core.base.mvp.BasePresenter
 import com.matias.domain.base.exception.FailureType
+import com.matias.domain.base.exception.FailureType.SignInEmptyCredentialsError
 import com.matias.domain.models.user.UserModel
-import com.matias.domain.usecases.sigin.SignInUseCase
+import com.matias.domain.usecases.login.SignInUseCase
 import javax.inject.Inject
 
 class SignInFragmentPresenter @Inject constructor(

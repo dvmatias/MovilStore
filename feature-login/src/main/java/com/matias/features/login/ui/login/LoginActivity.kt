@@ -13,12 +13,11 @@ import com.matias.features.login.di.login.LoginActivitySubComponent
 import com.matias.features.login.ui.LoginUiComponent
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.bottom_sheet_error.*
-import kotlinx.android.synthetic.main.fragment_sign_in.*
 import javax.inject.Inject
 
 class LoginActivity :
 	BasePresenterActivity<LoginActivity, LoginActivityPresenter, LoginActivitySubComponent>(),
-	LoginActivityContract.View, LoginActivityContract.SignInFragmentInteractionListener {
+	LoginActivityContract.View, LoginActivityContract.FragmentInteractionListener {
 
 	companion object {
 		private const val HIDE_SIGN_IN_ERROR_DELAY = 5000L
@@ -60,11 +59,31 @@ class LoginActivity :
 		tabs.setTitlesAtTabs(tabTitles)
 	}
 
+	override fun onStop() {
+		super.onStop()
+		finish()
+	}
+
+	override fun onBackPressed() {
+		when (LoginPagerAdapter.PAGE.SIGN_IN.position != pager.currentItem) {
+			true -> pager.currentItem = LoginPagerAdapter.PAGE.SIGN_IN.position
+			else -> finish()
+		}
+	}
+
 	/**
 	 * [LoginActivityContract.View] implementation
 	 */
 
 	override fun showSignInError(errorMsgResource: Int) {
+		clBottomSheet.requestFocus()
+		bottomSheetBehavior = BottomSheetBehavior.from(clBottomSheet)
+		tvBottomSheetErrorMessage.text = htmlHelper.fromHtml(errorMsgResource)
+		bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+		Handler().postDelayed({ hideSignInError() }, HIDE_SIGN_IN_ERROR_DELAY)
+	}
+
+	override fun showSignUpErrorFields(errorMsgResource: Int) {
 		clBottomSheet.requestFocus()
 		bottomSheetBehavior = BottomSheetBehavior.from(clBottomSheet)
 		tvBottomSheetErrorMessage.text = htmlHelper.fromHtml(errorMsgResource)
@@ -88,20 +107,8 @@ class LoginActivity :
 		}
 	}
 
-	override fun onStop() {
-		super.onStop()
-		finish()
-	}
-
-	override fun onBackPressed() {
-		when (LoginPagerAdapter.PAGE.SIGN_IN.position != pager.currentItem) {
-			true -> pager.currentItem = LoginPagerAdapter.PAGE.SIGN_IN.position
-			else -> finish()
-		}
-	}
-
 	/**
-	 * [LoginActivityContract.SignInFragmentInteractionListener] implementation
+	 * [LoginActivityContract.FragmentInteractionListener] implementation
 	 */
 
 	override fun showErrorBadCredentials(errorMsgResource: Int) {
@@ -119,6 +126,14 @@ class LoginActivity :
 	override fun onSignInSuccess(userModel: UserModel) {
 		showLoading(false)
 		goToMainScreen()
+	}
+
+	override fun showSignUpError(errorMsgResource: Int) {
+		showSignUpErrorFields(errorMsgResource)
+	}
+
+	override fun onSignUpSuccess(userModel: UserModel) {
+
 	}
 
 	override fun hideCredentialsError() {

@@ -1,4 +1,4 @@
-package com.matias.domain.provider.signin
+package com.matias.domain.provider.login
 
 import com.matias.domain.base.exception.FailureType
 import com.matias.domain.base.functional.Either

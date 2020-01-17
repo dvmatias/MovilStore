@@ -1,21 +1,21 @@
-package com.matias.data.provider.siginin
+package com.matias.data.provider.login
 
 import com.matias.data.mappers.user.UserMapper
 import com.matias.data.platform.NetworkHandler
 import com.matias.data.provider.NetworkProvider
-import com.matias.data.service.signin.SignInApi
+import com.matias.data.service.login.LogInApi
 import com.matias.domain.base.exception.FailureType
 import com.matias.domain.base.functional.Either
 import com.matias.domain.models.user.UserModel
-import com.matias.domain.provider.signin.SignInProvider
+import com.matias.domain.provider.login.SignInProvider
 
 class SignInProviderImpl(
-		private val signInApi: SignInApi,
-		networkHandler: NetworkHandler
+	private val logInApi: LogInApi,
+	networkHandler: NetworkHandler
 ) : SignInProvider, NetworkProvider(networkHandler) {
 	
 	override fun signIn(username: String, password: String, staySignedIn: Boolean): Either<FailureType, UserModel> =
-			request(signInApi.signIn(username, password, staySignedIn)) {
+			request(logInApi.signIn(username, password, staySignedIn)) {
 				UserMapper().transformEntityToModel(it)
 			}
 	

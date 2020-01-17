@@ -158,15 +158,13 @@
 
 	</androidx.cardview.widget.CardView>
 
-	<!-- BUTTON SIGN IN -->
-	<androidx.appcompat.widget.AppCompatButton
+	<!-- BUTTON SIGN UP -->
+	<com.matias.components.button.flowbutton.StylingFlowButton
 		android:id="@+id/btnSignUp"
-		style="@style/LoginButtonStyle"
-		android:layout_width="match_parent"
-		android:layout_height="@dimen/dimen_52dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="2dp"
 		android:layout_marginBottom="@dimen/dimen_26dp"
-		android:text="@string/btn_sign_up_label"
 		app:layout_constraintBottom_toBottomOf="parent"
-		tools:layout_editor_absoluteX="@dimen/dimen_36dp" />
-
+		app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,6 +16,8 @@ interface LoginActivityContract {
 
 		fun showSignInError(errorMsgResource: Int)
 
+		fun showSignUpErrorFields(errorMsgResource: Int)
+
 		fun hideSignInError()
 
 		fun goToMainScreen()
@@ -34,7 +36,7 @@ interface LoginActivityContract {
 	 *
 	 * @see LoginActivity client
 	 */
-	interface SignInFragmentInteractionListener {
+	interface FragmentInteractionListener {
 
 		fun showEmptyCredentialsError(errorMsgResource: Int)
 
@@ -45,6 +47,10 @@ interface LoginActivityContract {
 		fun showMessagePasswordSent()
 
 		fun onSignInSuccess(userModel: UserModel)
+
+		fun showSignUpError(errorMsgResource: Int)
+
+		fun onSignUpSuccess(userModel: UserModel)
 
 		fun showLoading(show: Boolean)
 

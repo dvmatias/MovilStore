@@ -1,25 +1,63 @@
 package com.matias.features.login.ui.fragments.signup
 
-import android.net.Uri
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import com.matias.core.base.mvp.BasePresenterFragment
+import com.matias.domain.models.user.UserModel
 import com.matias.features.R
+import com.matias.features.login.di.fragments.signup.SignUpFragmentModule
+import com.matias.features.login.di.fragments.signup.SignUpFragmentSubcomponent
+import com.matias.features.login.ui.LoginUiComponent
+import com.matias.features.login.ui.login.LoginActivityContract
+import kotlinx.android.synthetic.main.fragment_sign_up.*
 
-class SignUpFragment : Fragment() {
+class SignUpFragment : BasePresenterFragment<
+		SignUpFragment,
+		SignUpFragmentPresenter,
+		SignUpFragmentSubcomponent>(), SignUpFragmentContract.View {
 
-	private var listener: OnFragmentInteractionListener? = null
+	private var listener: LoginActivityContract.FragmentInteractionListener? = null
 
-	override fun onCreateView(
-		inflater: LayoutInflater,
-		container: ViewGroup?,
-		savedInstanceState: Bundle?
-	): View? = inflater.inflate(R.layout.fragment_sign_up, container, false)
+	companion object {
+		@JvmStatic
+		fun newInstance(): SignUpFragment =
+			SignUpFragment()
+	}
 
-	fun onButtonPressed(uri: Uri) {
-		listener?.onFragmentInteraction(uri)
+	override fun bindComponent(): SignUpFragmentSubcomponent =
+		LoginUiComponent.component.plus(SignUpFragmentModule())
+
+	override fun bindLayout(): Int =
+		R.layout.fragment_sign_up
+
+	override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
+		inflater.inflate(R.layout.fragment_sign_up, container, false)
+
+	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+		super.onViewCreated(view, savedInstanceState)
+
+		btnSignUp.setOnClickListener { onButtonPressed() }
+	}
+
+	private fun onButtonPressed() {
+		presenter.signUpUser(inputEmail.text.toString(),
+			inputPassword.text.toString(),
+			inputUsername.text.toString(),
+			inputDateOfBirth.text.toString(),
+			inputPhone.text.toString(),
+			inputGender.text.toString()
+		)
+	}
+
+	override fun onAttach(context: Context) {
+		super.onAttach(context)
+		if (context is LoginActivityContract.FragmentInteractionListener)
+			listener = context
+		else
+			throw IllegalAccessException("Context $context should be implement LoginActivityContract.FragmentInteractionListener")
 	}
 
 	override fun onDetach() {
@@ -27,14 +65,20 @@ class SignUpFragment : Fragment() {
 		listener = null
 	}
 
-	interface OnFragmentInteractionListener {
-		fun onFragmentInteraction(uri: Uri)
+	/**
+	 * [SignUpFragmentContract.View] implementation
+	 */
+
+	override fun showLoading(show: Boolean) {
+		listener?.showLoading(show)
 	}
 
-	companion object {
-		@JvmStatic
-		fun newInstance(): SignUpFragment =
-			SignUpFragment()
+	override fun onSignUpSuccess(userModel: UserModel) {
+		listener?.onSignUpSuccess(userModel)
+	}
+
+	override fun onEmptyCredentialsError() {
+		listener?.showSignUpError(R.string.error_empty_credentials_sign_up)
 	}
 
 }
