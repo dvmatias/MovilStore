@@ -20,7 +20,7 @@
     <string name="edit_sign_up_input_email_hint">E-mail</string>
     <string name="edit_sign_up_input_password_hint">Choose password</string>
     <string name="edit_sign_up_input_username_hint">Choose username</string>
-    <string name="edit_sign_up_input_date_of_birth_hint">Date of birth</string>
+    <string name="edit_sign_up_input_birth_date_hint">Birth date</string>
     <string name="edit_sign_up_input_phone_hint">Phone</string>
     <string name="edit_sign_up_input_gender_hint">Gender</string>
 </resources>

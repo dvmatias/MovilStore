@@ -12,19 +12,21 @@ interface SignUpFragmentContract {
 
 		fun onEmptyCredentialsError()
 
+		fun showBirthDatePicker()
+
 		fun showLoading(show: Boolean)
 
 	}
 
 	interface Presenter<V : View> : BaseContract.Presenter<V> {
 
-		fun signUpUser(email: String, psasword: String, userName: String, dateOfBirth: String, phone: String, gender: String)
+		fun signUpUser(email: String, psasword: String, userName: String, birthDate: String, phone: String, gender: String)
 
 		fun handleSignUpFailure(failureType: FailureType)
 
 		fun handleSignUpSuccess(response: UserModel)
 
-		fun isValidFields(email: String, psasword: String, userName: String, dateOfBirth: String, phone: String, gender: String): Boolean
+		fun isValidFields(email: String, psasword: String, userName: String, birthDate: String, phone: String, gender: String): Boolean
 
 	}
 

@@ -9,13 +9,13 @@ import com.matias.domain.provider.login.SignUpProvider
 class SignUpUseCase(private val signUpProvider: SignUpProvider) : UseCase<UserModel, SignUpUseCase.Params>() {
 
 	override suspend fun run(params: Params): Either<FailureType, UserModel> =
-		signUpProvider.signUp(params.email, params.psasword, params.userName, params.dateOfBirth, params.phone, params.gender)
+		signUpProvider.signUp(params.email, params.psasword, params.userName, params.birthDate, params.phone, params.gender)
 
 	data class Params(
 		val email: String,
 		val psasword: String,
 		val userName: String,
-		val dateOfBirth: String,
+		val birthDate: String,
 		val phone: String,
 		val gender: String)
 

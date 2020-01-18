@@ -6,6 +6,6 @@ import com.matias.domain.models.user.UserModel
 
 interface SignUpProvider {
 
-	fun signUp(email: String, psasword: String, userName: String, dateOfBirth: String, phone: String, gender: String): Either<FailureType, UserModel>
+	fun signUp(email: String, psasword: String, userName: String, birthDate: String, phone: String, gender: String): Either<FailureType, UserModel>
 
 }

@@ -11,11 +11,11 @@ class UserMapper : Mapper<UserEntity, UserModel>() {
 		val username: String = e.username ?: ""
 		val email: String = e.email ?: ""
 		val password: String = e.password ?: ""
-		val dateOfBirth: String = e.dateOfBirth ?: ""
+		val birthDate: String = e.birthDate ?: ""
 		val phone: String = e.phone ?: ""
 		val gender: String = e.gender ?: ""
 
-		return UserModel(id, username, email, password, dateOfBirth, phone, gender)
+		return UserModel(id, username, email, password, birthDate, phone, gender)
 	}
 
 }

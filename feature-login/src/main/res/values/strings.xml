@@ -9,4 +9,9 @@
 	<!-- Sign Up Error Messages -->
 	<string name="error_empty_credentials_sign_up">You must enter all the information required in order to register in the app. Please check it and try again.</string>
 
+	<string-array name="genders">
+		<item></item>
+		<item>Female</item>
+		<item>Male</item>
+	</string-array>
 </resources>

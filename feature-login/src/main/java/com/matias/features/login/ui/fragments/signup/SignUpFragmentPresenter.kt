@@ -11,16 +11,19 @@ class SignUpFragmentPresenter @Inject constructor(
 ) : BasePresenter<SignUpFragmentContract.View>(),
 	SignUpFragmentContract.Presenter<SignUpFragmentContract.View> {
 
-	override fun signUpUser(email: String, psasword: String, userName: String, dateOfBirth: String, phone: String, gender: String) {
-		if (isValidFields(email, psasword, userName, dateOfBirth, phone, gender)) {
-			signUpUseCase(
-				{ it.either(::handleSignUpFailure, ::handleSignUpSuccess) },
-				SignUpUseCase.Params(email, psasword, userName, dateOfBirth, phone, gender)
-			)
-		} else {
-			view?.apply {
-				showLoading(false)
-				handleSignUpFailure(FailureType.SignUpError.EmmptyFields)
+	override fun signUpUser(email: String, psasword: String, userName: String, birthDate: String, phone: String, gender: String) {
+		when (isValidFields(email, psasword, userName, birthDate, phone, gender)) {
+			true -> {
+				signUpUseCase(
+					{ it.either(::handleSignUpFailure, ::handleSignUpSuccess) },
+					SignUpUseCase.Params(email, psasword, userName, birthDate, phone, gender)
+				)
+			}
+			false -> {
+				view?.apply {
+					showLoading(false)
+					handleSignUpFailure(FailureType.SignUpError.EmptyFieldsLocalException())
+				}
 			}
 		}
 	}
@@ -29,7 +32,7 @@ class SignUpFragmentPresenter @Inject constructor(
 		view?.apply {
 			showLoading(false)
 			when (failureType) {
-				is FailureType.SignUpError.EmmptyFields -> onEmptyCredentialsError()
+				is FailureType.SignUpError.EmptyFieldsLocalException -> onEmptyCredentialsError()
 			}
 		}
 	}
@@ -41,7 +44,7 @@ class SignUpFragmentPresenter @Inject constructor(
 		}
 	}
 
-	override fun isValidFields(email: String, psasword: String, userName: String, dateOfBirth: String, phone: String, gender: String): Boolean =
-			email.isNotEmpty() && psasword.isNotEmpty() && userName.isNotEmpty() && dateOfBirth.isNotEmpty() && phone.isNotEmpty() && gender.isNotEmpty()
+	override fun isValidFields(email: String, psasword: String, userName: String, birthDate: String, phone: String, gender: String): Boolean =
+			email.isNotEmpty() && psasword.isNotEmpty() && userName.isNotEmpty() && birthDate.isNotEmpty() && phone.isNotEmpty() && gender.isNotEmpty()
 
 }

@@ -10,7 +10,7 @@ data class UserEntity(
 	@SerializedName("last_name") val lastName: String?,
 	@SerializedName("email") val email: String?,
 	@SerializedName("password") val password: String?,
-	@SerializedName("date_of_birth") val dateOfBirth: String?,
+	@SerializedName("birth_date") val birthDate: String?,
 	@SerializedName("phone") val phone: String?,
 	@SerializedName("gender") val gender: String?,
 	@SerializedName("image") val image: String?,
