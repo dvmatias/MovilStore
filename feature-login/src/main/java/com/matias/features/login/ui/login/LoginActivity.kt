@@ -124,7 +124,6 @@ class LoginActivity :
 	}
 
 	override fun onSignInSuccess(userModel: UserModel) {
-		showLoading(false)
 		goToMainScreen()
 	}
 
@@ -133,7 +132,7 @@ class LoginActivity :
 	}
 
 	override fun onSignUpSuccess(userModel: UserModel) {
-
+		goToMainScreen()
 	}
 
 	override fun hideCredentialsError() {

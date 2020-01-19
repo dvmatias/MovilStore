@@ -48,11 +48,12 @@ class SignUpFragment : BasePresenterFragment<
 		super.onViewCreated(view, savedInstanceState)
 
 		inputBirthDate.setOnClickListener { showBirthDatePicker() }
-		btnSignUp.setOnClickListener { onButtonPressed() }
+		btnSignUp.setOnClickListener { signUpUser() }
+		inputGender.setOnClickListener { spinnerGender.performClick() }
 		setupSpinnerGender()
 	}
 
-	private fun onButtonPressed() {
+	private fun signUpUser() {
 		presenter.signUpUser(
 			inputEmail.text.toString(),
 			inputPassword.text.toString(),
