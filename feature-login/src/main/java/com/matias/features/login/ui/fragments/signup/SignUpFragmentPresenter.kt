@@ -14,6 +14,7 @@ class SignUpFragmentPresenter @Inject constructor(
 	override fun signUpUser(email: String, psasword: String, userName: String, birthDate: String, phone: String, gender: String) {
 		when (isValidFields(email, psasword, userName, birthDate, phone, gender)) {
 			true -> {
+				view?.showLoading(true)
 				signUpUseCase(
 					{ it.either(::handleSignUpFailure, ::handleSignUpSuccess) },
 					SignUpUseCase.Params(email, psasword, userName, birthDate, phone, gender)
@@ -22,7 +23,7 @@ class SignUpFragmentPresenter @Inject constructor(
 			false -> {
 				view?.apply {
 					showLoading(false)
-					handleSignUpFailure(FailureType.SignUpError.EmptyFieldsLocalException())
+					handleSignUpFailure(FailureType.SignUpErrorType.EmptyFieldsLocalException())
 				}
 			}
 		}
@@ -32,7 +33,12 @@ class SignUpFragmentPresenter @Inject constructor(
 		view?.apply {
 			showLoading(false)
 			when (failureType) {
-				is FailureType.SignUpError.EmptyFieldsLocalException -> onEmptyCredentialsError()
+				is FailureType.SignUpErrorType.EmptyFieldsLocalException -> onEmptyCredentialsError()
+				is FailureType.SignUpErrorType.InvalidPhoneServerException -> onSignUpFailure(failureType.apiError.errorCode)
+				is FailureType.SignUpErrorType.InvalidBirthDayServerException -> onSignUpFailure(failureType.apiError.errorCode)
+				is FailureType.SignUpErrorType.MalformedEmailServerException -> onSignUpFailure(failureType.apiError.errorCode)
+				is FailureType.SignUpErrorType.UserAlreadyExistsServerException -> onSignUpFailure(failureType.apiError.errorCode)
+				is FailureType.SignUpErrorType.UserNameNotAvailableServerException -> onSignUpFailure(failureType.apiError.errorCode)
 			}
 		}
 	}
@@ -45,6 +51,6 @@ class SignUpFragmentPresenter @Inject constructor(
 	}
 
 	override fun isValidFields(email: String, psasword: String, userName: String, birthDate: String, phone: String, gender: String): Boolean =
-			email.isNotEmpty() && psasword.isNotEmpty() && userName.isNotEmpty() && birthDate.isNotEmpty() && phone.isNotEmpty() && gender.isNotEmpty()
+		email.isNotEmpty() && psasword.isNotEmpty() && userName.isNotEmpty() && birthDate.isNotEmpty() && phone.isNotEmpty() && gender.isNotEmpty()
 
 }

@@ -10,6 +10,8 @@ interface SignUpFragmentContract {
 
 		fun onSignUpSuccess(userModel: UserModel)
 
+		fun onSignUpFailure(errorCode: Int)
+
 		fun onEmptyCredentialsError()
 
 		fun showBirthDatePicker()

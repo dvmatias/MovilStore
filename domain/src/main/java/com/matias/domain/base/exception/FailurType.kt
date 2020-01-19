@@ -1,22 +1,25 @@
 package com.matias.domain.base.exception
 
+import com.matias.domain.models.ApiErrorModel
+
 sealed class FailureType {
 	object NetworkConnection : FailureType()
-    class ServerError(val errorCode: Int = 400) : FailureType()
-    class LocalError(val errorCode: Int = 327) : FailureType()
 
+	open class LocalErrorType(val errorCode: Int = 327) : FailureType()
 
-	sealed class SignInError : FailureType() {
-		object EmptyCredentialsError: SignInError()
+	object ServerError : FailureType()
+
+	sealed class SignInErrorType : LocalErrorType() {
+		object EmptyCredentialsErrorType : SignInErrorType()
 	}
 
-	sealed class SignUpError(val errorCode: Int) : FailureType() {
-		class EmptyFieldsLocalException: SignUpError(500)
-		class MalformedEmailServerException: SignUpError(501)
-		class UserAlreadyExistsServerException: SignUpError(502)
-		class UserNameNotAvailableServerException: SignUpError(503)
-		class NotValidBirthDayServerException: SignUpError(504)
-		class NotValidPhoneServerException: SignUpError(505)
+	open class SignUpErrorType : FailureType() {
+		class EmptyFieldsLocalException : SignUpErrorType()
+		class MalformedEmailServerException(val apiError: ApiErrorModel) : SignUpErrorType()
+		class UserAlreadyExistsServerException(val apiError: ApiErrorModel) : SignUpErrorType()
+		class UserNameNotAvailableServerException(val apiError: ApiErrorModel) : SignUpErrorType()
+		class InvalidBirthDayServerException(val apiError: ApiErrorModel) : SignUpErrorType()
+		class InvalidPhoneServerException(val apiError: ApiErrorModel) : SignUpErrorType()
 	}
 
 }

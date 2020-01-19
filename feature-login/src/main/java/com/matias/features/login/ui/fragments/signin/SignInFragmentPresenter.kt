@@ -21,7 +21,7 @@ class SignInFragmentPresenter @Inject constructor(
 
 	override fun signIn(usernName: String?, password: String?, staySignedIn: Boolean) {
 		when (usernName.isNullOrEmpty() || password.isNullOrEmpty()) {
-			true -> handleSignInError(FailureType.SignInError.EmptyCredentialsError)
+			true -> handleSignInError(FailureType.SignInErrorType.EmptyCredentialsErrorType)
 			false -> {
 				view?.apply { showLoading(true); showPassword(false) }
 				signInUseCase(
@@ -42,8 +42,8 @@ class SignInFragmentPresenter @Inject constructor(
 	override fun handleSignInError(failureType: FailureType) {
 		view?.apply {
 			when (failureType) {
-				is FailureType.SignInError.EmptyCredentialsError -> onEmptyCredentialsError()
-				is FailureType.ServerError -> onWrongCredentialsError(failureType.errorCode)
+				is FailureType.SignInErrorType.EmptyCredentialsErrorType -> onEmptyCredentialsError()
+				else -> onWrongCredentialsError(404) // TODO mannage properly
 			}
 			showLoading(false)
 		}

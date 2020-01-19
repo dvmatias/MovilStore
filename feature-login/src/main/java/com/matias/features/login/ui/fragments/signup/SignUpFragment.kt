@@ -119,6 +119,18 @@ class SignUpFragment : BasePresenterFragment<
 		listener?.onSignUpSuccess(userModel)
 	}
 
+	override fun onSignUpFailure(errorCode: Int) {
+		val errorMessageResource: Int = when (errorCode) {
+			501 -> R.string.error_malformed_email_sign_up
+			502 -> R.string.error_user_already_exists_sign_up
+			503 -> R.string.error_username_not_available_sign_up
+			504 -> R.string.error_invalid_birth_date_sign_up
+			505 -> R.string.error_invalid_phone_sign_up
+			else -> -1
+		}
+		listener?.showSignUpError(errorMessageResource)
+	}
+
 	override fun onEmptyCredentialsError() {
 		listener?.showSignUpError(R.string.error_empty_credentials_sign_up)
 	}
