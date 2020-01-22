@@ -37,6 +37,7 @@
 		<item name="android:autoText">true</item>
 		<item name="android:gravity">center_vertical</item>
 		<item name="android:theme">@style/SignInEditTextTheme</item>
+		<item name="android:fontFamily">@font/mark_book</item>
 	</style>
 
 	<style name="SignInEditTextTheme" parent="Theme.AppCompat.Light.DarkActionBar">
