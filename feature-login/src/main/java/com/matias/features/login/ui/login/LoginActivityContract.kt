@@ -54,6 +54,8 @@ interface LoginActivityContract {
 
 		fun showLoading(show: Boolean)
 
+		fun goToSignUpFragment()
+
 	}
 
 }

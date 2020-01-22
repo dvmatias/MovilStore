@@ -2,10 +2,12 @@ package com.matias.features.login.ui.fragments.signin
 
 import android.content.Context
 import android.os.Bundle
+import android.os.Handler
 import android.text.method.PasswordTransformationMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.matias.components.button.flowbutton.StylingFlowButtonStatus
 import com.matias.core.base.mvp.BasePresenterFragment
 import com.matias.core.helpers.SimpleTextWatcher
 import com.matias.domain.models.user.UserModel
@@ -48,6 +50,8 @@ class SignInFragment :
 
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
+
+		btnSignIn.buttonStatus = StylingFlowButtonStatus.STATUS_ENABLED.status
 		btnFacebook.setOnClickListener { onUserClickLoginWithFacebook() }
 		btnGoogle.setOnClickListener { onUserClickLoginWithGoogle() }
 		textForgotPassword.setOnClickListener { onUserClickForgotPassword() }
@@ -65,13 +69,17 @@ class SignInFragment :
 				listener?.hideCredentialsError()
 			}
 		})
-		btnShowHidePassword.setOnClickListener{ handleBtnShowHidePasswordClick() }
+		btnShowHidePassword.setOnClickListener { handleBtnShowHidePasswordClick() }
 	}
 
 	private fun handleBtnShowHidePasswordClick() {
 		when (!inputPassword.text.isNullOrEmpty()) {
-			true -> { showPassword(!isPasswordVisible) }
-			false -> { showPassword(false) }
+			true -> {
+				showPassword(!isPasswordVisible)
+			}
+			false -> {
+				showPassword(false)
+			}
 		}
 
 	}
@@ -106,22 +114,26 @@ class SignInFragment :
 	}
 
 	override fun onUserClickDontHaveAccount() {
-		// TODO()
+		listener?.goToSignUpFragment()
 	}
 
 	override fun onUserClickSignIn() {
+		btnSignIn.buttonStatus = StylingFlowButtonStatus.STATUS_LOADING.status
 		presenter.signIn(inputUserName.text.toString(), inputPassword.text.toString(), switchStaySignedIn.isChecked)
 	}
 
 	override fun onSignInSuccess(userModel: UserModel) {
-		listener?.onSignInSuccess(userModel)
+		btnSignIn.buttonStatus = StylingFlowButtonStatus.STATUS_OK.status
+		Handler().postDelayed({ listener?.onSignInSuccess(userModel) }, 350)
 	}
 
 	override fun onEmptyCredentialsError() {
+		btnSignIn.buttonStatus = StylingFlowButtonStatus.STATUS_ENABLED.status
 		listener?.showEmptyCredentialsError(R.string.error_empty_credentials_sign_in)
 	}
 
 	override fun onWrongCredentialsError(errorCode: Int) {
+		btnSignIn.buttonStatus = StylingFlowButtonStatus.STATUS_ENABLED.status
 		val errorMessageResource: Int = when (errorCode) {
 			404 -> R.string.error_user_not_found_sign_in
 			401 -> R.string.error_wrong_password_sign_in

@@ -8,6 +8,8 @@ interface SignUpFragmentContract {
 
 	interface View : BaseContract.View {
 
+		fun onUserClickSignUp()
+
 		fun onSignUpSuccess(userModel: UserModel)
 
 		fun onSignUpFailure(errorCode: Int)

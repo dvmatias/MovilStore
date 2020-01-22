@@ -4,12 +4,14 @@ import android.app.DatePickerDialog
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.TextView
+import com.matias.components.button.flowbutton.StylingFlowButtonStatus
 import com.matias.components.datepicker.StylingDatePicker
 import com.matias.core.base.mvp.BasePresenterFragment
 import com.matias.domain.models.user.UserModel
@@ -47,21 +49,11 @@ class SignUpFragment : BasePresenterFragment<
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
 
+		btnSignUp.buttonStatus = StylingFlowButtonStatus.STATUS_ENABLED.status
 		inputBirthDate.setOnClickListener { showBirthDatePicker() }
-		btnSignUp.setOnClickListener { signUpUser() }
 		inputGender.setOnClickListener { spinnerGender.performClick() }
 		setupSpinnerGender()
-	}
-
-	private fun signUpUser() {
-		presenter.signUpUser(
-			inputEmail.text.toString(),
-			inputPassword.text.toString(),
-			inputUsername.text.toString(),
-			inputBirthDate.text.toString(),
-			inputPhone.text.toString(),
-			inputGender.text.toString()
-		)
+		btnSignUp.setOnClickListener { onUserClickSignUp() }
 	}
 
 	private fun setupSpinnerGender() {
@@ -103,6 +95,18 @@ class SignUpFragment : BasePresenterFragment<
 	 * [SignUpFragmentContract.View] implementation
 	 */
 
+	override fun onUserClickSignUp() {
+		btnSignUp.buttonStatus = StylingFlowButtonStatus.STATUS_LOADING.status
+		presenter.signUpUser(
+			inputEmail.text.toString(),
+			inputPassword.text.toString(),
+			inputUsername.text.toString(),
+			inputBirthDate.text.toString(),
+			inputPhone.text.toString(),
+			inputGender.text.toString()
+		)
+	}
+
 	override fun showLoading(show: Boolean) {
 		listener?.showLoading(show)
 	}
@@ -117,10 +121,12 @@ class SignUpFragment : BasePresenterFragment<
 	}
 
 	override fun onSignUpSuccess(userModel: UserModel) {
-		listener?.onSignUpSuccess(userModel)
+		btnSignUp.buttonStatus = StylingFlowButtonStatus.STATUS_OK.status
+		Handler().postDelayed({ listener?.onSignUpSuccess(userModel) }, 350)
 	}
 
 	override fun onSignUpFailure(errorCode: Int) {
+		btnSignUp.buttonStatus = StylingFlowButtonStatus.STATUS_ENABLED.status
 		val errorMessageResource: Int = when (errorCode) {
 			501 -> R.string.error_malformed_email_sign_up
 			502 -> R.string.error_user_already_exists_sign_up
@@ -133,6 +139,7 @@ class SignUpFragment : BasePresenterFragment<
 	}
 
 	override fun onEmptyCredentialsError() {
+		btnSignUp.buttonStatus = StylingFlowButtonStatus.STATUS_ENABLED.status
 		listener?.showSignUpError(R.string.error_empty_credentials_sign_up)
 	}
 

@@ -107,6 +107,10 @@ class LoginActivity :
 		}
 	}
 
+	override fun goToSignUpFragment() {
+		pager.currentItem = LoginPagerAdapter.PAGE.SIGN_UP.position
+	}
+
 	/**
 	 * [LoginActivityContract.FragmentInteractionListener] implementation
 	 */
