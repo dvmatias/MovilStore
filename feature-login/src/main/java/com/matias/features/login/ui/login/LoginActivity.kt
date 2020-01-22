@@ -71,7 +71,7 @@ class LoginActivity :
 		}
 	}
 
-	/**
+	/*******************************************************************************************************************
 	 * [LoginActivityContract.View] implementation
 	 */
 
@@ -111,7 +111,7 @@ class LoginActivity :
 		pager.currentItem = LoginPagerAdapter.PAGE.SIGN_UP.position
 	}
 
-	/**
+	/*******************************************************************************************************************
 	 * [LoginActivityContract.FragmentInteractionListener] implementation
 	 */
 

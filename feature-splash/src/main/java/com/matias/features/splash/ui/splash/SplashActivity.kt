@@ -1,5 +1,6 @@
 package com.matias.features.splash.ui.splash
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
@@ -69,8 +70,8 @@ class SplashActivity :
 		val options = ActivityOptionsCompat
 			.makeSceneTransitionAnimation(this, imageLogoName as View, "image_logo_name")
 		Handler().postDelayed({
-			navigator.toLoginScreen(this, null, options)
-			finish()
+			navigator.toLoginScreen(this, null, options, false)
+			Handler().postDelayed( { this@SplashActivity.finish() }, 500 )
 		}, 500)
 	}
 
