@@ -1,0 +1,1 @@
+package com.matias.features.diimport com.matias.core.base.diap.base.BaseComponentimport dagger.Component@Component(        dependencies = [(BaseComponent::class)],        modules = [(MainModule::class)])@MainScopeinterface MainComponent {        // plus functions (m: Module) -> Subcomponent    }

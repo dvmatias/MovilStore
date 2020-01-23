@@ -1,0 +1,1 @@
+package com.matias.features.diimport dagger.Module@Moduleclass MainModule {        // Common dependencies providers    }
