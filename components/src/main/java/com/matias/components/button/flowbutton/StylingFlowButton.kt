@@ -197,7 +197,10 @@ class StylingFlowButton : CardView {
 		private var listener: OnClickListener? = null
 
 		override fun onClick(v: View?) {
-			listener?.onClick(this@StylingFlowButton)
+			when (buttonStatus) {
+                StylingFlowButtonStatus.STATUS_ENABLED.status -> listener?.onClick(this@StylingFlowButton)
+                else -> {  }
+            }
 		}
 
 		fun setListener(clickListener: OnClickListener) {
