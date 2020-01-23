@@ -1,3 +1,26 @@
 <resources>
-	<string name="app_name">Core</string>
+    <string name="app_name">Core</string>
+
+    <string name="tab_sign_in_label">SIGN IN</string>
+    <string name="tab_sign_up_label">SIGN UP</string>
+
+    <string name="text_sign_in_facebook_label">LOG IN WITH FACEBOOK</string>
+    <string name="text_sign_in_google_label">LOG IN WITH GOGLE</string>
+    <string name="text_or_label">OR</string>
+    <string name="edit_sing_in_input_user_name_hint">Username</string>
+    <string name="edit_sing_in_input_password_hint">Password</string>
+    <string name="switch_stay_signed_in_label">Stay signed in?</string>
+    <string name="btn_sign_in_label">SIGN IN</string>
+    <string name="btn_sign_up_label">SIGN UP</string>
+    <string name="text_forgot_password_label">Forgot password?</string>
+    <string name="text_dont_have_account_label">Don\'t have account?</string>
+    <string name="text_sign_up_title">Get on board!</string>
+    <string name="text_sign_in_title">Hello there,\nwellcome!</string>
+
+    <string name="edit_sign_up_input_email_hint">E-mail</string>
+    <string name="edit_sign_up_input_password_hint">Choose password</string>
+    <string name="edit_sign_up_input_username_hint">Choose username</string>
+    <string name="edit_sign_up_input_birth_date_hint">Birth date</string>
+    <string name="edit_sign_up_input_phone_hint">Phone</string>
+    <string name="edit_sign_up_input_gender_hint">Gender</string>
 </resources>

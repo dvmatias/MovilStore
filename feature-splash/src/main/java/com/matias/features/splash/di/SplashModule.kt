@@ -15,11 +15,11 @@ import retrofit2.Retrofit
 
 @Module
 class SplashModule {
-
+    
     @Provides
     @SplashScope
     fun provideSplashApi(retrofit: Retrofit): SplashApi = SplashService(retrofit)
-
+    
     @Provides
     @SplashScope
     fun provideGlobalConfigProvider(
@@ -27,11 +27,11 @@ class SplashModule {
             featureFlaghCache: FeatureFlaghCache,
             networkHandler: NetworkHandler
     ): GlobalConfigProvider = GlobalConfigProviderImpl(splashApi, featureFlaghCache, networkHandler)
-
+    
     @Provides
     @SplashScope
     fun provideLoginStatusProvider(
             sharedPreferencesCache: SharedPreferencesCache
     ): LoginStatusProvider = LoginStatusProviderImpl(sharedPreferencesCache)
-
+    
 }

@@ -15,11 +15,11 @@ class GlobalConfigProviderImpl(
         private val featureFlaghCache: FeatureFlaghCache,
         networkHandler: NetworkHandler
 ) : GlobalConfigProvider, NetworkProvider(networkHandler) {
-
+    
     override fun fetchGlobalConfig(arg: Any): Either<FailureType, GlobalConfigModel> =
             request(splashApi.fetchGlobalConfig()) {
                 featureFlaghCache.storeFeatureFlags(it.featureFlagsEntity)
                 GlobalConfigMapper().transformEntityToModel(it)
             }
-
+    
 }

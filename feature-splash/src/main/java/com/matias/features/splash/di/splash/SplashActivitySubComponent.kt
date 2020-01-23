@@ -5,5 +5,4 @@ import com.matias.features.splash.ui.splash.SplashActivity
 import dagger.Subcomponent
 
 @Subcomponent(modules = [(SplashActivityModule::class)])
-interface SplashActivitySubComponent : ViewComponent<SplashActivity> {
-}
+interface SplashActivitySubComponent : ViewComponent<SplashActivity>

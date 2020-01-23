@@ -10,25 +10,25 @@ import com.matias.core.base.diap.base.ViewComponent
 const val ATTACH_TO_ROOT_FALSE: Boolean = false
 
 abstract class BaseFragment<
-		in V : BaseContract.View,
-		out C : ViewComponent<V>> : Fragment() {
-
-	protected abstract fun bindComponent(): C
-
-	protected abstract fun bindLayout(): Int
-
-	override fun onCreate(savedInstanceState: Bundle?) {
-		super.onCreate(savedInstanceState)
-		@Suppress("UNCHECKED_CAST")
-		bindComponent().inject(this as V)
-	}
-
-	override fun onCreateView(
-		inflater: LayoutInflater,
-		container: ViewGroup?,
-		savedInstanceState: Bundle?
-	): View? {
-		return inflater.inflate(bindLayout(), container, ATTACH_TO_ROOT_FALSE)
-	}
-
+        in V : BaseContract.View,
+        out C : ViewComponent<V>> : Fragment() {
+    
+    protected abstract fun bindComponent(): C
+    
+    protected abstract fun bindLayout(): Int
+    
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        @Suppress("UNCHECKED_CAST")
+        bindComponent().inject(this as V)
+    }
+    
+    override fun onCreateView(
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(bindLayout(), container, ATTACH_TO_ROOT_FALSE)
+    }
+    
 }

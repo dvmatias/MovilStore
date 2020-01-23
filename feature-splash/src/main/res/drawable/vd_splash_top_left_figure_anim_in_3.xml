@@ -18,22 +18,22 @@
                 <group android:name="group">
                     <path
                         android:name="path_inner"
-                        android:pathData="M 203.25 -29.72 C 149 -53.25 89.86 -58.84 34.59 -37.15 C 12 -28.31 -3.73 -9.36 -13 12.6 C -21.74 33.3 -25.52 56 -26.76 78.31 C -28.329 104.674 -25.428 131.114 -18.18 156.51 C -11.98 178.51 -3.18 200.28 10.13 219.08 C 24.34 239.08 44.48 254.74 69.29 258.27 C 128.08 266.57 184.29 247.51 231.55 211.97 C 248.85 199.03 264.76 183.84 277.55 166.36 C 290.34 148.88 299.99 129.19 304.09 107.83 C 307.23 91.4 306.21 75.37 299.98 59.69 C 295.927 49.647 290.658 40.14 284.29 31.38 C 271.59 13.8 254.87 -0.56 236.67 -12.17 C 225.973 -18.828 214.803 -24.693 203.25 -29.72 Z"
                         android:fillColor="#00000000"
-                        android:strokeColor="@color/colorTopFigure"
-                        android:strokeWidth="22"/>
+                        android:pathData="M 203.25 -29.72 C 149 -53.25 89.86 -58.84 34.59 -37.15 C 12 -28.31 -3.73 -9.36 -13 12.6 C -21.74 33.3 -25.52 56 -26.76 78.31 C -28.329 104.674 -25.428 131.114 -18.18 156.51 C -11.98 178.51 -3.18 200.28 10.13 219.08 C 24.34 239.08 44.48 254.74 69.29 258.27 C 128.08 266.57 184.29 247.51 231.55 211.97 C 248.85 199.03 264.76 183.84 277.55 166.36 C 290.34 148.88 299.99 129.19 304.09 107.83 C 307.23 91.4 306.21 75.37 299.98 59.69 C 295.927 49.647 290.658 40.14 284.29 31.38 C 271.59 13.8 254.87 -0.56 236.67 -12.17 C 225.973 -18.828 214.803 -24.693 203.25 -29.72 Z"
+                        android:strokeWidth="22"
+                        android:strokeColor="@color/colorTopFigure"/>
                     <path
                         android:name="path_middle"
-                        android:pathData="M 220.69 -65.5 C 151.54 -95.5 76.09 -102.63 5.61 -75 C -23.19 -63.73 -43.26 -39.57 -55.08 -11.56 C -66.23 14.84 -71.08 43.78 -72.63 72.23 C -74.636 105.866 -70.934 139.6 -61.68 172 C -53.78 200.11 -42.53 227.82 -25.58 251.79 C -7.47 277.27 18.22 297.27 49.86 301.79 C 124.86 312.37 196.48 288.07 256.79 242.79 C 278.79 226.28 299.14 206.92 315.47 184.62 C 331.8 162.32 344.09 137.22 349.32 109.98 C 353.32 88.98 352.02 68.58 344.08 48.58 C 338.914 35.774 332.198 23.65 324.08 12.48 C 307.85 -10 286.52 -28.31 263.31 -43.11 C 249.669 -51.605 235.425 -59.088 220.69 -65.5 Z"
                         android:fillColor="#00000000"
-                        android:strokeColor="@color/colorTopFigure"
-                        android:strokeWidth="22"/>
+                        android:pathData="M 220.69 -65.5 C 151.54 -95.5 76.09 -102.63 5.61 -75 C -23.19 -63.73 -43.26 -39.57 -55.08 -11.56 C -66.23 14.84 -71.08 43.78 -72.63 72.23 C -74.636 105.866 -70.934 139.6 -61.68 172 C -53.78 200.11 -42.53 227.82 -25.58 251.79 C -7.47 277.27 18.22 297.27 49.86 301.79 C 124.86 312.37 196.48 288.07 256.79 242.79 C 278.79 226.28 299.14 206.92 315.47 184.62 C 331.8 162.32 344.09 137.22 349.32 109.98 C 353.32 88.98 352.02 68.58 344.08 48.58 C 338.914 35.774 332.198 23.65 324.08 12.48 C 307.85 -10 286.52 -28.31 263.31 -43.11 C 249.669 -51.605 235.425 -59.088 220.69 -65.5 Z"
+                        android:strokeWidth="22"
+                        android:strokeColor="@color/colorTopFigure"/>
                     <path
                         android:name="path_outter"
-                        android:pathData="M 238.57 -102.15 C 154.12 -138.79 62 -147.5 -24.08 -113.71 C -59.26 -99.95 -83.76 -70.45 -98.2 -36.24 C -111.81 -4 -117.69 31.34 -119.63 66.09 C -122.073 107.146 -117.553 148.322 -106.26 187.87 C -96.61 222.19 -82.87 256.03 -62.17 285.31 C -40 316.43 -8.69 340.84 30 346.34 C 121.56 359.26 209.05 329.59 282.69 274.24 C 309.63 254.09 334.41 230.44 354.36 203.24 C 374.31 176.04 389.3 145.35 395.7 112.09 C 400.58 86.5 398.99 61.53 389.3 37.09 C 382.968 21.447 374.739 6.639 364.8 -7 C 345 -34.38 319 -56.74 290.61 -74.82 C 273.954 -85.189 256.561 -94.323 238.57 -102.15 Z"
                         android:fillColor="#00000000"
-                        android:strokeColor="@color/colorTopFigure"
-                        android:strokeWidth="22"/>
+                        android:pathData="M 238.57 -102.15 C 154.12 -138.79 62 -147.5 -24.08 -113.71 C -59.26 -99.95 -83.76 -70.45 -98.2 -36.24 C -111.81 -4 -117.69 31.34 -119.63 66.09 C -122.073 107.146 -117.553 148.322 -106.26 187.87 C -96.61 222.19 -82.87 256.03 -62.17 285.31 C -40 316.43 -8.69 340.84 30 346.34 C 121.56 359.26 209.05 329.59 282.69 274.24 C 309.63 254.09 334.41 230.44 354.36 203.24 C 374.31 176.04 389.3 145.35 395.7 112.09 C 400.58 86.5 398.99 61.53 389.3 37.09 C 382.968 21.447 374.739 6.639 364.8 -7 C 345 -34.38 319 -56.74 290.61 -74.82 C 273.954 -85.189 256.561 -94.323 238.57 -102.15 Z"
+                        android:strokeWidth="22"
+                        android:strokeColor="@color/colorTopFigure"/>
                 </group>
             </group>
         </vector>
@@ -41,53 +41,53 @@
     <target android:name="path_inner">
         <aapt:attr name="android:animation">
             <objectAnimator
-                android:propertyName="trimPathStart"
                 android:duration="1000"
+                android:interpolator="@android:interpolator/fast_out_slow_in"
+                android:propertyName="trimPathStart"
                 android:valueFrom="1"
                 android:valueTo="0"
-                android:valueType="floatType"
-                android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                android:valueType="floatType"/>
         </aapt:attr>
     </target>
     <target android:name="path_middle">
         <aapt:attr name="android:animation">
             <objectAnimator
-                android:propertyName="trimPathEnd"
                 android:duration="1000"
+                android:interpolator="@android:interpolator/fast_out_slow_in"
+                android:propertyName="trimPathEnd"
                 android:valueFrom="0.3"
                 android:valueTo="1"
-                android:valueType="floatType"
-                android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                android:valueType="floatType"/>
         </aapt:attr>
     </target>
     <target android:name="path_outter">
         <aapt:attr name="android:animation">
             <objectAnimator
-                android:propertyName="trimPathStart"
                 android:duration="1000"
+                android:interpolator="@android:interpolator/fast_out_slow_in"
+                android:propertyName="trimPathStart"
                 android:valueFrom="1"
                 android:valueTo="0"
-                android:valueType="floatType"
-                android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                android:valueType="floatType"/>
         </aapt:attr>
     </target>
     <target android:name="wrapper">
         <aapt:attr name="android:animation">
             <set>
                 <objectAnimator
+                    android:duration="900"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"
                     android:propertyName="translateX"
-                    android:duration="900"
                     android:valueFrom="-50"
                     android:valueTo="0"
-                    android:valueType="floatType"
-                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                    android:valueType="floatType"/>
                 <objectAnimator
-                    android:propertyName="translateY"
                     android:duration="900"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"
+                    android:propertyName="translateY"
                     android:valueFrom="-50"
                     android:valueTo="0"
-                    android:valueType="floatType"
-                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                    android:valueType="floatType"/>
             </set>
         </aapt:attr>
     </target>

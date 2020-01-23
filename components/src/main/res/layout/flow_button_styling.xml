@@ -1,0 +1,27 @@
+<androidx.cardview.widget.CardView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/cardButton"
+	android:layout_width="@dimen/dimen_button_flow_height"
+	android:layout_height="@dimen/dimen_button_flow_height"
+	android:layout_margin="@dimen/dimen_button_flow_container_margin"
+	android:clickable="true"
+	android:fitsSystemWindows="false"
+	android:focusable="true"
+	android:foreground="?android:attr/selectableItemBackground"
+	app:cardBackgroundColor="#A6D390"
+	android:alpha="1.0"
+	app:cardCornerRadius="@dimen/dimen_button_flow_radius"
+	app:cardElevation="@dimen/dimen_button_flow_elevation">
+
+	<androidx.appcompat.widget.AppCompatImageView
+		android:id="@+id/ivStatus"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/ic_flow_button_next_vector"
+		android:tint="#000"
+		android:alpha="0.8"
+		android:layout_gravity="center"
+		android:contentDescription="@null"/>
+
+</androidx.cardview.widget.CardView>

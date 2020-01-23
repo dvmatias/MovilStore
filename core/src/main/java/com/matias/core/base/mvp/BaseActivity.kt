@@ -1,18 +1,22 @@
 package com.matias.core.base.mvp
 
-import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.matias.core.base.diap.base.ViewComponent
+import com.matias.core.navigator.Navigator
+import javax.inject.Inject
 
 val ROOT: Nothing? = null
 
 abstract class BaseActivity<
 		in V : BaseContract.View,
 		out C : ViewComponent<V>> : AppCompatActivity() {
+
+	@Inject
+	protected lateinit var navigator: Navigator
 
 	protected abstract fun bindComponent(): C
 
@@ -23,18 +27,6 @@ abstract class BaseActivity<
 		@Suppress("UNCHECKED_CAST")
 		bindComponent().inject(this as V)
 		setContentView(layoutInflater.inflate(bindLayout(), ROOT))
-	}
-
-	override fun attachBaseContext(newBase: Context?) {
-		super.attachBaseContext(newBase)
-	}
-
-	override fun onResume() {
-		super.onResume()
-	}
-
-	override fun onPause() {
-		super.onPause()
 	}
 
 	protected fun showToast(message: String) {
@@ -74,6 +66,15 @@ abstract class BaseActivity<
 					applyImmersiveFullScreen()
 				}, 200
 			)
+	}
+
+	/**
+	 * Draw full screen with navitgation bar.
+	 */
+	fun applyFullScreen() {
+		window.decorView.systemUiVisibility = (
+				View.SYSTEM_UI_FLAG_IMMERSIVE or View.SYSTEM_UI_FLAG_LAYOUT_STABLE or
+						View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
 	}
 
 }
