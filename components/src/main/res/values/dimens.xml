@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Custom View Button Flow -->
+	<dimen name="dimen_button_flow_height">52dp</dimen>
+	<dimen name="dimen_button_flow_radius">26dp</dimen>
+	<dimen name="dimen_button_flow_elevation">2dp</dimen>
+	<dimen name="dimen_button_flow_container_margin">4dp</dimen>
+</resources>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:paddingStart="@dimen/dimen_36dp"
+	android:paddingEnd="@dimen/dimen_36dp"
+	tools:background="@color/colorLoginActivityBackground"
+	tools:context=".login.ui.fragments.signup.SignUpFragment">
+
+	<!-- TITLE -->
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/textTitle"
+		style="@style/TitleTextStyle"
+		android:layout_width="170dp"
+		android:layout_height="35dp"
+		android:layout_marginTop="@dimen/dimen_18dp"
+		android:text="@string/text_sign_up_title"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<androidx.cardview.widget.CardView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dimen_18dp"
+		app:cardBackgroundColor="@color/colorTransparent"
+		app:cardCornerRadius="@dimen/dimen_4dp"
+		app:layout_constraintBottom_toTopOf="@id/btnSignUp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/textTitle">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<!-- INPUT FIELD EMAIL -->
+			<androidx.appcompat.widget.AppCompatEditText
+				android:id="@+id/inputEmail"
+				style="@style/SignUpEditTextStyle"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/dimen_42dp"
+				android:drawableStart="@drawable/ic_email_24"
+				android:hint="@string/edit_sign_up_input_email_hint"
+				android:imeOptions="actionNext"
+				android:inputType="textEmailAddress"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+			<View
+				android:id="@+id/separatorEmail"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/coloSeparatoSignUpBackground"
+				app:layout_constraintTop_toBottomOf="@id/inputEmail" />
+
+			<!-- INPUT FIELD PASSWORD -->
+			<androidx.appcompat.widget.AppCompatEditText
+				android:id="@+id/inputPassword"
+				style="@style/SignUpEditTextStyle"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/dimen_42dp"
+				android:drawableStart="@drawable/ic_password_24"
+				android:hint="@string/edit_sign_up_input_password_hint"
+				android:imeOptions="actionNext"
+				android:inputType="textPassword|textWebPassword"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/separatorEmail" />
+
+			<View
+				android:id="@+id/separatorPassword"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/coloSeparatoSignUpBackground"
+				app:layout_constraintTop_toBottomOf="@id/inputPassword" />
+
+			<!-- INPUT FIELD USERNAME -->
+			<androidx.appcompat.widget.AppCompatEditText
+				android:id="@+id/inputUsername"
+				style="@style/SignUpEditTextStyle"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/dimen_42dp"
+				android:drawableStart="@drawable/ic_username_24"
+				android:hint="@string/edit_sign_up_input_username_hint"
+				android:imeOptions="actionNext"
+				android:inputType="textPersonName"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/separatorPassword" />
+
+			<View
+				android:id="@+id/separatorUsername"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/coloSeparatoSignUpBackground"
+				app:layout_constraintTop_toBottomOf="@id/inputUsername" />
+
+			<!-- INPUT FIELD PHONE -->
+			<androidx.appcompat.widget.AppCompatEditText
+				android:id="@+id/inputPhone"
+				style="@style/SignUpEditTextStyle"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/dimen_42dp"
+				android:drawableStart="@drawable/ic_phone_24"
+				android:hint="@string/edit_sign_up_input_phone_hint"
+				android:imeOptions="actionDone"
+				android:inputType="phone"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/separatorUsername" />
+
+			<View
+				android:id="@+id/separatorPhone"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/coloSeparatoSignUpBackground"
+				app:layout_constraintTop_toBottomOf="@id/inputPhone" />
+
+			<!-- INPUT FIELD DATE OF BIRTH -->
+			<androidx.appcompat.widget.AppCompatEditText
+				android:id="@+id/inputBirthDate"
+				style="@style/SignUpEditTextStyle"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/dimen_42dp"
+				android:clickable="true"
+				android:drawableStart="@drawable/ic_date_of_birth_24"
+				android:focusable="false"
+				android:hint="@string/edit_sign_up_input_birth_date_hint"
+				android:imeOptions="actionNone"
+				android:inputType="date"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/separatorPhone" />
+
+			<View
+				android:id="@+id/separatorBirthDate"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/coloSeparatoSignUpBackground"
+				app:layout_constraintTop_toBottomOf="@id/inputBirthDate" />
+
+			<!-- INPUT FIELD GENDER -->
+			<androidx.appcompat.widget.AppCompatEditText
+				android:id="@+id/inputGender"
+				style="@style/SignUpEditTextStyle"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/dimen_42dp"
+				android:clickable="true"
+				android:drawableStart="@drawable/ic_gender_24"
+				android:focusable="false"
+				android:hint="@string/edit_sign_up_input_gender_hint"
+				android:imeOptions="actionNone"
+				android:inputType="text"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/separatorBirthDate" />
+
+			<androidx.appcompat.widget.AppCompatSpinner
+				android:id="@+id/spinnerGender"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:backgroundTint="@color/colorWhite"
+				app:layout_constraintBottom_toBottomOf="@id/inputGender"
+				app:layout_constraintEnd_toEndOf="@id/inputGender"
+				app:layout_constraintTop_toTopOf="@id/inputGender" />
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+	</androidx.cardview.widget.CardView>
+
+	<!-- BUTTON SIGN UP -->
+	<com.matias.components.button.flowbutton.StylingFlowButton
+		android:id="@+id/btnSignUp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="2dp"
+		android:layout_marginBottom="@dimen/dimen_26dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
