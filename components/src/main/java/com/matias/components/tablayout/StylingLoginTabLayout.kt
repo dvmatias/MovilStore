@@ -10,7 +10,7 @@ import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 import com.matias.components.R
 
-class StylingTabLayout : TabLayout {
+class StylingLoginTabLayout : TabLayout {
 
 	private val titles: MutableList<String> = arrayListOf()
 
