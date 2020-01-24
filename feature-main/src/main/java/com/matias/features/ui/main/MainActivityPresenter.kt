@@ -1,0 +1,1 @@
+package com.matias.features.ui.mainimport com.matias.core.base.mvp.BasePresenterimport javax.inject.Injectclass MainActivityPresenter @Inject constructor() : BasePresenter<MainActivityContract.View>(), MainActivityContract.Presenter<MainActivityContract.View>

@@ -35,9 +35,10 @@
                 android:theme="@style/LoginActivityTheme"/>
 
         <!-- Main Activity -->
-        <activity
-                android:name=".MainActivity"
-                android:screenOrientation="portrait"/>
+		<activity
+			android:name="com.matias.features.ui.main.MainActivity"
+			android:label="@string/title_activity_main"
+			android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

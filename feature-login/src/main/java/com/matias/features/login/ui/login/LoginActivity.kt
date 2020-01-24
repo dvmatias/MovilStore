@@ -97,7 +97,7 @@ class LoginActivity :
 	}
 
 	override fun goToMainScreen() {
-		super.showToast("go to main screen")
+        navigator.toMainScreen(this, null, null, true)
 	}
 
 	override fun showLoading(show: Boolean) {

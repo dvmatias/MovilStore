@@ -1,0 +1,1 @@
+package com.matias.features.di.mainimport dagger.Module@Moduleclass MainActivityModule
