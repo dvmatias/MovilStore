@@ -37,8 +37,8 @@
         <!-- Main Activity -->
 		<activity
 			android:name="com.matias.features.ui.main.MainActivity"
-			android:label="@string/title_activity_main"
-			android:theme="@style/AppTheme.NoActionBar" />
+			android:screenOrientation="portrait"
+			android:theme="@style/MainActivityTheme" />
     </application>
 
 </manifest>
