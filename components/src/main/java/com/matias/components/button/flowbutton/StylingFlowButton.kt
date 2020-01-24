@@ -29,7 +29,7 @@ class StylingFlowButton : CardView {
 	private var _iconColor: Int? =
 		ContextCompat.getColor(context, R.color.color_button_main_default_icon_color)
 
-	private var _buttonStatus: Int? = StylingFlowButtonStatus.STATUS_DISABLED.status
+	private var _buttonState: Int? = StylingFlowButtonState.STATE_DISABLED.state
 
 	/**
 	 * Button background color.
@@ -53,15 +53,15 @@ class StylingFlowButton : CardView {
 	/**
 	 * Button style (filled/outlined).
 	 */
-	var buttonStatus: Int?
-		get() = _buttonStatus
+	var buttonState: Int?
+		get() = _buttonState
 		set(value) {
-			_buttonStatus = value
-			when (_buttonStatus) {
-				StylingFlowButtonStatus.STATUS_ENABLED.status -> setEnabledStatus()
-				StylingFlowButtonStatus.STATUS_DISABLED.status -> setDisabledStatus()
-				StylingFlowButtonStatus.STATUS_LOADING.status -> setLoadingStatus()
-				StylingFlowButtonStatus.STATUS_OK.status -> setOkStatus()
+			_buttonState = value
+			when (_buttonState) {
+				StylingFlowButtonState.STATE_ENABLED.state -> setEnabledStatus()
+				StylingFlowButtonState.STATE_DISABLED.state -> setDisabledStatus()
+				StylingFlowButtonState.STATE_LOADING.state -> setLoadingStatus()
+				StylingFlowButtonState.STATE_OK.state -> setOkStatus()
 			}
 		}
 
@@ -96,9 +96,9 @@ class StylingFlowButton : CardView {
 							R.styleable.StylingFlowButton_iconColor, _iconColor!!
 						)
 					R.styleable.StylingFlowButton_buttonStatus -> {
-						_buttonStatus = typedArray.getInt(
+						_buttonState = typedArray.getInt(
 							R.styleable.StylingFlowButton_buttonStatus,
-							StylingFlowButtonStatus.STATUS_DISABLED.status
+							StylingFlowButtonState.STATE_DISABLED.state
 						)
 					}
 				}
@@ -108,7 +108,7 @@ class StylingFlowButton : CardView {
 		} finally {
 			buttonColor = _buttonColor
 			iconColor = _iconColor
-			buttonStatus = _buttonStatus
+			buttonState = _buttonState
 
 			setOnClickListener(listenerAdapter)
 
@@ -197,8 +197,8 @@ class StylingFlowButton : CardView {
 		private var listener: OnClickListener? = null
 
 		override fun onClick(v: View?) {
-			when (buttonStatus) {
-                StylingFlowButtonStatus.STATUS_ENABLED.status -> listener?.onClick(this@StylingFlowButton)
+			when (buttonState) {
+                StylingFlowButtonState.STATE_ENABLED.state -> listener?.onClick(this@StylingFlowButton)
                 else -> {  }
             }
 		}

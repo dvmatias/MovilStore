@@ -11,7 +11,7 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.TextView
-import com.matias.components.button.flowbutton.StylingFlowButtonStatus
+import com.matias.components.button.flowbutton.StylingFlowButtonState
 import com.matias.components.datepicker.StylingDatePicker
 import com.matias.core.base.mvp.BasePresenterFragment
 import com.matias.domain.models.user.UserModel
@@ -49,7 +49,7 @@ class SignUpFragment : BasePresenterFragment<
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
 
-		btnSignUp.buttonStatus = StylingFlowButtonStatus.STATUS_ENABLED.status
+		btnSignUp.buttonState = StylingFlowButtonState.STATE_ENABLED.state
 		inputBirthDate.setOnClickListener { showBirthDatePicker() }
 		inputGender.setOnClickListener { spinnerGender.performClick() }
 		setupSpinnerGender()
@@ -96,7 +96,7 @@ class SignUpFragment : BasePresenterFragment<
 	 */
 
 	override fun onUserClickSignUp() {
-		btnSignUp.buttonStatus = StylingFlowButtonStatus.STATUS_LOADING.status
+		btnSignUp.buttonState = StylingFlowButtonState.STATE_LOADING.state
 		presenter.signUpUser(
 			inputEmail.text.toString(),
 			inputPassword.text.toString(),
@@ -121,12 +121,12 @@ class SignUpFragment : BasePresenterFragment<
 	}
 
 	override fun onSignUpSuccess(userModel: UserModel) {
-		btnSignUp.buttonStatus = StylingFlowButtonStatus.STATUS_OK.status
+		btnSignUp.buttonState = StylingFlowButtonState.STATE_OK.state
 		Handler().postDelayed({ listener?.onSignUpSuccess(userModel) }, 350)
 	}
 
 	override fun onSignUpFailure(errorCode: Int) {
-		btnSignUp.buttonStatus = StylingFlowButtonStatus.STATUS_ENABLED.status
+		btnSignUp.buttonState = StylingFlowButtonState.STATE_ENABLED.state
 		val errorMessageResource: Int = when (errorCode) {
 			501 -> R.string.error_malformed_email_sign_up
 			502 -> R.string.error_user_already_exists_sign_up
@@ -139,7 +139,7 @@ class SignUpFragment : BasePresenterFragment<
 	}
 
 	override fun onEmptyCredentialsError() {
-		btnSignUp.buttonStatus = StylingFlowButtonStatus.STATUS_ENABLED.status
+		btnSignUp.buttonState = StylingFlowButtonState.STATE_ENABLED.state
 		listener?.showSignUpError(R.string.error_empty_credentials_sign_up)
 	}
 
