@@ -19,15 +19,13 @@ private const val ICON_ENABLED_ALPHA = 0.7F
 private const val DISABLED_ALPHA = 0.2F
 class StylingFlowButton : CardView {
 
-
 	private val listenerAdapter = InternalListener()
 
-
 	private var _buttonColor: Int? =
-		ContextCompat.getColor(context, R.color.color_button_main_default_background_color)
+		ContextCompat.getColor(context, R.color.colorFlowButtonBackgroundDefault)
 
 	private var _iconColor: Int? =
-		ContextCompat.getColor(context, R.color.color_button_main_default_icon_color)
+		ContextCompat.getColor(context, R.color.colorFlowButtonIconDefault)
 
 	private var _buttonState: Int? = StylingFlowButtonState.STATE_DISABLED.state
 

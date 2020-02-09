@@ -136,6 +136,7 @@
 		android:inputType="textPersonName|textEmailAddress|text"
 		app:layout_constraintBottom_toTopOf="@+id/inputPassword"
 		app:layout_constraintTop_toBottomOf="@+id/textOr"
+		android:text="admin"
 		tools:layout_editor_absoluteX="36dp" />
 
 	<!-- INPUT FIELD PASSWORD -->
@@ -149,6 +150,7 @@
 		android:imeOptions="actionDone"
 		android:inputType="textPassword|textWebPassword"
 		app:layout_constraintBottom_toTopOf="@+id/switchStaySignedIn"
+		android:text="admin"
 		app:layout_constraintTop_toBottomOf="@+id/inputUserName" />
 
 	<androidx.appcompat.widget.AppCompatImageView

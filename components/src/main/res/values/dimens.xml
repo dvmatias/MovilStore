@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<!-- Custom View Button Flow -->
+
 	<dimen name="dimen_button_flow_height">52dp</dimen>
 	<dimen name="dimen_button_flow_radius">26dp</dimen>
 	<dimen name="dimen_button_flow_elevation">2dp</dimen>
 	<dimen name="dimen_button_flow_container_margin">4dp</dimen>
+
+	<dimen name="dimen_styling_main_tab_custom_view_layout_height">42dp</dimen>
+	<dimen name="dimen_styling_main_tab_custom_view_padding">4dp</dimen>
+	<dimen name="dimen_styling_main_tab_custom_view_card_corner_radius">21dp</dimen>
+	<dimen name="dimen_styling_main_tab_custom_view_content_padding_left">10dp</dimen>
+	<dimen name="dimen_styling_main_tab_custom_view_content_padding_right">10dp</dimen>
+	<dimen name="dimen_styling_main_tab_custom_view_separator_width">10dp</dimen>
+
+	<dimen name="dimen_styling_main_tab_layout_height">72dp</dimen>
+	<dimen name="dimen_styling_main_tab_min_width">1dp</dimen>
+	<dimen name="dimen_styling_main_tab_padding_bottom">1dp</dimen>
+	<dimen name="dimen_styling_main_tab_padding_end">4dp</dimen>
+	<dimen name="dimen_styling_main_tab_padding_start">4dp</dimen>
+	<dimen name="dimen_styling_main_tab_padding_top">1dp</dimen>
 </resources>

@@ -1,6 +1,6 @@
 <resources>
 
-	<!-- Flow Button -->
+	<!-- FLOW BUTTON -->
 	<declare-styleable name="StylingFlowButton">
 		<attr name="buttonColor" format="color" />
 		<attr name="iconColor" format="color" />
@@ -9,6 +9,11 @@
 			<enum name="disabled" value="1" />
 			<enum name="loading" value="2" />
 		</attr>
+	</declare-styleable>
+
+	<!-- MAIN TAB LAYOUT -->
+	<declare-styleable name="StylingMainTabLayout">
+		<attr name="backgroundLayoutColor" format="color" />
 	</declare-styleable>
 
 </resources>
