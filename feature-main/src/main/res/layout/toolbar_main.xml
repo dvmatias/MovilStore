@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="@dimen/height_toolbar_main_64dp"
 	android:paddingStart="@dimen/padding_start_toolbar_main_8dp"
@@ -28,7 +29,7 @@
 		android:layout_marginBottom="@dimen/margin_bottom_toolbar_main_button_search_12dp"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintStart_toEndOf="@id/buttonNavigation"
-		app:layout_constraintEnd_toStartOf="@id/buttonFilterSearch"
+		app:layout_constraintEnd_toStartOf="@id/buttonShopCart"
 		app:cardBackgroundColor="@color/color_toolbar_main_button_search_background"
 		app:layout_constraintTop_toTopOf="parent"
 		app:contentPaddingRight="@dimen/content_padding_start_toolbar_main_button_search_8dp"
@@ -37,7 +38,7 @@
 		app:cardElevation="0dp">
 
 		<LinearLayout
-			android:layout_width="wrap_content"
+			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:orientation="horizontal"
 			android:layout_gravity="center_vertical"
@@ -51,34 +52,34 @@
 
 			<androidx.appcompat.widget.AppCompatTextView
 				android:id="@+id/titleSearch"
-				android:layout_width="wrap_content"
+				android:layout_width="0dp"
 				android:layout_height="wrap_content"
+				android:layout_weight="1"
 				android:includeFontPadding="false"
 				android:textSize="@dimen/size_toolbar_main_title_search_14sp"
 				android:text="@string/label_toolbar_main_button_search"
 				android:textColor="@color/color_toolbar_main_button_search_title_search"
 				android:layout_marginStart="@dimen/margin_start_toolbar_main_title_search_8dp"/>
 
+			<!-- FILTER SEARCH BUTTON -->
+			<androidx.appcompat.widget.AppCompatImageView
+				android:id="@+id/buttonFilterSearch"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/ic_toolbar_main_filter_18pt"
+				android:layout_marginEnd="@dimen/margin_end_toolbar_main_button_filter_search_4dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
 		</LinearLayout>
 
 	</androidx.cardview.widget.CardView>
 
-	<!-- FILTER SEARCH BUTTON -->
-	<androidx.appcompat.widget.AppCompatImageView
-		android:id="@+id/buttonFilterSearch"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:src="@drawable/ic_toolbar_main_filter_24pt"
-		android:layout_marginEnd="@dimen/margin_end_toolbar_main_button_filter_search_4dp"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toStartOf="@id/buttonShopCart"
-		app:layout_constraintTop_toTopOf="parent" />
-
 	<!-- SHOP CART BUTTON -->
 	<androidx.appcompat.widget.AppCompatImageView
 		android:id="@+id/buttonShopCart"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
+		android:layout_width="23dp"
+		android:layout_height="28dp"
 		android:layout_marginEnd="@dimen/margin_end_toolbar_main_button_shop_cart_4dp"
 		android:src="@drawable/ic_toolbar_main_cart_24pt"
 		app:layout_constraintBottom_toBottomOf="parent"
@@ -88,8 +89,8 @@
 	<!-- OFFERS BUTTON -->
 	<androidx.appcompat.widget.AppCompatImageView
 		android:id="@+id/buttonOffers"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
+		android:layout_width="28dp"
+		android:layout_height="28dp"
 		android:src="@drawable/ic_toolbar_main_offers_24pt"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"

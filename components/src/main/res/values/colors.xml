@@ -18,12 +18,12 @@
 	<color name="colorTextTabLight">#FFFFFF</color>
 
 	<!-- SPLASH ACTIVITY -->
-	<color name="colorSplashBackground">#DE393A</color>
+	<color name="colorSplashBackground">#E65149</color>
 	<color name="colorTopFigure">#8AC6D1</color>
 	<color name="colorBottomFigure">#A6D390</color>
 
 	<!-- LOGIN ACTIVITY -->
-	<color name="colorLoginActivityBackground">#000000</color>
+	<color name="colorLoginActivityBackground">#2E2E2E</color>
 	<color name="colorSocialNetworkLabel">#1A1A1A</color>
 	<color name="colorBtnTextLabel">#FFF</color>
 	<color name="coloEditTextHint">#898989</color>
