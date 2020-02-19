@@ -3,38 +3,65 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
-	android:layout_height="@dimen/height_toolbar_main_64dp"
+	android:layout_height="wrap_content"
 	android:paddingStart="@dimen/padding_start_toolbar_main_8dp"
 	android:paddingEnd="@dimen/padding_end_toolbar_main_8dp"
-	android:background="@color/colorTransparent">
+	android:background="@color/colorToolbarMainBackground">
 
 	<!-- NAVIGATION BUTTON -->
 	<androidx.appcompat.widget.AppCompatImageView
 		android:id="@+id/buttonNavigation"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:src="@drawable/ic_toolbar_main_navigation_button_32pt"
-		app:layout_constraintBottom_toBottomOf="parent"
+		android:src="@drawable/ic_toolbar_main_navigation_32dp"
+		android:layout_marginStart="8dp"
 		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@id/ivLogo"
+		app:layout_constraintBottom_toBottomOf="@id/ivLogo" />
+
+	<!-- LOGO -->
+	<androidx.appcompat.widget.AppCompatImageView
+		android:id="@+id/ivLogo"
+		android:layout_width="wrap_content"
+		android:layout_height="@dimen/dimen_26dp"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginEnd="8dp"
+		android:adjustViewBounds="true"
+		android:src="@drawable/img_main_toolbar_movil_store"
+		app:layout_constraintEnd_toStartOf="@+id/buttonNotification"
+		app:layout_constraintStart_toEndOf="@+id/buttonNavigation"
 		app:layout_constraintTop_toTopOf="parent" />
+
+	<!-- NOTIFICATION BUTTON -->
+	<androidx.appcompat.widget.AppCompatImageView
+		android:id="@+id/buttonNotification"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/ic_toolbar_main_notification_32dp"
+		android:layout_marginEnd="8dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="@id/ivLogo"
+		app:layout_constraintBottom_toBottomOf="@id/ivLogo" />
+
 
 	<!-- SEARCH BUTTON -->
 	<androidx.cardview.widget.CardView
 		android:id="@+id/buttonSearch"
 		android:layout_width="0dp"
-		android:layout_height="match_parent"
+		android:layout_height="@dimen/height_toolbar_main_button_search_46dp"
 		android:layout_marginStart="@dimen/margin_start_toolbar_main_button_search_8dp"
 		android:layout_marginEnd="@dimen/margin_end_toolbar_main_button_search_8dp"
 		android:layout_marginTop="@dimen/margin_top_toolbar_main_button_search_12dp"
-		android:layout_marginBottom="@dimen/margin_bottom_toolbar_main_button_search_12dp"
+		android:layout_marginBottom="@dimen/margin_bottom_toolbar_main_button_search_10dp"
+		app:layout_constraintTop_toBottomOf="@id/ivLogo"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toStartOf="@id/iconFilterSearchButton"
 		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintStart_toEndOf="@id/buttonNavigation"
-		app:layout_constraintEnd_toStartOf="@id/buttonShopCart"
-		app:cardBackgroundColor="@color/color_toolbar_main_button_search_background"
-		app:layout_constraintTop_toTopOf="parent"
-		app:contentPaddingRight="@dimen/content_padding_start_toolbar_main_button_search_8dp"
-		app:contentPaddingLeft="@dimen/content_padding_end_toolbar_main_button_search_8dp"
-		app:cardCornerRadius="@dimen/margin_start_toolbar_main_button_search_corner_radius_22dp"
+		app:cardBackgroundColor="@color/colorToolbarMainButtonSearchBackground"
+		app:contentPaddingRight="@dimen/content_padding_start_toolbar_main_button_search_16dp"
+		app:contentPaddingLeft="@dimen/content_padding_end_toolbar_main_button_search_16dp"
+		app:cardCornerRadius="@dimen/margin_start_toolbar_main_button_search_corner_radius_4dp"
 		app:cardElevation="0dp">
 
 		<LinearLayout
@@ -46,8 +73,8 @@
 
 			<androidx.appcompat.widget.AppCompatImageView
 				android:id="@+id/iconSearch"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
+				android:layout_width="24dp"
+				android:layout_height="24dp"
 				android:src="@drawable/ic_search_button_toolbar_main_18pt"/>
 
 			<androidx.appcompat.widget.AppCompatTextView
@@ -56,44 +83,38 @@
 				android:layout_height="wrap_content"
 				android:layout_weight="1"
 				android:includeFontPadding="false"
-				android:textSize="@dimen/size_toolbar_main_title_search_14sp"
+				android:textSize="@dimen/size_toolbar_main_title_search_16sp"
 				android:text="@string/label_toolbar_main_button_search"
-				android:textColor="@color/color_toolbar_main_button_search_title_search"
+				android:textColor="@color/colorToolbarMainButtonSearchLabelSearch"
 				android:layout_marginStart="@dimen/margin_start_toolbar_main_title_search_8dp"/>
-
-			<!-- FILTER SEARCH BUTTON -->
-			<androidx.appcompat.widget.AppCompatImageView
-				android:id="@+id/buttonFilterSearch"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:src="@drawable/ic_toolbar_main_filter_18pt"
-				android:layout_marginEnd="@dimen/margin_end_toolbar_main_button_filter_search_4dp"
-				app:layout_constraintBottom_toBottomOf="parent"
-				app:layout_constraintTop_toTopOf="parent" />
 
 		</LinearLayout>
 
 	</androidx.cardview.widget.CardView>
 
-	<!-- SHOP CART BUTTON -->
+	<!-- FILTER SEARCH BUTTON -->
 	<androidx.appcompat.widget.AppCompatImageView
-		android:id="@+id/buttonShopCart"
-		android:layout_width="23dp"
-		android:layout_height="28dp"
-		android:layout_marginEnd="@dimen/margin_end_toolbar_main_button_shop_cart_4dp"
-		android:src="@drawable/ic_toolbar_main_cart_24pt"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toStartOf="@id/buttonOffers"
-		app:layout_constraintTop_toTopOf="parent" />
+		android:id="@+id/iconFilterSearchButton"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/ic_toolbar_main_filter_search_24dp"
+		android:layout_marginEnd="@dimen/margin_end_toolbar_main_button_filter_search_4dp"
+		app:layout_constraintStart_toEndOf="@id/buttonSearch"
+		app:layout_constraintEnd_toEndOf="@id/labelFilterSearchButton"
+		app:layout_constraintBottom_toBottomOf="@id/buttonSearch"
+		app:layout_constraintTop_toTopOf="@id/buttonSearch" />
 
-	<!-- OFFERS BUTTON -->
-	<androidx.appcompat.widget.AppCompatImageView
-		android:id="@+id/buttonOffers"
-		android:layout_width="28dp"
-		android:layout_height="28dp"
-		android:src="@drawable/ic_toolbar_main_offers_24pt"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintTop_toTopOf="parent" />
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/labelFilterSearchButton"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/label_toolbar_main_button_filter"
+		android:textColor="@color/colorPrimary"
+		android:layout_marginStart="@dimen/margin_start_toolbar_main_label_button_filter_search_4dp"
+		android:layout_marginEnd="@dimen/margin_end_toolbar_main_label_button_filter_search_8dp"
+		app:layout_constraintTop_toTopOf="@id/buttonSearch"
+		app:layout_constraintBottom_toBottomOf="@id/buttonSearch"
+		app:layout_constraintStart_toEndOf="@id/iconFilterSearchButton"
+		app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

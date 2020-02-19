@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<color name="colorPrimary">#DE393A</color>
+	<color name="colorPrimary">#E65149</color>
 	<color name="colorPrimaryDark">#B83535</color>
 	<color name="colorAccent">#A6D390</color>
 
@@ -14,11 +14,21 @@
 
 	<!-- TEXT -->
 
+	<!-- ICONS -->
+	<color name="colorGrayIcon">#706f6f</color>
+
+	<!-- TOOLBAR MAIN -->
+	<color name="colorToolbarMainBackground">#FFFFFF</color>
+	<color name="colorToolbarMainButtonSearchBackground">#F5F4F4</color>
+	<color name="colorToolbarMainButtonSearchTitleSearch">#F7F6F6</color>
+	<color name="colorToolbarMainButtonSearchIconSearch">#AAA4B4</color>
+	<color name="colorToolbarMainButtonSearchLabelSearch">@color/colorToolbarMainButtonSearchIconSearch</color>
+
 	<!-- LOGIN TAB -->
 	<color name="colorTextTabLight">#FFFFFF</color>
 
 	<!-- SPLASH ACTIVITY -->
-	<color name="colorSplashBackground">#E65149</color>
+	<color name="colorSplashBackground">@color/colorPrimary</color>
 	<color name="colorTopFigure">#8AC6D1</color>
 	<color name="colorBottomFigure">#A6D390</color>
 
