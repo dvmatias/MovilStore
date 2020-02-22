@@ -12,8 +12,8 @@
                 <path
                     android:name="path_clapper"
                     android:pathData="M 17.397 20.396 C 18.023 20.848 18.432 21.597 18.432 22.443 L 18.431 22.655 C 18.431 24.035 17.341 25.155 15.999 25.155 C 14.655 25.155 13.567 24.035 13.567 22.655 L 13.567 22.443 C 13.567 21.582 13.993 20.82 14.639 20.37"
-                    android:strokeColor="@color/colorGrayIcon"
-                    android:strokeWidth="@dimen/stroke_width_icon_32dp_1_3"
+                    android:strokeColor="@color/colorGrayLightIcon"
+                    android:strokeWidth="@dimen/stroke_width_icon_1_3"
                     android:strokeLineCap="round"
                     android:strokeLineJoin="round"
                     android:strokeMiterLimit="10"/>
@@ -22,8 +22,8 @@
                 <path
                     android:name="path_handle"
                     android:pathData="M 17.436 9.458 C 17.436 9.458 17.467 8.557 17.436 8.254 C 17.354 7.525 16.695 7 16 7 C 15.305 7 14.646 7.525 14.564 8.254 C 14.533 8.557 14.564 9.458 14.564 9.458"
-                    android:strokeColor="@color/colorGrayIcon"
-                    android:strokeWidth="@dimen/stroke_width_icon_32dp_1_3"/>
+                    android:strokeColor="@color/colorGrayLightIcon"
+                    android:strokeWidth="@dimen/stroke_width_icon_1_3"/>
                 <path
                     android:name="path_body_fill"
                     android:pathData="M 16 22.553 L 24.256 22.553 C 20.402 19.631 20.444 15.536 20.348 13.01 C 19.873 9.311 16 9.302 16 9.302 C 16 9.302 12.127 9.31 11.65 13.01 C 11.555 15.536 11.597 19.631 7.744 22.553 L 16 22.553 Z"
@@ -31,8 +31,8 @@
                 <path
                     android:name="path_body"
                     android:pathData="M 16 22.553 L 24.256 22.553 C 20.402 19.631 20.444 15.536 20.348 13.01 C 19.873 9.311 16 9.302 16 9.302 C 16 9.302 12.127 9.31 11.65 13.01 C 11.555 15.536 11.597 19.631 7.744 22.553 L 16 22.553 Z"
-                    android:strokeColor="@color/colorGrayIcon"
-                    android:strokeWidth="@dimen/stroke_width_icon_32dp_1_3"
+                    android:strokeColor="@color/colorGrayLightIcon"
+                    android:strokeWidth="@dimen/stroke_width_icon_1_3"
                     android:strokeLineCap="round"
                     android:strokeLineJoin="round"/>
             </group>

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+	<!-- VECTOR DRAWABLE STROKE WIDTH -->
+	<dimen name="stroke_width_icon_1">1.0</dimen>
+	<dimen name="stroke_width_icon_1_1">1.1</dimen>
+	<dimen name="stroke_width_icon_1_2">1.2</dimen>
+	<dimen name="stroke_width_icon_1_3">1.3</dimen>
+	<dimen name="stroke_width_icon_2">2.0</dimen>
+	<dimen name="stroke_width_icon_2_3">2.3</dimen>
+
 	<dimen name="dimen_button_flow_height">52dp</dimen>
 	<dimen name="dimen_button_flow_radius">26dp</dimen>
 	<dimen name="dimen_button_flow_elevation">2dp</dimen>
@@ -19,4 +27,7 @@
 	<dimen name="dimen_styling_main_tab_padding_end">4dp</dimen>
 	<dimen name="dimen_styling_main_tab_padding_start">4dp</dimen>
 	<dimen name="dimen_styling_main_tab_padding_top">1dp</dimen>
+
+	<!-- BOTTOM NAV VIEW -->
+	<dimen name="height_styling_bottom_nav_main_56dp">56dp</dimen>
 </resources>

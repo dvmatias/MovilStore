@@ -31,8 +31,7 @@
 			android:id="@+id/ivTabIcon"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:scaleType="center"
-			android:src="@drawable/ic_tab_main_32" />
+			android:scaleType="center" />
 
 		<androidx.appcompat.widget.AppCompatTextView
 			android:id="@+id/tvLabel"

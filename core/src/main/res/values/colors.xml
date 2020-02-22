@@ -15,7 +15,8 @@
 	<!-- TEXT -->
 
 	<!-- ICONS -->
-	<color name="colorGrayIcon">#706f6f</color>
+	<color name="colorGrayLightIcon">#706f6f</color>
+	<color name="colorGrayDarkIcon">#474747</color>
 
 	<!-- TOOLBAR MAIN -->
 	<color name="colorToolbarMainBackground">#FFFFFF</color>
