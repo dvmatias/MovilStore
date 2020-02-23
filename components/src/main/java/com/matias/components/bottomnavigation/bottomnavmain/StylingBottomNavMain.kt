@@ -63,6 +63,9 @@ class StylingBottomNavMain : ConstraintLayout, OnItemClickListener {
 		recycler.adapter = adapter
 	}
 
+	/**
+	 * Returns the list of objects to populate the [StylingBottomNavMain] View.
+	 */
 	private fun getBottomNavItems(): ArrayList<ItemStylingBottomMainModel> {
 		val items: ArrayList<ItemStylingBottomMainModel> = ArrayList()
 		for (i in 0 until icons.size) {
