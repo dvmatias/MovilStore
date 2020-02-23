@@ -11,9 +11,12 @@ class FeatureFlagProviderImpl(private val featureFlaghCache: FeatureFlaghCache) 
 	override fun getFeatureFlagStatus(feature: Features): Either<FailureType, Boolean> {
 		featureFlaghCache.getFeatureFlags()?.let {
 			return when (feature) {
-				Features.FILTER_SEARCH_MAIN -> Either.Right(it.mainFilterSearchEnable)
-				Features.SHOP_CART_MAIN -> Either.Right(it.mainShopCartEnable)
-				Features.OFFERS_DISCOUNTS_COUPONS_MAIN -> Either.Right(it.mainOffersDiscountsCouponsEnable)
+				Features.TAB_HOME -> Either.Right(it.flagHomeTabEnable)
+				Features.TAB_PRODUCTS -> Either.Right(it.flagProductsTabEnable)
+				Features.TAB_SHOP_CART -> Either.Right(it.flagShopCartTabEnable)
+				Features.TAB_CONTACT_US -> Either.Right(it.flagContactUsTabEnable)
+				Features.TAB_PROFILE -> Either.Right(it.flagProfileTabEnable)
+				Features.NOTIFICATIONS -> Either.Right(it.flagNotificationsEnable)
 			}
 		}
 		return Either.Left(FailureType.FeatureFlagNotFoundError)

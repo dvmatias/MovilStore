@@ -31,9 +31,9 @@ class SplashActivity :
 
 	override fun onResume() {
 		super.onResume()
-		navigator.toMainScreen(this, null, null, true)
-//		animateScreenIn()
-//		Handler().postDelayed({ presenter.fetchGlobalConfig() }, 1100)
+//		navigator.toMainScreen(this, null, null, true)
+		animateScreenIn()
+		Handler().postDelayed({ presenter.fetchGlobalConfig() }, 1100)
 	}
 
 	/*******************************************************************************************************************
