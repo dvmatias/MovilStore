@@ -11,16 +11,31 @@ import com.matias.core.helpers.dpToPx
 import com.matias.domain.models.item.ItemMainPageModel
 import kotlinx.android.synthetic.main.item_styling_bottom_nav_main.view.*
 
+
 class StylingBottomNavMainAdapter(
 	private val context: Context,
 	private val listener: OnItemClickListener,
-	private val itemMainPageList: MutableList<ItemMainPageModel>
+	private var itemMainPageList: List<ItemMainPageModel>
 ) : RecyclerView.Adapter<StylingBottomNavMainAdapter.BottomNavItemViewHolder>() {
 
 	companion object {
 
 		private var isViewInitializaed: Boolean = false
 
+	}
+
+	init {
+		setupItemList()
+	}
+
+	/**
+	 * Remove not enabled tabs.
+	 */
+	private fun setupItemList() {
+		val mockItemList = itemMainPageList.filter { item ->
+			item.enable
+		}
+		itemMainPageList = mockItemList
 	}
 
 	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BottomNavItemViewHolder =
@@ -30,7 +45,7 @@ class StylingBottomNavMainAdapter(
 		val params = holder.itemView.container.layoutParams
 		val displayMetrics = context.resources.displayMetrics
 		val dpWidth = displayMetrics.widthPixels / displayMetrics.density
-		params.width = dpToPx(context, (dpWidth / 5).toInt())
+		params.width = dpToPx(context, (dpWidth / itemCount).toInt())
 
 		holder.bindItem(itemMainPageList[position], listener, position)
 

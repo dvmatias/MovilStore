@@ -5,17 +5,21 @@ import android.os.Handler
 import android.view.View
 import androidx.core.app.ActivityOptionsCompat
 import com.matias.core.base.mvp.BasePresenterActivity
-import com.matias.core.helpers.startVectorAnimation
+import com.matias.core.helpers.VectorDrawableHelper
 import com.matias.feature_splash.R
 import com.matias.features.splash.di.splash.SplashActivityModule
 import com.matias.features.splash.di.splash.SplashActivitySubComponent
 import com.matias.features.splash.ui.SplashUiComponent
 import kotlinx.android.synthetic.main.activity_splash.*
+import javax.inject.Inject
 
 
 class SplashActivity :
 	BasePresenterActivity<SplashActivity, SplashActivityPresenter, SplashActivitySubComponent>(),
 	SplashActivityContract.View {
+
+	@Inject
+	lateinit var vectorDrawableHelper: VectorDrawableHelper
 
 	override fun bindComponent(): SplashActivitySubComponent =
 		SplashUiComponent.component.plus(SplashActivityModule())
@@ -40,22 +44,22 @@ class SplashActivity :
 	 * [SplashActivityContract.View] implementation
 	 */
 	override fun animateScreenIn() {
-		startVectorAnimation(
+		vectorDrawableHelper.startVectorAnimation(
 			imageTopLeftFigure,
 			getDrawable(R.drawable.vd_splash_top_left_figure_anim_in_3)
 		)
-		startVectorAnimation(
+		vectorDrawableHelper.startVectorAnimation(
 			imageBottomRightFigure,
 			getDrawable(R.drawable.vd_splash_bottom_right_figure_anim_in_3)
 		)
 	}
 
 	override fun animateScreenOut() {
-		startVectorAnimation(
+		vectorDrawableHelper.startVectorAnimation(
 			imageTopLeftFigure,
 			getDrawable(R.drawable.vd_splash_top_left_figure_anim_out_3)
 		)
-		startVectorAnimation(
+		vectorDrawableHelper.startVectorAnimation(
 			imageBottomRightFigure,
 			getDrawable(R.drawable.vd_splash_bottom_right_figure_anim_out_3)
 		)
