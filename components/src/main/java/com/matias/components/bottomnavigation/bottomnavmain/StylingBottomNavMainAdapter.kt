@@ -1,7 +1,6 @@
 package com.matias.components.bottomnavigation.bottomnavmain
 
 import android.content.Context
-import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,13 +8,13 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.matias.components.R
 import com.matias.core.helpers.dpToPx
-import com.matias.domain.models.item.ItemStylingBottomMainModel
+import com.matias.domain.models.item.ItemMainPageModel
 import kotlinx.android.synthetic.main.item_styling_bottom_nav_main.view.*
 
 class StylingBottomNavMainAdapter(
 	private val context: Context,
 	private val listener: OnItemClickListener,
-	private val items: ArrayList<ItemStylingBottomMainModel>
+	private val itemMainPageList: MutableList<ItemMainPageModel>
 ) : RecyclerView.Adapter<StylingBottomNavMainAdapter.BottomNavItemViewHolder>() {
 
 	companion object {
@@ -25,7 +24,7 @@ class StylingBottomNavMainAdapter(
 	}
 
 	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BottomNavItemViewHolder =
-		BottomNavItemViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_styling_bottom_nav_main, parent, false), context)
+		BottomNavItemViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_styling_bottom_nav_main, parent, false))
 
 	override fun onBindViewHolder(holder: BottomNavItemViewHolder, position: Int) {
 		val params = holder.itemView.container.layoutParams
@@ -33,7 +32,7 @@ class StylingBottomNavMainAdapter(
 		val dpWidth = displayMetrics.widthPixels / displayMetrics.density
 		params.width = dpToPx(context, (dpWidth / 5).toInt())
 
-		holder.bindItem(items[position], listener, position)
+		holder.bindItem(itemMainPageList[position], listener, position)
 
 		if (position == 0 && !isViewInitializaed) {
 			isViewInitializaed = true
@@ -42,7 +41,7 @@ class StylingBottomNavMainAdapter(
 	}
 
 	override fun getItemCount(): Int =
-		items.size
+		itemMainPageList.size
 
 	fun updateSelected(selectedView: View?, unselectedView: View?) {
 		selectedView?.let { setSelected(it) }
@@ -66,18 +65,18 @@ class StylingBottomNavMainAdapter(
 	/**
 	 * Holder class.
 	 */
-	class BottomNavItemViewHolder(itemView: View, private val context: Context) : RecyclerView.ViewHolder(itemView) {
+	class BottomNavItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 		private lateinit var listener: OnItemClickListener
 
-		fun bindItem(item: ItemStylingBottomMainModel, listener: OnItemClickListener, position: Int) {
+		fun bindItem(itemMainPage: ItemMainPageModel, listener: OnItemClickListener, position: Int) {
 			this.listener = listener
-			
+
 			itemView.apply {
-				ivIcon.setImageDrawable(ContextCompat.getDrawable(context, item.icon))
-				tvLabel.text = item.label
+				ivIcon.setImageDrawable(ContextCompat.getDrawable(context, itemMainPage.icon))
+				tvLabel.text = itemMainPage.label
 				ivBadge.visibility = View.GONE
 				container.setOnClickListener { handleItemClick(position) }
-				tag = item.tag
+				tag = itemMainPage.tag
 			}
 		}
 

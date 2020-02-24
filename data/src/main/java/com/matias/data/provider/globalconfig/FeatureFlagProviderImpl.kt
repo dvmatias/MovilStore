@@ -8,18 +8,18 @@ import com.matias.domain.provider.globalconfig.FeatureFlagProvider
 
 class FeatureFlagProviderImpl(private val featureFlaghCache: FeatureFlaghCache) : FeatureFlagProvider {
 
-	override fun getFeatureFlagStatus(feature: Features): Either<FailureType, Boolean> {
+	override fun getFeatureFlagStatus(feature: Features): Boolean {
 		featureFlaghCache.getFeatureFlags()?.let {
 			return when (feature) {
-				Features.TAB_HOME -> Either.Right(it.flagHomeTabEnable)
-				Features.TAB_PRODUCTS -> Either.Right(it.flagProductsTabEnable)
-				Features.TAB_SHOP_CART -> Either.Right(it.flagShopCartTabEnable)
-				Features.TAB_CONTACT_US -> Either.Right(it.flagContactUsTabEnable)
-				Features.TAB_PROFILE -> Either.Right(it.flagProfileTabEnable)
-				Features.NOTIFICATIONS -> Either.Right(it.flagNotificationsEnable)
+				Features.TAB_HOME -> it.flagHomeTabEnable
+				Features.TAB_PRODUCTS -> it.flagProductsTabEnable
+				Features.TAB_SHOP_CART -> it.flagShopCartTabEnable
+				Features.TAB_CONTACT_US -> it.flagContactUsTabEnable
+				Features.TAB_PROFILE -> it.flagProfileTabEnable
+				Features.NOTIFICATIONS -> it.flagNotificationsEnable
 			}
 		}
-		return Either.Left(FailureType.FeatureFlagNotFoundError)
+		return false
 	}
 
 }

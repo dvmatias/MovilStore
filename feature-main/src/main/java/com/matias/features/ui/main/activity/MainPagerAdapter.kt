@@ -3,23 +3,19 @@ package com.matias.features.ui.main.activity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import com.matias.features.ui.main.fragments.contactus.MainContactUsFragment
-import com.matias.features.ui.main.fragments.home.MainHomeFragment
-import com.matias.features.ui.main.fragments.products.MainProductsFragment
-import com.matias.features.ui.main.fragments.profile.MainProfileFragment
-import com.matias.features.ui.main.fragments.shopcart.MainShopCartFragment
+import com.matias.domain.models.item.ItemMainPageModel
 
-class MainPagerAdapter(fm: FragmentManager, behavior: Int) :
+class MainPagerAdapter(itemMainPageList: MutableList<ItemMainPageModel>, fm: FragmentManager, behavior: Int) :
 	FragmentStatePagerAdapter(fm, behavior) {
 
 	private val fragmentList = ArrayList<Fragment>()
 
 	init {
-		fragmentList.add(MainHomeFragment.newInstance())
-		fragmentList.add(MainProductsFragment.newInstance())
-		fragmentList.add(MainShopCartFragment.newInstance())
-		fragmentList.add(MainContactUsFragment.newInstance())
-		fragmentList.add(MainProfileFragment.newInstance())
+		for (itemMainPage in itemMainPageList) {
+			if (itemMainPage.enable) {
+				fragmentList.add(itemMainPage.fragment)
+			}
+		}
 	}
 
 	override fun getItem(position: Int): Fragment = fragmentList[position]

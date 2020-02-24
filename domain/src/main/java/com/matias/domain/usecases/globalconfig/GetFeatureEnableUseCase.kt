@@ -8,9 +8,9 @@ import com.matias.domain.provider.globalconfig.FeatureFlagProvider
 
 class GetFeatureEnableUseCase(
 	private val featureFlagProvider: FeatureFlagProvider
-) : UseCase<Boolean, GetFeatureEnableUseCase.Params>() {
+)  {
 
-	override suspend fun run(params: Params): Either<FailureType, Boolean> =
+	fun isFeatureAvailable(params: Params): Boolean =
 		featureFlagProvider.getFeatureFlagStatus(params.feature)
 
 	data class Params(val feature: Features)
