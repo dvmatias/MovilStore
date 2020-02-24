@@ -62,7 +62,7 @@ class StylingBottomNavMain : ConstraintLayout, OnItemClickListener {
 			oldPosition -> listener?.onItemReselected(selectedView)
 			else -> {
 				listener?.onItemUnselected(unselectedView)
-				listener?.onItemSelected(selectedView)
+				listener?.onItemSelected(selectedView, position)
 				adapter.updateSelected(selectedView, unselectedView)
 			}
 		}
@@ -73,7 +73,7 @@ class StylingBottomNavMain : ConstraintLayout, OnItemClickListener {
 	 */
 	interface OnBottomNavMainItemSelectedListener {
 
-		fun onItemSelected(view: View?)
+		fun onItemSelected(view: View?, position: Int)
 
 		fun onItemReselected(view: View?)
 
@@ -82,7 +82,7 @@ class StylingBottomNavMain : ConstraintLayout, OnItemClickListener {
 	}
 
 	open class SimpleOnBottomNavMainItemSelectedListener : OnBottomNavMainItemSelectedListener {
-		override fun onItemSelected(view: View?) {}
+		override fun onItemSelected(view: View?, position: Int) {}
 
 		override fun onItemReselected(view: View?) {}
 
