@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:paddingTop="@dimen/padding_top_toolbar_main_footer_to_search_padding_top_10dp"
+	android:paddingBottom="@dimen/padding_top_toolbar_main_footer_to_search_padding_bottom_10dp"
+	app:layout_constraintBottom_toBottomOf="parent"
+	app:layout_constraintEnd_toEndOf="parent"
+	app:layout_constraintStart_toStartOf="parent">
+
+	<!-- SEARCH BUTTON -->
+	<androidx.cardview.widget.CardView
+		android:id="@+id/buttonSearch"
+		android:layout_width="0dp"
+		android:layout_height="@dimen/height_toolbar_main_button_search_46dp"
+		android:layout_marginEnd="@dimen/margin_end_toolbar_main_button_search_8dp"
+		app:cardBackgroundColor="@color/colorToolbarMainButtonSearchBackground"
+		app:cardCornerRadius="@dimen/margin_start_toolbar_main_button_search_corner_radius_4dp"
+		app:cardElevation="0dp"
+		app:contentPaddingLeft="@dimen/content_padding_end_toolbar_main_button_search_16dp"
+		app:contentPaddingRight="@dimen/content_padding_start_toolbar_main_button_search_16dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@id/iconFilterSearchButton"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<androidx.appcompat.widget.LinearLayoutCompat
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical"
+			android:gravity="center_vertical"
+			android:orientation="horizontal">
+
+			<!-- SEARCH ICON -->
+			<androidx.appcompat.widget.AppCompatImageView
+				android:id="@+id/iconSearch"
+				android:layout_width="24dp"
+				android:layout_height="24dp"
+				android:src="@drawable/ic_toolbar_main_search_button_18pt" />
+
+			<!-- SEARCH HINT -->
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/titleSearch"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="@dimen/margin_start_toolbar_main_title_search_8dp"
+				android:layout_weight="1"
+				android:includeFontPadding="false"
+				android:text="@string/label_toolbar_main_button_search"
+				android:textColor="@color/colorToolbarMainButtonSearchLabelSearch"
+				android:textSize="@dimen/size_toolbar_main_title_search_16sp" />
+
+		</androidx.appcompat.widget.LinearLayoutCompat>
+
+	</androidx.cardview.widget.CardView>
+
+	<!-- FILTER SEARCH BUTTON -->
+	<androidx.appcompat.widget.AppCompatImageView
+		android:id="@+id/iconFilterSearchButton"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="@dimen/margin_end_toolbar_main_button_filter_search_4dp"
+		android:src="@drawable/ic_toolbar_main_filter_search_24dp"
+		app:layout_constraintBottom_toBottomOf="@id/buttonSearch"
+		app:layout_constraintEnd_toStartOf="@id/labelFilterSearchButton"
+		app:layout_constraintStart_toEndOf="@id/buttonSearch"
+		app:layout_constraintTop_toTopOf="@id/buttonSearch" />
+
+	<!-- FILTER SEARCH LABEL -->
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/labelFilterSearchButton"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/label_toolbar_main_button_filter"
+		android:textColor="@color/colorPrimary"
+		app:layout_constraintBottom_toBottomOf="@id/buttonSearch"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="@id/buttonSearch" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

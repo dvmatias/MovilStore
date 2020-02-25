@@ -39,6 +39,9 @@ android {
 }
 
 dependencies {
+    implementation project(path: ':core')
+    implementation project(path: ':components')
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'androidx.appcompat:appcompat:1.1.0'
@@ -58,6 +61,4 @@ dependencies {
     // Retrofit
     implementation libs.retrofit
     implementation libs.retrofitJsonConverter
-
-    implementation project(path: ':core')
 }

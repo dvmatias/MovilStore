@@ -3,6 +3,7 @@ package com.matias.data.cache.featureflag
 import com.matias.data.entities.featureflag.FeatureFlagsEntity
 import com.matias.data.mappers.featureflag.FeatureFlagMapper
 import com.matias.domain.models.featureflag.FeatureFlagsModel
+import com.matias.domain.models.featureflag.Features
 
 class FeatureFlaghCacheImpl : FeatureFlaghCache {
     
@@ -15,5 +16,5 @@ class FeatureFlaghCacheImpl : FeatureFlaghCache {
     }
     
     override fun getFeatureFlags(): FeatureFlagsModel? = featureFlagsModel
-    
+
 }

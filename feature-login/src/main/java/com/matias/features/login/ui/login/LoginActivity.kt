@@ -36,7 +36,8 @@ class LoginActivity :
 	override fun bindComponent(): LoginActivitySubComponent =
 		LoginUiComponent.component.plus(LoginActivityModule(this))
 
-	override fun bindLayout(): Int = R.layout.activity_login
+	override fun bindLayout(): Int =
+		R.layout.activity_login
 
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
@@ -97,7 +98,7 @@ class LoginActivity :
 	}
 
 	override fun goToMainScreen() {
-		super.showToast("go to main screen")
+        navigator.toMainScreen(this, null, null, true)
 	}
 
 	override fun showLoading(show: Boolean) {

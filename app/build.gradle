@@ -48,6 +48,13 @@ android {
 }
 
 dependencies {
+    implementation project(':data')
+    implementation project(':domain')
+    implementation project(':core')
+    implementation project(':feature-splash')
+    implementation project(':feature-login')
+    implementation project(':feature-main')
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'androidx.appcompat:appcompat:1.1.0'
@@ -59,10 +66,4 @@ dependencies {
     // Kotlin
     implementation libs.kotlin
     implementation libs.kotlinx
-
-    implementation project(':data')
-    implementation project(':domain')
-    implementation project(':core')
-    implementation project(':feature-splash')
-    implementation project(':feature-login')
 }

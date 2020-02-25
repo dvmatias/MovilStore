@@ -10,10 +10,10 @@ import retrofit2.http.Query
 interface LogInApi {
 
 	companion object {
-		private const val CONTROLLER_SIGNIN = "user/"
+		private const val CONTROLLER_SIGNIN = "user"
 
-		private const val EP_SIGN_IN = "${CONTROLLER_SIGNIN}signin"
-		private const val EP_SIGN_UP = "${CONTROLLER_SIGNIN}signup"
+		private const val EP_SIGN_IN = "$CONTROLLER_SIGNIN/signin"
+		private const val EP_SIGN_UP = "$CONTROLLER_SIGNIN/signup"
 
 		private const val QUERY_USERNAME = "username"
 		private const val QUERY_PASSWORD = "password"

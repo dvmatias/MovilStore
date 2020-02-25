@@ -6,7 +6,7 @@ import androidx.core.app.ActivityOptionsCompat
 import com.matias.core.extensions.navigateTo
 import com.matias.core.navigator.Navigator
 import com.matias.features.login.ui.login.LoginActivity
-import com.matias.movilstore.MainActivity
+import com.matias.features.ui.main.activity.MainActivity
 
 class NavigatorImpl : Navigator {
 

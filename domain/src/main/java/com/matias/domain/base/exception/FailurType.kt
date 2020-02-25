@@ -22,4 +22,6 @@ sealed class FailureType {
 		class InvalidPhoneServerException(val apiError: ApiErrorModel) : SignUpErrorType()
 	}
 
+	object FeatureFlagNotFoundError : FailureType()
+
 }

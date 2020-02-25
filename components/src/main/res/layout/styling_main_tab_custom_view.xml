@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/cv"
+	android:layout_width="wrap_content"
+	android:layout_height="@dimen/dimen_styling_main_tab_custom_view_layout_height"
+	android:layout_gravity="center"
+	android:animateLayoutChanges="true"
+	android:padding="@dimen/dimen_styling_main_tab_custom_view_padding"
+	app:cardCornerRadius="@dimen/dimen_styling_main_tab_custom_view_card_corner_radius"
+	app:cardElevation="0dp"
+	app:cardUseCompatPadding="false"
+	app:contentPaddingLeft="@dimen/dimen_styling_main_tab_custom_view_content_padding_left"
+	app:contentPaddingRight="@dimen/dimen_styling_main_tab_custom_view_content_padding_right">
+
+	<LinearLayout
+		android:id="@+id/rootview"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:animateLayoutChanges="true"
+		android:gravity="center_vertical">
+
+		<View
+			android:id="@+id/separatorStart"
+			android:layout_width="@dimen/dimen_styling_main_tab_custom_view_separator_width"
+			android:layout_height="match_parent"
+			android:visibility="gone" />
+
+		<androidx.appcompat.widget.AppCompatImageView
+			android:id="@+id/ivTabIcon"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:scaleType="center" />
+
+		<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/tvLabel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="8dp"
+			android:fontFamily="@font/open_sans_bold"
+			android:textSize="14sp"
+			android:visibility="gone" />
+
+		<View
+			android:id="@+id/separatorEnd"
+			android:layout_width="@dimen/dimen_styling_main_tab_custom_view_separator_width"
+			android:layout_height="match_parent"
+			android:visibility="gone" />
+
+	</LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+
