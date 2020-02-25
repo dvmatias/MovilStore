@@ -9,4 +9,8 @@
         <item>PROFILE</item>
     </string-array>
 
+    <!-- TOOLBAR MAIN -->
+    <string name="label_toolbar_main_button_search">Search in Movil Store</string>
+    <string name="label_toolbar_main_button_filter">Filter</string>
+
 </resources>

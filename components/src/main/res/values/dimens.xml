@@ -30,4 +30,21 @@
 
 	<!-- BOTTOM NAV VIEW -->
 	<dimen name="height_styling_bottom_nav_main_56dp">56dp</dimen>
+
+	<!-- TOOLBAR MAIN (styling_toolbar_main) -->
+	<dimen name="padding_start_toolbar_main_16dp">16dp</dimen>
+	<dimen name="padding_end_toolbar_main_16dp">16dp</dimen>
+
+	<!-- TOOLBAR MAIN FOOTER TO SEARCH (styling_toolbar_main_footer_to_search) -->
+	<dimen name="padding_top_toolbar_main_footer_to_search_padding_top_10dp">10dp</dimen>
+	<dimen name="padding_top_toolbar_main_footer_to_search_padding_bottom_10dp">10dp</dimen>
+	<dimen name="height_toolbar_main_button_search_46dp">46dp</dimen>
+	<dimen name="margin_start_toolbar_main_button_search_corner_radius_4dp">4dp</dimen>
+	<dimen name="margin_end_toolbar_main_button_search_8dp">8dp</dimen>
+	<dimen name="content_padding_start_toolbar_main_button_search_16dp">16dp</dimen>
+	<dimen name="content_padding_end_toolbar_main_button_search_16dp">16dp</dimen>
+	<dimen name="margin_start_toolbar_main_title_search_8dp">8dp</dimen>
+	<dimen name="size_toolbar_main_title_search_16sp">16sp</dimen>
+	<dimen name="margin_end_toolbar_main_button_filter_search_4dp">4dp</dimen>
+
 </resources>
