@@ -1,0 +1,1 @@
+package com.matias.features.di.main.fragments.homeimport com.matias.features.ui.main.fragments.home.MainHomeFragmentimport dagger.Module/** * Dagger Module * * @see [MainHomeFragment] client * @see [MainHomeFragmentSubcomponent] component */@Moduleclass MainHomeFragmentModule {}

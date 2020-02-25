@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	tools:context=".ui.main.fragments.home.MainHomeFragment">
 
-	<TextView
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="8dp"
-		android:layout_marginTop="8dp"
-		android:layout_marginEnd="8dp"
-		android:text="HOME"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent" />
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed tristique purus. Suspendisse aliquet tellus tortor, eget hendrerit urna bibendum vitae. In dolor neque, mattis et purus sit amet, viverra molestie est. Pellentesque turpis enim, vulputate tempus orci eget, ultrices pharetra tortor. Duis massa ex, maximus at scelerisque non, cursus pharetra nibh. Pellentesque viverra eros non purus viverra venenatis. Ut a arcu erat. Etiam non elementum tortor, quis dignissim elit. Praesent eleifend aliquam purus, quis sodales dolor laoreet id. Fusce interdum lectus vel elit ullamcorper interdum.
+
+Morbi quis lectus ut magna accumsan accumsan ut sed sem. Curabitur finibus neque ut lorem feugiat vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel sagittis ligula, nec tempus libero. Maecenas accumsan, ante ac lacinia venenatis, magna justo egestas mi, eu tempus magna purus id arcu. Nullam non nisl dolor. In ultrices venenatis feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur tempor nibh ac diam auctor, sed accumsan est euismod. Vestibulum vel dapibus nibh. Proin eu metus id tortor dapibus ultricies. Mauris nec bibendum nisl. In sed neque a quam porta egestas at eleifend diam. Quisque id ornare ante. Pellentesque sagittis purus vitae sapien luctus laoreet. Duis tincidunt sapien sit amet purus consequat finibus.
+
+Maecenas hendrerit purus nec erat aliquam, non tempor metus vehicula. Cras pulvinar imperdiet consectetur. Sed tempor porta dolor at ultrices. Nam efficitur at mi sit amet blandit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce eget neque in nibh fringilla pulvinar. Sed hendrerit erat sit amet nisi gravida, at commodo quam imperdiet. Nam finibus nisl vel arcu ultricies iaculis. Pellentesque vitae quam aliquet, venenatis purus et, ornare tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut pellentesque, risus non rhoncus dignissim, arcu elit varius nibh, non imperdiet mauris nisi sit amet turpis. Curabitur augue tellus, pretium ac elementum non, cursus sed ligula. Duis ullamcorper mi sed ipsum hendrerit rhoncus. Sed in porttitor ante. Nulla accumsan, tellus eu maximus gravida, augue lectus mattis mi, in feugiat purus nisi at erat. Nullam convallis at nisi a dictum.
+
+Praesent euismod eros ac viverra iaculis. Proin vel urna arcu. Pellentesque elit enim, venenatis eget elit et, fermentum malesuada tellus. Pellentesque tincidunt ultrices orci facilisis hendrerit. Donec rhoncus diam aliquam tellus maximus, et ullamcorper dui pretium. Pellentesque blandit ex nulla, non mollis erat pulvinar ut. Curabitur quis diam nec diam scelerisque scelerisque non a neque. Vivamus sed quam nisi. Mauris eu dapibus tortor, semper malesuada neque. In hac habitasse platea dictumst. Donec eu quam convallis, rhoncus quam eget, maximus libero. Vestibulum quis tristique felis, sit amet iaculis mauris.
+
+Sed a dolor scelerisque, pellentesque erat eu, aliquam metus. Donec bibendum, libero a gravida ullamcorper, arcu sapien rutrum magna, non sagittis ipsum massa ut magna. Maecenas mauris metus, ornare sit amet tempus quis, commodo ut tellus. Integer tempor, magna at cursus blandit, velit diam feugiat leo, ac lacinia mauris risus eu eros. Aenean auctor laoreet nisl eu vehicula. Nunc nec semper elit, eu commodo odio. Nunc lobortis sed neque sit amet fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent lacinia lectus purus, a pellentesque sem volutpat in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras nec lorem ut lacus feugiat maximus at vitae nibh. Praesent sodales turpis non sapien euismod, pretium euismod mauris dictum. Sed et tellus dapibus lorem elementum gravida. Aenean metus leo, tincidunt ac leo vitae, ultrices posuere diam."
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
