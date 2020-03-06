@@ -10,6 +10,7 @@ import com.matias.core.navigator.Navigator
 import javax.inject.Inject
 
 val ROOT: Nothing? = null
+private const val DELAY_TO_INMERSIION = 2500L
 
 abstract class BaseActivity<
 		in V : BaseContract.View,
@@ -64,7 +65,7 @@ abstract class BaseActivity<
 			Handler().postDelayed(
 				{
 					applyImmersiveFullScreen()
-				}, 200
+				}, DELAY_TO_INMERSIION
 			)
 	}
 

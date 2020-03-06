@@ -10,6 +10,7 @@ import com.matias.core.helpers.VectorDrawableHelper
 import kotlinx.android.synthetic.main.styling_toolbar_main.view.*
 import kotlinx.android.synthetic.main.styling_toolbar_main_footer_to_search.view.*
 
+private const val DELAY_ICON_ANIMATION = 500L
 
 class StylingToolbarMain : ConstraintLayout, StylingToolbarMainContract {
 
@@ -43,8 +44,9 @@ class StylingToolbarMain : ConstraintLayout, StylingToolbarMainContract {
 
 	fun animateIcons(vectorDrawableHelper: VectorDrawableHelper?) {
 		vectorDrawableHelper?.run {
-			startVectorAnimationWithDelay(buttonNotification, 500)
-			startVectorAnimationWithDelay(buttonNavigation, 500)
+			startVectorAnimationWithDelay(buttonNotification, DELAY_ICON_ANIMATION)
+			startVectorAnimationWithDelay(buttonNavigation, DELAY_ICON_ANIMATION)
+			startVectorAnimationWithDelay(buttonCoupon, DELAY_ICON_ANIMATION)
 		}
 	}
 
