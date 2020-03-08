@@ -12,7 +12,8 @@
 	<color name="colorTransparent">#00000000</color>
 	<color name="colorPrimary20">#37DE393A</color>
 
-	<!-- TEXT -->
+	<!-- VIEW LOADING -->
+	<color name="colorLoadingViewBackground">#00000000</color>
 
 	<!-- ICONS -->
 	<color name="colorGrayLightIcon">#706f6f</color>

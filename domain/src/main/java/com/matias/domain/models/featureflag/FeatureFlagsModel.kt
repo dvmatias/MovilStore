@@ -8,7 +8,7 @@ data class FeatureFlagsModel(
 	val flagProfileTabEnable: Boolean,
 	val flagNotificationsEnable: Boolean,
 	val flagHomeNoveltyEnable: Boolean,
-	val flagHomePromotionsEnable: Boolean,
-	val flagHomeOffersEnable: Boolean,
-	val flagHomeServicesEnable: Boolean
+	val flagHomePromotionEnable: Boolean,
+	val flagHomeOfferEnable: Boolean,
+	val flagHomeServiceEnable: Boolean
 )

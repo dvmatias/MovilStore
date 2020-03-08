@@ -10,7 +10,7 @@ data class FeatureFlagsEntity(
 	@SerializedName("flag_profile_tab_enable") val flagProfileTabEnable: Boolean?,
 	@SerializedName("flag_notifications_enable") val flagNotificationsEnable: Boolean?,
 	@SerializedName("flag_home_novelty_enable") val flagHomeNoveltyEnable: Boolean?,
-	@SerializedName("flag_home_promotions_enable") val flagHomePromotionsEnable: Boolean?,
-	@SerializedName("flag_home_offers_enable") val flagHomeOffersEnable: Boolean?,
-	@SerializedName("flag_home_services_enable") val flagHomeServicesEnable: Boolean?
+	@SerializedName("flag_home_promotion_enable") val flagHomePromotionEnable: Boolean?,
+	@SerializedName("flag_home_offer_enable") val flagHomeOfferEnable: Boolean?,
+	@SerializedName("flag_home_service_enable") val flagHomeServiceEnable: Boolean?
 )

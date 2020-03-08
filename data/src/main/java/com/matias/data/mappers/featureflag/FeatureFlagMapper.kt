@@ -14,9 +14,9 @@ class FeatureFlagMapper : Mapper<FeatureFlagsEntity, FeatureFlagsModel>() {
 		val flagProfileTabEnable = e.flagProfileTabEnable ?: false
 		val flagNotificationsEnable = e.flagNotificationsEnable ?: false
 		val flagHomeNoveltyEnable = e.flagHomeNoveltyEnable ?: false
-		val flagHomePromotionsEnable = e.flagHomePromotionsEnable ?: false
-		val flagHomeOffersEnable = e.flagHomeOffersEnable ?: false
-		val flagHomeServicesEnable = e.flagHomeServicesEnable ?: false
+		val flagHomePromotionEnable = e.flagHomePromotionEnable ?: false
+		val flagHomeOfferEnable = e.flagHomeOfferEnable ?: false
+		val flagHomeServiceEnable = e.flagHomeServiceEnable ?: false
 
 		return FeatureFlagsModel(
 			flagHomeTabEnable,
@@ -26,9 +26,9 @@ class FeatureFlagMapper : Mapper<FeatureFlagsEntity, FeatureFlagsModel>() {
 			flagProfileTabEnable,
 			flagNotificationsEnable,
 			flagHomeNoveltyEnable,
-			flagHomePromotionsEnable,
-			flagHomeOffersEnable,
-			flagHomeServicesEnable
+			flagHomePromotionEnable,
+			flagHomeOfferEnable,
+			flagHomeServiceEnable
 		)
 	}
 
