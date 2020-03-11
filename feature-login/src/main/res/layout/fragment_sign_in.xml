@@ -149,7 +149,7 @@
 		android:hint="@string/edit_sing_in_input_password_hint"
 		android:imeOptions="actionDone"
 		android:inputType="textPassword|textWebPassword"
-		app:layout_constraintBottom_toTopOf="@+id/switchStaySignedIn"
+		app:layout_constraintBottom_toTopOf="@+id/switchStayLoggedIn"
 		android:text="admin"
 		app:layout_constraintTop_toBottomOf="@+id/inputUserName" />
 
@@ -165,12 +165,12 @@
 
 	<!-- SWITCH STAY SIGNED IN -->
 	<androidx.appcompat.widget.SwitchCompat
-		android:id="@+id/switchStaySignedIn"
-		style="@style/SignInSwitchStyle"
+		android:id="@+id/switchStayLoggedIn"
+		style="@style/LogInSwitchStyle"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="@dimen/dimen_14dp"
-		android:text="@string/switch_stay_signed_in_label"
+		android:text="@string/switch_stay_logged_in_label"
 		app:layout_constraintBottom_toTopOf="@+id/btnSignIn"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/inputPassword"

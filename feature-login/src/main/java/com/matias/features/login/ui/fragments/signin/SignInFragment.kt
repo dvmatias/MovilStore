@@ -119,7 +119,7 @@ class SignInFragment :
 
 	override fun onUserClickSignIn() {
 		btnSignIn.buttonState = StylingFlowButtonState.STATE_LOADING.state
-		presenter.signIn(inputUserName.text.toString(), inputPassword.text.toString(), switchStaySignedIn.isChecked)
+		presenter.logIn(inputUserName.text.toString(), inputPassword.text.toString(), switchStayLoggedIn.isChecked)
 	}
 
 	override fun onSignInSuccess(userModel: UserModel) {
