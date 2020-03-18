@@ -17,15 +17,15 @@ import dagger.Provides
  */
 @Module
 class SignInFragmentModule {
-    
-    @Provides
-    fun provideLogInProvider(
-            logInApi: LogInApi,
-            networkHandler: NetworkHandler
-    ): LogInProvider = LogInProviderImpl(logInApi, networkHandler)
-    
-    @Provides
-    fun provideSignInUseCase(logInProvider: LogInProvider): LogInUseCase =
-            LogInUseCase(logInProvider)
-    
+
+	@Provides
+	fun provideLogInProvider(
+		logInApi: LogInApi,
+		networkHandler: NetworkHandler
+	): LogInProvider = LogInProviderImpl(logInApi, networkHandler)
+
+	@Provides
+	fun provideSignInUseCase(logInProvider: LogInProvider): LogInUseCase =
+		LogInUseCase(logInProvider)
+
 }

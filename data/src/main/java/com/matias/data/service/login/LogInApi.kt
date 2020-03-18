@@ -18,7 +18,7 @@ interface LogInApi {
 
 		private const val QUERY_USERNAME = "username"
 		private const val QUERY_PASSWORD = "password"
-		private const val QUERY_STAY_LOGGED_IN = "stay_signed_in"
+		private const val QUERY_STAY_LOGGED_IN = "stay_logged_in"
 	}
 
 	@POST(EP_LOG_IN)
