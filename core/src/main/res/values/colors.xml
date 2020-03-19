@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<color name="colorPrimary">#E65149</color>
-	<color name="colorPrimaryDark">#B83535</color>
+	<color name="colorPrimary">#ff0028</color>
+	<color name="colorPrimaryDark">#cc0020</color>
 	<color name="colorAccent">#A6D390</color>
+	<color name="colorSecondaryCyan">#8AC6D1</color>
+	<color name="colorSecondaryGreen">#A6D390</color>
 
 	<!-- BASICS -->
 	<color name="colorWhite">#FFFFFFFF</color>
@@ -31,8 +33,6 @@
 
 	<!-- SPLASH ACTIVITY -->
 	<color name="colorSplashBackground">@color/colorPrimary</color>
-	<color name="colorTopFigure">#8AC6D1</color>
-	<color name="colorBottomFigure">#A6D390</color>
 
 	<!-- LOGIN ACTIVITY -->
 	<color name="colorLoginActivityBackground">#2E2E2E</color>
@@ -46,11 +46,11 @@
 
 	<!-- BUTTON FLOW -->
 	<color name="colorFlowButtonLabelDefautl">#FFFFFF</color>
-	<color name="colorFlowButtonBackgroundDefault">#A6D390</color>
+	<color name="colorFlowButtonBackgroundDefault">@color/colorSecondaryGreen</color>
 	<color name="colorFlowButtonIconDefault">#000000</color>
 
 	<!-- STYLING MAIN TAB VIEW -->
-	<color name="color_main_tab_primary_default">#DE393A</color>
+	<color name="color_main_tab_primary_default">@color/colorPrimary</color>
 	<color name="color_main_tab_secondary_default">#313131</color>
 
 </resources>

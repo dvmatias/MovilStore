@@ -2,10 +2,13 @@ package com.matias.features.login.ui.login
 
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.view.View
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.matias.core.base.mvp.BasePresenterActivity
 import com.matias.core.helpers.HtmlHelper
+import com.matias.core.helpers.pxToDp
 import com.matias.domain.models.user.UserModel
 import com.matias.features.R
 import com.matias.features.login.di.login.LoginActivityModule
@@ -46,6 +49,7 @@ class LoginActivity :
 
 		setupPager()
 		setupTabLayout()
+		setupLoadingView()
 		bottomSheetBehavior = BottomSheetBehavior.from(clBottomSheet)
 	}
 
@@ -58,6 +62,13 @@ class LoginActivity :
 			listOf(getString(R.string.tab_sign_in_label), getString(R.string.tab_sign_up_label))
 		tabs.setupWithViewPager(pager)
 		tabs.setTitlesAtTabs(tabTitles)
+	}
+
+	private fun setupLoadingView() {
+		viewLoading.setOnApplyWindowInsetsListener { v, insets ->
+			(v.layoutParams as CoordinatorLayout.LayoutParams).topMargin = insets.systemWindowInsetTop
+			insets
+		}
 	}
 
 	override fun onStop() {
