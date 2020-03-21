@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<color name="colorPrimary">#ff0028</color>
+	<color name="colorPrimary">#ff033e</color>
 	<color name="colorPrimaryDark">#cc0020</color>
-	<color name="colorAccent">#A6D390</color>
-	<color name="colorSecondaryCyan">#8AC6D1</color>
-	<color name="colorSecondaryGreen">#A6D390</color>
+	<color name="colorSecondaryCyan">#00FFF7</color>
+	<color name="colorSecondaryGreen">#92E755</color>
+	<color name="colorAccent">@color/colorSecondaryGreen</color>
 
 	<!-- BASICS -->
 	<color name="colorWhite">#FFFFFFFF</color>
