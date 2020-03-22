@@ -6,15 +6,15 @@ import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST
 import retrofit2.http.Query
-import java.util.logging.Logger
 
 interface LogInApi {
 
 	companion object {
+		private const val CONTROLLER_ONBOARDING = "onboarding"
 		private const val CONTROLLER_SIGNIN = "user"
 
 		private const val EP_LOG_IN = "$CONTROLLER_SIGNIN/login"
-		private const val EP_SIGN_UP = "$CONTROLLER_SIGNIN/signup"
+		private const val EP_SIGN_UP = "$CONTROLLER_ONBOARDING/signup"
 
 		private const val QUERY_USERNAME = "username"
 		private const val QUERY_PASSWORD = "password"

@@ -2,13 +2,11 @@ package com.matias.features.login.ui.login
 
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
 import android.view.View
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.matias.core.base.mvp.BasePresenterActivity
 import com.matias.core.helpers.HtmlHelper
-import com.matias.core.helpers.pxToDp
 import com.matias.domain.models.user.UserModel
 import com.matias.features.R
 import com.matias.features.login.di.login.LoginActivityModule
@@ -18,8 +16,10 @@ import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.bottom_sheet_error.*
 import javax.inject.Inject
 
-class LoginActivity :
-	BasePresenterActivity<LoginActivity, LoginActivityPresenter, LoginActivitySubComponent>(),
+class LoginActivity : BasePresenterActivity<
+		LoginActivity,
+		LoginActivityPresenter,
+		LoginActivitySubComponent>(),
 	LoginActivityContract.View, LoginActivityContract.FragmentInteractionListener {
 
 	companion object {
@@ -109,7 +109,7 @@ class LoginActivity :
 	}
 
 	override fun goToMainScreen() {
-        navigator.toMainScreen(this, null, null, true)
+		navigator.toMainScreen(this, null, null, true)
 	}
 
 	override fun showLoading(show: Boolean) {

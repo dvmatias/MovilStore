@@ -1,8 +1,6 @@
 package com.matias.data.provider.globalconfig
 
 import com.matias.data.cache.featureflag.FeatureFlaghCache
-import com.matias.domain.base.exception.FailureType
-import com.matias.domain.base.functional.Either
 import com.matias.domain.models.featureflag.Features
 import com.matias.domain.provider.globalconfig.FeatureFlagProvider
 

@@ -25,7 +25,8 @@ import kotlinx.android.synthetic.main.fragment_sign_up.*
 class SignUpFragment : BasePresenterFragment<
 		SignUpFragment,
 		SignUpFragmentPresenter,
-		SignUpFragmentSubcomponent>(), SignUpFragmentContract.View {
+		SignUpFragmentSubcomponent>(),
+	SignUpFragmentContract.View {
 
 	private var listener: LoginActivityContract.FragmentInteractionListener? = null
 

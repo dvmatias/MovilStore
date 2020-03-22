@@ -18,11 +18,10 @@ import com.matias.features.login.ui.LoginUiComponent
 import com.matias.features.login.ui.login.LoginActivityContract
 import kotlinx.android.synthetic.main.fragment_sign_in.*
 
-class SignInFragment :
-	BasePresenterFragment<
-			SignInFragment,
-			SignInFragmentPresenter,
-			SignInFragmentSubcomponent>(),
+class SignInFragment : BasePresenterFragment<
+		SignInFragment,
+		SignInFragmentPresenter,
+		SignInFragmentSubcomponent>(),
 	SignInFragmentContract.View {
 
 	private var listener: LoginActivityContract.FragmentInteractionListener? = null

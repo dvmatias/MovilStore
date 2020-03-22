@@ -11,7 +11,7 @@ class GetMainPositionUseCase(
 ) : UseCase<MainPositionModel, GetMainPositionUseCase.Params>() {
 
 	override suspend fun run(params: Params): Either<FailureType, MainPositionModel> =
-		mainPositionProvider.getMainPosition(params.userId)
+		mainPositionProvider.getMainPosition(params.refresh)
 
-	class Params(val userId: Int)
+	class Params(val refresh: Boolean)
 }

@@ -9,10 +9,10 @@ import com.matias.data.entities.service.ServiceEntity
 
 data class MainPositionEntity (
 	@SerializedName("profile") val profile: ProfileEntity?,
-	@SerializedName("novelties_list") val noveltiesList: List<NoveltyEntity>?,
-	@SerializedName("promotions_list") val promotionsList: List<PromotionEntity>?,
-	@SerializedName("offers_list") val offersList: List<OfferEntity>?,
-	@SerializedName("services_list") val servicesList: List<ServiceEntity>?,
+	@SerializedName("novelty_list") val noveltyList: List<NoveltyEntity>?,
+	@SerializedName("promotion_list") val promotionList: List<PromotionEntity>?,
+	@SerializedName("offer_list") val offerList: List<OfferEntity>?,
+	@SerializedName("service_list") val serviceList: List<ServiceEntity>?,
 	@SerializedName("notifications_last_update_date") val notificationsLastUpdateDate: String?,
 	@SerializedName("coupons_last_update_date") val couponsLastUpdateDate: String?
 )

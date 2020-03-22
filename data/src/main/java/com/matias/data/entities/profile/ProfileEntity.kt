@@ -14,7 +14,7 @@ data class ProfileEntity (
 	@SerializedName("gender") val gender: String?,
 	@SerializedName("avatar_url") val avatarUrl: String?,
 	@SerializedName("dni") val dni: String?,
-	@SerializedName("stay_logged_in") val stayLoggedIn: Boolean?,
+	@SerializedName("stay_logged_in") val stayLoggedIn: Int?,
 	@SerializedName("created_time") val createdTime: String?,
 	@SerializedName("last_updated_time") val lastUpdatedTime: String?,
 	@SerializedName("last_log_in_time") val lastLogInTime: String?

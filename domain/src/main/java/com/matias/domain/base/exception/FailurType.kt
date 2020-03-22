@@ -24,4 +24,6 @@ sealed class FailureType {
 
 	object FeatureFlagNotFoundError : FailureType()
 
+	object MainPositionNotFoundError : FailureType()
+
 }

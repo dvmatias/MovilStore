@@ -6,6 +6,6 @@ import com.matias.domain.models.mainposition.MainPositionModel
 
 interface MainPositionProvider {
 
-	fun getMainPosition(userId: Int): Either<FailureType, MainPositionModel>
+	fun getMainPosition(refresh: Boolean): Either<FailureType, MainPositionModel>
 
 }
