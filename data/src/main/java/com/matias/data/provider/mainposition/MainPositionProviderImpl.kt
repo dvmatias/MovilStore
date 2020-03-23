@@ -17,17 +17,18 @@ class MainPositionProviderImpl(
 	networkHandler: NetworkHandler
 ) : MainPositionProvider, NetworkProvider(networkHandler) {
 
-	override fun getMainPosition(refresh: Boolean): Either<FailureType, MainPositionModel> =
-		when (refresh) {
-			true -> {
-				request(mainPositionApi.getMainPosition()) { e: MainPositionEntity ->
-					mainPositionCache.storeMainPosition(e)
-					MainPositionMapper().transformEntityToModel(e)
-				}
-			}
-			false -> mainPositionCache.getMainPosition().let { either: Either<FailureType, MainPositionModel> ->
-				if (either.isRight) either else getMainPosition(true)
-			}
+	/**
+	 * From server.
+	 */
+	override fun fetchMainPosition(): Either<FailureType, MainPositionModel> =
+		request(mainPositionApi.getMainPosition()) { e: MainPositionEntity ->
+			mainPositionCache.storeMainPosition(e)
+			MainPositionMapper().transformEntityToModel(e)
 		}
 
+	/**
+	 * From cache.
+	 */
+	override fun getMainPosition(): MainPositionModel =
+		mainPositionCache.getMainPosition()
 }

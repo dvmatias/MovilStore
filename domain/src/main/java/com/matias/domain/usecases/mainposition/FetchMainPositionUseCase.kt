@@ -6,12 +6,13 @@ import com.matias.domain.base.usecase.UseCase
 import com.matias.domain.models.mainposition.MainPositionModel
 import com.matias.domain.provider.mainposition.MainPositionProvider
 
-class GetMainPositionUseCase(
+class FetchMainPositionUseCase(
 	private val mainPositionProvider: MainPositionProvider
-) : UseCase<MainPositionModel, GetMainPositionUseCase.Params>() {
+) : UseCase<MainPositionModel, FetchMainPositionUseCase.Params>() {
 
 	override suspend fun run(params: Params): Either<FailureType, MainPositionModel> =
-		mainPositionProvider.getMainPosition(params.refresh)
+		mainPositionProvider.fetchMainPosition()
 
-	class Params(val refresh: Boolean)
+	class Params(val a: Any)
+
 }

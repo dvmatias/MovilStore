@@ -18,8 +18,10 @@ class MainPagerAdapter(itemMainPageList: MutableList<ItemMainPageModel>, fm: Fra
 		}
 	}
 
-	override fun getItem(position: Int): Fragment = fragmentList[position]
+	override fun getItem(position: Int): Fragment =
+		fragmentList[position]
 
-	override fun getCount(): Int = fragmentList.size
+	override fun getCount(): Int =
+		fragmentList.size
 
 }

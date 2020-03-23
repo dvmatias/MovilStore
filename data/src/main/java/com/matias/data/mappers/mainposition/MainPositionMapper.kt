@@ -39,7 +39,8 @@ class MainPositionMapper : Mapper<MainPositionEntity, MainPositionModel>() {
 				noveltyEntity.title ?: STRING_DEFAULT,
 				noveltyEntity.subtitle ?: STRING_DEFAULT,
 				noveltyEntity.description ?: STRING_DEFAULT,
-				noveltyEntity.termsAndConditions ?: STRING_DEFAULT
+				noveltyEntity.termsAndConditions ?: STRING_DEFAULT,
+				noveltyEntity.backgroundColor ?: STRING_DEFAULT
 			)
 		}
 	}

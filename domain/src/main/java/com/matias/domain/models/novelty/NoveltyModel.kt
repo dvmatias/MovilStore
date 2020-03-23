@@ -6,5 +6,6 @@ data class NoveltyModel(
 	val title: String,
 	val subtitle: String,
 	val description: String,
-	val termsAndConditions: String
+	val termsAndConditions: String,
+	val backgroundColor: String
 )
