@@ -1,6 +1,5 @@
 package com.matias.features.ui.main.fragments.home.novelty
 
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.google.gson.Gson
@@ -13,7 +12,7 @@ class NoveltyPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 	fun setData(noveltyList: List<NoveltyModel>) {
 		if (noveltyList.isEmpty()) return
 
-		this.noveltyList = noveltyList
+		this.noveltyList = noveltyList.filter { it.imageUrl.isNotEmpty() }
 
 		notifyDataSetChanged()
 	}
@@ -27,13 +26,13 @@ class NoveltyPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 	/**
 	 * Return the Fragment associated with a specified position.
 	 */
-	override fun getItem(position: Int): Fragment =
+	override fun getItem(position: Int): ItemNoveltyFragment =
 		getFragmentBasedOnPosition(position)
 
 	/**
 	 *
 	 */
-	private fun getFragmentBasedOnPosition(position: Int): Fragment {
+	private fun getFragmentBasedOnPosition(position: Int): ItemNoveltyFragment {
 		val fragmentPosition = position % noveltyList.size
 		return ItemNoveltyFragment().newInstance(Gson().toJson(noveltyList[fragmentPosition], NoveltyModel::class.java))
 	}

@@ -22,7 +22,6 @@ class ItemNoveltyFragment : Fragment() {
 			}
 		}
 
-
 	private var novelty: NoveltyModel? = null
 
 	override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,4 +43,5 @@ class ItemNoveltyFragment : Fragment() {
 		}
 
 	}
+
 }

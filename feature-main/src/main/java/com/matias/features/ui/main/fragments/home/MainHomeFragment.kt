@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.matias.core.base.mvp.BasePresenterFragment
+import com.matias.core.helpers.dpToPx
 import com.matias.features.R
 import com.matias.features.di.main.fragments.home.MainHomeFragmentModule
 import com.matias.features.di.main.fragments.home.MainHomeFragmentSubcomponent
@@ -57,15 +58,17 @@ class MainHomeFragment :
 	 */
 	private fun setupNoveltyPager() {
 		noveltyPagerAdapter.setData(presenter.getNoveltyList())
-		pagerNovelty.adapter = noveltyPagerAdapter
-
-		for (i in 1 until presenter.getNoveltyList().size) {
-			val position = (Integer.MAX_VALUE / i)
-			if ((position % presenter.getNoveltyList().size) == 1) {
-				val item = if (presenter.getNoveltyList().size % 2 == 0) position else position - 1
-				pagerNovelty.setCurrentItem(item, false)
+		pagerNovelty.apply {
+			adapter = noveltyPagerAdapter
+			setCurrentItem(Int.MAX_VALUE / 2, false)
+			offscreenPageLimit = 2
+			clipToPadding = false
+			activity?.let {
+				this.setPadding(dpToPx(it, 16), 0, dpToPx(it, 16), 0)
+				pagerNovelty.pageMargin = dpToPx(it, 6)
 			}
 		}
+
 	}
 
 }

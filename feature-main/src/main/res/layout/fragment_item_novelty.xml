@@ -5,16 +5,16 @@
 	android:id="@+id/clContainer"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
-	android:background="@color/colorSecondaryGreen"
 	tools:context=".ui.main.fragments.home.novelty.ItemNoveltyFragment">
 
 	<androidx.cardview.widget.CardView
 		android:id="@+id/cardView"
 		android:layout_width="0dp"
 		android:layout_height="0dp"
-		android:layout_margin="@dimen/dimen_8dp"
+		android:layout_marginStart="@dimen/dimen_2dp"
+		android:layout_marginEnd="@dimen/dimen_2dp"
 		app:cardCornerRadius="@dimen/dimen_8dp"
-		app:cardElevation="@dimen/dimen_4dp"
+		app:cardElevation="@dimen/dimen_2dp"
 		app:contentPadding="0dp"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintDimensionRatio="H,50:23"
