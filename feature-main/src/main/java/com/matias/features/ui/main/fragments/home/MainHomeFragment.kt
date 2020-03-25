@@ -60,12 +60,12 @@ class MainHomeFragment :
 		noveltyPagerAdapter.setData(presenter.getNoveltyList())
 		pagerNovelty.apply {
 			adapter = noveltyPagerAdapter
-			setCurrentItem(Int.MAX_VALUE / 2, false)
+			setCurrentItem(noveltyPagerAdapter.count / 2, false)
 			offscreenPageLimit = 2
 			clipToPadding = false
 			activity?.let {
 				this.setPadding(dpToPx(it, 16), 0, dpToPx(it, 16), 0)
-				pagerNovelty.pageMargin = dpToPx(it, 6)
+				this.pageMargin = dpToPx(it, 6)
 			}
 		}
 

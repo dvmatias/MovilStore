@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import com.bumptech.glide.Glide
 import com.google.gson.Gson
 import com.matias.domain.models.novelty.NoveltyModel
 import com.matias.features.R
@@ -38,8 +40,15 @@ class ItemNoveltyFragment : Fragment() {
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
 
-		novelty?.let {
-			cardView.setCardBackgroundColor(Color.parseColor(it.backgroundColor))
+		novelty?.let { novelty: NoveltyModel ->
+			cv.setCardBackgroundColor(Color.parseColor(novelty.backgroundColor))
+			activity?.let { activity: FragmentActivity ->
+				Glide.with(activity)
+					.load(novelty.imageUrl)
+					.centerCrop()
+					.into(iv)
+			}
+
 		}
 
 	}

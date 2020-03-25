@@ -65,4 +65,6 @@ dependencies {
     implementation libs.retrofit
     implementation libs.retrofitLogging
     implementation libs.retrofitJsonConverter
+    // Glide
+    implementation libs.glide
 }

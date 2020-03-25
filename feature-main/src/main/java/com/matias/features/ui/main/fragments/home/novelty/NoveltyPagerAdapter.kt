@@ -1,10 +1,14 @@
 package com.matias.features.ui.main.fragments.home.novelty
 
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.google.gson.Gson
 import com.matias.domain.models.novelty.NoveltyModel
 
+private const val COUNT = 1000
+
+@Suppress("DEPRECATION")
 class NoveltyPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
 	private var noveltyList: List<NoveltyModel> = listOf()
@@ -21,20 +25,18 @@ class NoveltyPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 	 * Return the number of views available.
 	 */
 	override fun getCount(): Int =
-		Int.MAX_VALUE
+		COUNT
 
 	/**
 	 * Return the Fragment associated with a specified position.
 	 */
-	override fun getItem(position: Int): ItemNoveltyFragment =
-		getFragmentBasedOnPosition(position)
-
-	/**
-	 *
-	 */
-	private fun getFragmentBasedOnPosition(position: Int): ItemNoveltyFragment {
-		val fragmentPosition = position % noveltyList.size
-		return ItemNoveltyFragment().newInstance(Gson().toJson(noveltyList[fragmentPosition], NoveltyModel::class.java))
-	}
+	override fun getItem(position: Int): Fragment =
+		ItemNoveltyFragment()
+			.newInstance(
+				Gson().toJson(
+					noveltyList[position % noveltyList.size],
+					NoveltyModel::class.java
+				)
+			)
 
 }
