@@ -66,4 +66,8 @@ dependencies {
     // Kotlin
     implementation libs.kotlin
     implementation libs.kotlinx
+    // Glide
+    implementation libs.glide
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
 }

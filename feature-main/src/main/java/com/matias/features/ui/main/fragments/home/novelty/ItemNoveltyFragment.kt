@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import com.bumptech.glide.Glide
 import com.google.gson.Gson
+import com.matias.core.managers.GlideApp
 import com.matias.domain.models.novelty.NoveltyModel
 import com.matias.features.R
 import kotlinx.android.synthetic.main.fragment_item_novelty.*
@@ -43,7 +43,7 @@ class ItemNoveltyFragment : Fragment() {
 		novelty?.let { novelty: NoveltyModel ->
 			cv.setCardBackgroundColor(Color.parseColor(novelty.backgroundColor))
 			activity?.let { activity: FragmentActivity ->
-				Glide.with(activity)
+				GlideApp.with(activity)
 					.load(novelty.imageUrl)
 					.centerCrop()
 					.into(iv)
