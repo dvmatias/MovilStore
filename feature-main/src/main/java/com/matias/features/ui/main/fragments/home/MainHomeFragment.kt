@@ -64,8 +64,8 @@ class MainHomeFragment :
 			offscreenPageLimit = 2
 			clipToPadding = false
 			activity?.let {
-				this.setPadding(dpToPx(it, 16), 0, dpToPx(it, 16), 0)
-				this.pageMargin = dpToPx(it, 6)
+				this.setPadding(dpToPx(it, 12), 0, dpToPx(it, 12), 0)
+//				this.pageMargin = dpToPx(it, 4)
 			}
 		}
 

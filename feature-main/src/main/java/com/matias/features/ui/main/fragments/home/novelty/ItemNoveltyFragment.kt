@@ -41,7 +41,6 @@ class ItemNoveltyFragment : Fragment() {
 		super.onViewCreated(view, savedInstanceState)
 
 		novelty?.let { novelty: NoveltyModel ->
-			cv.setCardBackgroundColor(Color.parseColor(novelty.backgroundColor))
 			activity?.let { activity: FragmentActivity ->
 				GlideApp.with(activity)
 					.load(novelty.imageUrl)
