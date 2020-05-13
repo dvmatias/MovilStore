@@ -15,7 +15,6 @@
 		android:layout_width="0dp"
 		android:layout_height="@dimen/height_toolbar_main_button_search_46dp"
 		android:layout_marginEnd="@dimen/margin_end_toolbar_main_button_search_8dp"
-		app:cardBackgroundColor="@color/colorToolbarMainButtonSearchBackground"
 		app:cardCornerRadius="@dimen/margin_start_toolbar_main_button_search_corner_radius_4dp"
 		app:cardElevation="0dp"
 		app:contentPaddingLeft="@dimen/content_padding_end_toolbar_main_button_search_16dp"

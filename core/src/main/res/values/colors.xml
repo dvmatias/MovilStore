@@ -23,7 +23,7 @@
 
 	<!-- TOOLBAR MAIN -->
 	<color name="colorToolbarMainBackground">#FFFFFF</color>
-	<color name="colorToolbarMainButtonSearchBackground">#F5F4F4</color>
+	<color name="colorToolbarMainIconStroke">#000000</color>
 	<color name="colorToolbarMainButtonSearchTitleSearch">#F7F6F6</color>
 	<color name="colorToolbarMainButtonSearchIconSearch">#AAA4B4</color>
 	<color name="colorToolbarMainButtonSearchLabelSearch">@color/colorToolbarMainButtonSearchIconSearch</color>

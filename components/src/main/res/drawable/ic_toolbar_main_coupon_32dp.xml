@@ -12,7 +12,7 @@
 					android:name="path_body"
 					android:pathData="M 22.794 15.638 C 22.794 14.421 23.78 13.432 25 13.432 L 25 9.129 L 7 9.129 L 7 13.432 C 8.22 13.432 9.206 14.421 9.206 15.638 C 9.206 16.857 8.22 17.846 7 17.846 L 7 22.15 L 25 22.15 L 25 17.846 C 23.78 17.846 22.794 16.857 22.794 15.638 Z"
 					android:strokeWidth="@dimen/stroke_width_icon_1_3"
-					android:strokeColor="@color/colorWhite"
+					android:strokeColor="@color/colorToolbarMainIconStroke"
 					android:strokeLineCap="round"
 					android:strokeLineJoin="round"
 					android:strokeMiterLimit="10" />
@@ -21,7 +21,7 @@
 						android:name="path_cut_line_top"
 						android:pathData="M 14.363 11.129 L 14.363 9.129"
 						android:strokeWidth="@dimen/stroke_width_icon_1_3"
-						android:strokeColor="@color/colorWhite"
+						android:strokeColor="@color/colorToolbarMainIconStroke"
 						android:strokeLineCap="round"
 						android:trimPathStart="1"
 						android:trimPathOffset="1" />
@@ -29,21 +29,21 @@
 						android:name="path_cut_line_mid_top"
 						android:pathData="M 14.363 14.139 L 14.363 15.639"
 						android:strokeWidth="@dimen/stroke_width_icon_1_3"
-						android:strokeColor="@color/colorWhite"
+						android:strokeColor="@color/colorToolbarMainIconStroke"
 						android:strokeLineCap="round"
 						android:trimPathStart="1" />
 					<path
 						android:name="path_cut_line_mid_bottom"
 						android:pathData="M 14.363 15.639 L 14.363 17.139"
 						android:strokeWidth="@dimen/stroke_width_icon_1_3"
-						android:strokeColor="@color/colorWhite"
+						android:strokeColor="@color/colorToolbarMainIconStroke"
 						android:strokeLineCap="round"
 						android:trimPathEnd="0" />
 					<path
 						android:name="path_cut_line_bottom"
 						android:pathData="M 14.363 22.149 L 14.363 20.149"
 						android:strokeWidth="@dimen/stroke_width_icon_1_3"
-						android:strokeColor="@color/colorWhite"
+						android:strokeColor="@color/colorToolbarMainIconStroke"
 						android:strokeLineCap="round"
 						android:trimPathEnd="0" />
 				</group>
@@ -52,12 +52,12 @@
 				<path
 					android:name="path_alert_outter"
 					android:fillAlpha="0.2"
-					android:fillColor="@color/colorSecondaryGreen"
+					android:fillColor="@color/colorPrimary"
 					android:pathData="M 28 10.467 C 28 13.996 25.137 16.852 21.615 16.852 C 18.086 16.852 15.222 13.998 15.222 10.467 C 15.222 6.937 18.084 4.078 21.615 4.078 C 25.137 4.078 28 6.938 28 10.467 Z"
 					android:strokeWidth="1" />
 				<path
 					android:name="path_alet_inner"
-					android:fillColor="@color/colorSecondaryGreen"
+					android:fillColor="@color/colorPrimary"
 					android:pathData="M 25.115 10.467 C 25.115 12.401 23.541 13.967 21.615 13.967 C 19.679 13.967 18.115 12.401 18.115 10.467 C 18.115 8.532 19.679 6.967 21.615 6.967 C 23.541 6.967 25.115 8.532 25.115 10.467 Z"
 					android:strokeWidth="1" />
 			</group>
