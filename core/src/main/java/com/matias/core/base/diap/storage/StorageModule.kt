@@ -4,6 +4,8 @@ import com.matias.data.cache.featureflag.FeatureFlaghCache
 import com.matias.data.cache.featureflag.FeatureFlaghCacheImpl
 import com.matias.data.cache.loginstatus.SharedPreferencesCache
 import com.matias.data.cache.loginstatus.SharedPreferencesCacheImpl
+import com.matias.data.cache.mainposition.MainPositionCache
+import com.matias.data.cache.mainposition.MainPositionCacheImpl
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -18,5 +20,9 @@ class StorageModule {
     @Provides
     @Singleton
     fun provideSharedPreferencesCache(): SharedPreferencesCache = SharedPreferencesCacheImpl()
+
+    @Provides
+    @Singleton
+    fun provideMainPositionCache(): MainPositionCache = MainPositionCacheImpl()
     
 }

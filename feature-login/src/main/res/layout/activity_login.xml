@@ -11,16 +11,6 @@
 		android:layout_width="match_parent"
 		android:layout_height="match_parent">
 
-		<!-- BACKGROUND IMAGE -->
-		<androidx.appcompat.widget.AppCompatImageView
-			android:id="@+id/imageBackground"
-			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:alpha="@dimen/loginActivityBgrImgAlpha"
-			android:contentDescription="@null"
-			android:scaleType="centerCrop"
-			android:src="@drawable/bgr_login_activity" />
-
 		<!-- IMAGE NAME LOGO -->
 		<androidx.appcompat.widget.AppCompatImageView
 			android:id="@+id/imageLogoName"
@@ -65,7 +55,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:visibility="visible"
-			app:constraint_referenced_ids="imageBackground,tabs,pager" />
+			app:constraint_referenced_ids="tabs,pager" />
 
 	</androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -77,7 +67,6 @@
 		android:id="@+id/viewLoading"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		android:layout_marginTop="@dimen/dimen_24dp"
 		android:visibility="gone" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

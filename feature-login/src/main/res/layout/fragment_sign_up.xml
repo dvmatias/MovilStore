@@ -13,8 +13,8 @@
 	<androidx.appcompat.widget.AppCompatTextView
 		android:id="@+id/textTitle"
 		style="@style/TitleTextStyle"
-		android:layout_width="170dp"
-		android:layout_height="35dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
 		android:layout_marginTop="@dimen/dimen_18dp"
 		android:text="@string/text_sign_up_title"
 		app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +24,8 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="@dimen/dimen_18dp"
-		app:cardBackgroundColor="@color/colorTransparent"
+		app:cardBackgroundColor="@color/colorWhite"
+		android:background="@color/colorWhite"
 		app:cardCornerRadius="@dimen/dimen_4dp"
 		app:layout_constraintBottom_toTopOf="@id/btnSignUp"
 		app:layout_constraintEnd_toEndOf="parent"
@@ -176,7 +177,6 @@
 		android:id="@+id/btnSignUp"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginEnd="2dp"
 		android:layout_marginBottom="@dimen/dimen_26dp"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent" />

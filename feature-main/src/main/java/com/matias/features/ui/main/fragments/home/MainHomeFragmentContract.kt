@@ -1,0 +1,1 @@
+package com.matias.features.ui.main.fragments.homeimport com.matias.core.base.mvp.BaseContractimport com.matias.domain.models.novelty.NoveltyModelinterface MainHomeFragmentContract {	interface View : BaseContract.View	interface Presenter<V : View> : BaseContract.Presenter<V> {		fun getNoveltyList(): List<NoveltyModel>	}}

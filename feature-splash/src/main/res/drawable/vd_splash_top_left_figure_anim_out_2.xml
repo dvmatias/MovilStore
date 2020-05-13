@@ -12,7 +12,7 @@
                 android:name="path"
                 android:pathData="M 8.4 -341.9 C -66.362 -341.9 -138.139 -312.169 -191.004 -259.304 C -243.869 -206.439 -273.6 -134.662 -273.6 -59.9 C -273.6 14.862 -243.869 86.639 -191.004 139.504 C -138.139 192.369 -66.362 222.1 8.4 222.1 C 83.162 222.1 154.939 192.369 207.804 139.504 C 260.669 86.639 290.4 14.862 290.4 -59.9 C 290.4 -134.662 260.669 -206.439 207.804 -259.304 C 154.939 -312.169 83.162 -341.9 8.4 -341.9 Z"
                 android:strokeWidth="90"
-                android:strokeColor="@color/colorTopFigure"
+                android:strokeColor="@color/colorSecondaryCyan"
                 android:strokeMiterLimit="10"/>
         </vector>
     </aapt:attr>

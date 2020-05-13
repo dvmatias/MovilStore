@@ -1,5 +1,6 @@
 package com.matias.data.provider
 
+import android.util.Log
 import com.matias.data.handlers.ApiHerrorHandler
 import com.matias.data.platform.NetworkHandler
 import com.matias.domain.base.exception.FailureType
@@ -25,6 +26,7 @@ open class NetworkProvider(protected val networkHandler: NetworkHandler) {
 				false, null -> Either.Left(FailureType.NetworkConnection)
 			}
 		} catch (e: Exception) {
+			Log.e(NetworkProvider::class.java.simpleName, "$e")
 			Either.Left(FailureType.ServerError)
 		}
 	}

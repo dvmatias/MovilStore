@@ -9,7 +9,7 @@
     <string name="text_or_label">OR</string>
     <string name="edit_sing_in_input_user_name_hint">Username</string>
     <string name="edit_sing_in_input_password_hint">Password</string>
-    <string name="switch_stay_signed_in_label">Stay signed in?</string>
+    <string name="switch_stay_logged_in_label">Stay logged in?</string>
     <string name="btn_sign_in_label">SIGN IN</string>
     <string name="btn_sign_up_label">SIGN UP</string>
     <string name="text_forgot_password_label">Forgot password?</string>

@@ -26,15 +26,6 @@ class MainItemPageHelper(context: Context) {
 			Features.TAB_PROFILE
 		)
 
-	private var fragmentList: List<Fragment> =
-		listOf(
-			MainHomeFragment.newInstance(),
-			MainProductsFragment.newInstance(),
-			MainShopCartFragment.newInstance(),
-			MainContactUsFragment.newInstance(),
-			MainProfileFragment.newInstance()
-		)
-
 	private var iconList: IntArray =
 		intArrayOf(
 			R.drawable.ic_bottom_nav_home_32dp,
@@ -45,6 +36,7 @@ class MainItemPageHelper(context: Context) {
 		)
 
 	fun getItemMainPageList(falgList: List<Boolean>): MutableList<ItemMainPageModel> {
+		val fragmentList = getFragmentList()
 		for (i in 0 until 5) {
 			itemMainPageList.add(
 				ItemMainPageModel(
@@ -58,5 +50,14 @@ class MainItemPageHelper(context: Context) {
 		}
 		return itemMainPageList
 	}
+
+	private fun getFragmentList(): List<Fragment> =
+		listOf(
+			MainHomeFragment.newInstance(),
+			MainProductsFragment.newInstance(),
+			MainShopCartFragment.newInstance(),
+			MainContactUsFragment.newInstance(),
+			MainProfileFragment.newInstance()
+		)
 
 }

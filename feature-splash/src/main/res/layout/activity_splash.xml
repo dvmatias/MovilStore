@@ -1,52 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorSplashBackground"
-    tools:context="com.matias.features.splash.ui.splash.SplashActivity">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/colorSplashBackground"
+	tools:context="com.matias.features.splash.ui.splash.SplashActivity">
 
-    <ImageView
-        android:id="@+id/imageTopLeftFigure"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:adjustViewBounds="true"
-        android:contentDescription="@null"
-        android:scaleType="fitCenter"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+	<ImageView
+		android:id="@+id/imageTopLeftFigure"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:adjustViewBounds="true"
+		android:contentDescription="@null"
+		android:scaleType="fitCenter"
+		app:layout_constraintDimensionRatio="1:1"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageLogoName"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:adjustViewBounds="true"
-        android:contentDescription="@null"
-        android:elevation="1dp"
-        android:scaleType="centerInside"
-        android:src="@drawable/logo_name_splash_activity_vector"
-        android:transitionName="image_logo_name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="16:10"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="1.0"/>
+	<ImageView
+		android:id="@+id/imageLogoName"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:adjustViewBounds="true"
+		android:contentDescription="@null"
+		android:elevation="1dp"
+		android:scaleType="centerInside"
+		android:src="@drawable/logo_name_splash_activity_vector"
+		android:transitionName="image_logo_name"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintDimensionRatio="16:10"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintWidth_percent="1.0" />
 
-    <ImageView
-        android:id="@+id/imageBottomRightFigure"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:adjustViewBounds="true"
-        android:contentDescription="@null"
-        android:scaleType="centerInside"
-        android:src="@drawable/vd_splash_bottom_right_figure_anim_in_2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toEndOf="parent"/>
+	<ImageView
+		android:id="@+id/imageBottomRightFigure"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:adjustViewBounds="true"
+		android:contentDescription="@null"
+		android:scaleType="centerInside"
+		android:src="@drawable/vd_splash_bottom_right_figure_anim_in_2"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintDimensionRatio="1:1"
+		app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

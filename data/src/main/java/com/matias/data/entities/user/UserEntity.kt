@@ -13,8 +13,10 @@ data class UserEntity(
 	@SerializedName("birth_date") val birthDate: String?,
 	@SerializedName("phone") val phone: String?,
 	@SerializedName("gender") val gender: String?,
-	@SerializedName("image") val image: String?,
+	@SerializedName("avatar_url") val avatar: String?,
 	@SerializedName("dni") val dni: String?,
-	@SerializedName("createdTime") val createdTime: Date,
-	@SerializedName("updatedTime") val updatedTime: Date?
+	@SerializedName("stay_logged_in") val stayLoggedIn: Int?,
+	@SerializedName("created_time") val createdTime: Date?,
+	@SerializedName("last_updated_time") val updatedTime: Date?,
+	@SerializedName("last_log_in_time") val lastLogInTime: Date?
 )

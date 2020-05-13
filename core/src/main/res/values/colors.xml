@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<color name="colorPrimary">#E65149</color>
-	<color name="colorPrimaryDark">#B83535</color>
-	<color name="colorAccent">#A6D390</color>
+	<color name="colorPrimary">#ff033e</color>
+	<color name="colorPrimaryDark">#cc0020</color>
+	<color name="colorSecondaryCyan">#00FFF7</color>
+	<color name="colorSecondaryGreen">#92E755</color>
+	<color name="colorAccent">@color/colorSecondaryGreen</color>
 
 	<!-- BASICS -->
 	<color name="colorWhite">#FFFFFFFF</color>
@@ -12,7 +14,8 @@
 	<color name="colorTransparent">#00000000</color>
 	<color name="colorPrimary20">#37DE393A</color>
 
-	<!-- TEXT -->
+	<!-- VIEW LOADING -->
+	<color name="colorLoadingViewBackground">#00000000</color>
 
 	<!-- ICONS -->
 	<color name="colorGrayLightIcon">#706f6f</color>
@@ -20,7 +23,7 @@
 
 	<!-- TOOLBAR MAIN -->
 	<color name="colorToolbarMainBackground">#FFFFFF</color>
-	<color name="colorToolbarMainButtonSearchBackground">#F5F4F4</color>
+	<color name="colorToolbarMainIconStroke">#000000</color>
 	<color name="colorToolbarMainButtonSearchTitleSearch">#F7F6F6</color>
 	<color name="colorToolbarMainButtonSearchIconSearch">#AAA4B4</color>
 	<color name="colorToolbarMainButtonSearchLabelSearch">@color/colorToolbarMainButtonSearchIconSearch</color>
@@ -30,26 +33,25 @@
 
 	<!-- SPLASH ACTIVITY -->
 	<color name="colorSplashBackground">@color/colorPrimary</color>
-	<color name="colorTopFigure">#8AC6D1</color>
-	<color name="colorBottomFigure">#A6D390</color>
 
 	<!-- LOGIN ACTIVITY -->
-	<color name="colorLoginActivityBackground">#2E2E2E</color>
+	<color name="colorLoginActivityBackground">@color/colorPrimary</color>
 	<color name="colorSocialNetworkLabel">#1A1A1A</color>
 	<color name="colorBtnTextLabel">#FFF</color>
-	<color name="coloEditTextHint">#898989</color>
-	<color name="coloEditTextInput">#F3F3F3</color>
+	<color name="coloInputLoginHintText">#44303030</color>
+	<color name="coloInputLoginText">#303030</color>
 	<color name="coloSeparatoSignUpBackground">#898989</color>
-	<color name="colorEditTextSignUpIcon">#C3FFFFFF</color>
+	<color name="colorEditTextSignUpIcon">#DD303030</color>
+	<color name="colorEditTextSignInIcon">@color/colorEditTextSignUpIcon</color>
 	<color name="colorFlowButtonLabel">#1A1A1A</color>
 
 	<!-- BUTTON FLOW -->
 	<color name="colorFlowButtonLabelDefautl">#FFFFFF</color>
-	<color name="colorFlowButtonBackgroundDefault">#A6D390</color>
+	<color name="colorFlowButtonBackgroundDefault">@color/colorSecondaryGreen</color>
 	<color name="colorFlowButtonIconDefault">#000000</color>
 
 	<!-- STYLING MAIN TAB VIEW -->
-	<color name="color_main_tab_primary_default">#DE393A</color>
+	<color name="color_main_tab_primary_default">@color/colorPrimary</color>
 	<color name="color_main_tab_secondary_default">#313131</color>
 
 </resources>

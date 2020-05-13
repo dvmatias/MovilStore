@@ -4,8 +4,8 @@ import com.matias.domain.base.exception.FailureType
 import com.matias.domain.base.functional.Either
 import com.matias.domain.models.user.UserModel
 
-interface SignInProvider {
+interface LogInProvider {
     
-    fun signIn(username: String, password: String, staySignedIn: Boolean): Either<FailureType, UserModel>
+    fun logIn(username: String, password: String, stayLoggedIn: Boolean): Either<FailureType, UserModel>
     
 }
