@@ -6,6 +6,6 @@ interface StylingToolbarMainContract {
 
 	fun setOnCLickListener(listener: View.OnClickListener?)
 
-	fun setMode(mode: StylingToolbarMainMode)
+	fun setMode(newMode: StylingToolbarMainMode)
 
 }

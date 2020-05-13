@@ -18,11 +18,10 @@ import com.matias.features.login.ui.LoginUiComponent
 import com.matias.features.login.ui.login.LoginActivityContract
 import kotlinx.android.synthetic.main.fragment_sign_in.*
 
-class SignInFragment :
-	BasePresenterFragment<
-			SignInFragment,
-			SignInFragmentPresenter,
-			SignInFragmentSubcomponent>(),
+class SignInFragment : BasePresenterFragment<
+		SignInFragment,
+		SignInFragmentPresenter,
+		SignInFragmentSubcomponent>(),
 	SignInFragmentContract.View {
 
 	private var listener: LoginActivityContract.FragmentInteractionListener? = null
@@ -119,7 +118,7 @@ class SignInFragment :
 
 	override fun onUserClickSignIn() {
 		btnSignIn.buttonState = StylingFlowButtonState.STATE_LOADING.state
-		presenter.signIn(inputUserName.text.toString(), inputPassword.text.toString(), switchStaySignedIn.isChecked)
+		presenter.logIn(inputUserName.text.toString(), inputPassword.text.toString(), switchStayLoggedIn.isChecked)
 	}
 
 	override fun onSignInSuccess(userModel: UserModel) {

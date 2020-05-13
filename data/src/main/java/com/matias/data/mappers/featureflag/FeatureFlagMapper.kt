@@ -13,6 +13,10 @@ class FeatureFlagMapper : Mapper<FeatureFlagsEntity, FeatureFlagsModel>() {
 		val flagContactUsTabEnable = e.flagContactUsTabEnable ?: false
 		val flagProfileTabEnable = e.flagProfileTabEnable ?: false
 		val flagNotificationsEnable = e.flagNotificationsEnable ?: false
+		val flagHomeNoveltyEnable = e.flagHomeNoveltyEnable ?: false
+		val flagHomePromotionEnable = e.flagHomePromotionEnable ?: false
+		val flagHomeOfferEnable = e.flagHomeOfferEnable ?: false
+		val flagHomeServiceEnable = e.flagHomeServiceEnable ?: false
 
 		return FeatureFlagsModel(
 			flagHomeTabEnable,
@@ -20,7 +24,11 @@ class FeatureFlagMapper : Mapper<FeatureFlagsEntity, FeatureFlagsModel>() {
 			flagShopCartTabEnable,
 			flagContactUsTabEnable,
 			flagProfileTabEnable,
-			flagNotificationsEnable
+			flagNotificationsEnable,
+			flagHomeNoveltyEnable,
+			flagHomePromotionEnable,
+			flagHomeOfferEnable,
+			flagHomeServiceEnable
 		)
 	}
 

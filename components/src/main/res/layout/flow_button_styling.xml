@@ -9,7 +9,7 @@
 	android:fitsSystemWindows="false"
 	android:focusable="true"
 	android:foreground="?android:attr/selectableItemBackground"
-	app:cardBackgroundColor="#A6D390"
+	app:cardBackgroundColor="@color/colorSecondaryGreen"
 	android:alpha="1.0"
 	app:cardCornerRadius="@dimen/dimen_button_flow_radius"
 	app:cardElevation="@dimen/dimen_button_flow_elevation">

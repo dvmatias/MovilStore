@@ -11,6 +11,7 @@ class LoginModule {
 
 	@Provides
 	@LoginScope
-	fun provideSignInApi(retrofit: Retrofit): LogInApi = LogInService(retrofit)
+	fun provideSignInApi(retrofit: Retrofit): LogInApi =
+		LogInService(retrofit)
 
 }

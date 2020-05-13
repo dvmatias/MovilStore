@@ -35,7 +35,6 @@ class SplashActivity :
 
 	override fun onResume() {
 		super.onResume()
-//		navigator.toMainScreen(this, null, null, true)
 		animateScreenIn()
 		Handler().postDelayed({ presenter.fetchGlobalConfig() }, 1100)
 	}
@@ -75,7 +74,7 @@ class SplashActivity :
 			.makeSceneTransitionAnimation(this, imageLogoName as View, "image_logo_name")
 		Handler().postDelayed({
 			navigator.toLoginScreen(this, null, options, false)
-			Handler().postDelayed({ this@SplashActivity.finish() }, 500)
+			Handler().postDelayed({ this@SplashActivity.finish() }, 1000)
 		}, 500)
 	}
 

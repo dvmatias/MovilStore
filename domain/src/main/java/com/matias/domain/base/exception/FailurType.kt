@@ -9,8 +9,8 @@ sealed class FailureType {
 
 	object ServerError : FailureType()
 
-	sealed class SignInErrorType : LocalErrorType() {
-		object EmptyCredentialsErrorType : SignInErrorType()
+	sealed class LogInErrorType : LocalErrorType() {
+		object EmptyCredentialsErrorType : LogInErrorType()
 	}
 
 	open class SignUpErrorType : FailureType() {
@@ -23,5 +23,7 @@ sealed class FailureType {
 	}
 
 	object FeatureFlagNotFoundError : FailureType()
+
+	object MainPositionNotFoundError : FailureType()
 
 }

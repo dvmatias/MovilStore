@@ -24,7 +24,7 @@ class SplashActivityPresenter @Inject constructor(
 		checkUserLoginStatus()
 	}
 
-	override fun globalConfigFetchFail(e: FailureType) {
+	override fun globalConfigFetchFail(failure: FailureType) {
 		TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
 	}
 
@@ -44,7 +44,7 @@ class SplashActivityPresenter @Inject constructor(
 		}
 	}
 
-	override fun onUserLoggedOut(e: FailureType) {
+	override fun onUserLoggedOut(failure: FailureType) {
 		view?.apply {
 			animateScreenOut()
 			goToLoginScreen()

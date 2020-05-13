@@ -7,6 +7,9 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.matias.components.R
 import com.matias.components.bottomnavigation.bottomnavmain.StylingBottomNavMainAdapter.OnItemClickListener
+import com.matias.core.helpers.dpToActualPx
+import com.matias.core.helpers.objectAlphaAnimIn
+import com.matias.core.helpers.objectTranslationYAnim
 import com.matias.domain.models.item.ItemMainPageModel
 import kotlinx.android.synthetic.main.bottom_nav_main.view.*
 
@@ -45,9 +48,13 @@ class StylingBottomNavMain : ConstraintLayout, OnItemClickListener {
 	fun setup(itemMainPageList: MutableList<ItemMainPageModel>, listener: OnBottomNavMainItemSelectedListener?) {
 		this.listener = listener
 
-		adapter = StylingBottomNavMainAdapter(context, this, itemMainPageList)
-		recycler.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-		recycler.adapter = adapter
+		this.apply {
+			adapter = StylingBottomNavMainAdapter(context, this, itemMainPageList)
+			recycler.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+			recycler.adapter = adapter
+			objectAlphaAnimIn(this, 0f, 1f, 450)
+			objectTranslationYAnim(this, dpToActualPx(context, 56), 0f, 450)
+		}
 	}
 
 	/**

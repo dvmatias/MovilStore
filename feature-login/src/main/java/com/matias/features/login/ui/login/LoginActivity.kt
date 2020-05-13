@@ -3,6 +3,7 @@ package com.matias.features.login.ui.login
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.matias.core.base.mvp.BasePresenterActivity
 import com.matias.core.helpers.HtmlHelper
@@ -15,8 +16,10 @@ import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.bottom_sheet_error.*
 import javax.inject.Inject
 
-class LoginActivity :
-	BasePresenterActivity<LoginActivity, LoginActivityPresenter, LoginActivitySubComponent>(),
+class LoginActivity : BasePresenterActivity<
+		LoginActivity,
+		LoginActivityPresenter,
+		LoginActivitySubComponent>(),
 	LoginActivityContract.View, LoginActivityContract.FragmentInteractionListener {
 
 	companion object {
@@ -46,6 +49,7 @@ class LoginActivity :
 
 		setupPager()
 		setupTabLayout()
+		setupLoadingView()
 		bottomSheetBehavior = BottomSheetBehavior.from(clBottomSheet)
 	}
 
@@ -58,6 +62,13 @@ class LoginActivity :
 			listOf(getString(R.string.tab_sign_in_label), getString(R.string.tab_sign_up_label))
 		tabs.setupWithViewPager(pager)
 		tabs.setTitlesAtTabs(tabTitles)
+	}
+
+	private fun setupLoadingView() {
+		viewLoading.setOnApplyWindowInsetsListener { v, insets ->
+			(v.layoutParams as CoordinatorLayout.LayoutParams).topMargin = insets.systemWindowInsetTop
+			insets
+		}
 	}
 
 	override fun onStop() {
@@ -98,7 +109,7 @@ class LoginActivity :
 	}
 
 	override fun goToMainScreen() {
-        navigator.toMainScreen(this, null, null, true)
+		navigator.toMainScreen(this, null, null, true)
 	}
 
 	override fun showLoading(show: Boolean) {

@@ -31,7 +31,6 @@ class StylingLoadingHorizontal : FrameLayout {
 	private fun init(context: Context, attrs: AttributeSet?) {
 		View.inflate(context, R.layout.styling_loading_horizontal, this)
 
-
 		val d = imageLoading.drawable
 		if (d is AnimatedVectorDrawableCompat) d.start()
 		else if (d is AnimatedVectorDrawable) d.start()

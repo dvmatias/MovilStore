@@ -5,14 +5,14 @@
 
 	<aapt:attr name="android:drawable">
 		<vector
-			android:width="360dp"
+			android:width="460dp"
 			android:height="10dp"
-			android:viewportHeight="10"
+			android:viewportHeight="5"
 			android:viewportWidth="360">
 			<group
 				android:name="progress_group"
 				android:translateX="180"
-				android:translateY="5">
+				android:translateY="0">
 				<path
 					android:name="background_track"
 					android:fillAlpha="?android:attr/disabledAlpha"
