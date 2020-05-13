@@ -30,20 +30,21 @@
 		<item name="android:padding">2dp</item>
 		<item name="android:paddingStart">24dp</item>
 		<item name="android:background">@drawable/bgr_edit_text_sign_in</item>
-		<item name="android:textColorHint">@color/coloEditTextHint</item>
-		<item name="android:textColor">@color/coloEditTextInput</item>
+		<item name="android:textColorHint">@color/coloInputLoginHintText</item>
+		<item name="android:textColor">@color/coloInputLoginText</item>
 		<item name="android:maxLines">1</item>
 		<item name="android:maxLength">100</item>
 		<item name="android:autoText">true</item>
 		<item name="android:gravity">center_vertical</item>
 		<item name="android:theme">@style/SignInEditTextTheme</item>
 		<item name="android:fontFamily">@font/mark_book</item>
+		<item name="android:elevation">@dimen/dimen_2dp</item>
 	</style>
 
 	<style name="SignInEditTextTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-		<item name="android:colorControlNormal">@color/colorAccent</item>
-		<item name="android:colorControlActivated">@color/colorAccent</item>
-		<item name="android:colorControlHighlight">@color/colorAccent</item>
+		<item name="android:colorControlNormal">@color/colorPrimaryDark</item>
+		<item name="android:colorControlActivated">@color/colorPrimaryDark</item>
+		<item name="android:colorControlHighlight">@color/colorPrimaryDark</item>
 	</style>
 
 	<!-- SWITCH -->
@@ -60,7 +61,7 @@
 		<item name="android:colorControlHighlight">@color/colorAccent</item>
 		<item name="colorControlActivated">@color/colorAccent</item>
 		<item name="colorSwitchThumbNormal">@color/colorWhite</item>
-		<item name="android:colorForeground">#BEBEBE</item>
+		<item name="android:colorForeground">@color/colorWhite</item>
 	</style>
 
 	<!-- LABEL -->
@@ -81,8 +82,8 @@
 	<style name="SignUpEditTextStyle" parent="@style/Widget.AppCompat.EditText">
 		<item name="android:padding">2dp</item>
 		<item name="android:background">@drawable/bgr_edit_text_sign_up</item>
-		<item name="android:textColorHint">@color/coloEditTextHint</item>
-		<item name="android:textColor">@color/coloEditTextInput</item>
+		<item name="android:textColorHint">@color/coloInputLoginHintText</item>
+		<item name="android:textColor">@color/coloInputLoginText</item>
 		<item name="android:maxLines">1</item>
 		<item name="android:maxLength">100</item>
 		<item name="android:autoText">true</item>
