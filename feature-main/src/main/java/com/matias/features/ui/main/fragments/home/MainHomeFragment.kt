@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.matias.components.viewpager.StylingWrapContentHeightViewPager
 import com.matias.core.base.mvp.BasePresenterFragment
 import com.matias.core.helpers.dpToPx
 import com.matias.features.R
@@ -11,7 +12,6 @@ import com.matias.features.di.main.fragments.home.MainHomeFragmentModule
 import com.matias.features.di.main.fragments.home.MainHomeFragmentSubcomponent
 import com.matias.features.ui.MainUiComponent
 import com.matias.features.ui.main.fragments.home.novelty.NoveltyPagerAdapter
-import kotlinx.android.synthetic.main.section_novelty.*
 import javax.inject.Inject
 
 class MainHomeFragment :
@@ -20,6 +20,10 @@ class MainHomeFragment :
 			MainHomeFragmentPresenter,
 			MainHomeFragmentSubcomponent>(),
 	MainHomeFragmentContract.View {
+
+	// Views.
+	private lateinit var sectionNovelty: ViewGroup
+	private lateinit var pagerNovelty: StylingWrapContentHeightViewPager
 
 	companion object {
 
@@ -49,8 +53,18 @@ class MainHomeFragment :
 
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
-
+		setViews()
 		setupNoveltyPager()
+	}
+
+	/**
+	 *
+	 */
+	private fun setViews() {
+		view?.let {v: View ->
+			sectionNovelty = v.findViewById(R.id.section_novelty)
+			pagerNovelty = sectionNovelty.findViewById(R.id.pager_novelty)
+		}
 	}
 
 	/**

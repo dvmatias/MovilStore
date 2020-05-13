@@ -1,6 +1,5 @@
 package com.matias.features.ui.main.fragments.home.novelty
 
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
