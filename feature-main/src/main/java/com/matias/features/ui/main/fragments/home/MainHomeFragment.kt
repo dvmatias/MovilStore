@@ -62,7 +62,7 @@ class MainHomeFragment :
 	 */
 	private fun setViews() {
 		view?.let {v: View ->
-			sectionNovelty = v.findViewById(R.id.section_novelty)
+//			sectionNovelty = v.findViewById(R.id.section_novelty)
 			pagerNovelty = sectionNovelty.findViewById(R.id.pager_novelty)
 		}
 	}
