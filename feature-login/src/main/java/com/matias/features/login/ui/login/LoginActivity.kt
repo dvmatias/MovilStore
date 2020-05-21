@@ -6,7 +6,7 @@ import android.view.View
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.matias.core.base.mvp.BasePresenterActivity
-import com.matias.core.helpers.HtmlHelper
+import com.matias.core.helpers.fromHtml
 import com.matias.domain.models.user.UserModel
 import com.matias.features.R
 import com.matias.features.login.di.login.LoginActivityModule
@@ -28,9 +28,6 @@ class LoginActivity : BasePresenterActivity<
 
 	@Inject
 	lateinit var pagerAdapter: LoginPagerAdapter
-
-	@Inject
-	lateinit var htmlHelper: HtmlHelper
 
 	private lateinit var tabTitles: List<String>
 
@@ -90,7 +87,7 @@ class LoginActivity : BasePresenterActivity<
 	override fun showSignInError(errorMsgResource: Int) {
 		clBottomSheet.requestFocus()
 		bottomSheetBehavior = BottomSheetBehavior.from(clBottomSheet)
-		tvBottomSheetErrorMessage.text = htmlHelper.fromHtml(errorMsgResource)
+		tvBottomSheetErrorMessage.text = fromHtml(errorMsgResource, this)
 		bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
 		Handler().postDelayed({ hideSignInError() }, HIDE_SIGN_IN_ERROR_DELAY)
 	}
@@ -98,7 +95,7 @@ class LoginActivity : BasePresenterActivity<
 	override fun showSignUpErrorFields(errorMsgResource: Int) {
 		clBottomSheet.requestFocus()
 		bottomSheetBehavior = BottomSheetBehavior.from(clBottomSheet)
-		tvBottomSheetErrorMessage.text = htmlHelper.fromHtml(errorMsgResource)
+		tvBottomSheetErrorMessage.text = fromHtml(errorMsgResource, this)
 		bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
 		Handler().postDelayed({ hideSignInError() }, HIDE_SIGN_IN_ERROR_DELAY)
 	}

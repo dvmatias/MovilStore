@@ -54,4 +54,7 @@
 	<color name="color_main_tab_primary_default">@color/colorPrimary</color>
 	<color name="color_main_tab_secondary_default">#313131</color>
 
+	<color name="colorTextProductDark">#0C0C0C</color>
+	<color name="colorTextProductDiscount">#05C105</color>
+
 </resources>
