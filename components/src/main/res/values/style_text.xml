@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>Product
+		
+	<style name="ProductTitleText" parent="TextAppearance.AppCompat">
+		<item name="android:maxLines">1</item>
+		<item name="android:ellipsize">end</item>
+		<item name="textAllCaps">true</item>
+		<item name="android:textSize">@dimen/text_12sp</item>
+		<item name="android:textColor">@color/colorTextProductDark</item>
+		<item name="fontFamily">@font/cereal_bold</item>
+	</style>
+
+	<style name="ProductSubtitleText" parent="TextAppearance.AppCompat">
+		<item name="android:maxLines">2</item>
+		<item name="fontFamily">@font/cereal_book</item>
+		<item name="android:textColor">@color/colorTextProductDark</item>
+		<item name="android:ellipsize">end</item>
+		<item name="android:textSize">@dimen/text_14sp</item>
+	</style>
+
+	<style name="ProductSubtitleText.OriginalPrice">
+		<item name="android:maxLines">1</item>
+	</style>
+
+	<style name="ProductSubtitleText.Price">
+		<item name="android:maxLines">1</item>
+		<item name="fontFamily">@font/cereal_book</item>
+		<item name="android:textSize">@dimen/text_20sp</item>
+	</style>
+
+	<style name="ProductDiscountPercentajeText" parent="TextAppearance.AppCompat">
+		<item name="fontFamily">@font/cereal_medium</item>
+		<item name="android:textColor">@color/colorTextProductDiscount</item>
+		<item name="android:textSize">@dimen/text_16sp</item>
+	</style>
+	
+</resources>
