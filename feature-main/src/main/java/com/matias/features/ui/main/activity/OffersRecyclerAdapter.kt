@@ -19,6 +19,16 @@ class OffersRecyclerAdapter(private val activity: Activity) : RecyclerView.Adapt
 
 	private var data: ArrayList<ProductOfferModel> = arrayListOf()
 
+	private var listener: OnOfferClickListener?
+
+	init {
+		if (activity is OnOfferClickListener) {
+			listener = activity
+		} else {
+			throw IllegalAccessException("Calling activity must implement OffersRecyclerAdapter.OnOfferClickListener interface")
+		}
+	}
+
 	fun setData(data: ArrayList<ProductOfferModel>) {
 		this.data.clear()
 		this.data = data
@@ -32,7 +42,7 @@ class OffersRecyclerAdapter(private val activity: Activity) : RecyclerView.Adapt
 		if (data.size >= MAX_OFFERS_TO_DISPLAY) MAX_OFFERS_TO_DISPLAY else data.size
 
 	override fun onBindViewHolder(holder: OfferViewHolder, position: Int) {
-		holder.bindItem(activity, data[position])
+		holder.bindItem(data[position], listener, activity)
 	}
 
 	class OfferViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -43,7 +53,7 @@ class OffersRecyclerAdapter(private val activity: Activity) : RecyclerView.Adapt
 		private var tvPrice: AppCompatTextView = itemView.findViewById(R.id.tv_price)
 		private var tvDiscountPercentaje: AppCompatTextView = itemView.findViewById(R.id.tv_discount_percentaje)
 
-		fun bindItem(activity: Activity, productOffer: ProductOfferModel) {
+		fun bindItem(productOffer: ProductOfferModel, listener: OnOfferClickListener?, activity: Activity) {
 			val discountPercentaje = getDiscount(productOffer.originalPrice, productOffer.price)
 
 			if (discountPercentaje <= 0) {
@@ -67,6 +77,8 @@ class OffersRecyclerAdapter(private val activity: Activity) : RecyclerView.Adapt
 			tvDiscountPercentaje.text =
 				String.format(activity.getString(R.string.discount_percentaje_placeholder), discountPercentaje)
 
+			itemView.setOnClickListener { listener?.onClick(productOffer.id) }
+
 		}
 
 		private fun getDiscount(originalPrice: Float, price: Float): Int {
@@ -76,6 +88,10 @@ class OffersRecyclerAdapter(private val activity: Activity) : RecyclerView.Adapt
 		private fun getFormattedPrice(value: Float): String =
 			DecimalFormat("#,###").format(value).replace(',', '.')
 
+	}
+
+	interface OnOfferClickListener {
+		fun onClick(productId: Int)
 	}
 
 }
