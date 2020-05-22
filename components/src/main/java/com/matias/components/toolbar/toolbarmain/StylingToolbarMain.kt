@@ -9,7 +9,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.matias.components.R
 import com.matias.components.toolbar.toolbarmain.StylingToolbarMainMode.INIT
 import com.matias.core.helpers.VectorDrawableHelper
-import com.matias.core.helpers.dpToActualPx
+import com.matias.core.helpers.dpToPx
 import com.matias.core.helpers.objectAlphaAnimIn
 import com.matias.core.helpers.objectTranslationYAnim
 import kotlinx.android.synthetic.main.styling_toolbar_main.view.*
@@ -97,7 +97,7 @@ class StylingToolbarMain : ConstraintLayout, StylingToolbarMainContract {
 			footerContainer.apply {
 				addView(footerView, 0)
 				objectAlphaAnimIn(this, 0f, 1f, 450)
-				objectTranslationYAnim(this, -dpToActualPx(context, 24), 0f, 450)
+				objectTranslationYAnim(this, -dpToPx(context, 24F), 0f, 450)
 			}
 		}
 	}

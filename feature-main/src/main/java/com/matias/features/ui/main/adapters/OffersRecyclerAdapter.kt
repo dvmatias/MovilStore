@@ -1,4 +1,4 @@
-package com.matias.features.ui.main.activity
+package com.matias.features.ui.main.adapters
 
 import android.app.Activity
 import android.view.LayoutInflater
@@ -77,7 +77,7 @@ class OffersRecyclerAdapter(private val activity: Activity) : RecyclerView.Adapt
 			tvDiscountPercentaje.text =
 				String.format(activity.getString(R.string.discount_percentaje_placeholder), discountPercentaje)
 
-			itemView.setOnClickListener { listener?.onClick(productOffer.id) }
+			itemView.setOnClickListener { listener?.onOfferClick(productOffer.id) }
 
 		}
 
@@ -91,7 +91,7 @@ class OffersRecyclerAdapter(private val activity: Activity) : RecyclerView.Adapt
 	}
 
 	interface OnOfferClickListener {
-		fun onClick(productId: Int)
+		fun onOfferClick(productId: Int)
 	}
 
 }

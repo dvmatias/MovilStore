@@ -45,7 +45,7 @@ class StylingBottomNavMainAdapter(
 		val params = holder.itemView.container.layoutParams
 		val displayMetrics = context.resources.displayMetrics
 		val dpWidth = displayMetrics.widthPixels / displayMetrics.density
-		params.width = dpToPx(context, (dpWidth / itemCount).toInt())
+		params.width = dpToPx(context, (dpWidth / itemCount)).toInt()
 
 		holder.bindItem(itemMainPageList[position], listener, position)
 

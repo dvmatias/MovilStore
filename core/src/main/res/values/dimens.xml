@@ -32,7 +32,10 @@
 	<dimen name="dimen_48dp">48dp</dimen>
 	<dimen name="dimen_50dp">50dp</dimen>
 	<dimen name="dimen_52dp">52dp</dimen>
-	
+	<dimen name="dimen_76dp">76dp</dimen>
+	<dimen name="dimen_84dp">84dp</dimen>
+	<dimen name="dimen_96dp">96dp</dimen>
+
 	<dimen name="text_8sp">8sp</dimen>
 	<dimen name="text_10sp">10sp</dimen>
 	<dimen name="text_12sp">12sp</dimen>

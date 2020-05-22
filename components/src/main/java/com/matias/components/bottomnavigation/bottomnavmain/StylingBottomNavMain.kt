@@ -7,7 +7,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.matias.components.R
 import com.matias.components.bottomnavigation.bottomnavmain.StylingBottomNavMainAdapter.OnItemClickListener
-import com.matias.core.helpers.dpToActualPx
+import com.matias.core.helpers.dpToPx
 import com.matias.core.helpers.objectAlphaAnimIn
 import com.matias.core.helpers.objectTranslationYAnim
 import com.matias.domain.models.item.ItemMainPageModel
@@ -53,7 +53,7 @@ class StylingBottomNavMain : ConstraintLayout, OnItemClickListener {
 			recycler.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 			recycler.adapter = adapter
 			objectAlphaAnimIn(this, 0f, 1f, 450)
-			objectTranslationYAnim(this, dpToActualPx(context, 56), 0f, 450)
+			objectTranslationYAnim(this, dpToPx(context, 56F), 0f, 450)
 		}
 	}
 

@@ -9,6 +9,7 @@
 	<dimen name="stroke_width_icon_1_5">1.5</dimen>
 	<dimen name="stroke_width_icon_2">2.0</dimen>
 	<dimen name="stroke_width_icon_2_3">2.3</dimen>
+	<dimen name="stroke_width_service_icon">3.1</dimen>
 
 	<dimen name="dimen_button_flow_height">52dp</dimen>
 	<dimen name="dimen_button_flow_radius">26dp</dimen>

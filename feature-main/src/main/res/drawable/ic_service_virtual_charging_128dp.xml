@@ -1,0 +1,52 @@
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="vector"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+    <path
+        android:name="path"
+        android:pathData="M 788.75 226.714 L 730.201 226.714 C 727.441 226.714 725.183 224.456 725.183 221.696 L 725.183 169.18 C 725.183 166.42 727.441 164.162 730.201 164.162 L 816.166 164.162 C 818.926 164.162 821.184 166.42 821.184 169.18 L 821.184 221.696 C 821.184 224.456 818.926 226.714 816.166 226.714 L 801.5 226.714 M 771.25 189.584 L 821.184 189.584 M 725.184 189.584 L 737.32 189.584 M 754.285 179.584 L 754.285 164.163 M 754.285 226.211 L 754.285 199.584"
+        android:strokeColor="@color/colorDarkTextNormal"
+        android:strokeWidth="@dimen/stroke_width_service_icon"
+        android:strokeLineCap="round"
+        android:strokeMiterLimit="10"/>
+    <path
+        android:name="path_4"
+        android:pathData="M 812 175.167 L 775.25 175.167 M 812 181.833 L 783.957 181.833"
+        android:strokeColor="@color/colorDarkTextNormal"
+        android:strokeWidth="@dimen/stroke_width_service_icon"
+        android:strokeLineCap="round"
+        android:strokeMiterLimit="10"/>
+    <path
+        android:name="path_5"
+        android:pathData="M 83.702 62.094 L 83.702 106.148 C 83.702 109.367 81.068 112.001 77.849 112.001 L 37.452 112.001 C 34.233 112.001 31.6 109.367 31.6 106.148 L 31.6 21.853 C 31.6 18.634 34.068 16.001 37.083 16.001 L 77.848 16.001 C 81.067 16.001 83.701 18.569 83.701 21.709 L 83.701 27.417"
+        android:strokeColor="@color/colorDarkTextNormal"
+        android:strokeWidth="@dimen/stroke_width_service_icon"
+        android:strokeLineCap="round"
+        android:strokeMiterLimit="10"/>
+    
+    <path
+        android:name="path_6"
+        android:pathData="M 81.745 51.815 C 80.089 50.16 79.066 47.873 79.066 45.347 C 79.066 42.824 80.088 40.535 81.745 38.881 M 75.512 58.048 C 72.263 54.797 70.253 50.309 70.253 45.348 C 70.253 40.39 72.263 35.903 75.512 32.651"
+        android:strokeColor="@color/colorPrimary"
+        android:strokeWidth="@dimen/stroke_width_service_icon"
+        android:strokeLineCap="round"
+        android:strokeMiterLimit="10"/>
+
+    <path
+        android:name="path_6"
+        android:pathData="M 66.519 23.649 L 47.786 23.649 C 47.786 23.649 45.347 23.428 43.018 16 M 48.784 105.25 L 66.519 105.25 "
+        android:strokeColor="@color/colorDarkTextNormal"
+        android:strokeWidth="@dimen/stroke_width_service_icon"
+        android:strokeLineCap="round"
+        android:strokeMiterLimit="10"/>
+
+    <path
+        android:name="path_7"
+        android:pathData="M 96.232 40.261 C 95.716 39.136 94.498 37.433 92.021 37.433 C 89.546 37.433 88.23 38.944 88.23 40.808 C 88.23 42.841 89.878 43.905 91.876 44.89 C 94.147 45.966 96.167 47.074 96.167 49.536 C 96.167 51.884 94.464 53.265 92.085 53.265 C 89.128 53.265 87.778 51.497 87.167 49.761 M 91.701 37.433 L 91.701 34.767 M 91.701 55.931 L 91.701 53.265"
+        android:strokeColor="@color/colorDarkTextNormal"
+        android:strokeLineCap="round"
+        android:strokeWidth="@dimen/stroke_width_service_icon"/>
+</vector>
