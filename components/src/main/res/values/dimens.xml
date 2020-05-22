@@ -42,7 +42,7 @@
 	<dimen name="padding_top_toolbar_main_footer_to_search_padding_top_6dp">6dp</dimen>
 	<dimen name="padding_top_toolbar_main_footer_to_search_padding_bottom_6dp">6dp</dimen>
 	<dimen name="height_toolbar_main_button_search_46dp">46dp</dimen>
-	<dimen name="margin_start_toolbar_main_button_search_corner_radius_4dp">4dp</dimen>
+	<dimen name="margin_start_toolbar_main_button_search_corner_radius_23dp">23dp</dimen>
 	<dimen name="margin_end_toolbar_main_button_search_8dp">8dp</dimen>
 	<dimen name="content_padding_start_toolbar_main_button_search_16dp">16dp</dimen>
 	<dimen name="content_padding_end_toolbar_main_button_search_16dp">16dp</dimen>

@@ -13,7 +13,7 @@ import com.matias.domain.models.offer.ProductOfferModel
 import com.matias.features.R
 import java.text.DecimalFormat
 
-private const val MAX_OFFERS_TO_DISPLAY = 6
+private const val MAX_OFFERS_TO_DISPLAY = 3
 
 class OffersRecyclerAdapter(private val activity: Activity) : RecyclerView.Adapter<OffersRecyclerAdapter.OfferViewHolder>() {
 

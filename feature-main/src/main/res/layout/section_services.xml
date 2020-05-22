@@ -30,7 +30,7 @@
 		<!-- TITLE -->
 		<androidx.appcompat.widget.AppCompatTextView
 			android:id="@+id/tv_services_title"
-			style="@style/SectionTiteText"
+			style="@style/SectionTitleText"
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
 			android:text="@string/service_section_title"

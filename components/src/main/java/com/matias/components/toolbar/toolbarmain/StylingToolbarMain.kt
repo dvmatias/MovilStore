@@ -9,11 +9,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.matias.components.R
 import com.matias.components.toolbar.toolbarmain.StylingToolbarMainMode.INIT
 import com.matias.core.helpers.VectorDrawableHelper
-import com.matias.core.helpers.dpToPx
-import com.matias.core.helpers.objectAlphaAnimIn
-import com.matias.core.helpers.objectTranslationYAnim
 import kotlinx.android.synthetic.main.styling_toolbar_main.view.*
-import kotlinx.android.synthetic.main.styling_toolbar_main_footer_to_search.view.*
 
 class StylingToolbarMain : ConstraintLayout, StylingToolbarMainContract {
 
@@ -41,14 +37,6 @@ class StylingToolbarMain : ConstraintLayout, StylingToolbarMainContract {
 		setMode(INIT)
 	}
 
-	private fun transitionFooter(mode: StylingToolbarMainMode) {
-		val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-		mode.footerLayoutId?.let {
-			val footerView = inflater.inflate(it, null) as ConstraintLayout
-			footerContainer.addView(footerView, 0)
-		}
-	}
-
 	fun animateNavigationIcon(vectorDrawableHelper: VectorDrawableHelper?, delay: Long) {
 		vectorDrawableHelper?.let {
 			animateIcon(buttonNavigation, it, delay)
@@ -71,10 +59,6 @@ class StylingToolbarMain : ConstraintLayout, StylingToolbarMainContract {
 			buttonNavigation.setOnClickListener(listenerAdapter)
 			buttonCoupon.setOnClickListener(listenerAdapter)
 			buttonNotification.setOnClickListener(listenerAdapter)
-
-			buttonSearch?.setOnClickListener(listenerAdapter)
-			iconFilterSearchButton?.setOnClickListener(listenerAdapter)
-			labelFilterSearchButton?.setOnClickListener(listenerAdapter)
 		}
 	}
 
@@ -88,18 +72,6 @@ class StylingToolbarMain : ConstraintLayout, StylingToolbarMainContract {
 
 	private fun transitionNotificationsIcon(mode: StylingToolbarMainMode) {
 		// TODO
-	}
-
-	private fun initFooter(mode: StylingToolbarMainMode) {
-		val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-		mode.footerLayoutId?.let {
-			val footerView = inflater.inflate(it, null) as ConstraintLayout
-			footerContainer.apply {
-				addView(footerView, 0)
-				objectAlphaAnimIn(this, 0f, 1f, 450)
-				objectTranslationYAnim(this, -dpToPx(context, 24F), 0f, 450)
-			}
-		}
 	}
 
 	/**
@@ -117,18 +89,9 @@ class StylingToolbarMain : ConstraintLayout, StylingToolbarMainContract {
 			}
 			// Toolbar already initialized.
 			else -> {
-				// Came from init status
-				if (INIT == oldMode) {
-					buttonNavigation.visibility = View.VISIBLE
-					buttonCoupon.visibility = View.VISIBLE
-					buttonNotification.visibility = View.VISIBLE
-					initFooter(newMode)
-				} else {
-					transitionNavigationIcon(newMode)
-					transitionCouponIcon(newMode)
-					transitionNotificationsIcon(newMode)
-					transitionFooter(newMode)
-				}
+				buttonNavigation.visibility = View.VISIBLE
+				buttonCoupon.visibility = View.VISIBLE
+				buttonNotification.visibility = View.VISIBLE
 			}
 		}
 		oldMode = setMode

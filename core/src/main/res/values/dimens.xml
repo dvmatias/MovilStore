@@ -34,6 +34,7 @@
 	<dimen name="dimen_52dp">52dp</dimen>
 	<dimen name="dimen_76dp">76dp</dimen>
 	<dimen name="dimen_84dp">84dp</dimen>
+	<dimen name="dimen_90dp">90dp</dimen>
 	<dimen name="dimen_96dp">96dp</dimen>
 
 	<dimen name="text_8sp">8sp</dimen>

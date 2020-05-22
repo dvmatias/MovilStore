@@ -15,7 +15,7 @@
 
 		<androidx.appcompat.widget.AppCompatTextView
 			android:id="@+id/tv_offers_title"
-			style="@style/SectionTiteText"
+			style="@style/SectionTitleText"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:text="@string/offer_section_title"
