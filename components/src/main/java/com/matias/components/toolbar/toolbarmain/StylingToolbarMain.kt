@@ -2,12 +2,12 @@ package com.matias.components.toolbar.toolbarmain
 
 import android.content.Context
 import android.util.AttributeSet
-import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.matias.components.R
-import com.matias.components.toolbar.toolbarmain.StylingToolbarMainMode.INIT
+import com.matias.components.toolbar.toolbarmain.StylingToolbarMainMode.LOADING
+import com.matias.components.toolbar.toolbarmain.StylingToolbarMainMode.NORMAL
 import com.matias.core.helpers.VectorDrawableHelper
 import kotlinx.android.synthetic.main.styling_toolbar_main.view.*
 
@@ -15,9 +15,9 @@ class StylingToolbarMain : ConstraintLayout, StylingToolbarMainContract {
 
 	private var listenerAdapter: InternalListener = InternalListener()
 
-	private var oldMode: StylingToolbarMainMode = INIT
+	private var oldMode: StylingToolbarMainMode = LOADING
 
-	private var setMode: StylingToolbarMainMode = INIT
+	private var setMode: StylingToolbarMainMode = LOADING
 
 	constructor(context: Context) : super(context) {
 		init(context)
@@ -34,7 +34,7 @@ class StylingToolbarMain : ConstraintLayout, StylingToolbarMainContract {
 	private fun init(context: Context) {
 		View.inflate(context, R.layout.styling_toolbar_main, this)
 
-		setMode(INIT)
+		setMode(LOADING)
 	}
 
 	fun animateNavigationIcon(vectorDrawableHelper: VectorDrawableHelper?, delay: Long) {
@@ -82,13 +82,13 @@ class StylingToolbarMain : ConstraintLayout, StylingToolbarMainContract {
 	override fun setMode(newMode: StylingToolbarMainMode) {
 		when (newMode) {
 			// Toolbar initialization, visible only brand name.
-			INIT -> {
+			LOADING -> {
 				buttonNavigation.visibility = View.INVISIBLE
 				buttonCoupon.visibility = View.INVISIBLE
 				buttonNotification.visibility = View.INVISIBLE
 			}
 			// Toolbar already initialized.
-			else -> {
+			NORMAL -> {
 				buttonNavigation.visibility = View.VISIBLE
 				buttonCoupon.visibility = View.VISIBLE
 				buttonNotification.visibility = View.VISIBLE
