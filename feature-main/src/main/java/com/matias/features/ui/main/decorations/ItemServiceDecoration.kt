@@ -1,4 +1,4 @@
-package com.matias.features.ui.main.activity
+package com.matias.features.ui.main.decorations
 
 import android.content.Context
 import android.graphics.Canvas

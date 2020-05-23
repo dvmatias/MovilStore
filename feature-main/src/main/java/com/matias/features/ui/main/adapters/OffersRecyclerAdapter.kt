@@ -19,13 +19,13 @@ class OffersRecyclerAdapter(private val activity: Activity) : RecyclerView.Adapt
 
 	private var data: ArrayList<ProductOfferModel> = arrayListOf()
 
-	private var listener: OnOfferClickListener?
+	private var listener: OfferClickListener?
 
 	init {
-		if (activity is OnOfferClickListener) {
+		if (activity is OfferClickListener) {
 			listener = activity
 		} else {
-			throw IllegalAccessException("Calling activity must implement OffersRecyclerAdapter.OnOfferClickListener interface")
+			throw IllegalAccessException("Calling activity must implement OffersRecyclerAdapter.OfferClickListener interface")
 		}
 	}
 
@@ -53,7 +53,7 @@ class OffersRecyclerAdapter(private val activity: Activity) : RecyclerView.Adapt
 		private var tvPrice: AppCompatTextView = itemView.findViewById(R.id.tv_price)
 		private var tvDiscountPercentaje: AppCompatTextView = itemView.findViewById(R.id.tv_discount_percentaje)
 
-		fun bindItem(productOffer: ProductOfferModel, listener: OnOfferClickListener?, activity: Activity) {
+		fun bindItem(productOffer: ProductOfferModel, listener: OfferClickListener?, activity: Activity) {
 			val discountPercentaje = getDiscount(productOffer.originalPrice, productOffer.price)
 
 			if (discountPercentaje <= 0) {
@@ -90,7 +90,7 @@ class OffersRecyclerAdapter(private val activity: Activity) : RecyclerView.Adapt
 
 	}
 
-	interface OnOfferClickListener {
+	interface OfferClickListener {
 		fun onOfferClick(productId: Int)
 	}
 
