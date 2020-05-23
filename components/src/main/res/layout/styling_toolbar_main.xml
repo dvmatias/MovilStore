@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/colorToolbarMainBackground"
+	android:paddingStart="@dimen/padding_start_toolbar_main_16dp"
+	android:paddingEnd="@dimen/padding_end_toolbar_main_16dp">
+
+	<!-- PROVIDE TOOLBAR HEIGHT -->
+	<Space
+		android:id="@+id/spaceToolbarHeight"
+		android:layout_width="wrap_content"
+		android:layout_height="@dimen/height_styling_toolbar_main_56dp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<!-- NAVIGATION BUTTON -->
+	<androidx.appcompat.widget.AppCompatImageView
+		android:id="@+id/buttonNavigation"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/ic_toolbar_main_navigation_32dp"
+		app:layout_constraintBottom_toBottomOf="@id/spaceToolbarHeight"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@id/spaceToolbarHeight" />
+
+	<!-- LOGO -->
+	<androidx.appcompat.widget.AppCompatImageView
+		android:id="@+id/ivLogo"
+		android:layout_width="wrap_content"
+		android:layout_height="@dimen/dimen_26dp"
+		android:layout_marginBottom="@dimen/dimen_4dp"
+		android:adjustViewBounds="true"
+		android:src="@drawable/img_main_toolbar_movil_store"
+		app:layout_constraintBottom_toBottomOf="@id/spaceToolbarHeight"
+		app:layout_constraintEnd_toStartOf="@+id/buttonNotification"
+		app:layout_constraintStart_toEndOf="@+id/buttonNavigation"
+		app:layout_constraintTop_toTopOf="@id/spaceToolbarHeight" />
+
+	<!-- COUPON BUTTON -->
+	<androidx.appcompat.widget.AppCompatImageView
+		android:id="@+id/buttonCoupon"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="4dp"
+		android:src="@drawable/ic_toolbar_main_coupon_32dp"
+		app:layout_constraintBottom_toBottomOf="@id/spaceToolbarHeight"
+		app:layout_constraintEnd_toStartOf="@id/buttonNotification"
+		app:layout_constraintTop_toTopOf="@id/spaceToolbarHeight" />
+
+	<!-- NOTIFICATION BUTTON -->
+	<androidx.appcompat.widget.AppCompatImageView
+		android:id="@+id/buttonNotification"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/ic_toolbar_main_notification_32dp"
+		app:layout_constraintBottom_toBottomOf="@id/spaceToolbarHeight"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="@id/spaceToolbarHeight" />
+
+	<!-- FOOTER -->
+	<FrameLayout
+		android:id="@+id/footerContainer"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/spaceToolbarHeight" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

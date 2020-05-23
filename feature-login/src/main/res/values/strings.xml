@@ -1,0 +1,22 @@
+<resources>
+	<string name="app_name">Feature Login</string>
+
+	<!-- Sign In Error Messages -->
+	<string name="error_empty_credentials_sign_in">You must provide an user mail or email and a password to enter.</string>
+	<string name="error_user_not_found_sign_in">We can not find the user. Please check if you are using the correct email or username.</string>
+	<string name="error_wrong_password_sign_in">Wrong password. Please check the password you entered and try again.</string>
+
+	<!-- Sign Up Error Messages -->
+	<string name="error_empty_credentials_sign_up">You must enter all the information required in order to register in the app. Please check it and try again.</string>
+	<string name="error_username_not_available_sign_up">The user name you entered is already in use, please try another one.</string>
+	<string name="error_invalid_phone_sign_up">You must enter a valid phone number.</string>
+	<string name="error_invalid_birth_date_sign_up">The birth day you entered is not valid, please check it and choose the right one.</string>
+	<string name="error_user_already_exists_sign_up">This user is alredy registered. If you forgot the password go to previous screen and click on \'Forgot Password?\'</string>
+	<string name="error_malformed_email_sign_up">The email address you entered is not valid, please check it.</string>
+
+	<string-array name="genders">
+		<item></item>
+		<item>Female</item>
+		<item>Male</item>
+	</string-array>
+</resources>

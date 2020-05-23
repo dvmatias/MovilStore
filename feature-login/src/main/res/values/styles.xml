@@ -1,0 +1,107 @@
+<resources>
+
+	<style name="AppTheme" parent="Theme.AppCompat.Light" />
+
+	<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+	<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+	<style name="LoginActivityTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+		<item name="android:windowContentTransitions">true</item>
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+		<item name="android:windowAnimationStyle">@null</item>
+		<item name="android:windowBackground">@color/colorLoginActivityBackground</item>
+		<item name="android:statusBarColor">@color/colorTransparent</item>
+	</style>
+
+	<!-- SOCIAL NETWORK BUTTONS -->
+	<style name="TextSignInSocialNetwork" parent="Widget.AppCompat.TextView">
+		<item name="android:layout_marginStart">@dimen/dimen_14dp</item>
+		<item name="android:fontFamily">@font/cereal_bold</item>
+		<item name="android:letterSpacing">0.03</item>
+		<item name="android:textColor">@color/colorSocialNetworkLabel</item>
+		<item name="android:textSize">@dimen/text_14sp</item>
+		<item name="android:gravity">center</item>
+	</style>
+
+	<!-- SIGN IN EDIT TEXT - INPUT FIELDS -->
+	<style name="SignInEditTextStyle" parent="@style/Widget.AppCompat.EditText">
+		<item name="android:padding">2dp</item>
+		<item name="android:paddingStart">24dp</item>
+		<item name="android:background">@drawable/bgr_edit_text_sign_in</item>
+		<item name="android:textColorHint">@color/coloInputLoginHintText</item>
+		<item name="android:textColor">@color/coloInputLoginText</item>
+		<item name="android:maxLines">1</item>
+		<item name="android:maxLength">100</item>
+		<item name="android:autoText">true</item>
+		<item name="android:gravity">center_vertical</item>
+		<item name="android:theme">@style/SignInEditTextTheme</item>
+		<item name="android:fontFamily">@font/cereal_book</item>
+		<item name="android:elevation">@dimen/dimen_2dp</item>
+	</style>
+
+	<style name="SignInEditTextTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+		<item name="android:colorControlNormal">@color/colorPrimaryDark</item>
+		<item name="android:colorControlActivated">@color/colorPrimaryDark</item>
+		<item name="android:colorControlHighlight">@color/colorPrimaryDark</item>
+	</style>
+
+	<!-- SWITCH -->
+	<style name="LogInSwitchStyle" parent="Widget.AppCompat.CompoundButton.Switch">
+		<item name="android:textColor">@color/colorBtnTextLabel</item>
+		<item name="android:textSize">@dimen/text_14sp</item>
+		<item name="android:fontFamily">@font/cereal_bold</item>
+		<item name="android:theme">@style/SignInSwitchTheme</item>
+	</style>
+
+	<style name="SignInSwitchTheme" parent="Theme.AppCompat.Light">
+		<item name="android:colorControlNormal">@color/colorAccent</item>
+		<item name="android:colorControlActivated">@color/colorAccent</item>
+		<item name="android:colorControlHighlight">@color/colorAccent</item>
+		<item name="colorControlActivated">@color/colorAccent</item>
+		<item name="colorSwitchThumbNormal">@color/colorWhite</item>
+		<item name="android:colorForeground">@color/colorWhite</item>
+	</style>
+
+	<!-- LABEL -->
+	<style name="LabelTextStyle" parent="Widget.AppCompat.TextView">
+		<item name="android:textColor">@color/colorBtnTextLabel</item>
+		<item name="android:textSize">@dimen/text_14sp</item>
+		<item name="android:fontFamily">@font/cereal_medium</item>
+	</style>
+
+	<!-- TITLE -->
+	<style name="TitleTextStyle" parent="Widget.AppCompat.TextView">
+		<item name="android:textColor">@color/colorBtnTextLabel</item>
+		<item name="android:textSize">@dimen/text_30sp</item>
+		<item name="android:fontFamily">@font/cereal_bold</item>
+	</style>
+
+	<!-- SIGN UP EDIT TEXT - INPUT FIELDS -->
+	<style name="SignUpEditTextStyle" parent="@style/Widget.AppCompat.EditText">
+		<item name="android:padding">2dp</item>
+		<item name="android:background">@drawable/bgr_edit_text_sign_up</item>
+		<item name="android:textColorHint">@color/coloInputLoginHintText</item>
+		<item name="android:textColor">@color/coloInputLoginText</item>
+		<item name="android:maxLines">1</item>
+		<item name="android:maxLength">100</item>
+		<item name="android:autoText">true</item>
+		<item name="android:gravity">center_vertical</item>
+		<item name="android:theme">@style/SignInEditTextTheme</item>
+		<item name="android:drawablePadding">@dimen/dimen_12dp</item>
+		<item name="android:paddingStart">@dimen/dimen_12dp</item>
+		<item name="android:paddingEnd">@dimen/dimen_16dp</item>
+	</style>
+
+	<!-- FLOW BUTTONS -->
+	<style name="LoginButtonStyle" parent="Widget.AppCompat.Button">
+		<item name="android:backgroundTint">@color/colorAccent</item>
+		<item name="android:fontFamily">@font/open_sans_bold</item>
+		<item name="android:textColor">@color/colorFlowButtonLabel</item>
+		<item name="android:textSize">@dimen/text_16sp</item>
+		<item name="android:theme">@style/Theme.AppCompat</item>
+		<item name="android:clickable">true</item>
+	</style>
+
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="@dimen/dimen_styling_main_tab_layout_height"
+	android:animateLayoutChanges="true"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<com.google.android.material.tabs.TabLayout
+		android:id="@+id/tabLayout"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		app:tabBackground="@color/colorWhite"
+		android:animateLayoutChanges="true"
+		app:tabIndicatorHeight="0dp"
+		app:tabMinWidth="@dimen/dimen_styling_main_tab_min_width"
+		app:tabPaddingBottom="@dimen/dimen_styling_main_tab_padding_bottom"
+		app:tabPaddingEnd="@dimen/dimen_styling_main_tab_padding_end"
+		app:tabPaddingStart="@dimen/dimen_styling_main_tab_padding_start"
+		app:tabPaddingTop="@dimen/dimen_styling_main_tab_padding_top"
+		android:layout_gravity="center_horizontal"/>
+
+</FrameLayout>

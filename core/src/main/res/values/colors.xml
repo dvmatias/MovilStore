@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="colorPrimary">#ff033e</color>
+	<color name="colorPrimaryDark">#cc0020</color>
+	<color name="colorSecondaryCyan">#00FFF7</color>
+	<color name="colorSecondaryGreen">#92E755</color>
+	<color name="colorAccent">@color/colorSecondaryGreen</color>
+
+	<!-- BASICS -->
+	<color name="colorWhite">#FFFFFFFF</color>
+	<color name="colorWhite20">#37FFFFFF</color>
+	<color name="colorBlack">#FF000000</color>
+	<color name="colorBlack20">#37000000</color>
+	<color name="colorTransparent">#00000000</color>
+	<color name="colorPrimary20">#37DE393A</color>
+
+	<!-- VIEW LOADING -->
+	<color name="colorLoadingViewBackground">#00000000</color>
+
+	<!-- ICONS -->
+	<color name="colorGrayLightIcon">#706f6f</color>
+	<color name="colorGrayDarkIcon">#474747</color>
+
+	<!-- TOOLBAR MAIN -->
+	<color name="colorToolbarMainBackground">#FFFFFF</color>
+	<color name="colorToolbarMainIconStroke">#636363</color>
+	<color name="colorToolbarMainButtonSearchTitleSearch">#F7F6F6</color>
+
+	<!-- LOGIN TAB -->
+	<color name="colorTextTabLight">#FFFFFF</color>
+
+	<!-- SPLASH ACTIVITY -->
+	<color name="colorSplashBackground">@color/colorPrimary</color>
+
+	<!-- LOGIN ACTIVITY -->
+	<color name="colorLoginActivityBackground">@color/colorPrimary</color>
+	<color name="colorSocialNetworkLabel">#1A1A1A</color>
+	<color name="colorBtnTextLabel">#FFF</color>
+	<color name="coloInputLoginHintText">#44303030</color>
+	<color name="coloInputLoginText">#303030</color>
+	<color name="coloSeparatoSignUpBackground">#898989</color>
+	<color name="colorEditTextSignUpIcon">#DD303030</color>
+	<color name="colorEditTextSignInIcon">@color/colorEditTextSignUpIcon</color>
+	<color name="colorFlowButtonLabel">#1A1A1A</color>
+
+	<!-- BUTTON FLOW -->
+	<color name="colorFlowButtonLabelDefautl">#FFFFFF</color>
+	<color name="colorFlowButtonBackgroundDefault">@color/colorSecondaryGreen</color>
+	<color name="colorFlowButtonIconDefault">#000000</color>
+
+	<!-- STYLING MAIN TAB VIEW -->
+	<color name="color_main_tab_primary_default">@color/colorPrimary</color>
+	<color name="color_main_tab_secondary_default">#313131</color>
+
+	<!-- TEXT-->
+	<color name="colorTextServiceTitle">#1C1C1C</color>
+	<color name="colorDarkTextDarker">#0C0C0C</color>
+	<color name="colorDarkTextDark">#292929</color>
+	<color name="colorDarkTextNormal">#535353</color>
+	<color name="colorDarkTextLight">#777777</color>
+	<color name="colorDarkTextLighter">#9F9F9F</color>
+	<color name="colorTextProductDiscount">#05C105</color>
+
+</resources>

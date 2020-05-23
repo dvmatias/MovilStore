@@ -1,0 +1,12 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+	android:name="vector"
+	android:width="24dp"
+	android:height="24dp"
+	android:viewportWidth="24"
+	android:viewportHeight="24">
+	<path
+		android:name="path_1"
+		android:fillColor="@color/colorEditTextSignUpIcon"
+		android:pathData="M 5.5 21 L 5.5 14.5 L 5 14.5 C 4.45 14.5 4 14.05 4 13.5 L 4 9 C 4 7.9 4.9 7 6 7 L 9 7 C 10.1 7 11 7.9 11 9 L 11 13.5 C 11 14.05 10.55 14.5 10 14.5 L 9.5 14.5 L 9.5 21 C 9.5 21.55 9.05 22 8.5 22 L 6.5 22 C 5.95 22 5.5 21.55 5.5 21 Z M 18 21 L 18 16 L 19.61 16 C 20.29 16 20.77 15.33 20.56 14.68 L 18.46 8.37 C 18.18 7.55 17.42 7 16.56 7 L 16.44 7 C 15.58 7 14.81 7.55 14.54 8.37 L 12.44 14.68 C 12.22 15.33 12.7 16 13.39 16 L 15 16 L 15 21 C 15 21.55 15.45 22 16 22 L 17 22 C 17.55 22 18 21.55 18 21 Z M 7.5 6 C 8.61 6 9.5 5.11 9.5 4 C 9.5 2.89 8.61 2 7.5 2 C 6.39 2 5.5 2.89 5.5 4 C 5.5 5.11 6.39 6 7.5 6 Z M 16.5 6 C 17.61 6 18.5 5.11 18.5 4 C 18.5 2.89 17.61 2 16.5 2 C 15.39 2 14.5 2.89 14.5 4 C 14.5 5.11 15.39 6 16.5 6 Z"
+		android:strokeWidth="1" />
+</vector>

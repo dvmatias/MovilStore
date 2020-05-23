@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- VECTOR DRAWABLE STROKE WIDTH -->
+	<dimen name="stroke_width_icon_1">1.0</dimen>
+	<dimen name="stroke_width_icon_1_1">1.1</dimen>
+	<dimen name="stroke_width_icon_1_2">1.2</dimen>
+	<dimen name="stroke_width_icon_1_3">1.3</dimen>
+	<dimen name="stroke_width_icon_1_5">1.5</dimen>
+	<dimen name="stroke_width_icon_2">2.0</dimen>
+	<dimen name="stroke_width_icon_2_3">2.3</dimen>
+	<dimen name="stroke_width_service_icon">3.1</dimen>
+
+	<dimen name="dimen_button_flow_height">52dp</dimen>
+	<dimen name="dimen_button_flow_radius">26dp</dimen>
+	<dimen name="dimen_button_flow_elevation">2dp</dimen>
+	<dimen name="dimen_button_flow_container_margin">4dp</dimen>
+
+	<dimen name="dimen_styling_main_tab_custom_view_layout_height">42dp</dimen>
+	<dimen name="dimen_styling_main_tab_custom_view_padding">4dp</dimen>
+	<dimen name="dimen_styling_main_tab_custom_view_card_corner_radius">21dp</dimen>
+	<dimen name="dimen_styling_main_tab_custom_view_content_padding_left">10dp</dimen>
+	<dimen name="dimen_styling_main_tab_custom_view_content_padding_right">10dp</dimen>
+	<dimen name="dimen_styling_main_tab_custom_view_separator_width">10dp</dimen>
+
+	<dimen name="dimen_styling_main_tab_layout_height">72dp</dimen>
+	<dimen name="dimen_styling_main_tab_min_width">1dp</dimen>
+	<dimen name="dimen_styling_main_tab_padding_bottom">1dp</dimen>
+	<dimen name="dimen_styling_main_tab_padding_end">4dp</dimen>
+	<dimen name="dimen_styling_main_tab_padding_start">4dp</dimen>
+	<dimen name="dimen_styling_main_tab_padding_top">1dp</dimen>
+
+	<!-- BOTTOM NAV VIEW -->
+	<dimen name="height_styling_bottom_nav_main_56dp">56dp</dimen>
+
+	<!-- TOOLBAR MAIN (styling_toolbar_main) -->
+	<dimen name="height_styling_toolbar_main_56dp">56dp</dimen>
+	<dimen name="padding_start_toolbar_main_16dp">16dp</dimen>
+	<dimen name="padding_end_toolbar_main_16dp">16dp</dimen>
+
+	<!-- TOOLBAR MAIN FOOTER TO SEARCH (styling_toolbar_main_footer_to_search) -->
+	<dimen name="padding_top_toolbar_main_footer_to_search_padding_top_6dp">6dp</dimen>
+	<dimen name="padding_top_toolbar_main_footer_to_search_padding_bottom_6dp">6dp</dimen>
+	<dimen name="height_toolbar_main_button_search_46dp">46dp</dimen>
+	<dimen name="margin_start_toolbar_main_button_search_corner_radius_23dp">23dp</dimen>
+	<dimen name="margin_end_toolbar_main_button_search_8dp">8dp</dimen>
+	<dimen name="content_padding_start_toolbar_main_button_search_16dp">16dp</dimen>
+	<dimen name="content_padding_end_toolbar_main_button_search_16dp">16dp</dimen>
+	<dimen name="margin_start_toolbar_main_title_search_8dp">8dp</dimen>
+	<dimen name="size_toolbar_main_title_search_16sp">16sp</dimen>
+	<dimen name="margin_end_toolbar_main_button_filter_search_4dp">4dp</dimen>
+
+</resources>

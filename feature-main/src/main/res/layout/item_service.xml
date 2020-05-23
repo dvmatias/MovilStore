@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:paddingTop="@dimen/dimen_8dp"
+	android:paddingBottom="@dimen/dimen_8dp"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<!-- ICON -->
+	<androidx.appcompat.widget.AppCompatImageView
+		android:id="@+id/ic_icon"
+		android:layout_width="@dimen/dimen_76dp"
+		android:layout_height="@dimen/dimen_76dp"
+		android:contentDescription="@null"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:src="@drawable/ic_service_gift_card_128dp" />
+
+	<!-- TITLE -->
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/tv_title"
+		style="@style/SrviceTitleText"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/dimen_8dp"
+		android:layout_marginEnd="@dimen/dimen_8dp"
+		app:layout_constraintBottom_toTopOf="@id/tv_description"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.5"
+		app:layout_constraintStart_toEndOf="@id/ic_icon"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_chainStyle="packed"
+		tools:text="title" />
+
+	<!-- DESCRIPTION -->
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/tv_description"
+		style="@style/ServiceDescriptionText"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dimen_4dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="@id/tv_title"
+		app:layout_constraintHorizontal_bias="0.5"
+		app:layout_constraintStart_toStartOf="@id/tv_title"
+		app:layout_constraintTop_toBottomOf="@+id/tv_title"
+		app:layout_constraintVertical_chainStyle="packed"
+		tools:text="Lorem ispum dolor sato sit amet. Lorem ispum dolor sato sit amet." />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
