@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>Product
-		
+<resources>
+
+	<!-- Sections -->
+
+	<style name="SectionTitleText" parent="TextAppearance.AppCompat">
+		<item name="fontFamily">@font/cereal_medium</item>
+		<item name="android:textColor">@color/colorDarkTextDark</item>
+		<item name="android:textSize">@dimen/text_22sp</item>
+		<item name="android:paddingEnd">@dimen/dimen_8dp</item>
+		<item name="android:paddingStart">@dimen/dimen_8dp</item>
+		<item name="android:paddingTop">@dimen/dimen_18dp</item>
+		<item name="android:paddingBottom">@dimen/dimen_18dp</item>
+	</style>
+
+	<!-- Product -->
+
 	<style name="ProductTitleText" parent="TextAppearance.AppCompat">
 		<item name="android:maxLines">1</item>
 		<item name="android:ellipsize">end</item>
 		<item name="textAllCaps">true</item>
 		<item name="android:textSize">@dimen/text_12sp</item>
-		<item name="android:textColor">@color/colorTextProductDark</item>
+		<item name="android:textColor">@color/colorDarkTextDarker</item>
 		<item name="fontFamily">@font/cereal_bold</item>
 	</style>
 
 	<style name="ProductSubtitleText" parent="TextAppearance.AppCompat">
 		<item name="android:maxLines">2</item>
 		<item name="fontFamily">@font/cereal_book</item>
-		<item name="android:textColor">@color/colorTextProductDark</item>
+		<item name="android:textColor">@color/colorDarkTextDarker</item>
 		<item name="android:ellipsize">end</item>
 		<item name="android:textSize">@dimen/text_14sp</item>
 	</style>
@@ -33,5 +47,26 @@
 		<item name="android:textColor">@color/colorTextProductDiscount</item>
 		<item name="android:textSize">@dimen/text_16sp</item>
 	</style>
-	
+
+	<!-- Services -->
+
+	<style name="SrviceTitleText" parent="TextAppearance.AppCompat">
+		<item name="android:maxLines">1</item>
+		<item name="android:ellipsize">end</item>
+		<item name="textAllCaps">true</item>
+		<item name="android:textSize">@dimen/text_12sp</item>
+		<item name="android:textColor">@color/colorDarkTextDarker</item>
+		<item name="fontFamily">@font/cereal_bold</item>
+	</style>
+
+	<style name="ServiceDescriptionText" parent="TextAppearance.AppCompat">
+		<item name="android:maxLines">2</item>
+		<item name="fontFamily">@font/cereal_book</item>
+		<item name="android:textColor">@color/colorDarkTextNormal</item>
+		<item name="android:ellipsize">end</item>
+		<item name="android:textSize">@dimen/text_14sp</item>
+	</style>
+
+
+
 </resources>

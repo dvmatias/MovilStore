@@ -8,7 +8,7 @@
     <path
         android:name="path_1"
         android:pathData="M 8.2 3.1 C 6.768 3.1 5.394 3.648 4.382 4.623 C 3.369 5.598 2.8 6.921 2.8 8.3 C 2.8 9.679 3.369 11.002 4.382 11.977 C 5.394 12.952 6.768 13.5 8.2 13.5 C 9.632 13.5 11.006 12.952 12.018 11.977 C 13.031 11.002 13.6 9.679 13.6 8.3 C 13.6 6.921 13.031 5.598 12.018 4.623 C 11.006 3.648 9.632 3.1 8.2 3.1 Z M 12.1 11.9 L 15.1 15"
-        android:strokeColor="@color/colorToolbarMainButtonSearchIconSearch"
-        android:strokeWidth="1"
+        android:strokeColor="@color/colorDarkTextNormal"
+        android:strokeWidth="@dimen/stroke_width_icon_1_3"
         android:strokeLineCap="round"/>
 </vector>

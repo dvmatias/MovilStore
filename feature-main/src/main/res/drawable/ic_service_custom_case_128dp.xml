@@ -1,0 +1,29 @@
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="vector"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+    <path
+        android:name="path_5"
+        android:pathData="M 105.576 33.667 L 105.576 30.542 L 105.576 21.708 C 105.576 18.568 102.942 16 99.724 16 L 61.9 16 M 61.9 112 L 99.724 112 C 102.943 112 105.577 109.366 105.577 106.147 L 105.577 67.946 L 105.577 61.672 L 105.577 42.667"
+        android:strokeColor="@color/colorDarkTextNormal"
+        android:strokeWidth="@dimen/stroke_width_service_icon"
+        android:strokeLineCap="round"
+        android:strokeMiterLimit="10"/>
+    <path
+        android:name="path_7"
+        android:pathData="M 48.475 42.833 C 46.707 42.833 45.011 43.536 43.761 44.786 C 42.511 46.036 41.808 47.732 41.808 49.5 C 41.808 51.268 42.511 52.964 43.761 54.214 C 45.011 55.464 46.707 56.167 48.475 56.167 C 50.243 56.167 51.939 55.464 53.189 54.214 C 54.439 52.964 55.142 51.268 55.142 49.5 C 55.142 47.732 54.439 46.036 53.189 44.786 C 51.939 43.536 50.243 42.833 48.475 42.833 Z M 32.996 28.99 C 30.945 28.99 29.284 27.328 29.284 25.278 C 29.284 23.228 30.946 21.566 32.996 21.566 L 43.869 21.566 C 45.919 21.566 47.58 23.228 47.58 25.278 C 47.58 27.328 45.918 28.99 43.869 28.99 L 32.996 28.99 Z M 53.15 107 L 34.15 107 C 33.05 107 32.15 107.9 32.15 109 L 32.15 112 M 60.025 107 L 62.798 107 C 63.898 107 64.798 107.9 64.798 109 L 64.798 112"
+        android:strokeColor="@color/colorDarkTextNormal"
+        android:strokeWidth="@dimen/stroke_width_service_icon"
+        android:strokeLineCap="round"
+        android:strokeMiterLimit="10"/>
+    <path
+        android:name="path_6"
+        android:pathData="M 22.424 85.333 L 22.424 21.852 C 22.424 18.633 24.892 16 27.907 16 L 68.672 16 C 71.891 16 74.525 18.568 74.525 21.708 L 74.525 61.25 M 74.525 62.094 L 74.525 106.148 C 74.525 109.367 71.891 112.001 68.672 112.001 L 28.275 112.001 C 25.056 112.001 22.423 109.367 22.423 106.148 L 22.423 93.5"
+        android:strokeColor="@color/colorPrimary"
+        android:strokeWidth="@dimen/stroke_width_service_icon"
+        android:strokeLineCap="round"
+        android:strokeMiterLimit="10"/>
+</vector>

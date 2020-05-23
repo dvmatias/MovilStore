@@ -1,4 +1,4 @@
-package com.matias.features.ui.main.activity
+package com.matias.features.ui.main.adapters
 
 import android.app.Activity
 import android.view.LayoutInflater
@@ -13,19 +13,19 @@ import com.matias.domain.models.offer.ProductOfferModel
 import com.matias.features.R
 import java.text.DecimalFormat
 
-private const val MAX_OFFERS_TO_DISPLAY = 6
+private const val MAX_OFFERS_TO_DISPLAY = 3
 
 class OffersRecyclerAdapter(private val activity: Activity) : RecyclerView.Adapter<OffersRecyclerAdapter.OfferViewHolder>() {
 
 	private var data: ArrayList<ProductOfferModel> = arrayListOf()
 
-	private var listener: OnOfferClickListener?
+	private var listener: OfferClickListener?
 
 	init {
-		if (activity is OnOfferClickListener) {
+		if (activity is OfferClickListener) {
 			listener = activity
 		} else {
-			throw IllegalAccessException("Calling activity must implement OffersRecyclerAdapter.OnOfferClickListener interface")
+			throw IllegalAccessException("Calling activity must implement OffersRecyclerAdapter.OfferClickListener interface")
 		}
 	}
 
@@ -53,7 +53,7 @@ class OffersRecyclerAdapter(private val activity: Activity) : RecyclerView.Adapt
 		private var tvPrice: AppCompatTextView = itemView.findViewById(R.id.tv_price)
 		private var tvDiscountPercentaje: AppCompatTextView = itemView.findViewById(R.id.tv_discount_percentaje)
 
-		fun bindItem(productOffer: ProductOfferModel, listener: OnOfferClickListener?, activity: Activity) {
+		fun bindItem(productOffer: ProductOfferModel, listener: OfferClickListener?, activity: Activity) {
 			val discountPercentaje = getDiscount(productOffer.originalPrice, productOffer.price)
 
 			if (discountPercentaje <= 0) {
@@ -77,7 +77,7 @@ class OffersRecyclerAdapter(private val activity: Activity) : RecyclerView.Adapt
 			tvDiscountPercentaje.text =
 				String.format(activity.getString(R.string.discount_percentaje_placeholder), discountPercentaje)
 
-			itemView.setOnClickListener { listener?.onClick(productOffer.id) }
+			itemView.setOnClickListener { listener?.onOfferClick(productOffer.id) }
 
 		}
 
@@ -90,8 +90,8 @@ class OffersRecyclerAdapter(private val activity: Activity) : RecyclerView.Adapt
 
 	}
 
-	interface OnOfferClickListener {
-		fun onClick(productId: Int)
+	interface OfferClickListener {
+		fun onOfferClick(productId: Int)
 	}
 
 }
