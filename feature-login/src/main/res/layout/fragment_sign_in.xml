@@ -11,20 +11,20 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:orientation="vertical"
-		app:layout_constraintGuide_begin="@dimen/dimen_36dp" />
+		app:layout_constraintGuide_begin="@dimen/dimen_42dp" />
 
 	<androidx.constraintlayout.widget.Guideline
 		android:id="@+id/guidelineEnd"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:orientation="vertical"
-		app:layout_constraintGuide_end="@dimen/dimen_36dp" />
+		app:layout_constraintGuide_end="@dimen/dimen_42dp" />
 
 	<LinearLayout
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
-		app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
-		app:layout_constraintStart_toStartOf="@id/guidelineStart"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
 		app:layout_constraintBottom_toTopOf="@id/btnSignIn"
 		android:orientation="vertical">
@@ -36,6 +36,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_marginBottom="@dimen/dimen_22dp"
+			android:layout_marginStart="@dimen/dimen_42dp"
 			android:text="@string/text_sign_in_title"
 			app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,6 +46,8 @@
 			android:layout_width="match_parent"
 			android:layout_height="@dimen/dimen_46dp"
 			app:cardBackgroundColor="@color/colorWhite"
+			android:layout_marginStart="@dimen/dimen_42dp"
+			android:layout_marginEnd="@dimen/dimen_42dp"
 			app:cardCornerRadius="21dp"
 			app:cardElevation="4dp"
 			app:contentPaddingLeft="@dimen/dimen_16dp"
@@ -86,7 +89,11 @@
 			android:layout_width="match_parent"
 			android:layout_height="@dimen/dimen_46dp"
 			android:layout_marginTop="@dimen/dimen_14dp"
+			android:layout_marginStart="@dimen/dimen_42dp"
+			android:layout_marginEnd="@dimen/dimen_42dp"
 			app:cardBackgroundColor="@color/colorWhite"
+			app:contentPaddingLeft="@dimen/dimen_16dp"
+			app:contentPaddingRight="@dimen/dimen_16dp"
 			app:cardCornerRadius="21dp"
 			app:cardElevation="4dp" >
 
@@ -137,6 +144,8 @@
 			android:layout_width="match_parent"
 			android:layout_height="@dimen/dimen_46dp"
 			android:layout_marginTop="@dimen/dimen_26dp"
+			android:layout_marginStart="@dimen/dimen_42dp"
+			android:layout_marginEnd="@dimen/dimen_42dp"
 			android:hint="@string/edit_sing_in_input_user_name_hint"
 			android:imeOptions="actionNext"
 			android:inputType="textPersonName|textEmailAddress|text"
@@ -155,6 +164,8 @@
 				android:layout_height="@dimen/dimen_46dp"
 				android:hint="@string/edit_sing_in_input_password_hint"
 				android:imeOptions="actionDone"
+				android:layout_marginStart="@dimen/dimen_42dp"
+				android:layout_marginEnd="@dimen/dimen_42dp"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintTop_toTopOf="parent"
@@ -180,6 +191,7 @@
 			style="@style/LogInSwitchStyle"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:layout_marginEnd="@dimen/dimen_42dp"
 			android:layout_marginTop="@dimen/dimen_14dp"
 			android:text="@string/switch_stay_logged_in_label"
 			android:layout_gravity="end"
@@ -193,8 +205,8 @@
 		style="@style/LabelTextStyle"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dimen_8dp"
 		android:text="@string/text_forgot_password_label"
-		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintStart_toStartOf="@id/guidelineStart"
 		app:layout_constraintTop_toBottomOf="@id/btnSignIn" />
 
@@ -204,8 +216,8 @@
 		style="@style/LabelTextStyle"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dimen_8dp"
 		android:text="@string/text_dont_have_account_label"
-		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
 		app:layout_constraintTop_toBottomOf="@id/btnSignIn" />
 
@@ -214,7 +226,7 @@
 		android:id="@+id/btnSignIn"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginBottom="@dimen/dimen_26dp"
+		android:layout_marginBottom="@dimen/dimen_36dp"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
 		app:iconColor="@color/colorBlack"/>
