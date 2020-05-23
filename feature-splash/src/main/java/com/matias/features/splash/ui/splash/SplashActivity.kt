@@ -54,14 +54,14 @@ class SplashActivity :
 	}
 
 	override fun animateScreenOut() {
-		vectorDrawableHelper.startVectorAnimation(
-			imageTopLeftFigure,
-			getDrawable(R.drawable.vd_splash_top_left_figure_anim_out_3)
-		)
-		vectorDrawableHelper.startVectorAnimation(
-			imageBottomRightFigure,
-			getDrawable(R.drawable.vd_splash_bottom_right_figure_anim_out_3)
-		)
+//		vectorDrawableHelper.startVectorAnimation(
+//			imageTopLeftFigure,
+//			getDrawable(R.drawable.vd_splash_top_left_figure_anim_out_3)
+//		)
+//		vectorDrawableHelper.startVectorAnimation(
+//			imageBottomRightFigure,
+//			getDrawable(R.drawable.vd_splash_bottom_right_figure_anim_out_3)
+//		)
 	}
 
 	override fun goToMainScreen() {

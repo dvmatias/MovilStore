@@ -4,12 +4,39 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:background="@color/colorLoginActivityBackground"
+	android:background="@drawable/bgr_activity_login"
 	tools:context="com.matias.features.login.ui.login.LoginActivity">
 
 	<androidx.constraintlayout.widget.ConstraintLayout
 		android:layout_width="match_parent"
 		android:layout_height="match_parent">
+
+		<ImageView
+			android:id="@+id/imageTopLeftFigure"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:adjustViewBounds="true"
+			android:contentDescription="@null"
+			android:scaleType="fitCenter"
+			android:alpha="0.2"
+			android:src="@drawable/vd_top_left"
+			app:layout_constraintDimensionRatio="1:1"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<ImageView
+			android:id="@+id/imageBottomRightFigure"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:adjustViewBounds="true"
+			android:contentDescription="@null"
+			android:scaleType="centerInside"
+			android:alpha="0.2"
+			android:src="@drawable/vd_bottom_right"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintDimensionRatio="1:1"
+			app:layout_constraintEnd_toEndOf="parent" />
 
 		<!-- IMAGE NAME LOGO -->
 		<androidx.appcompat.widget.AppCompatImageView

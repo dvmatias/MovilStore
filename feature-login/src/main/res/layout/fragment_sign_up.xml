@@ -6,7 +6,6 @@
 	android:layout_height="match_parent"
 	android:paddingStart="@dimen/dimen_36dp"
 	android:paddingEnd="@dimen/dimen_36dp"
-	tools:background="@color/colorLoginActivityBackground"
 	tools:context=".login.ui.fragments.signup.SignUpFragment">
 
 	<!-- TITLE -->
