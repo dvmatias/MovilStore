@@ -4,7 +4,6 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	tools:background="@color/colorLoginActivityBackground"
 	tools:context=".login.ui.fragments.signin.SignInFragment">
 
 	<androidx.constraintlayout.widget.Guideline
@@ -21,165 +20,172 @@
 		android:orientation="vertical"
 		app:layout_constraintGuide_end="@dimen/dimen_36dp" />
 
-	<!-- TITLE -->
-	<androidx.appcompat.widget.AppCompatTextView
-		android:id="@+id/textTitle"
-		style="@style/TitleTextStyle"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="@dimen/dimen_18dp"
-		android:text="@string/text_sign_in_title"
-		app:layout_constraintStart_toStartOf="@id/guidelineStart"
-		app:layout_constraintTop_toTopOf="parent" />
-
-	<!-- FCEBOOK BUTTON -->
-	<androidx.cardview.widget.CardView
-		android:id="@+id/btnFacebook"
+	<LinearLayout
 		android:layout_width="0dp"
-		android:layout_height="@dimen/dimen_46dp"
-		app:cardBackgroundColor="@color/colorWhite"
-		app:cardCornerRadius="21dp"
-		app:cardElevation="4dp"
-		app:contentPaddingLeft="@dimen/dimen_16dp"
-		app:contentPaddingRight="@dimen/dimen_16dp"
-		app:layout_constraintBottom_toTopOf="@+id/btnGoogle"
-		app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+		android:layout_height="wrap_content"
+		app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
 		app:layout_constraintStart_toStartOf="@id/guidelineStart"
-		app:layout_constraintTop_toBottomOf="@+id/textTitle"
-		app:layout_constraintVertical_chainStyle="packed">
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintBottom_toTopOf="@id/btnSignIn"
+		android:orientation="vertical">
+
+		<!-- TITLE -->
+		<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/textTitle"
+			style="@style/TitleTextStyle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="@dimen/dimen_22dp"
+			android:text="@string/text_sign_in_title"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<!-- FCEBOOK BUTTON -->
+		<androidx.cardview.widget.CardView
+			android:id="@+id/btnFacebook"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dimen_46dp"
+			app:cardBackgroundColor="@color/colorWhite"
+			app:cardCornerRadius="21dp"
+			app:cardElevation="4dp"
+			app:contentPaddingLeft="@dimen/dimen_16dp"
+			app:contentPaddingRight="@dimen/dimen_16dp" >
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical">
+
+				<androidx.appcompat.widget.AppCompatImageView
+					android:id="@+id/icFacebook"
+					android:layout_width="@dimen/dimen_32dp"
+					android:layout_height="@dimen/dimen_32dp"
+					android:contentDescription="@null"
+					android:src="@drawable/ic_facebook_24_vector"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/appCompatTextView"
+					style="@style/TextSignInSocialNetwork"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:text="@string/text_sign_in_facebook_label"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+			</androidx.constraintlayout.widget.ConstraintLayout>
+
+		</androidx.cardview.widget.CardView>
+
+		<!-- GOOGLE BUTTON -->
+		<androidx.cardview.widget.CardView
+			android:id="@+id/btnGoogle"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dimen_46dp"
+			android:layout_marginTop="@dimen/dimen_14dp"
+			app:cardBackgroundColor="@color/colorWhite"
+			app:cardCornerRadius="21dp"
+			app:cardElevation="4dp" >
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_gravity="center_vertical">
+
+				<androidx.appcompat.widget.AppCompatImageView
+					android:id="@+id/icGoogle"
+					android:layout_width="@dimen/dimen_32dp"
+					android:layout_height="@dimen/dimen_32dp"
+					android:contentDescription="@null"
+					android:src="@drawable/ic_google_24_vector"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/appCompatTextView2"
+					style="@style/TextSignInSocialNetwork"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:text="@string/text_sign_in_google_label"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+			</androidx.constraintlayout.widget.ConstraintLayout>
+
+		</androidx.cardview.widget.CardView>
+
+		<!-- OR -->
+		<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/textOr"
+			style="@style/LabelTextStyle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="24dp"
+			android:text="@string/text_or_label"
+			android:layout_gravity="center_horizontal" />
+
+		<!-- INPUT FIELD USER NAME -->
+		<androidx.appcompat.widget.AppCompatEditText
+			android:id="@+id/inputUserName"
+			style="@style/SignInEditTextStyle"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dimen_46dp"
+			android:layout_marginTop="@dimen/dimen_26dp"
+			android:hint="@string/edit_sing_in_input_user_name_hint"
+			android:imeOptions="actionNext"
+			android:inputType="textPersonName|textEmailAddress|text"
+			android:text="admin"/>
 
 		<androidx.constraintlayout.widget.ConstraintLayout
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:layout_gravity="center_vertical">
+			android:layout_marginTop="@dimen/dimen_14dp" >
 
-			<androidx.appcompat.widget.AppCompatImageView
-				android:id="@+id/icFacebook"
-				android:layout_width="@dimen/dimen_32dp"
-				android:layout_height="@dimen/dimen_32dp"
-				android:contentDescription="@null"
-				android:src="@drawable/ic_facebook_24_vector"
-				app:layout_constraintBottom_toBottomOf="parent"
-				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toTopOf="parent" />
-
-			<androidx.appcompat.widget.AppCompatTextView
-				android:id="@+id/appCompatTextView"
-				style="@style/TextSignInSocialNetwork"
+			<!-- INPUT FIELD PASSWORD -->
+			<androidx.appcompat.widget.AppCompatEditText
+				android:id="@+id/inputPassword"
+				style="@style/SignInEditTextStyle"
 				android:layout_width="0dp"
-				android:layout_height="wrap_content"
-				android:text="@string/text_sign_in_facebook_label"
-				app:layout_constraintBottom_toBottomOf="parent"
-				app:layout_constraintEnd_toEndOf="parent"
+				android:layout_height="@dimen/dimen_46dp"
+				android:hint="@string/edit_sing_in_input_password_hint"
+				android:imeOptions="actionDone"
 				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toTopOf="parent" />
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				android:inputType="textPassword|textWebPassword"
+				android:text="admin" />
+
+				<androidx.appcompat.widget.AppCompatImageView
+					android:id="@+id/btnShowHidePassword"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginEnd="@dimen/dimen_12dp"
+					android:src="@drawable/ic_hide_password_24"
+					android:elevation="@dimen/dimen_4dp"
+					app:layout_constraintBottom_toBottomOf="@id/inputPassword"
+					app:layout_constraintEnd_toEndOf="@id/inputPassword"
+					app:layout_constraintTop_toTopOf="@id/inputPassword" />
 
 		</androidx.constraintlayout.widget.ConstraintLayout>
 
-	</androidx.cardview.widget.CardView>
+		<!-- SWITCH STAY SIGNED IN -->
+		<androidx.appcompat.widget.SwitchCompat
+			android:id="@+id/switchStayLoggedIn"
+			style="@style/LogInSwitchStyle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/dimen_14dp"
+			android:text="@string/switch_stay_logged_in_label"
+			android:layout_gravity="end"
+			app:switchPadding="@dimen/dimen_6dp" />
 
-	<!-- GOOGLE BUTTON -->
-	<androidx.cardview.widget.CardView
-		android:id="@+id/btnGoogle"
-		android:layout_width="0dp"
-		android:layout_height="@dimen/dimen_46dp"
-		android:layout_marginTop="@dimen/dimen_14dp"
-		app:cardBackgroundColor="@color/colorWhite"
-		app:cardCornerRadius="21dp"
-		app:cardElevation="4dp"
-		app:contentPaddingLeft="@dimen/dimen_16dp"
-		app:contentPaddingRight="@dimen/dimen_16dp"
-		app:layout_constraintBottom_toTopOf="@+id/textOr"
-		app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
-		app:layout_constraintStart_toStartOf="@id/guidelineStart"
-		app:layout_constraintTop_toBottomOf="@+id/btnFacebook">
-
-		<androidx.constraintlayout.widget.ConstraintLayout
-			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:layout_gravity="center_vertical">
-
-			<androidx.appcompat.widget.AppCompatImageView
-				android:id="@+id/icGoogle"
-				android:layout_width="@dimen/dimen_32dp"
-				android:layout_height="@dimen/dimen_32dp"
-				android:contentDescription="@null"
-				android:src="@drawable/ic_google_24_vector"
-				app:layout_constraintBottom_toBottomOf="parent"
-				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toTopOf="parent" />
-
-			<androidx.appcompat.widget.AppCompatTextView
-				android:id="@+id/appCompatTextView2"
-				style="@style/TextSignInSocialNetwork"
-				android:layout_width="0dp"
-				android:layout_height="wrap_content"
-				android:text="@string/text_sign_in_google_label"
-				app:layout_constraintBottom_toBottomOf="parent"
-				app:layout_constraintEnd_toEndOf="parent"
-				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toTopOf="parent" />
-
-		</androidx.constraintlayout.widget.ConstraintLayout>
-
-	</androidx.cardview.widget.CardView>
-
-	<!-- OR -->
-	<androidx.appcompat.widget.AppCompatTextView
-		android:id="@+id/textOr"
-		style="@style/LabelTextStyle"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="24dp"
-		android:text="@string/text_or_label"
-		app:layout_constraintBottom_toTopOf="@+id/inputUserName"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintHorizontal_bias="0.5"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/btnGoogle" />
-
-	<!-- INPUT FIELD USER NAME -->
-	<androidx.appcompat.widget.AppCompatEditText
-		android:id="@+id/inputUserName"
-		style="@style/SignInEditTextStyle"
-		android:layout_width="0dp"
-		android:layout_height="@dimen/dimen_46dp"
-		android:layout_marginTop="@dimen/dimen_26dp"
-		android:hint="@string/edit_sing_in_input_user_name_hint"
-		android:imeOptions="actionNext"
-		android:inputType="textPersonName|textEmailAddress|text"
-		android:text="admin"
-		app:layout_constraintBottom_toTopOf="@+id/inputPassword"
-		app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
-		app:layout_constraintStart_toStartOf="@id/guidelineStart"
-		app:layout_constraintTop_toBottomOf="@+id/textOr" />
-
-	<!-- INPUT FIELD PASSWORD -->
-	<androidx.appcompat.widget.AppCompatEditText
-		android:id="@+id/inputPassword"
-		style="@style/SignInEditTextStyle"
-		android:layout_width="0dp"
-		android:layout_height="@dimen/dimen_46dp"
-		android:layout_marginTop="@dimen/dimen_14dp"
-		android:hint="@string/edit_sing_in_input_password_hint"
-		android:imeOptions="actionDone"
-		android:inputType="textPassword|textWebPassword"
-		android:text="admin"
-		app:layout_constraintBottom_toTopOf="@+id/switchStayLoggedIn"
-		app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
-		app:layout_constraintStart_toStartOf="@id/guidelineStart"
-		app:layout_constraintTop_toBottomOf="@+id/inputUserName" />
-
-	<androidx.appcompat.widget.AppCompatImageView
-		android:id="@+id/btnShowHidePassword"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginEnd="@dimen/dimen_12dp"
-		android:src="@drawable/ic_hide_password_24"
-		android:elevation="@dimen/dimen_4dp"
-		app:layout_constraintBottom_toBottomOf="@id/inputPassword"
-		app:layout_constraintEnd_toEndOf="@id/inputPassword"
-		app:layout_constraintTop_toTopOf="@id/inputPassword" />
+	</LinearLayout>
 
 	<!-- BUTTON TEXT FORGOT PASSWORD -->
 	<androidx.appcompat.widget.AppCompatTextView
@@ -202,19 +208,6 @@
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
 		app:layout_constraintTop_toBottomOf="@id/btnSignIn" />
-
-	<!-- SWITCH STAY SIGNED IN -->
-	<androidx.appcompat.widget.SwitchCompat
-		android:id="@+id/switchStayLoggedIn"
-		style="@style/LogInSwitchStyle"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="@dimen/dimen_14dp"
-		android:text="@string/switch_stay_logged_in_label"
-		app:layout_constraintBottom_toTopOf="@+id/btnSignIn"
-		app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
-		app:layout_constraintTop_toBottomOf="@+id/inputPassword"
-		app:switchPadding="@dimen/dimen_6dp" />
 
 	<!-- BUTTON SIGN IN -->
 	<com.matias.components.button.flowbutton.StylingFlowButton

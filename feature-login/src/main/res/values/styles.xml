@@ -75,7 +75,7 @@
 	<style name="TitleTextStyle" parent="Widget.AppCompat.TextView">
 		<item name="android:textColor">@color/colorBtnTextLabel</item>
 		<item name="android:textSize">@dimen/text_30sp</item>
-		<item name="android:fontFamily">@font/cereal_bold</item>
+		<item name="android:fontFamily">@font/cereal_medium</item>
 	</style>
 
 	<!-- SIGN UP EDIT TEXT - INPUT FIELDS -->
