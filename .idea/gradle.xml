@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/domain" />
             <option value="$PROJECT_DIR$/feature-login" />
             <option value="$PROJECT_DIR$/feature-main" />
+            <option value="$PROJECT_DIR$/feature-productdetails" />
             <option value="$PROJECT_DIR$/feature-splash" />
           </set>
         </option>
