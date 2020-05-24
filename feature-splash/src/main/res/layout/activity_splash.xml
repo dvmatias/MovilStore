@@ -7,6 +7,20 @@
 	android:background="@drawable/bgr_activity_splash"
 	tools:context="com.matias.features.splash.ui.splash.SplashActivity">
 
+	<androidx.constraintlayout.widget.Guideline
+		android:id="@+id/guideline_end"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		app:layout_constraintGuide_percent="0.85" />
+
+	<androidx.constraintlayout.widget.Guideline
+		android:id="@+id/guideline_start"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		app:layout_constraintGuide_percent="0.15" />
+
 	<ImageView
 		android:id="@+id/imageTopLeftFigure"
 		android:layout_width="0dp"
@@ -15,7 +29,7 @@
 		android:contentDescription="@null"
 		android:scaleType="fitCenter"
 		app:layout_constraintDimensionRatio="1:1"
-		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintEnd_toStartOf="@id/guideline_end"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,7 +44,7 @@
 		android:src="@drawable/logo_name_splash_activity_vector"
 		android:transitionName="image_logo_name"
 		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintDimensionRatio="16:10"
+		app:layout_constraintDimensionRatio="2:1"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
@@ -44,6 +58,7 @@
 		android:contentDescription="@null"
 		android:scaleType="centerInside"
 		android:src="@drawable/vd_splash_bottom_right_figure_anim_in_2"
+		app:layout_constraintStart_toStartOf="@id/guideline_start"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintDimensionRatio="1:1"
 		app:layout_constraintEnd_toEndOf="parent" />
