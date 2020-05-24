@@ -14,14 +14,14 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:orientation="vertical"
-		app:layout_constraintGuide_begin="@dimen/dimen_16dp" />
+		app:layout_constraintGuide_begin="16dp" />
 
 	<androidx.constraintlayout.widget.Guideline
 		android:id="@+id/guidelineEnd"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:orientation="vertical"
-		app:layout_constraintGuide_end="@dimen/dimen_16dp" />
+		app:layout_constraintGuide_end="16dp" />
 
 	<androidx.appcompat.widget.AppCompatTextView
 		android:id="@+id/tv_title"
@@ -40,43 +40,54 @@
 		android:layout_height="@dimen/height_toolbar_main_button_search_46dp"
 		android:layout_marginEnd="@dimen/margin_end_toolbar_main_button_search_8dp"
 		app:cardCornerRadius="@dimen/margin_start_toolbar_main_button_search_corner_radius_23dp"
-		app:cardElevation="2dp"
-		app:cardBackgroundColor="@color/colorWhite"
-		app:contentPaddingLeft="@dimen/content_padding_end_toolbar_main_button_search_16dp"
-		app:contentPaddingRight="@dimen/content_padding_start_toolbar_main_button_search_16dp"
+		app:cardElevation="1dp"
+		app:cardBackgroundColor="#6C000000"
+		app:contentPadding="0.75dp"
 		android:layout_margin="4dp"
 		app:layout_constraintEnd_toStartOf="@id/iconFilterSearchButton"
 		app:layout_constraintStart_toStartOf="@id/guidelineStart"
 		app:layout_constraintTop_toBottomOf="@id/tv_title">
 
-		<androidx.appcompat.widget.LinearLayoutCompat
+		<androidx.cardview.widget.CardView
 			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_gravity="center_vertical"
-			android:gravity="center_vertical"
-			android:orientation="horizontal">
+			android:layout_height="match_parent"
+			app:cardCornerRadius="22dp"
+			app:contentPaddingLeft="@dimen/content_padding_end_toolbar_main_button_search_16dp"
+			app:contentPaddingRight="@dimen/content_padding_start_toolbar_main_button_search_16dp"
+			android:elevation="0dp"
+			app:cardElevation="0dp"
+			app:cardBackgroundColor="@color/colorWhite">
 
-			<!-- SEARCH ICON -->
-			<androidx.appcompat.widget.AppCompatImageView
-				android:id="@+id/iconSearch"
-				android:layout_width="@dimen/dimen_24dp"
-				android:layout_height="24dp"
-				android:src="@drawable/ic_toolbar_main_search_button_18pt" />
-
-			<!-- SEARCH HINT -->
-			<androidx.appcompat.widget.AppCompatTextView
-				android:id="@+id/titleSearch"
-				android:layout_width="0dp"
+			<androidx.appcompat.widget.LinearLayoutCompat
+				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:layout_marginStart="@dimen/margin_start_toolbar_main_title_search_8dp"
-				android:layout_weight="1"
-				android:fontFamily="@font/cereal_medium"
-				android:includeFontPadding="false"
-				android:text="@string/label_toolbar_main_button_search"
-				android:textColor="@color/colorDarkTextLighter"
-				android:textSize="@dimen/size_toolbar_main_title_search_16sp" />
+				android:layout_gravity="center_vertical"
+				android:gravity="center_vertical"
+				android:orientation="horizontal">
 
-		</androidx.appcompat.widget.LinearLayoutCompat>
+				<!-- SEARCH ICON -->
+				<androidx.appcompat.widget.AppCompatImageView
+					android:id="@+id/iconSearch"
+					android:layout_width="@dimen/dimen_24dp"
+					android:layout_height="24dp"
+					android:src="@drawable/ic_toolbar_main_search_button_18pt" />
+
+				<!-- SEARCH HINT -->
+				<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/titleSearch"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="@dimen/margin_start_toolbar_main_title_search_8dp"
+					android:layout_weight="1"
+					android:fontFamily="@font/cereal_medium"
+					android:includeFontPadding="false"
+					android:text="@string/label_toolbar_main_button_search"
+					android:textColor="@color/colorDarkTextLighter"
+					android:textSize="@dimen/size_toolbar_main_title_search_16sp" />
+
+			</androidx.appcompat.widget.LinearLayoutCompat>
+
+		</androidx.cardview.widget.CardView>
 
 	</androidx.cardview.widget.CardView>
 
@@ -99,6 +110,7 @@
 		android:layout_height="wrap_content"
 		android:text="@string/label_toolbar_main_button_filter"
 		android:fontFamily="@font/cereal_book"
+		android:layout_marginEnd="@dimen/dimen_4dp"
 		android:textSize="@dimen/text_16sp"
 		android:textColor="@color/colorPrimary"
 		app:layout_constraintBottom_toBottomOf="@id/buttonSearch"

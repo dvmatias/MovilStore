@@ -1,10 +1,15 @@
 package com.matias.components.toolbar.toolbarmain
 
 import android.content.Context
+import android.graphics.drawable.VectorDrawable
 import android.util.AttributeSet
 import android.view.View
 import android.widget.ImageView
+import androidx.annotation.NonNull
+import androidx.appcompat.widget.AppCompatDrawableManager
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.graphics.drawable.DrawableCompat
 import com.matias.components.R
 import com.matias.components.toolbar.toolbarmain.StylingToolbarMainMode.LOADING
 import com.matias.components.toolbar.toolbarmain.StylingToolbarMainMode.NORMAL
@@ -33,13 +38,30 @@ class StylingToolbarMain : ConstraintLayout, StylingToolbarMainContract {
 
 	private fun init(context: Context) {
 		View.inflate(context, R.layout.styling_toolbar_main, this)
-
 		setMode(LOADING)
 	}
 
-	fun animateNavigationIcon(vectorDrawableHelper: VectorDrawableHelper?, delay: Long) {
+	fun animateIcons(vectorDrawableHelper: VectorDrawableHelper?, delay: Long) {
+		animateNavigationIcon(vectorDrawableHelper, delay)
+		animateAnimateCouponIcon(vectorDrawableHelper, delay)
+		animateAnimateNotificationIcon(vectorDrawableHelper, delay)
+	}
+
+	private fun animateNavigationIcon(vectorDrawableHelper: VectorDrawableHelper?, delay: Long) {
 		vectorDrawableHelper?.let {
 			animateIcon(buttonNavigation, it, delay)
+		}
+	}
+
+	private fun animateAnimateCouponIcon(vectorDrawableHelper: VectorDrawableHelper?, delay: Long) {
+		vectorDrawableHelper?.let {
+			animateIcon(buttonCoupon, it, delay)
+		}
+	}
+
+	private fun animateAnimateNotificationIcon(vectorDrawableHelper: VectorDrawableHelper?, delay: Long) {
+		vectorDrawableHelper?.let {
+			animateIcon(buttonNotification, it, delay)
 		}
 	}
 

@@ -23,7 +23,7 @@
 
 	<!-- TOOLBAR MAIN -->
 	<color name="colorToolbarMainBackground">#FFFFFF</color>
-	<color name="colorToolbarMainIconStroke">#636363</color>
+	<color name="colorToolbarMainIconStroke">#FFFFFF</color>
 	<color name="colorToolbarMainButtonSearchTitleSearch">#F7F6F6</color>
 
 	<!-- LOGIN TAB -->

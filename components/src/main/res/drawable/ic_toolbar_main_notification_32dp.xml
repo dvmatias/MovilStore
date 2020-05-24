@@ -11,7 +11,7 @@
 				<path
 					android:name="path_clapper"
 					android:pathData="M 17.397 20.396 C 18.023 20.848 18.432 21.597 18.432 22.443 L 18.431 22.655 C 18.431 24.035 17.341 25.155 15.999 25.155 C 14.655 25.155 13.567 24.035 13.567 22.655 L 13.567 22.443 C 13.567 21.582 13.993 20.82 14.639 20.37"
-					android:strokeWidth="@dimen/stroke_width_icon_1_3"
+					android:strokeWidth="@dimen/stroke_width_toolbar_icon"
 					android:strokeColor="@color/colorToolbarMainIconStroke"
 					android:strokeLineCap="round"
 					android:strokeLineJoin="round"
@@ -21,33 +21,33 @@
 				<path
 					android:name="path_handle"
 					android:pathData="M 17.436 9.458 C 17.436 9.458 17.467 8.557 17.436 8.254 C 17.354 7.525 16.695 7 16 7 C 15.305 7 14.646 7.525 14.564 8.254 C 14.533 8.557 14.564 9.458 14.564 9.458"
-					android:strokeWidth="@dimen/stroke_width_icon_1_3"
+					android:strokeWidth="@dimen/stroke_width_toolbar_icon"
 					android:strokeColor="@color/colorToolbarMainIconStroke" />
 				<path
 					android:name="path_body_fill"
-					android:fillColor="@color/colorWhite"
+					android:fillColor="@color/colorPrimary"
 					android:pathData="M 16 22.553 L 24.256 22.553 C 20.402 19.631 20.444 15.536 20.348 13.01 C 19.873 9.311 16 9.302 16 9.302 C 16 9.302 12.127 9.31 11.65 13.01 C 11.555 15.536 11.597 19.631 7.744 22.553 L 16 22.553 Z" />
 				<path
 					android:name="path_body"
 					android:pathData="M 16 22.553 L 24.256 22.553 C 20.402 19.631 20.444 15.536 20.348 13.01 C 19.873 9.311 16 9.302 16 9.302 C 16 9.302 12.127 9.31 11.65 13.01 C 11.555 15.536 11.597 19.631 7.744 22.553 L 16 22.553 Z"
-					android:strokeWidth="@dimen/stroke_width_icon_1_3"
+					android:strokeWidth="@dimen/stroke_width_toolbar_icon"
 					android:strokeColor="@color/colorToolbarMainIconStroke"
 					android:strokeLineCap="round"
 					android:strokeLineJoin="round" />
 			</group>
-			<group android:name="group_alert">
-				<path
-					android:name="path_alert_outter"
-					android:fillAlpha="0.2"
-					android:fillColor="@color/colorPrimary"
-					android:pathData="M 28 10.467 C 28 13.996 25.137 16.852 21.615 16.852 C 18.086 16.852 15.222 13.997 15.222 10.467 C 15.222 6.937 18.085 4.078 21.615 4.078 C 25.137 4.078 28 6.938 28 10.467 Z"
-					android:strokeWidth="1" />
-				<path
-					android:name="path_alert_inner"
-					android:fillColor="@color/colorPrimary"
-					android:pathData="M 25.115 10.467 C 25.115 12.401 23.541 13.967 21.615 13.967 C 19.68 13.967 18.115 12.401 18.115 10.467 C 18.115 8.532 19.68 6.967 21.615 6.967 C 23.541 6.967 25.115 8.532 25.115 10.467 Z"
-					android:strokeWidth="1" />
-			</group>
+<!--			<group android:name="group_alert">-->
+<!--				<path-->
+<!--					android:name="path_alert_outter"-->
+<!--					android:fillAlpha="0.2"-->
+<!--					android:fillColor="@color/colorPrimary"-->
+<!--					android:pathData="M 28 10.467 C 28 13.996 25.137 16.852 21.615 16.852 C 18.086 16.852 15.222 13.997 15.222 10.467 C 15.222 6.937 18.085 4.078 21.615 4.078 C 25.137 4.078 28 6.938 28 10.467 Z"-->
+<!--					android:strokeWidth="1" />-->
+<!--				<path-->
+<!--					android:name="path_alert_inner"-->
+<!--					android:fillColor="@color/colorPrimary"-->
+<!--					android:pathData="M 25.115 10.467 C 25.115 12.401 23.541 13.967 21.615 13.967 C 19.68 13.967 18.115 12.401 18.115 10.467 C 18.115 8.532 19.68 6.967 21.615 6.967 C 23.541 6.967 25.115 8.532 25.115 10.467 Z"-->
+<!--					android:strokeWidth="1" />-->
+<!--			</group>-->
 		</vector>
 	</aapt:attr>
 	<target android:name="group_body">
