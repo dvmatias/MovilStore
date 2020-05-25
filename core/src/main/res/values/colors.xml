@@ -6,6 +6,8 @@
 	<color name="colorSecondaryGreen">#92E755</color>
 	<color name="colorAccent">@color/colorSecondaryGreen</color>
 
+	<color name="colorToolbarBackground">#1B1B1B</color>
+
 	<!-- BASICS -->
 	<color name="colorWhite">#FFFFFFFF</color>
 	<color name="colorWhite20">#37FFFFFF</color>
@@ -13,6 +15,8 @@
 	<color name="colorBlack20">#37000000</color>
 	<color name="colorTransparent">#00000000</color>
 	<color name="colorPrimary20">#37DE393A</color>
+
+	<color name="colorStarRating">#FDCC0D</color>
 
 	<!-- VIEW LOADING -->
 	<color name="colorLoadingViewBackground">#00000000</color>
@@ -60,5 +64,6 @@
 	<color name="colorDarkTextLight">#777777</color>
 	<color name="colorDarkTextLighter">#9F9F9F</color>
 	<color name="colorTextProductDiscount">#05C105</color>
+	<color name="colorProductDetailSaveBackground">#05C105</color>
 
 </resources>

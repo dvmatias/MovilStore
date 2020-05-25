@@ -10,4 +10,6 @@ interface Navigator {
 
 	fun toLoginScreen(activityOrigin: Activity, bundle: Bundle?, options: ActivityOptionsCompat?, finish: Boolean)
 
+	fun toProducDetailsScreen(activityOrigin: Activity, bundle: Bundle?, options: ActivityOptionsCompat?, finish: Boolean)
+
 }

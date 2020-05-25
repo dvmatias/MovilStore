@@ -17,7 +17,7 @@
 		app:layout_constraintBottom_toBottomOf="parent"
 		android:elevation="0dp"
 		app:cardElevation="1dp"
-		app:cardBackgroundColor="#6C000000">
+		app:cardBackgroundColor="@color/colorPrimary">
 
 		<androidx.cardview.widget.CardView
 			android:layout_width="wrap_content"
@@ -33,10 +33,10 @@
 				android:layout_height="wrap_content"
 				android:layout_marginStart="@dimen/dimen_22dp"
 				android:layout_marginEnd="@dimen/dimen_22dp"
-				android:fontFamily="@font/cereal_medium"
+				android:fontFamily="@font/cereal_book"
 				android:textColor="@color/colorDarkTextNormal"
 				android:layout_gravity="center"
-				android:textSize="@dimen/text_16sp"
+				android:textSize="@dimen/text_12sp"
 				android:text="Test"/>
 
 		</androidx.cardview.widget.CardView>

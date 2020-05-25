@@ -79,11 +79,11 @@
 					android:layout_height="wrap_content"
 					android:layout_marginStart="@dimen/margin_start_toolbar_main_title_search_8dp"
 					android:layout_weight="1"
-					android:fontFamily="@font/cereal_medium"
+					android:fontFamily="@font/cereal_book"
 					android:includeFontPadding="false"
 					android:text="@string/label_toolbar_main_button_search"
 					android:textColor="@color/colorDarkTextLighter"
-					android:textSize="@dimen/size_toolbar_main_title_search_16sp" />
+					android:textSize="@dimen/text_14sp" />
 
 			</androidx.appcompat.widget.LinearLayoutCompat>
 

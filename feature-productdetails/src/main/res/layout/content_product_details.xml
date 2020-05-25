@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	app:layout_behavior="@string/appbar_scrolling_view_behavior"
+	tools:context=".ui.productdetails.activity.ProductDetailsActivity"
+	tools:showIn="@layout/activity_product_details">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<!-- SECTION 1 -->
+		<include layout="@layout/product_detail_section_1" />
+
+		<!-- SECTION 2 -->
+		<include layout="@layout/product_detail_section_2" />
+
+		<!-- SECTION 3 -->
+		<include layout="@layout/product_detail_section_3" />
+
+		<!-- SECTION 4 -->
+		<include layout="@layout/product_detail_section_4" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
