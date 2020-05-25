@@ -16,7 +16,8 @@ data class ProductEntity (
 	@SerializedName("secure_thumbnail_url") val secureThumbnailUrl: String?,
 	@SerializedName("tags") val tags : String?,
 	@SerializedName("quantity") val quantity: QuantityEntity?,
-	@SerializedName("multimedia") val multimedia: MultimediaEntity?
+	@SerializedName("multimedia") val multimedia: MultimediaEntity?,
+	@SerializedName("rating") val rating: RatingEntity?
 ) {
 	
 	data class QuantityEntity(
@@ -27,6 +28,10 @@ data class ProductEntity (
 
 	data class MultimediaEntity(
 		@SerializedName("") val any: Any?
+	)
+
+	data class RatingEntity(
+		@SerializedName("value") val value: Float?
 	)
 	
 }

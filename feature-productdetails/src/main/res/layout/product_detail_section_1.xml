@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/section_1"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/colorWhite"
+	android:padding="@dimen/dimen_16dp"
+	app:layout_constraintEnd_toEndOf="parent"
+	app:layout_constraintStart_toStartOf="parent"
+	app:layout_constraintTop_toTopOf="parent"
+	tools:showIn="@layout/content_product_details">
+
+	<!-- TITLE -->
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/tvTitle"
+		style="@style/ProductDetailTitle"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:text="Funda Silicone Cover Original Samsung Galaxy S9 O S9 Plus" />
+
+	<!-- SUBTITLE -->
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/tvSubtitle"
+		style="@style/ProductDetailSubTitle"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dimen_8dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/tvTitle"
+		tools:text="Agárrate fuerte a tu Galaxy S9 + con esta funda de silicona. El material ofrece un agarre cómodo que no querrás soltar." />
+
+	<!-- ORIGINAL PRICE -->
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/tvOriginalPrice"
+		style="@style/ProductDetailOriginalPrice"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dimen_16dp"
+		app:layout_constraintStart_toStartOf="@id/tvTitle"
+		app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+		tools:text="from $800" />
+
+	<!-- PRICE -->
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/tvPrice"
+		style="@style/ProductDetailPrice"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:layout_constraintStart_toStartOf="@id/tvTitle"
+		app:layout_constraintTop_toBottomOf="@id/tvOriginalPrice"
+		tools:text="$700" />
+
+	<!-- SAVE -->
+	<androidx.cardview.widget.CardView
+		android:id="@+id/cvSave"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/dimen_16dp"
+		app:cardBackgroundColor="@color/colorProductDetailSaveBackground"
+		app:cardCornerRadius="@dimen/dimen_2dp"
+		app:cardElevation="0dp"
+		app:layout_constraintBottom_toBottomOf="@id/tvPrice"
+		app:layout_constraintStart_toEndOf="@id/tvPrice"
+		app:layout_constraintTop_toTopOf="@id/tvPrice">
+
+		<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/tvSave"
+			style="@style/ProductDetailSave"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/dimen_12dp"
+			android:layout_marginTop="@dimen/dimen_2dp"
+			android:layout_marginEnd="@dimen/dimen_12dp"
+			android:layout_marginBottom="@dimen/dimen_2dp"
+			tools:text="Save 5%" />
+
+	</androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+		

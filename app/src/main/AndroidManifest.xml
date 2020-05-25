@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
 	package="com.matias.movilstore">
+
+	<uses-permission android:name="android.permission.INTERNET" />
 
 	<application
 		android:name=".common.MovilStoreApp"
@@ -20,7 +22,8 @@
 		<activity
 			android:name="com.matias.features.splash.ui.splash.SplashActivity"
 			android:screenOrientation="portrait"
-			android:theme="@style/SplashActivityTheme">
+			android:theme="@style/SplashActivityTheme"
+			tools:ignore="LockedOrientationActivity">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 
@@ -32,15 +35,23 @@
 		<activity
 			android:name="com.matias.features.login.ui.login.LoginActivity"
 			android:screenOrientation="portrait"
-			android:theme="@style/LoginActivityTheme" />
+			android:theme="@style/LoginActivityTheme"
+			tools:ignore="LockedOrientationActivity" />
 
 		<!-- Main Activity -->
 		<activity
 			android:name="com.matias.features.ui.main.activity.MainActivity"
 			android:screenOrientation="portrait"
-			android:theme="@style/AppTheme.NoActionBar" />
+			android:theme="@style/AppTheme.NoActionBar"
+			tools:ignore="LockedOrientationActivity" />
+
+		<!-- Product Details Activity -->
+		<activity
+			android:name="com.matias.features.ui.productdetails.activity.ProductDetailsActivity"
+			android:screenOrientation="portrait"
+			android:theme="@style/ProductDetailsTheme"
+			tools:ignore="LockedOrientationActivity" />
 	</application>
 
-	<uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
