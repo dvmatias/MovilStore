@@ -12,32 +12,36 @@
 	app:layout_constraintTop_toBottomOf="@id/section_1"
 	tools:showIn="@layout/content_product_details">
 
-	<!-- AVAILABLE QUANTITY -->
+	<!-- RATING BAR -->
 	<androidx.appcompat.widget.AppCompatRatingBar
-		android:id="@+id/rating_bar"
+		android:id="@+id/ratingBar"
 		style="?android:attr/ratingBarStyleSmall"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
+		android:progressTint="@color/colorStarRating"
+		android:secondaryProgressTint="@color/colorStarRating"
+		android:numStars="5"
 		android:layout_marginStart="@dimen/dimen_16dp"
-		app:layout_constraintBottom_toBottomOf="@id/tv_rating_score"
+		app:layout_constraintBottom_toBottomOf="@id/tvRatingScore"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="@id/tv_rating_score" />
+		app:layout_constraintTop_toTopOf="@id/tvRatingScore"
+		tools:rating="3.5"/>
 
 	<!-- RATING BAR -->
 	<androidx.appcompat.widget.AppCompatTextView
-		android:id="@+id/tv_rating_score"
+		android:id="@+id/tvRatingScore"
 		style="@style/ProductDetailRatingScore"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginStart="@dimen/dimen_16dp"
 		android:layout_marginTop="@dimen/dimen_16dp"
-		app:layout_constraintStart_toEndOf="@id/rating_bar"
-		app:layout_constraintTop_toBottomOf="@id/cv_available_quantity"
+		app:layout_constraintStart_toEndOf="@id/ratingBar"
+		app:layout_constraintTop_toBottomOf="@id/cvAvailableQuantity"
 		tools:text="4.5" />
 
 	<!-- RATING SCORE -->
 	<androidx.appcompat.widget.AppCompatTextView
-		android:id="@+id/tv_view_all_comments"
+		android:id="@+id/tvViewAllComments"
 		style="@style/ProductDetailViewAllComents"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
@@ -45,11 +49,12 @@
 		android:layout_marginTop="@dimen/dimen_8dp"
 		android:layout_marginBottom="@dimen/dimen_16dp"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/tv_rating_score"
+		app:layout_constraintTop_toBottomOf="@id/tvRatingScore"
 		android:text="@string/product_details_button_view_all_comment_text" />
 
+	<!-- AVAILABLE QUANTITY -->
 	<androidx.cardview.widget.CardView
-		android:id="@+id/cv_available_quantity"
+		android:id="@+id/cvAvailableQuantity"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginStart="@dimen/dimen_16dp"
@@ -61,7 +66,7 @@
 		app:layout_constraintTop_toTopOf="parent">
 
 		<androidx.appcompat.widget.AppCompatTextView
-			android:id="@+id/tv_available_quantity"
+			android:id="@+id/tvAvailableQuantity"
 			style="@style/ProductDetailAvailableQuantity"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -70,12 +75,23 @@
 			android:layout_marginEnd="@dimen/dimen_12dp"
 			android:layout_marginBottom="@dimen/dimen_2dp"
 			tools:text="Disponibles: 3" />
-
 	</androidx.cardview.widget.CardView>
+
+	<!-- SOLD QUANTITY -->
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/tvSoldQuantity"
+		style="@style/ProductDetailSold"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/dimen_16dp"
+		app:layout_constraintStart_toEndOf="@id/cvAvailableQuantity"
+		app:layout_constraintTop_toTopOf="@id/cvAvailableQuantity"
+		app:layout_constraintBottom_toBottomOf="@id/cvAvailableQuantity"
+		tools:text="3 sold"/>
 
 	<!-- BUTTON 'ADD TO CART' -->
 	<androidx.cardview.widget.CardView
-		android:id="@+id/cv_add_to_cart_btn"
+		android:id="@+id/cvAddToCartBtn"
 		android:layout_width="0dp"
 		android:layout_height="@dimen/product_detail_button_height"
 		android:layout_marginStart="@dimen/dimen_12dp"
@@ -87,7 +103,7 @@
 		app:contentPadding="1dp"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/tv_view_all_comments">
+		app:layout_constraintTop_toBottomOf="@id/tvViewAllComments">
 
 		<androidx.cardview.widget.CardView
 			android:layout_width="match_parent"
@@ -105,6 +121,7 @@
 
 	<!-- BUTTON 'BUY' -->
 	<androidx.cardview.widget.CardView
+		android:id="@+id/cvBuyBtn"
 		android:layout_width="0dp"
 		android:layout_height="@dimen/product_detail_button_height"
 		android:layout_marginStart="@dimen/dimen_12dp"
@@ -119,7 +136,7 @@
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/cv_add_to_cart_btn">
+		app:layout_constraintTop_toBottomOf="@id/cvAddToCartBtn">
 
 		<androidx.appcompat.widget.AppCompatTextView
 			style="@style/ProductDetailButtonLabel.Dark"

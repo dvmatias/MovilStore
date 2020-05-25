@@ -16,6 +16,8 @@
 	<color name="colorTransparent">#00000000</color>
 	<color name="colorPrimary20">#37DE393A</color>
 
+	<color name="colorStarRating">#FDCC0D</color>
+
 	<!-- VIEW LOADING -->
 	<color name="colorLoadingViewBackground">#00000000</color>
 

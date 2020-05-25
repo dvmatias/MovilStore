@@ -5,17 +5,18 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:fitsSystemWindows="true"
-	tools:context=".ui.productdetails.ProductDetailsActivity">
+	tools:context=".ui.productdetails.activity.ProductDetailsActivity">
 
+	<!-- APP BAR -->
 	<com.google.android.material.appbar.AppBarLayout
-		android:id="@+id/app_bar"
+		android:id="@+id/appBar"
 		android:layout_width="match_parent"
 		android:layout_height="@dimen/app_bar_height"
 		android:fitsSystemWindows="true"
 		android:theme="@style/AppTheme.AppBarOverlay">
 
 		<com.google.android.material.appbar.CollapsingToolbarLayout
-			android:id="@+id/toolbar_layout"
+			android:id="@+id/toolbarLayout"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
 			android:fitsSystemWindows="true"
@@ -42,6 +43,14 @@
 <!--		app:layout_anchorGravity="bottom|end"-->
 <!--		app:srcCompat="@android:drawable/ic_dialog_email" />-->
 
-	<include layout="@layout/content_product_details" />
+	<!-- PRODUCT DETAILS CONTENT -->
+	<include
+		android:id="@+id/contentProductDetails"
+		layout="@layout/content_product_details" />
+
+	<!-- LOADING VIEW -->
+	<include
+		android:id="@+id/viewLoading"
+		layout="@layout/view_loading" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

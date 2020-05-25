@@ -47,7 +47,7 @@
 
 		<!-- Product Details Activity -->
 		<activity
-			android:name="com.matias.features.ui.productdetails.ProductDetailsActivity"
+			android:name="com.matias.features.ui.productdetails.activity.ProductDetailsActivity"
 			android:screenOrientation="portrait"
 			android:theme="@style/ProductDetailsTheme"
 			tools:ignore="LockedOrientationActivity" />

@@ -12,7 +12,7 @@
 	tools:showIn="@layout/content_product_details">
 
 	<androidx.appcompat.widget.AppCompatTextView
-		android:id="@+id/tv_warranty_title"
+		android:id="@+id/tvWarrantyTitle"
 		style="@style/SectionTitleText"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
 		app:layout_constraintTop_toTopOf="parent" />
 
 	<androidx.appcompat.widget.AppCompatTextView
-		android:id="@+id/tv_warranty"
+		android:id="@+id/tvWarranty"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_marginStart="@dimen/dimen_16dp"
@@ -32,7 +32,7 @@
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/tv_warranty_title"
+		app:layout_constraintTop_toBottomOf="@+id/tvWarrantyTitle"
 		tools:text="Lorem ispum dolor sato sit amet. Lorem ispum dolor sato sit amet. Lorem ispum dolor sato sit amet. Lorem ispum dolor sato sit amet. Lorem ispum dolor sato sit amet." />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

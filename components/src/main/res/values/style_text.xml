@@ -6,7 +6,7 @@
 	<style name="SectionTitleText" parent="TextAppearance.AppCompat">
 		<item name="fontFamily">@font/cereal_medium</item>
 		<item name="android:textColor">@color/colorDarkTextDark</item>
-		<item name="android:textSize">@dimen/text_22sp</item>
+		<item name="android:textSize">@dimen/text_21sp</item>
 		<item name="android:paddingEnd">@dimen/dimen_8dp</item>
 		<item name="android:paddingStart">@dimen/dimen_8dp</item>
 		<item name="android:paddingTop">@dimen/dimen_18dp</item>
@@ -93,7 +93,7 @@
 	<style name="ProductDetailPrice" parent="TextAppearance.AppCompat">
 		<item name="fontFamily">@font/cereal_bold</item>
 		<item name="android:textColor">@color/colorDarkTextDarker</item>
-		<item name="android:textSize">@dimen/text_28sp</item>
+		<item name="android:textSize">@dimen/text_22sp</item>
 		<item name="android:includeFontPadding">false</item>
 	</style>
 
@@ -125,6 +125,12 @@
 		<item name="android:textColor">@color/colorDarkTextDark</item>
 		<item name="android:textSize">@dimen/text_14sp</item>
 		<item name="android:includeFontPadding">false</item>
+	</style>
+
+	<style name="ProductDetailSold" parent="TextAppearance.AppCompat">
+		<item name="fontFamily">@font/cereal_book</item>
+		<item name="android:textColor">@color/colorDarkTextLight</item>
+		<item name="android:textSize">@dimen/text_14sp</item>
 	</style>
 
 	<style name="ProductDetailButtonLabel" parent="TextAppearance.AppCompat">
