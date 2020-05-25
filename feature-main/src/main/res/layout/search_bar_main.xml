@@ -83,7 +83,7 @@
 					android:includeFontPadding="false"
 					android:text="@string/label_toolbar_main_button_search"
 					android:textColor="@color/colorDarkTextLighter"
-					android:textSize="@dimen/size_toolbar_main_title_search_16sp" />
+					android:textSize="@dimen/text_14sp" />
 
 			</androidx.appcompat.widget.LinearLayoutCompat>
 

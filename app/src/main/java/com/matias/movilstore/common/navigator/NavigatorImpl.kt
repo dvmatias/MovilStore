@@ -7,6 +7,7 @@ import com.matias.core.extensions.navigateTo
 import com.matias.core.navigator.Navigator
 import com.matias.features.login.ui.login.LoginActivity
 import com.matias.features.ui.main.activity.MainActivity
+import com.matias.features.ui.productdetails.ProductDetailsActivity
 
 class NavigatorImpl : Navigator {
 
@@ -16,6 +17,10 @@ class NavigatorImpl : Navigator {
 
 	override fun toLoginScreen(activityOrigin: Activity, bundle: Bundle?, options: ActivityOptionsCompat?, finish: Boolean) {
 		activityOrigin.navigateTo<LoginActivity>(bundle, options, finish)
+	}
+
+	override fun toProducDetailsScreen(activityOrigin: Activity, bundle: Bundle?, options: ActivityOptionsCompat?, finish: Boolean) {
+		activityOrigin.navigateTo<ProductDetailsActivity>(bundle, options, finish)
 	}
 
 }

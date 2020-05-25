@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/section_2"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="@dimen/dimen_16dp"
+	android:background="@color/colorWhite"
+	app:layout_constraintEnd_toEndOf="parent"
+	app:layout_constraintStart_toStartOf="parent"
+	app:layout_constraintTop_toBottomOf="@id/section_1"
+	tools:showIn="@layout/content_product_details">
+
+	<!-- AVAILABLE QUANTITY -->
+	<androidx.appcompat.widget.AppCompatRatingBar
+		android:id="@+id/rating_bar"
+		style="?android:attr/ratingBarStyleSmall"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/dimen_16dp"
+		app:layout_constraintBottom_toBottomOf="@id/tv_rating_score"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@id/tv_rating_score" />
+
+	<!-- RATING BAR -->
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/tv_rating_score"
+		style="@style/ProductDetailRatingScore"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/dimen_16dp"
+		android:layout_marginTop="@dimen/dimen_16dp"
+		app:layout_constraintStart_toEndOf="@id/rating_bar"
+		app:layout_constraintTop_toBottomOf="@id/cv_available_quantity"
+		tools:text="4.5" />
+
+	<!-- RATING SCORE -->
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/tv_view_all_comments"
+		style="@style/ProductDetailViewAllComents"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/dimen_16dp"
+		android:layout_marginTop="@dimen/dimen_8dp"
+		android:layout_marginBottom="@dimen/dimen_16dp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/tv_rating_score"
+		android:text="@string/product_details_button_view_all_comment_text" />
+
+	<androidx.cardview.widget.CardView
+		android:id="@+id/cv_available_quantity"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/dimen_16dp"
+		android:layout_marginTop="@dimen/dimen_16dp"
+		app:cardBackgroundColor="#FFEB3B"
+		app:cardCornerRadius="2dp"
+		app:cardElevation="0dp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/tv_available_quantity"
+			style="@style/ProductDetailAvailableQuantity"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/dimen_12dp"
+			android:layout_marginTop="@dimen/dimen_2dp"
+			android:layout_marginEnd="@dimen/dimen_12dp"
+			android:layout_marginBottom="@dimen/dimen_2dp"
+			tools:text="Disponibles: 3" />
+
+	</androidx.cardview.widget.CardView>
+
+	<!-- BUTTON 'ADD TO CART' -->
+	<androidx.cardview.widget.CardView
+		android:id="@+id/cv_add_to_cart_btn"
+		android:layout_width="0dp"
+		android:layout_height="@dimen/product_detail_button_height"
+		android:layout_marginStart="@dimen/dimen_12dp"
+		android:layout_marginTop="@dimen/dimen_24dp"
+		android:layout_marginEnd="@dimen/dimen_12dp"
+		app:cardBackgroundColor="@color/colorPrimary"
+		app:cardCornerRadius="@dimen/dimen_4dp"
+		app:cardElevation="0dp"
+		app:contentPadding="1dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/tv_view_all_comments">
+
+		<androidx.cardview.widget.CardView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<androidx.appcompat.widget.AppCompatTextView
+				style="@style/ProductDetailButtonLabel.Light"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:text="@string/product_details_button_add_to_cart_label" />
+		</androidx.cardview.widget.CardView>
+
+	</androidx.cardview.widget.CardView>
+
+	<!-- BUTTON 'BUY' -->
+	<androidx.cardview.widget.CardView
+		android:layout_width="0dp"
+		android:layout_height="@dimen/product_detail_button_height"
+		android:layout_marginStart="@dimen/dimen_12dp"
+		android:layout_marginTop="@dimen/dimen_12dp"
+		android:layout_marginEnd="@dimen/dimen_12dp"
+		android:layout_marginBottom="@dimen/dimen_16dp"
+		app:cardBackgroundColor="@color/colorPrimary"
+		app:cardCornerRadius="@dimen/dimen_4dp"
+		app:cardElevation="0dp"
+		app:contentPaddingBottom="@dimen/dimen_12dp"
+		app:contentPaddingTop="@dimen/dimen_12dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/cv_add_to_cart_btn">
+
+		<androidx.appcompat.widget.AppCompatTextView
+			style="@style/ProductDetailButtonLabel.Dark"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/product_details_button_buy_label" />
+	</androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

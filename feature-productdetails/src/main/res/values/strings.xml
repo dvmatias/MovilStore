@@ -1,0 +1,11 @@
+<resources>
+	<string name="title_activity_product_details">ProductDetailsActivity</string>
+	<string name="product_details_button_view_all_comment_text">View all comments</string>
+	<string name="product_details_button_add_to_cart_label">add to cart</string>
+	<string name="product_details_button_buy_label">buy</string>
+	<string name="product_original_price_placeholder"><![CDATA[from <strike>&nbsp;$%s&nbsp;</strike> ]]></string>
+	<string name="product_details_save_placeholder">Save %s%%</string>
+	<string name="product_details_available_quantity_placeholder">Available: %s</string>
+	<string name="product_details_description_title">Description</string>
+	<string name="product_details_warranty_title">Warranty</string>
+</resources>
