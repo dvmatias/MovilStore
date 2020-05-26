@@ -1,6 +1,6 @@
 package com.matias.domain.models.offer
 
-data class ProductOfferModel(
+data class OfferProductModel(
 	val id: Int,
 	val price: Float,
 	val originalPrice: Float,

@@ -14,6 +14,7 @@ data class ProductEntity (
 	@SerializedName("image_url") val imageUrl: String?,
 	@SerializedName("thumbnail_url") val thumbnailUrl: String?,
 	@SerializedName("secure_thumbnail_url") val secureThumbnailUrl: String?,
+	@SerializedName("promotion_image_url") val promotionImageUrl: String?,
 	@SerializedName("tags") val tags : String?,
 	@SerializedName("quantity") val quantity: QuantityEntity?,
 	@SerializedName("multimedia") val multimedia: MultimediaEntity?,

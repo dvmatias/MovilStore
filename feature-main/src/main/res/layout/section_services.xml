@@ -47,7 +47,7 @@
 
 		<!-- SERVICES -->
 		<androidx.recyclerview.widget.RecyclerView
-			android:id="@+id/recycler_services"
+			android:id="@+id/recyclerServices"
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
 			app:layout_constraintEnd_toEndOf="@id/guidelineEnd"

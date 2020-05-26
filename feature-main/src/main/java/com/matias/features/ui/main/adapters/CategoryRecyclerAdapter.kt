@@ -18,7 +18,7 @@ class CategoryRecyclerAdapter(private val activity: Activity) : RecyclerView.Ada
 		if (activity is CategoryClickListener) {
 			listener = activity
 		} else {
-			throw IllegalAccessException("Calling activity must implement OffersRecyclerAdapter.OnOfferClickListener interface")
+			throw IllegalAccessException("Calling activity must implement OfferProductRecyclerAdapter.OnOfferClickListener interface")
 		}
 	}
 

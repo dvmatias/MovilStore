@@ -10,7 +10,7 @@
 		<item name="android:paddingEnd">@dimen/dimen_8dp</item>
 		<item name="android:paddingStart">@dimen/dimen_8dp</item>
 		<item name="android:paddingTop">@dimen/dimen_18dp</item>
-		<item name="android:paddingBottom">@dimen/dimen_18dp</item>
+		<item name="android:paddingBottom">@dimen/dimen_12dp</item>
 	</style>
 
 	<!-- Product Offer -->
@@ -25,7 +25,7 @@
 	</style>
 
 	<style name="ProductOfferSubtitleText" parent="TextAppearance.AppCompat">
-		<item name="android:maxLines">2</item>
+		<item name="android:lines">2</item>
 		<item name="fontFamily">@font/cereal_book</item>
 		<item name="android:textColor">@color/colorDarkTextNormal</item>
 		<item name="android:ellipsize">end</item>
@@ -35,7 +35,7 @@
 	<style name="ProductOfferSubtitleText.OriginalPrice">
 		<item name="android:textColor">@color/colorDarkTextNormal</item>
 		<item name="android:textSize">@dimen/text_12sp</item>
-		<item name="android:maxLines">1</item>
+		<item name="android:lines">1</item>
 	</style>
 
 	<style name="ProductOfferSubtitleText.Price">
