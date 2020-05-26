@@ -12,23 +12,23 @@
 		android:layout_width="160dp"
 		android:layout_height="200dp"
 		android:layout_margin="6dp"
-		app:cardBackgroundColor="#ff9800"
 		app:cardCornerRadius="8dp"
-		app:cardElevation="4dp"
+		app:cardElevation="2dp"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent">
 
 		<androidx.appcompat.widget.AppCompatImageView
-			android:id="@+id/ivImageNewProduct"
+			android:id="@+id/ivNewProductImage"
 			android:layout_width="match_parent"
-			android:layout_height="match_parent" />
+			android:layout_height="match_parent"
+			android:scaleType="centerCrop"/>
 
 	</androidx.cardview.widget.CardView>
 
 	<!-- TITLE -->
 	<androidx.appcompat.widget.AppCompatTextView
-		android:id="@+id/tv_title"
+		android:id="@+id/tvTitle"
 		style="@style/ProductOfferTitleText"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
@@ -36,18 +36,18 @@
 		app:layout_constraintEnd_toEndOf="@id/cvImageNewProduct"
 		app:layout_constraintStart_toStartOf="@id/cvImageNewProduct"
 		app:layout_constraintTop_toBottomOf="@id/cvImageNewProduct"
-		android:text="Title" />
+		tools:text="Title" />
 
 	<!-- SUBTITLE -->
 	<androidx.appcompat.widget.AppCompatTextView
-		android:id="@+id/tv_subtitle"
+		android:id="@+id/tvSubtitle"
 		style="@style/ProductOfferSubtitleText"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="@id/tv_title"
-		app:layout_constraintTop_toBottomOf="@id/tv_title"
-		android:text="Subitle" />
+		app:layout_constraintStart_toStartOf="@id/tvTitle"
+		app:layout_constraintTop_toBottomOf="@id/tvTitle"
+		tools:text="Subitle" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

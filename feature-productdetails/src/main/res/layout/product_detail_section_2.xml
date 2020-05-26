@@ -33,7 +33,7 @@
 		style="@style/ProductDetailRatingScore"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="@dimen/dimen_16dp"
+		android:layout_marginStart="@dimen/dimen_8dp"
 		android:layout_marginTop="@dimen/dimen_16dp"
 		app:layout_constraintStart_toEndOf="@id/ratingBar"
 		app:layout_constraintTop_toBottomOf="@id/cvAvailableQuantity"
@@ -48,6 +48,8 @@
 		android:layout_marginStart="@dimen/dimen_16dp"
 		android:layout_marginTop="@dimen/dimen_8dp"
 		android:layout_marginBottom="@dimen/dimen_16dp"
+		android:drawablePadding="0dp"
+		android:drawableEnd="@drawable/ic_arrow_right_black_18dp"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/tvRatingScore"
 		android:text="@string/product_details_button_view_all_comment_text" />
