@@ -11,6 +11,10 @@
 	<string name="product_details_save_placeholder">Save %d%%</string>
 	<string name="product_details_available_quantity_placeholder">Available: %d</string>
 	<string name="product_details_sold_quantity_placeholder">%d Sold</string>
+	<plurals name="product_details_rating_quantity_plurals">
+		<item quantity="one">%d vote</item>
+		<item quantity="other">%d votes</item>
+	</plurals>
 	<string name="product_details_description_title">Description</string>
 	<string name="product_details_warranty_title">Warranty</string>
 </resources>

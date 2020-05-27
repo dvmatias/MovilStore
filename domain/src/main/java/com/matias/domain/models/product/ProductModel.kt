@@ -15,7 +15,7 @@ data class ProductModel(
 	val tags: ArrayList<String>,
 	val quantity: QuantityModel,
 	val multimedia: MultimediaModel,
-	val rating: Float
+	val rating: RatingModel
 ) {
 
 	data class QuantityModel(
@@ -25,6 +25,11 @@ data class ProductModel(
 
 	data class MultimediaModel(
 		val any: Any
+	)
+
+	data class RatingModel(
+		val value: Float,
+		val quantity: Int
 	)
 
 }

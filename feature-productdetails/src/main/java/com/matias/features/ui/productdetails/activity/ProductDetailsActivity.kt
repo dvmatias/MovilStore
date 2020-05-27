@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.product_detail_section_1.*
 import kotlinx.android.synthetic.main.product_detail_section_2.*
 import kotlinx.android.synthetic.main.product_detail_section_3.*
 import kotlinx.android.synthetic.main.product_detail_section_4.*
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import java.text.DecimalFormat
 
 class ProductDetailsActivity :
@@ -27,6 +28,7 @@ class ProductDetailsActivity :
 	override fun bindLayout(): Int =
 		R.layout.activity_product_details
 
+	@ExperimentalCoroutinesApi
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_product_details)
@@ -85,9 +87,11 @@ class ProductDetailsActivity :
 			// Section 2
 			tvTagAvailableQuantity.text = String.format(getString(R.string.product_details_available_quantity_placeholder), p.quantity.available)
 			tvSoldQuantity.text = String.format(getString(R.string.product_details_sold_quantity_placeholder), p.quantity.sold)
-			ratingBar.rating = p.rating
-			tvRatingScore.text = DecimalFormat("#.#").format(p.rating).replace('.', ',')
-
+			p.rating.let { rating: ProductModel.RatingModel ->
+				ratingBar.rating = rating.value
+				tvRatingScore.text = DecimalFormat("#.#").format(rating.value).replace(',', '.')
+				tvRatingQuantity.text = resources.getQuantityString(R.plurals.product_details_rating_quantity_plurals, rating.quantity, rating.quantity)//(R.string.product_details_rating_quantity_placeholder), rating.quantity)
+			}
 			// TODO mannage tvViewAllComments click event
 
 			// TODO mannage cvAddToCartBtn & cvBuyBtn enabled/disable status

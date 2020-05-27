@@ -66,7 +66,7 @@
 	<color name="colorDarkTextLighter">#9F9F9F</color>
 	<color name="colorTextProductDiscount">#05C105</color>
 	<color name="colorProductDetailSaveBackground">#05C105</color>
-	<color name="colorProductDetailNewBackground">#E6E6E6</color>
+	<color name="colorProductDetailNewBackground">@color/colorSecondaryCyan</color>
 	<color name="colorProductDetailOfferBackground">@color/colorProductDetailNewBackground</color>
 	<color name="colorProductDetailFeaturedBackground">@color/colorProductDetailNewBackground</color>
 

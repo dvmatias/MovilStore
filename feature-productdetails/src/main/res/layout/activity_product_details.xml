@@ -6,22 +6,11 @@
 	android:layout_height="match_parent"
 	tools:context=".ui.productdetails.activity.ProductDetailsActivity">
 
-	<!-- PRODUCT DETAILS CONTENT -->
-	<include
-		android:id="@+id/contentProductDetails"
-		layout="@layout/content_product_details" />
-
-	<!-- LOADING VIEW -->
-	<include
-		android:id="@+id/viewLoading"
-		layout="@layout/view_loading" />
-
 	<!-- APP BAR -->
 	<com.google.android.material.appbar.AppBarLayout
 		android:id="@+id/appBar"
 		android:layout_width="match_parent"
 		android:layout_height="@dimen/app_bar_height"
-		android:fitsSystemWindows="true"
 		android:theme="@style/AppTheme.AppBarOverlay">
 
 		<com.google.android.material.appbar.CollapsingToolbarLayout
@@ -42,6 +31,16 @@
 
 		</com.google.android.material.appbar.CollapsingToolbarLayout>
 	</com.google.android.material.appbar.AppBarLayout>
+
+	<!-- PRODUCT DETAILS CONTENT -->
+	<include
+		android:id="@+id/contentProductDetails"
+		layout="@layout/content_product_details" />
+
+	<!-- LOADING VIEW -->
+	<include
+		android:id="@+id/viewLoading"
+		layout="@layout/view_loading" />
 
 <!--	<com.google.android.material.floatingactionbutton.FloatingActionButton-->
 <!--		android:id="@+id/fab"-->

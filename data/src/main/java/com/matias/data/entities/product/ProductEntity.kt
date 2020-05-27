@@ -32,7 +32,8 @@ data class ProductEntity (
 	)
 
 	data class RatingEntity(
-		@SerializedName("value") val value: Float?
+		@SerializedName("value") val value: Float?,
+		@SerializedName("quantity") val quantity: Int?
 	)
 	
 }

@@ -22,7 +22,7 @@ class ProductMapper : Mapper<ProductEntity, ProductModel>() {
 		val tags: ArrayList<String> = arrayListOf()
 		val quantity: ProductModel.QuantityModel = transformQuantity(e.quantity)
 		val multimedia: ProductModel.MultimediaModel = ProductModel.MultimediaModel("")
-		val rating: Float = e.rating?.value ?: 0F
+		val rating: ProductModel.RatingModel = transformRating(e.rating)
 
 		return ProductModel(
 			id,
@@ -49,8 +49,8 @@ class ProductMapper : Mapper<ProductEntity, ProductModel>() {
 
 	private fun transformQuantity(e: ProductEntity.QuantityEntity?): ProductModel.QuantityModel =
 		ProductModel.QuantityModel(
-			e?.available ?: 0,
-			e?.sold ?: 0
+			available = e?.available ?: 0,
+			sold = e?.sold ?: 0
 		)
 
 	private fun transformStatus(e: String?): StatusEnum =
@@ -60,4 +60,11 @@ class ProductMapper : Mapper<ProductEntity, ProductModel>() {
 			StatusEnum.PAUSED.value -> StatusEnum.PAUSED
 			else -> StatusEnum.INACTIVE
 		}
+
+	private fun transformRating(e: ProductEntity.RatingEntity?): ProductModel.RatingModel =
+		ProductModel.RatingModel(
+			value = e?.value ?: 0F,
+			quantity = e?.quantity ?: 0
+		)
+
 }
