@@ -1,20 +1,30 @@
 <resources>
 	<string name="title_activity_product_details">ProductDetailsActivity</string>
+	<string name="product_details_status_placeholder">This product is %s</string>
+	<string name="product_details_status_paused_text">on puased</string>
+	<string name="product_details_status_inactive_text">inactive</string>
+
 	<string name="product_details_tag_new_text">New</string>
 	<string name="product_details_tag_offer_text">Offer</string>
 	<string name="product_details_tag_featured_text">Featured</string>
+
 	<string name="product_details_button_view_all_comment_text">View all comments</string>
 	<string name="product_details_button_add_to_cart_label">add to cart</string>
 	<string name="product_details_button_buy_label">buy</string>
+
 	<string name="product_details_original_price_placeholder"><![CDATA[from <strike>&nbsp;$%s&nbsp;</strike> ]]></string>
 	<string name="product_details_price_placeholder">$%s</string>
 	<string name="product_details_save_placeholder">Save %d%%</string>
+
 	<string name="product_details_available_quantity_placeholder">Available: %d</string>
 	<string name="product_details_sold_quantity_placeholder">%d Sold</string>
+
 	<plurals name="product_details_rating_quantity_plurals">
 		<item quantity="one">%d vote</item>
 		<item quantity="other">%d votes</item>
 	</plurals>
+
 	<string name="product_details_description_title">Description</string>
+
 	<string name="product_details_warranty_title">Warranty</string>
 </resources>

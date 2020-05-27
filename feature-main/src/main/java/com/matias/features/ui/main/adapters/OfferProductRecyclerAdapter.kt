@@ -4,14 +4,14 @@ import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.widget.AppCompatImageView
-import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
+import com.matias.core.helpers.formatPrice
 import com.matias.core.helpers.fromHtml
+import com.matias.core.helpers.getDiscount
 import com.matias.core.managers.GlideApp
 import com.matias.domain.models.offer.OfferProductModel
 import com.matias.features.R
-import java.text.DecimalFormat
+import kotlinx.android.synthetic.main.item_product_offer.view.*
 
 private const val MAX_OFFERS_TO_DISPLAY = 3
 
@@ -46,12 +46,6 @@ class OfferProductRecyclerAdapter(private val activity: Activity) : RecyclerView
 	}
 
 	class OfferProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-		private var ivThumbnail: AppCompatImageView = itemView.findViewById(R.id.iv_thumbnail)
-		private var tvTitle: AppCompatTextView = itemView.findViewById(R.id.tv_title)
-		private var tvSubtitle: AppCompatTextView = itemView.findViewById(R.id.tv_subtitle)
-		private var tvOriginalPrice: AppCompatTextView = itemView.findViewById(R.id.tv_original_price)
-		private var tvPrice: AppCompatTextView = itemView.findViewById(R.id.tv_price)
-		private var tvDiscountPercentaje: AppCompatTextView = itemView.findViewById(R.id.tv_discount_percentaje)
 
 		fun bindItem(offerProduct: OfferProductModel, listener: OfferClickListener?, activity: Activity) {
 			val discountPercentaje = getDiscount(offerProduct.originalPrice, offerProduct.price)
@@ -61,32 +55,26 @@ class OfferProductRecyclerAdapter(private val activity: Activity) : RecyclerView
 				return
 			}
 
-			GlideApp.with(activity).load(offerProduct.thumbnailUrl).fitCenter().into(ivThumbnail)
+			GlideApp.with(activity).load(offerProduct.thumbnailUrl).fitCenter().into(itemView.ivThumbnail)
 
-			tvTitle.text = offerProduct.title
-			tvSubtitle.text = offerProduct.subtitle
+			itemView.tvTitle.text = offerProduct.title
+			itemView.tvSubtitle.text = offerProduct.subtitle
 
-			val originalPrice = getFormattedPrice(offerProduct.originalPrice)
-			tvOriginalPrice.text =
+			val originalPrice = formatPrice(offerProduct.originalPrice)
+			itemView.tvOriginalPrice.text =
 				fromHtml(String.format(activity.getString(R.string.original_price_placeholder, originalPrice)))
 
-			val price = getFormattedPrice(offerProduct.price)
-			tvPrice.text = String.format(
-				activity.getString(R.string.price_placeholder, price))
+			val price = formatPrice(offerProduct.price)
+			itemView.tvPrice.text = String.format(
+				activity.getString(R.string.price_placeholder, price)
+			)
 
-			tvDiscountPercentaje.text =
+			itemView.tvDiscountPercentaje.text =
 				String.format(activity.getString(R.string.discount_percentaje_placeholder), discountPercentaje)
 
 			itemView.setOnClickListener { listener?.onOfferClick(offerProduct.id) }
 
 		}
-
-		private fun getDiscount(originalPrice: Float, price: Float): Int {
-			return 100 - ((price * 100) / originalPrice).toInt()
-		}
-
-		private fun getFormattedPrice(value: Float): String =
-			DecimalFormat("#,###").format(value).replace(',', '.')
 
 	}
 

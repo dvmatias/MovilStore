@@ -6,6 +6,7 @@
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
 	android:background="@color/colorWhite"
+	android:padding="@dimen/dimen_16dp"
 	tools:showIn="@layout/content_product_details">
 
 	<!-- RATING BAR -->
@@ -14,7 +15,6 @@
 		style="?android:attr/ratingBarStyleSmall"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="@dimen/dimen_16dp"
 		android:numStars="5"
 		android:stepSize="0.1"
 		android:progressTint="@color/colorRatingBarProgressTint"
@@ -31,7 +31,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginStart="@dimen/dimen_8dp"
-		android:layout_marginTop="@dimen/dimen_16dp"
+		android:layout_marginTop="@dimen/dimen_20dp"
 		app:layout_constraintStart_toEndOf="@id/ratingBar"
 		app:layout_constraintTop_toBottomOf="@id/cvTagAvailableQuantity"
 		tools:text="4.5" />
@@ -54,7 +54,6 @@
 		style="@style/ProductDetailViewAllComents"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="@dimen/dimen_16dp"
 		android:layout_marginTop="@dimen/dimen_8dp"
 		android:layout_marginBottom="@dimen/dimen_16dp"
 		android:drawablePadding="0dp"
@@ -68,8 +67,6 @@
 		android:id="@+id/cvTagAvailableQuantity"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="@dimen/dimen_16dp"
-		android:layout_marginTop="@dimen/dimen_16dp"
 		app:cardBackgroundColor="#FFEB3B"
 		app:cardCornerRadius="2dp"
 		app:cardElevation="0dp"
@@ -138,7 +135,6 @@
 		android:layout_marginStart="@dimen/dimen_12dp"
 		android:layout_marginTop="@dimen/dimen_12dp"
 		android:layout_marginEnd="@dimen/dimen_12dp"
-		android:layout_marginBottom="@dimen/dimen_16dp"
 		app:cardBackgroundColor="@color/colorPrimary"
 		app:cardCornerRadius="@dimen/dimen_4dp"
 		app:cardElevation="0dp"
