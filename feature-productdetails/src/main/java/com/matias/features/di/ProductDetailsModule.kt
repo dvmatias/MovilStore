@@ -10,6 +10,9 @@ import com.matias.data.service.product.ProductApi
 import com.matias.data.service.product.ProductService
 import com.matias.domain.provider.product.ProductProvider
 import com.matias.domain.usecases.product.GetProductDetailUseCase
+import com.matias.domain.usecases.product.IsFeaturedProductUseCase
+import com.matias.domain.usecases.product.IsNewProductUseCase
+import com.matias.domain.usecases.product.IsOfferProductUseCase
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
@@ -39,5 +42,17 @@ internal class ProductDetailsModule {
 	@Provides
 	fun provideGetProductDetailUseCase(productProvider: ProductProvider): GetProductDetailUseCase =
 		GetProductDetailUseCase(productProvider)
+
+	@Provides
+	fun provideIsOfferProductUseCase(productProvider: ProductProvider): IsOfferProductUseCase =
+		IsOfferProductUseCase(productProvider)
+
+	@Provides
+	fun provideIsNewProductUseCase(productProvider: ProductProvider): IsNewProductUseCase =
+		IsNewProductUseCase(productProvider)
+
+	@Provides
+	fun provideIsFeaturedProductUseCase(productProvider: ProductProvider): IsFeaturedProductUseCase =
+		IsFeaturedProductUseCase(productProvider)
 
 }

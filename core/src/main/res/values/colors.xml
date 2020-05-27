@@ -16,7 +16,8 @@
 	<color name="colorTransparent">#00000000</color>
 	<color name="colorPrimary20">#37DE393A</color>
 
-	<color name="colorStarRating">#FDCC0D</color>
+	<color name="colorRatingBarProgressTint">#FDCC0D</color>
+	<color name="colorRatingBarSecondaryProgressTint">#FDA50D</color>
 
 	<!-- VIEW LOADING -->
 	<color name="colorLoadingViewBackground">#00000000</color>
@@ -65,5 +66,8 @@
 	<color name="colorDarkTextLighter">#9F9F9F</color>
 	<color name="colorTextProductDiscount">#05C105</color>
 	<color name="colorProductDetailSaveBackground">#05C105</color>
+	<color name="colorProductDetailNewBackground">@color/colorSecondaryCyan</color>
+	<color name="colorProductDetailOfferBackground">@color/colorProductDetailNewBackground</color>
+	<color name="colorProductDetailFeaturedBackground">@color/colorProductDetailNewBackground</color>
 
 </resources>

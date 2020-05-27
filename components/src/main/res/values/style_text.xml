@@ -10,7 +10,7 @@
 		<item name="android:paddingEnd">@dimen/dimen_8dp</item>
 		<item name="android:paddingStart">@dimen/dimen_8dp</item>
 		<item name="android:paddingTop">@dimen/dimen_18dp</item>
-		<item name="android:paddingBottom">@dimen/dimen_18dp</item>
+		<item name="android:paddingBottom">@dimen/dimen_12dp</item>
 	</style>
 
 	<!-- Product Offer -->
@@ -25,7 +25,7 @@
 	</style>
 
 	<style name="ProductOfferSubtitleText" parent="TextAppearance.AppCompat">
-		<item name="android:maxLines">2</item>
+		<item name="android:lines">2</item>
 		<item name="fontFamily">@font/cereal_book</item>
 		<item name="android:textColor">@color/colorDarkTextNormal</item>
 		<item name="android:ellipsize">end</item>
@@ -35,7 +35,7 @@
 	<style name="ProductOfferSubtitleText.OriginalPrice">
 		<item name="android:textColor">@color/colorDarkTextNormal</item>
 		<item name="android:textSize">@dimen/text_12sp</item>
-		<item name="android:maxLines">1</item>
+		<item name="android:lines">1</item>
 	</style>
 
 	<style name="ProductOfferSubtitleText.Price">
@@ -97,11 +97,22 @@
 		<item name="android:includeFontPadding">false</item>
 	</style>
 
-	<style name="ProductDetailSave" parent="TextAppearance.AppCompat">
+	<style name="ProductDetailTag" parent="TextAppearance.AppCompat">
 		<item name="fontFamily">@font/cereal_medium</item>
-		<item name="android:textColor">@color/colorWhite</item>
 		<item name="android:textSize">@dimen/text_14sp</item>
 		<item name="android:includeFontPadding">false</item>
+	</style>
+
+	<style name="ProductDetailTag.Light">
+		<item name="android:textColor">@color/colorWhite</item>
+	</style>
+
+	<style name="ProductDetailTag.Normal">
+		<item name="android:textColor">@color/colorDarkTextNormal</item>
+	</style>
+
+	<style name="ProductDetailTag.Dark">
+		<item name="android:textColor">@color/colorDarkTextDark</item>
 	</style>
 
 	<style name="ProductDetailRatingScore" parent="TextAppearance.AppCompat">
@@ -116,15 +127,12 @@
 		<item name="android:textColor">@color/colorDarkTextLighter</item>
 		<item name="android:textSize">@dimen/text_14sp</item>
 		<item name="android:includeFontPadding">false</item>
-		<item name="drawableEndCompat">@drawable/ic_arrow_right_black_18dp</item>
-		<item name="android:drawableTint">@color/colorDarkTextLighter</item>
 	</style>
 
-	<style name="ProductDetailAvailableQuantity" parent="TextAppearance.AppCompat">
-		<item name="fontFamily">@font/cereal_medium</item>
-		<item name="android:textColor">@color/colorDarkTextDark</item>
-		<item name="android:textSize">@dimen/text_14sp</item>
-		<item name="android:includeFontPadding">false</item>
+	<style name="ProductDetailStatus" parent="TextAppearance.AppCompat">
+		<item name="fontFamily">@font/cereal_book</item>
+		<item name="android:textColor">@color/colorDarkTextLight</item>
+		<item name="android:textSize">@dimen/text_16sp</item>
 	</style>
 
 	<style name="ProductDetailSold" parent="TextAppearance.AppCompat">

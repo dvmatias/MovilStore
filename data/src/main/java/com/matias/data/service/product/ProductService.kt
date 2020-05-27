@@ -11,5 +11,14 @@ class ProductService constructor(retrofit: Retrofit) : ProductApi {
 	private val productApi: ProductApi by lazy { retrofit.create(ProductApi::class.java) }
 
 	override fun getProduct(productId: Long): Call<ProductEntity> =
-		productApi.getProduct(productId.toLong())
+		productApi.getProduct(productId)
+
+	override fun isOfferProduct(productId: Long): Call<Boolean> =
+		productApi.isOfferProduct(productId)
+
+	override fun isNewProduct(productId: Long): Call<Boolean>  =
+		productApi.isNewProduct(productId)
+
+	override fun isFeaturedProduct(productId: Long): Call<Boolean>  =
+		productApi.isFeaturedProduct(productId)
 }
