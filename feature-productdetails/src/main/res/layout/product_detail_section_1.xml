@@ -5,12 +5,84 @@
 	android:id="@+id/section_1"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
-	android:background="@color/colorWhite"
 	android:padding="@dimen/dimen_16dp"
-	app:layout_constraintEnd_toEndOf="parent"
-	app:layout_constraintStart_toStartOf="parent"
-	app:layout_constraintTop_toTopOf="parent"
+	android:background="@color/colorWhite"
 	tools:showIn="@layout/content_product_details">
+
+    <LinearLayout
+	    android:id="@+id/llNewOfferFeatured"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    app:layout_constraintStart_toStartOf="parent"
+	    app:layout_constraintTop_toTopOf="parent"
+	    app:layout_constraintEnd_toEndOf="parent" >
+
+	    <!-- NEW -->
+	    <androidx.cardview.widget.CardView
+		    android:id="@+id/cvTagNew"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginEnd="@dimen/dimen_16dp"
+		    app:cardBackgroundColor="@color/colorProductDetailNewBackground"
+		    app:cardCornerRadius="@dimen/dimen_2dp"
+		    app:cardElevation="0dp">
+
+		    <androidx.appcompat.widget.AppCompatTextView
+			    style="@style/ProductDetailTag.Normal"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_marginStart="@dimen/dimen_12dp"
+			    android:layout_marginTop="@dimen/dimen_2dp"
+			    android:layout_marginEnd="@dimen/dimen_12dp"
+			    android:layout_marginBottom="@dimen/dimen_2dp"
+			    android:text="@string/product_details_tag_new_text" />
+	    </androidx.cardview.widget.CardView>
+
+	    <!-- OFFER -->
+	    <androidx.cardview.widget.CardView
+		    android:id="@+id/cvTagOffer"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    app:cardBackgroundColor="@color/colorProductDetailOfferBackground"
+		    app:cardCornerRadius="@dimen/dimen_2dp"
+		    android:layout_marginEnd="@dimen/dimen_16dp"
+		    app:cardElevation="0dp">
+
+		    <androidx.appcompat.widget.AppCompatTextView
+			    android:id="@+id/tvOffer"
+			    style="@style/ProductDetailTag.Normal"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_marginStart="@dimen/dimen_12dp"
+			    android:layout_marginTop="@dimen/dimen_2dp"
+			    android:layout_marginEnd="@dimen/dimen_12dp"
+			    android:layout_marginBottom="@dimen/dimen_2dp"
+			    android:text="@string/product_details_tag_offer_text" />
+	    </androidx.cardview.widget.CardView>
+
+	    <!-- FEATURED -->
+	    <androidx.cardview.widget.CardView
+		    android:id="@+id/cvTagFeatured"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    app:cardBackgroundColor="@color/colorProductDetailFeaturedBackground"
+		    app:cardCornerRadius="@dimen/dimen_2dp"
+		    android:layout_marginEnd="@dimen/dimen_16dp"
+		    app:cardElevation="0dp">
+
+		    <androidx.appcompat.widget.AppCompatTextView
+			    style="@style/ProductDetailTag.Normal"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_marginStart="@dimen/dimen_12dp"
+			    android:layout_marginTop="@dimen/dimen_2dp"
+			    android:layout_marginEnd="@dimen/dimen_12dp"
+			    android:layout_marginBottom="@dimen/dimen_2dp"
+			    android:text="@string/product_details_tag_featured_text" />
+	    </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
 
 	<!-- TITLE -->
 	<androidx.appcompat.widget.AppCompatTextView
@@ -18,9 +90,10 @@
 		style="@style/ProductDetailTitle"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dimen_8dp"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/llNewOfferFeatured"
 		tools:text="Funda Silicone Cover Original Samsung Galaxy S9 O S9 Plus" />
 
 	<!-- SUBTITLE -->
@@ -41,7 +114,7 @@
 		style="@style/ProductDetailOriginalPrice"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginTop="@dimen/dimen_16dp"
+		android:layout_marginTop="@dimen/dimen_18dp"
 		app:layout_constraintStart_toStartOf="@id/tvTitle"
 		app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
 		tools:text="from $800" />
@@ -54,11 +127,12 @@
 		android:layout_height="wrap_content"
 		app:layout_constraintStart_toStartOf="@id/tvTitle"
 		app:layout_constraintTop_toBottomOf="@id/tvOriginalPrice"
+		app:layout_goneMarginTop="@dimen/dimen_18dp"
 		tools:text="$700" />
 
 	<!-- SAVE -->
 	<androidx.cardview.widget.CardView
-		android:id="@+id/cvSave"
+		android:id="@+id/cvTagSave"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginStart="@dimen/dimen_16dp"
@@ -70,8 +144,8 @@
 		app:layout_constraintTop_toTopOf="@id/tvPrice">
 
 		<androidx.appcompat.widget.AppCompatTextView
-			android:id="@+id/tvSave"
-			style="@style/ProductDetailSave"
+			android:id="@+id/tTagvSave"
+			style="@style/ProductDetailTag.Light"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_marginStart="@dimen/dimen_12dp"
@@ -79,7 +153,6 @@
 			android:layout_marginEnd="@dimen/dimen_12dp"
 			android:layout_marginBottom="@dimen/dimen_2dp"
 			tools:text="Save 5%" />
-
 	</androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
 

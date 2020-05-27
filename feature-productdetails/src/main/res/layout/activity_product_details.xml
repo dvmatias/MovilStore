@@ -4,7 +4,6 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:fitsSystemWindows="true"
 	tools:context=".ui.productdetails.activity.ProductDetailsActivity">
 
 	<!-- APP BAR -->
@@ -12,7 +11,6 @@
 		android:id="@+id/appBar"
 		android:layout_width="match_parent"
 		android:layout_height="@dimen/app_bar_height"
-		android:fitsSystemWindows="true"
 		android:theme="@style/AppTheme.AppBarOverlay">
 
 		<com.google.android.material.appbar.CollapsingToolbarLayout
@@ -34,15 +32,6 @@
 		</com.google.android.material.appbar.CollapsingToolbarLayout>
 	</com.google.android.material.appbar.AppBarLayout>
 
-<!--	<com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--		android:id="@+id/fab"-->
-<!--		android:layout_width="wrap_content"-->
-<!--		android:layout_height="wrap_content"-->
-<!--		android:layout_margin="@dimen/fab_margin"-->
-<!--		app:layout_anchor="@id/app_bar"-->
-<!--		app:layout_anchorGravity="bottom|end"-->
-<!--		app:srcCompat="@android:drawable/ic_dialog_email" />-->
-
 	<!-- PRODUCT DETAILS CONTENT -->
 	<include
 		android:id="@+id/contentProductDetails"
@@ -53,4 +42,12 @@
 		android:id="@+id/viewLoading"
 		layout="@layout/view_loading" />
 
+<!--	<com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--		android:id="@+id/fab"-->
+<!--		android:layout_width="wrap_content"-->
+<!--		android:layout_height="wrap_content"-->
+<!--		android:layout_margin="@dimen/fab_margin"-->
+<!--		app:layout_anchor="@id/app_bar"-->
+<!--		app:layout_anchorGravity="bottom|end"-->
+<!--		app:srcCompat="@android:drawable/ic_dialog_email" />-->
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

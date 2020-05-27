@@ -7,7 +7,7 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto">
 
 	<androidx.appcompat.widget.AppCompatImageView
-		android:id="@+id/iv_thumbnail"
+		android:id="@+id/ivThumbnail"
 		android:layout_width="@dimen/dimen_96dp"
 		android:layout_height="0dp"
 		android:contentDescription="@null"
@@ -18,58 +18,58 @@
 
 	<!-- TITLE -->
 	<androidx.appcompat.widget.AppCompatTextView
-		android:id="@+id/tv_title"
+		android:id="@+id/tvTitle"
 		style="@style/ProductOfferTitleText"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
 		android:layout_marginStart="@dimen/dimen_8dp"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toEndOf="@id/iv_thumbnail"
+		app:layout_constraintStart_toEndOf="@id/ivThumbnail"
 		app:layout_constraintTop_toTopOf="parent"
 		tools:text="Title" />
 
 	<!-- SUBTITLE -->
 	<androidx.appcompat.widget.AppCompatTextView
-		android:id="@+id/tv_subtitle"
+		android:id="@+id/tvSubtitle"
 		style="@style/ProductOfferSubtitleText"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="@id/tv_title"
-		app:layout_constraintTop_toBottomOf="@id/tv_title"
+		app:layout_constraintStart_toStartOf="@id/tvTitle"
+		app:layout_constraintTop_toBottomOf="@id/tvTitle"
 		tools:text="Subitle" />
 
 	<!-- ORIGINAL PRICE -->
 	<androidx.appcompat.widget.AppCompatTextView
-		android:id="@+id/tv_original_price"
+		android:id="@+id/tvOriginalPrice"
 		style="@style/ProductOfferSubtitleText.OriginalPrice"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="@dimen/dimen_8dp"
-		app:layout_constraintStart_toStartOf="@id/tv_title"
-		app:layout_constraintTop_toBottomOf="@id/tv_subtitle"
+		app:layout_constraintStart_toStartOf="@id/tvTitle"
+		app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
 		tools:text="$1000" />
 
 	<!-- PERCENTAJE DISCOUNT -->
 	<androidx.appcompat.widget.AppCompatTextView
-		android:id="@+id/tv_discount_percentaje"
+		android:id="@+id/tvDiscountPercentaje"
 		style="@style/ProductOfferDiscountPercentajeText"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginStart="@dimen/dimen_8dp"
-		app:layout_constraintBottom_toBottomOf="@id/tv_original_price"
-		app:layout_constraintStart_toEndOf="@id/tv_original_price"
-		app:layout_constraintTop_toTopOf="@id/tv_original_price"
+		app:layout_constraintBottom_toBottomOf="@id/tvOriginalPrice"
+		app:layout_constraintStart_toEndOf="@id/tvOriginalPrice"
+		app:layout_constraintTop_toTopOf="@id/tvOriginalPrice"
 		tools:text="50%" />
 
 	<!-- PRICE -->
 	<androidx.appcompat.widget.AppCompatTextView
-		android:id="@+id/tv_price"
+		android:id="@+id/tvPrice"
 		style="@style/ProductOfferSubtitleText.Price"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		app:layout_constraintStart_toStartOf="@id/tv_title"
-		app:layout_constraintTop_toBottomOf="@id/tv_original_price"
+		app:layout_constraintStart_toStartOf="@id/tvTitle"
+		app:layout_constraintTop_toBottomOf="@id/tvOriginalPrice"
 		tools:text="$700" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
