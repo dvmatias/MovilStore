@@ -4,8 +4,17 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:fitsSystemWindows="true"
 	tools:context=".ui.productdetails.activity.ProductDetailsActivity">
+
+	<!-- PRODUCT DETAILS CONTENT -->
+	<include
+		android:id="@+id/contentProductDetails"
+		layout="@layout/content_product_details" />
+
+	<!-- LOADING VIEW -->
+	<include
+		android:id="@+id/viewLoading"
+		layout="@layout/view_loading" />
 
 	<!-- APP BAR -->
 	<com.google.android.material.appbar.AppBarLayout
@@ -42,15 +51,4 @@
 <!--		app:layout_anchor="@id/app_bar"-->
 <!--		app:layout_anchorGravity="bottom|end"-->
 <!--		app:srcCompat="@android:drawable/ic_dialog_email" />-->
-
-	<!-- PRODUCT DETAILS CONTENT -->
-	<include
-		android:id="@+id/contentProductDetails"
-		layout="@layout/content_product_details" />
-
-	<!-- LOADING VIEW -->
-	<include
-		android:id="@+id/viewLoading"
-		layout="@layout/view_loading" />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

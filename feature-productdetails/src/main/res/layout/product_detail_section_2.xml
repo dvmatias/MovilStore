@@ -5,11 +5,7 @@
 	android:id="@+id/section_2"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
-	android:layout_marginTop="@dimen/dimen_16dp"
 	android:background="@color/colorWhite"
-	app:layout_constraintEnd_toEndOf="parent"
-	app:layout_constraintStart_toStartOf="parent"
-	app:layout_constraintTop_toBottomOf="@id/section_1"
 	tools:showIn="@layout/content_product_details">
 
 	<!-- RATING BAR -->
@@ -18,16 +14,17 @@
 		style="?android:attr/ratingBarStyleSmall"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:progressTint="@color/colorStarRating"
-		android:secondaryProgressTint="@color/colorStarRating"
-		android:numStars="5"
 		android:layout_marginStart="@dimen/dimen_16dp"
+		android:numStars="5"
+		android:stepSize="0.1"
+		android:progressTint="@color/colorRatingBarProgressTint"
+		android:secondaryProgressTint="@color/colorRatingBarSecondaryProgressTint"
 		app:layout_constraintBottom_toBottomOf="@id/tvRatingScore"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="@id/tvRatingScore"
-		tools:rating="3.5"/>
+		tools:rating="3.7" />
 
-	<!-- RATING BAR -->
+	<!-- RATING SCORE -->
 	<androidx.appcompat.widget.AppCompatTextView
 		android:id="@+id/tvRatingScore"
 		style="@style/ProductDetailRatingScore"
@@ -36,7 +33,7 @@
 		android:layout_marginStart="@dimen/dimen_8dp"
 		android:layout_marginTop="@dimen/dimen_16dp"
 		app:layout_constraintStart_toEndOf="@id/ratingBar"
-		app:layout_constraintTop_toBottomOf="@id/cvAvailableQuantity"
+		app:layout_constraintTop_toBottomOf="@id/cvTagAvailableQuantity"
 		tools:text="4.5" />
 
 	<!-- RATING SCORE -->
@@ -56,7 +53,7 @@
 
 	<!-- AVAILABLE QUANTITY -->
 	<androidx.cardview.widget.CardView
-		android:id="@+id/cvAvailableQuantity"
+		android:id="@+id/cvTagAvailableQuantity"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginStart="@dimen/dimen_16dp"
@@ -68,8 +65,8 @@
 		app:layout_constraintTop_toTopOf="parent">
 
 		<androidx.appcompat.widget.AppCompatTextView
-			android:id="@+id/tvAvailableQuantity"
-			style="@style/ProductDetailAvailableQuantity"
+			android:id="@+id/tvTagAvailableQuantity"
+			style="@style/ProductDetailTag.Dark"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_marginStart="@dimen/dimen_12dp"
@@ -86,9 +83,9 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginStart="@dimen/dimen_16dp"
-		app:layout_constraintStart_toEndOf="@id/cvAvailableQuantity"
-		app:layout_constraintTop_toTopOf="@id/cvAvailableQuantity"
-		app:layout_constraintBottom_toBottomOf="@id/cvAvailableQuantity"
+		app:layout_constraintStart_toEndOf="@id/cvTagAvailableQuantity"
+		app:layout_constraintTop_toTopOf="@id/cvTagAvailableQuantity"
+		app:layout_constraintBottom_toBottomOf="@id/cvTagAvailableQuantity"
 		tools:text="3 sold"/>
 
 	<!-- BUTTON 'ADD TO CART' -->

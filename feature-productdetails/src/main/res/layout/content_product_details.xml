@@ -2,27 +2,63 @@
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/nestedScrollView"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
 	app:layout_behavior="@string/appbar_scrolling_view_behavior"
+	app:layout_constraintEnd_toEndOf="parent"
+	app:layout_constraintStart_toStartOf="parent"
+	app:layout_constraintTop_toTopOf="parent"
 	tools:context=".ui.productdetails.activity.ProductDetailsActivity"
 	tools:showIn="@layout/activity_product_details">
 
 	<androidx.constraintlayout.widget.ConstraintLayout
 		android:layout_width="match_parent"
-		android:layout_height="match_parent">
+		android:layout_height="match_parent"
+		android:nestedScrollingEnabled="true">
 
 		<!-- SECTION 1 -->
-		<include layout="@layout/product_detail_section_1" />
+		<include
+			android:id="@+id/section_1"
+			layout="@layout/product_detail_section_1"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
 
 		<!-- SECTION 2 -->
-		<include layout="@layout/product_detail_section_2" />
+		<include
+			android:id="@+id/section_2"
+			layout="@layout/product_detail_section_2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/dimen_16dp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/section_1" />
 
 		<!-- SECTION 3 -->
-		<include layout="@layout/product_detail_section_3" />
+		<include
+			android:id="@+id/section_3"
+			layout="@layout/product_detail_section_3"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/dimen_16dp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/section_2" />
 
 		<!-- SECTION 4 -->
-		<include layout="@layout/product_detail_section_4" />
+		<include
+			android:id="@+id/section_4"
+			layout="@layout/product_detail_section_4"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/dimen_16dp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/section_3" />
 
 	</androidx.constraintlayout.widget.ConstraintLayout>
 

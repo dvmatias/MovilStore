@@ -29,5 +29,18 @@ class ProductProviderImpl(
 		}
 	}
 
+	override fun isOfferProduct(productId: Int): Either<FailureType, Boolean> =
+		request(service.isOfferProduct(productId.toLong())) {
+			it
+		}
 
+	override fun isNewProduct(productId: Int): Either<FailureType, Boolean> =
+		request(service.isNewProduct(productId.toLong())) {
+			it
+		}
+
+	override fun isFeaturedProduct(productId: Int): Either<FailureType, Boolean> =
+		request(service.isFeaturedProduct(productId.toLong())) {
+			it
+		}
 }

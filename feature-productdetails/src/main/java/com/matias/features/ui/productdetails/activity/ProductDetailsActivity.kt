@@ -16,7 +16,6 @@ import kotlinx.android.synthetic.main.product_detail_section_2.*
 import kotlinx.android.synthetic.main.product_detail_section_3.*
 import kotlinx.android.synthetic.main.product_detail_section_4.*
 import java.text.DecimalFormat
-import kotlin.math.roundToInt
 
 class ProductDetailsActivity :
 	BasePresenterActivity<ProductDetailsActivity, ProductDetailsActivityPresenter, ProductDetailsActivitySubcomponent>(),
@@ -57,21 +56,37 @@ class ProductDetailsActivity :
 		appBar.visibility = View.VISIBLE
 	}
 
-	override fun setProductInfo(product: ProductModel) {
-		product.let {
+	override fun setProductInfo(product: ProductModel, isNewProduct: Boolean, isOfferProduct: Boolean, isFeaturedProduct: Boolean) {
+		product.let {p: ProductModel ->
 			// Section 1
-			tvTitle.text = it.title
-			tvSubtitle.text = it.subtitle
-			// TODO Mannage tvOrignalPrice and tvSave visivility.
-			tvOriginalPrice.text = fromHtml(String.format(getString(R.string.product_details_original_price_placeholder), getFormattedPrice(it.originalPrice)))
-			tvPrice.text = String.format(getString(R.string.product_details_price_placeholder), getFormattedPrice(it.price))
-			tvSave.text = String.format(getString(R.string.product_details_save_placeholder), getDiscount(it.originalPrice, it.price))
+			if (isNewProduct || isOfferProduct || isFeaturedProduct) {
+				cvTagNew.visibility = if (isNewProduct) View.VISIBLE else View.GONE
+				cvTagOffer.visibility = if (isOfferProduct) View.VISIBLE else View.GONE
+				cvTagFeatured.visibility = if (isFeaturedProduct) View.VISIBLE else View.GONE
+			} else {
+				llNewOfferFeatured.visibility = View.GONE
+			}
+
+			tvTitle.text = p.title
+			tvSubtitle.text = p.subtitle
+			when (isOfferProduct) {
+				true -> {
+					tvOriginalPrice.text = fromHtml(String.format(getString(R.string.product_details_original_price_placeholder), getFormattedPrice(p.originalPrice)))
+					tTagvSave.text = String.format(getString(R.string.product_details_save_placeholder), getDiscount(p.originalPrice, p.price))
+				}
+				false -> {
+					tvOriginalPrice.visibility = View.GONE
+					cvTagSave.visibility = View.GONE
+				}
+			}
+
+			tvPrice.text = String.format(getString(R.string.product_details_price_placeholder), getFormattedPrice(p.price))
 
 			// Section 2
-			tvAvailableQuantity.text = String.format(getString(R.string.product_details_available_quantity_placeholder), it.quantity.available)
-			tvSoldQuantity.text = String.format(getString(R.string.product_details_sold_quantity_placeholder), it.quantity.sold)
-			ratingBar.rating = it.rating
-			tvRatingScore.text = DecimalFormat("#.#").format(it.rating).replace('.', ',')
+			tvTagAvailableQuantity.text = String.format(getString(R.string.product_details_available_quantity_placeholder), p.quantity.available)
+			tvSoldQuantity.text = String.format(getString(R.string.product_details_sold_quantity_placeholder), p.quantity.sold)
+			ratingBar.rating = p.rating
+			tvRatingScore.text = DecimalFormat("#.#").format(p.rating).replace('.', ',')
 
 			// TODO mannage tvViewAllComments click event
 
@@ -79,10 +94,10 @@ class ProductDetailsActivity :
 			// TODO mannage cvAddToCartBtn & cvBuyBtn click event
 
 			// Section 3
-			tvDescription.text = fromHtml(it.description)
+			tvDescription.text = fromHtml(p.description)
 
 			// Section 4
-			tvWarranty.text = it.warranty
+			tvWarranty.text = p.warranty
 
 		}
 	}

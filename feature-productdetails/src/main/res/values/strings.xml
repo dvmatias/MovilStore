@@ -1,5 +1,8 @@
 <resources>
 	<string name="title_activity_product_details">ProductDetailsActivity</string>
+	<string name="product_details_tag_new_text">New</string>
+	<string name="product_details_tag_offer_text">Offer</string>
+	<string name="product_details_tag_featured_text">Featured</string>
 	<string name="product_details_button_view_all_comment_text">View all comments</string>
 	<string name="product_details_button_add_to_cart_label">add to cart</string>
 	<string name="product_details_button_buy_label">buy</string>

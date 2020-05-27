@@ -10,7 +10,7 @@ interface ProductDetailsActivityContract {
 		fun showLoadingScreen()
 		fun showErrorScreen()
 		fun showInfoScreen()
-		fun setProductInfo(product: ProductModel)
+		fun setProductInfo(product: ProductModel, isNewProduct: Boolean, isOfferProduct: Boolean, isFeaturedProduct: Boolean)
 
 	}
 
