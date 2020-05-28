@@ -20,9 +20,9 @@ class ProductDetailsActivityPresenter @Inject constructor(
 	ProductDetailsActivityContract.Presenter<ProductDetailsActivityContract.View> {
 
 	private var product: ProductModel? = null
-	private var isOfferProduct: Boolean? = false
-	private var isNewProduct: Boolean? = false
-	private var isFeaturedProduct: Boolean? = false
+	private var isOffer: Boolean? = false
+	private var isNew: Boolean? = false
+	private var isFeatured: Boolean? = false
 
 	/**
 	 * [ProductDetailsActivityContract.Presenter] implementation.
@@ -40,9 +40,9 @@ class ProductDetailsActivityPresenter @Inject constructor(
 
 				this@ProductDetailsActivityPresenter.let {
 					it.product = product.await()
-					it.isOfferProduct = isOfferProduct.await()
-					it.isNewProduct = isNewProduct.await()
-					it.isFeaturedProduct = isFeaturedProduct.await()
+					it.isOffer = isOfferProduct.await()
+					it.isNew = isNewProduct.await()
+					it.isFeatured = isFeaturedProduct.await()
 				}
 
 				GlobalScope.launch(Dispatchers.Main) { onGetProductDetailSucces() }
@@ -57,16 +57,17 @@ class ProductDetailsActivityPresenter @Inject constructor(
 		}
 
 	private fun onGetProductDetailSucces() {
-		view?.let { view: ProductDetailsActivityContract.View ->
-			product?.let {
-				view.setProductInfo(
-					product = it,
-					isNewProduct = isNewProduct ?: false,
-					isOfferProduct = isOfferProduct ?: false,
-					isFeaturedProduct = isFeaturedProduct ?: false
-				)
-				view.showInfoScreen()
-			} ?: view.showErrorScreen()
+		view?.let { v: ProductDetailsActivityContract.View ->
+			product?.let { p: ProductModel ->
+				v.apply {
+					setProduct(p)
+					setIsNew(isNew ?: false)
+					setIsOffer(isOffer ?: false)
+					setIsFeatured(isFeatured ?: false)
+					setProductInfo()
+					showInfoScreen()
+				}
+			} ?: v.showErrorScreen()
 		}
 	}
 

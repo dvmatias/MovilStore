@@ -19,26 +19,28 @@ class ProductMapper : Mapper<ProductEntity, ProductModel>() {
 		val imageUrl: String = e.imageUrl ?: ""
 		val thumbnailUrl: String = e.thumbnailUrl ?: ""
 		val secureThumbnailUrl: String = e.secureThumbnailUrl ?: ""
+		val promotionImageUrl: String = e.promotionImageUrl ?: ""
 		val tags: ArrayList<String> = arrayListOf()
 		val quantity: ProductModel.QuantityModel = transformQuantity(e.quantity)
-		val multimedia: ProductModel.MultimediaModel = ProductModel.MultimediaModel("")
+		val images: List<ProductModel.ImageModel> = transformImages(e.images)
 		val rating: ProductModel.RatingModel = transformRating(e.rating)
 
 		return ProductModel(
 			id,
-			price, 
-			originalPrice, 
-			title, 
-			subtitle, 
-			description, 
-			status, 
+			price,
+			originalPrice,
+			title,
+			subtitle,
+			description,
+			status,
 			warranty,
 			imageUrl,
 			thumbnailUrl,
 			secureThumbnailUrl,
+			promotionImageUrl,
 			tags,
 			quantity,
-			multimedia,
+			images,
 			rating
 		)
 	}
@@ -60,6 +62,14 @@ class ProductMapper : Mapper<ProductEntity, ProductModel>() {
 			StatusEnum.PAUSED.value -> StatusEnum.PAUSED
 			else -> StatusEnum.INACTIVE
 		}
+
+	private fun transformImages(e: List<ProductEntity.ImageEntity>?): List<ProductModel.ImageModel> =
+		e?.map {
+			ProductModel.ImageModel(
+				it.url ?: ""
+			)
+		} ?: arrayListOf()
+
 
 	private fun transformRating(e: ProductEntity.RatingEntity?): ProductModel.RatingModel =
 		ProductModel.RatingModel(

@@ -154,6 +154,38 @@
 			android:layout_marginBottom="@dimen/dimen_2dp"
 			tools:text="Save 5%" />
 	</androidx.cardview.widget.CardView>
+
+   <!--	SHARE ICON -->
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/tvShareBtn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dimen_16dp"
+		android:drawableStart="@drawable/ic_share_black_24dp"
+		android:drawablePadding="@dimen/dimen_4dp"
+		android:ellipsize="end"
+		android:gravity="center_vertical"
+		android:lines="1"
+		android:text="Share it!"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/tvPrice" />
+
+	<!-- FAVORITE ICON -->
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/tvFavoriteBtn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="@dimen/dimen_12dp"
+		android:drawableStart="@drawable/ic_favorite_border_black_24dp"
+		android:drawablePadding="@dimen/dimen_4dp"
+		android:ellipsize="end"
+		android:gravity="center_vertical"
+		android:lines="1"
+		android:text="Add as favorite"
+		app:layout_constraintBottom_toBottomOf="@id/tvShareBtn"
+		app:layout_constraintEnd_toStartOf="@id/tvShareBtn"
+		app:layout_constraintTop_toTopOf="@id/tvShareBtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 		

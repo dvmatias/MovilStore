@@ -1,4 +1,5 @@
 <resources>
-	<dimen name="app_bar_height">280dp</dimen>
-	<dimen name="product_detail_button_height">56dp</dimen>
+	<dimen name="app_bar_height">320dp</dimen>
+	<dimen name="product_detail_button_height">48dp</dimen>
+	<dimen name="product_detail_button_radius">24dp</dimen>
 </resources>

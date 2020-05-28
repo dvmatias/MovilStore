@@ -102,11 +102,11 @@
 		android:id="@+id/cvAddToCartBtn"
 		android:layout_width="0dp"
 		android:layout_height="@dimen/product_detail_button_height"
-		android:layout_marginStart="@dimen/dimen_12dp"
+		android:layout_marginStart="@dimen/dimen_16dp"
 		android:layout_marginTop="@dimen/dimen_24dp"
-		android:layout_marginEnd="@dimen/dimen_12dp"
+		android:layout_marginEnd="@dimen/dimen_16dp"
 		app:cardBackgroundColor="@color/colorPrimary"
-		app:cardCornerRadius="@dimen/dimen_4dp"
+		app:cardCornerRadius="@dimen/product_detail_button_radius"
 		app:cardElevation="0dp"
 		app:contentPadding="1dp"
 		app:layout_constraintEnd_toEndOf="parent"
@@ -115,7 +115,9 @@
 
 		<androidx.cardview.widget.CardView
 			android:layout_width="match_parent"
-			android:layout_height="match_parent">
+			android:layout_height="match_parent"
+			app:cardCornerRadius="@dimen/product_detail_button_radius"
+			android:foreground="?android:selectableItemBackground">
 
 			<androidx.appcompat.widget.AppCompatTextView
 				style="@style/ProductDetailButtonLabel.Light"
@@ -132,11 +134,12 @@
 		android:id="@+id/cvBuyBtn"
 		android:layout_width="0dp"
 		android:layout_height="@dimen/product_detail_button_height"
-		android:layout_marginStart="@dimen/dimen_12dp"
+		android:layout_marginStart="@dimen/dimen_16dp"
 		android:layout_marginTop="@dimen/dimen_12dp"
-		android:layout_marginEnd="@dimen/dimen_12dp"
+		android:layout_marginEnd="@dimen/dimen_16dp"
+		android:foreground="?android:selectableItemBackground"
 		app:cardBackgroundColor="@color/colorPrimary"
-		app:cardCornerRadius="@dimen/dimen_4dp"
+		app:cardCornerRadius="@dimen/product_detail_button_radius"
 		app:cardElevation="0dp"
 		app:contentPaddingBottom="@dimen/dimen_12dp"
 		app:contentPaddingTop="@dimen/dimen_12dp"
