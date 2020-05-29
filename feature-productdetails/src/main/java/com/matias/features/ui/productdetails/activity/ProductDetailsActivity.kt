@@ -18,10 +18,10 @@ import com.matias.features.ui.productdetails.ProductDetailsUiComponent
 import com.matias.features.ui.productdetails.adapters.RecyclerMultimediaAdapter
 import kotlinx.android.synthetic.main.activity_product_details.*
 import kotlinx.android.synthetic.main.content_product_details.*
-import kotlinx.android.synthetic.main.product_detail_section_1.*
-import kotlinx.android.synthetic.main.product_detail_section_2.*
-import kotlinx.android.synthetic.main.product_detail_section_3.*
-import kotlinx.android.synthetic.main.product_detail_section_4.*
+import kotlinx.android.synthetic.main.product_detail_section_buy.*
+import kotlinx.android.synthetic.main.product_detail_section_description.*
+import kotlinx.android.synthetic.main.product_detail_section_price.*
+import kotlinx.android.synthetic.main.product_detail_section_warranty.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import java.text.DecimalFormat
 import javax.inject.Inject
@@ -108,8 +108,8 @@ class ProductDetailsActivity :
 
 	override fun setProductInfo() {
 		setupRecyclerMultimedia()
-		setupSectionOne()
-		setupSectionTwo()
+		setupSectionPrice()
+		setupSectionBuy()
 		// Section 3
 		tvDescription.text = fromHtml(product.description)
 		// Section 4
@@ -125,7 +125,7 @@ class ProductDetailsActivity :
 		multimediaAdapter.setData(product.images, product.imageUrl, product.promotionImageUrl)
 	}
 
-	private fun setupSectionOne() {
+	private fun setupSectionPrice() {
 		if (StatusEnum.ACTIVE != product.status) {
 			tvStatus.text = String.format(getString(R.string.product_details_status_placeholder), getStatusString(product.status))
 			tvStatus.visibility = View.VISIBLE
@@ -152,16 +152,6 @@ class ProductDetailsActivity :
 			}
 		}
 
-		tvPrice.text = String.format(getString(R.string.product_details_price_placeholder), formatPrice(product.price))
-
-		// TODO Manage favorite icon status.
-		tvFavoriteBtn.setOnClickListener { onUserClickFavoriteBtn() }
-		tvShareBtn.setOnClickListener { onUserClickShareBtn() }
-	}
-
-	private fun setupSectionTwo() {
-		tvTagAvailableQuantity.text = String.format(getString(R.string.product_details_available_quantity_placeholder), product.quantity.available)
-		tvSoldQuantity.text = String.format(getString(R.string.product_details_sold_quantity_placeholder), product.quantity.sold)
 		product.rating.let { rating: ProductModel.RatingModel ->
 			ratingBar.rating = rating.value
 			tvRatingScore.text = DecimalFormat("#.#").format(rating.value).replace(',', '.')
@@ -173,6 +163,17 @@ class ProductDetailsActivity :
 		}
 
 		tvViewAllComments.setOnClickListener { onUserClickViewAllCommentsBtn() }
+
+		tvPrice.text = String.format(getString(R.string.product_details_price_placeholder), formatPrice(product.price))
+
+		// TODO Manage favorite icon status.
+		tvFavoriteBtn.setOnClickListener { onUserClickFavoriteBtn() }
+		tvShareBtn.setOnClickListener { onUserClickShareBtn() }
+	}
+
+	private fun setupSectionBuy() {
+		tvTagAvailableQuantity.text = String.format(getString(R.string.product_details_available_quantity_placeholder), product.quantity.available)
+		tvSoldQuantity.text = String.format(getString(R.string.product_details_sold_quantity_placeholder), product.quantity.sold)
 
 		if (product.status != StatusEnum.ACTIVE) {
 			cvAddToCartBtn.visibility = View.GONE

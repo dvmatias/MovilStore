@@ -79,7 +79,7 @@
 	</style>
 
 	<style name="ProductDetailSubTitle" parent="TextAppearance.AppCompat">
-		<item name="fontFamily">@font/cereal_medium</item>
+		<item name="fontFamily">@font/cereal_book</item>
 		<item name="android:textColor">@color/colorDarkTextNormal</item>
 		<item name="android:textSize">@dimen/text_16sp</item>
 	</style>
@@ -101,6 +101,17 @@
 		<item name="fontFamily">@font/cereal_medium</item>
 		<item name="android:textSize">@dimen/text_14sp</item>
 		<item name="android:includeFontPadding">false</item>
+	</style>
+
+	<style name="ProductDetailIconTextButton" parent="TextAppearance.AppCompat">
+		<item name="fontFamily">@font/cereal_medium</item>
+		<item name="android:textSize">@dimen/text_14sp</item>
+		<item name="android:includeFontPadding">false</item>
+		<item name="android:drawablePadding">@dimen/dimen_4dp</item>
+		<item name="android:ellipsize">end</item>
+		<item name="android:gravity">center_vertical</item>
+		<item name="android:textColor">@color/colorPrimaryPastel</item>
+		<item name="android:lines">1</item>
 	</style>
 
 	<style name="ProductDetailTag.Light">
@@ -150,7 +161,7 @@
 	</style>
 
 	<style name="ProductDetailButtonLabel.Light">
-		<item name="android:textColor">@color/colorPrimary</item>
+		<item name="android:textColor">@color/colorPrimaryPastel</item>
 	</style>
 
 	<style name="ProductDetailButtonLabel.Dark">

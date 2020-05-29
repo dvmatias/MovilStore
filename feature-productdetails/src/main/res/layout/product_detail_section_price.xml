@@ -2,10 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
-	android:id="@+id/section_1"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
-	android:padding="@dimen/dimen_16dp"
+	android:paddingStart="@dimen/dimen_16dp"
+	android:paddingEnd="@dimen/dimen_16dp"
+	android:paddingTop="@dimen/dimen_22dp"
+	android:paddingBottom="@dimen/dimen_22dp"
 	android:background="@color/colorWhite"
 	tools:showIn="@layout/content_product_details">
 
@@ -108,15 +110,68 @@
 		app:layout_constraintTop_toBottomOf="@id/tvTitle"
 		tools:text="Agárrate fuerte a tu Galaxy S9 + con esta funda de silicona. El material ofrece un agarre cómodo que no querrás soltar." />
 
+	<!-- RATING BAR -->
+	<androidx.appcompat.widget.AppCompatRatingBar
+		android:id="@+id/ratingBar"
+		style="?android:attr/ratingBarStyleSmall"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:numStars="5"
+		android:stepSize="0.1"
+		android:progressTint="@color/colorRatingBarProgressTint"
+		android:secondaryProgressTint="@color/colorRatingBarSecondaryProgressTint"
+		app:layout_constraintBottom_toBottomOf="@id/tvRatingScore"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@id/tvRatingScore"
+		tools:rating="3.7" />
+
+	<!-- RATING SCORE -->
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/tvRatingScore"
+		style="@style/ProductDetailRatingScore"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/dimen_8dp"
+		android:layout_marginTop="@dimen/dimen_12dp"
+		app:layout_constraintStart_toEndOf="@id/ratingBar"
+		app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+		tools:text="4.5" />
+
+	<!-- RATINGS QUANTITY -->
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/tvRatingQuantity"
+		style="@style/ProductDetailSold"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/dimen_8dp"
+		app:layout_constraintStart_toEndOf="@id/tvRatingScore"
+		app:layout_constraintTop_toTopOf="@id/tvRatingScore"
+		app:layout_constraintBottom_toBottomOf="@id/tvRatingScore"
+		tools:text="(3 votes)"/>
+
+	<!-- RATING SCORE -->
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/tvViewAllComments"
+		style="@style/ProductDetailViewAllComents"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dimen_4dp"
+		android:layout_marginBottom="@dimen/dimen_16dp"
+		android:drawablePadding="0dp"
+		android:drawableEnd="@drawable/ic_arrow_right_black_18dp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/tvRatingScore"
+		android:text="@string/product_details_button_view_all_comment_text" />
+
 	<!-- ORIGINAL PRICE -->
 	<androidx.appcompat.widget.AppCompatTextView
 		android:id="@+id/tvOriginalPrice"
 		style="@style/ProductDetailOriginalPrice"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginTop="@dimen/dimen_18dp"
+		android:layout_marginTop="@dimen/dimen_24dp"
 		app:layout_constraintStart_toStartOf="@id/tvTitle"
-		app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+		app:layout_constraintTop_toBottomOf="@id/tvViewAllComments"
 		tools:text="from $800" />
 
 	<!-- PRICE -->
@@ -127,7 +182,7 @@
 		android:layout_height="wrap_content"
 		app:layout_constraintStart_toStartOf="@id/tvTitle"
 		app:layout_constraintTop_toBottomOf="@id/tvOriginalPrice"
-		app:layout_goneMarginTop="@dimen/dimen_18dp"
+		app:layout_goneMarginTop="@dimen/dimen_22dp"
 		tools:text="$700" />
 
 	<!-- SAVE -->
@@ -158,15 +213,12 @@
    <!--	SHARE ICON -->
 	<androidx.appcompat.widget.AppCompatTextView
 		android:id="@+id/tvShareBtn"
+		style="@style/ProductDetailIconTextButton"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="@dimen/dimen_16dp"
 		android:drawableStart="@drawable/ic_share_black_24dp"
-		android:drawablePadding="@dimen/dimen_4dp"
-		android:ellipsize="end"
-		android:gravity="center_vertical"
-		android:lines="1"
-		android:text="Share it!"
+		android:text="@string/product_details_share_label"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/tvPrice" />
@@ -174,15 +226,12 @@
 	<!-- FAVORITE ICON -->
 	<androidx.appcompat.widget.AppCompatTextView
 		android:id="@+id/tvFavoriteBtn"
+		style="@style/ProductDetailIconTextButton"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginEnd="@dimen/dimen_12dp"
 		android:drawableStart="@drawable/ic_favorite_border_black_24dp"
-		android:drawablePadding="@dimen/dimen_4dp"
-		android:ellipsize="end"
-		android:gravity="center_vertical"
-		android:lines="1"
-		android:text="Add as favorite"
+		android:text="@string/product_details_add_as_favorite"
 		app:layout_constraintBottom_toBottomOf="@id/tvShareBtn"
 		app:layout_constraintEnd_toStartOf="@id/tvShareBtn"
 		app:layout_constraintTop_toTopOf="@id/tvShareBtn" />

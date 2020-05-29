@@ -6,6 +6,9 @@
 	<color name="colorSecondaryGreen">#92E755</color>
 	<color name="colorAccent">@color/colorSecondaryGreen</color>
 
+	<color name="colorPrimaryPastel">#EE3A43</color>
+
+	<color name="colorActivityBackground">#F5F5F5</color>
 	<color name="colorToolbarBackground">#1B1B1B</color>
 
 	<!-- BASICS -->
@@ -16,8 +19,8 @@
 	<color name="colorTransparent">#00000000</color>
 	<color name="colorPrimary20">#37DE393A</color>
 
-	<color name="colorRatingBarProgressTint">#FDCC0D</color>
-	<color name="colorRatingBarSecondaryProgressTint">#FDA50D</color>
+	<color name="colorRatingBarProgressTint">#FCBD27</color>
+	<color name="colorRatingBarSecondaryProgressTint">#FCBD27</color>
 
 	<!-- VIEW LOADING -->
 	<color name="colorLoadingViewBackground">#00000000</color>

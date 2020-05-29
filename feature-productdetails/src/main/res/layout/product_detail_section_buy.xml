@@ -2,65 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
-	android:id="@+id/section_2"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
 	android:background="@color/colorWhite"
 	android:padding="@dimen/dimen_16dp"
 	tools:showIn="@layout/content_product_details">
-
-	<!-- RATING BAR -->
-	<androidx.appcompat.widget.AppCompatRatingBar
-		android:id="@+id/ratingBar"
-		style="?android:attr/ratingBarStyleSmall"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:numStars="5"
-		android:stepSize="0.1"
-		android:progressTint="@color/colorRatingBarProgressTint"
-		android:secondaryProgressTint="@color/colorRatingBarSecondaryProgressTint"
-		app:layout_constraintBottom_toBottomOf="@id/tvRatingScore"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="@id/tvRatingScore"
-		tools:rating="3.7" />
-
-	<!-- RATING SCORE -->
-	<androidx.appcompat.widget.AppCompatTextView
-		android:id="@+id/tvRatingScore"
-		style="@style/ProductDetailRatingScore"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="@dimen/dimen_8dp"
-		android:layout_marginTop="@dimen/dimen_20dp"
-		app:layout_constraintStart_toEndOf="@id/ratingBar"
-		app:layout_constraintTop_toBottomOf="@id/cvTagAvailableQuantity"
-		tools:text="4.5" />
-
-    <!-- RATINGS QUANTITY -->
-	<androidx.appcompat.widget.AppCompatTextView
-		android:id="@+id/tvRatingQuantity"
-		style="@style/ProductDetailSold"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="@dimen/dimen_8dp"
-		app:layout_constraintStart_toEndOf="@id/tvRatingScore"
-		app:layout_constraintTop_toTopOf="@id/tvRatingScore"
-		app:layout_constraintBottom_toBottomOf="@id/tvRatingScore"
-		tools:text="3 votes"/>
-
-	<!-- RATING SCORE -->
-	<androidx.appcompat.widget.AppCompatTextView
-		android:id="@+id/tvViewAllComments"
-		style="@style/ProductDetailViewAllComents"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="@dimen/dimen_8dp"
-		android:layout_marginBottom="@dimen/dimen_16dp"
-		android:drawablePadding="0dp"
-		android:drawableEnd="@drawable/ic_arrow_right_black_18dp"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/tvRatingScore"
-		android:text="@string/product_details_button_view_all_comment_text" />
 
 	<!-- AVAILABLE QUANTITY -->
 	<androidx.cardview.widget.CardView
@@ -105,13 +51,13 @@
 		android:layout_marginStart="@dimen/dimen_16dp"
 		android:layout_marginTop="@dimen/dimen_24dp"
 		android:layout_marginEnd="@dimen/dimen_16dp"
-		app:cardBackgroundColor="@color/colorPrimary"
+		app:cardBackgroundColor="@color/colorPrimaryPastel"
 		app:cardCornerRadius="@dimen/product_detail_button_radius"
 		app:cardElevation="0dp"
 		app:contentPadding="1dp"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/tvViewAllComments">
+		app:layout_constraintTop_toBottomOf="@id/cvTagAvailableQuantity">
 
 		<androidx.cardview.widget.CardView
 			android:layout_width="match_parent"
@@ -138,7 +84,7 @@
 		android:layout_marginTop="@dimen/dimen_12dp"
 		android:layout_marginEnd="@dimen/dimen_16dp"
 		android:foreground="?android:selectableItemBackground"
-		app:cardBackgroundColor="@color/colorPrimary"
+		app:cardBackgroundColor="@color/colorPrimaryPastel"
 		app:cardCornerRadius="@dimen/product_detail_button_radius"
 		app:cardElevation="0dp"
 		app:contentPaddingBottom="@dimen/dimen_12dp"
