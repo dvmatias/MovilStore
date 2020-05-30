@@ -43,17 +43,6 @@
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/sectionPrice" />
 
-	<!-- SECTION BUY -->
-	<include
-		android:id="@+id/sectionBuy"
-		layout="@layout/product_detail_section_buy"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="@dimen/dimen_16dp"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/sectionShipping" />
-
 	<!-- SECTION DESCRIPTION -->
 	<include
 		android:id="@+id/sectionDescription"
@@ -63,7 +52,7 @@
 		android:layout_marginTop="@dimen/dimen_16dp"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/sectionBuy" />
+		app:layout_constraintTop_toBottomOf="@id/sectionShipping" />
 
 	<!-- SECTION WARRANTY -->
 	<include
@@ -71,8 +60,7 @@
 		layout="@layout/product_detail_section_warranty"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_marginTop="@dimen/dimen_16dp"
-		android:layout_marginBottom="56dp"
+		android:layout_marginBottom="88dp"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/sectionDescription"

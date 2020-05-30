@@ -7,8 +7,10 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import com.matias.core.Constants
 import com.matias.core.base.mvp.BasePresenterActivity
 import com.matias.core.helpers.formatPrice
+import com.matias.core.helpers.formatPriceWithCurrency
 import com.matias.core.helpers.fromHtml
 import com.matias.core.helpers.getDiscount
+import com.matias.core.managers.GlideApp
 import com.matias.domain.models.product.ProductModel
 import com.matias.domain.models.product.StatusEnum
 import com.matias.features.R
@@ -18,9 +20,9 @@ import com.matias.features.ui.productdetails.ProductDetailsUiComponent
 import com.matias.features.ui.productdetails.adapters.RecyclerMultimediaAdapter
 import kotlinx.android.synthetic.main.activity_product_details.*
 import kotlinx.android.synthetic.main.content_product_details.*
-import kotlinx.android.synthetic.main.product_detail_section_buy.*
 import kotlinx.android.synthetic.main.product_detail_section_description.*
 import kotlinx.android.synthetic.main.product_detail_section_price.*
+import kotlinx.android.synthetic.main.product_detail_section_shipping.*
 import kotlinx.android.synthetic.main.product_detail_section_warranty.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import java.text.DecimalFormat
@@ -78,6 +80,7 @@ class ProductDetailsActivity :
 		viewLoading.visibility = View.VISIBLE
 		contentProductDetails.visibility = View.GONE
 		appBar.visibility = View.GONE
+		containerFloatingSection.visibility = View.GONE
 	}
 
 	override fun showErrorScreen() {
@@ -88,6 +91,7 @@ class ProductDetailsActivity :
 		viewLoading.visibility = View.GONE
 		contentProductDetails.visibility = View.VISIBLE
 		appBar.visibility = View.VISIBLE
+		containerFloatingSection.visibility = View.VISIBLE
 	}
 
 	override fun setProduct(product: ProductModel) {
@@ -107,12 +111,18 @@ class ProductDetailsActivity :
 	}
 
 	override fun setProductInfo() {
+		GlideApp.with(this).load(product.thumbnailUrl).into(ivFloatingThumnail)
+		tvFloatingTitle.text = product.title
+		tvFloatingPrice.text = formatPriceWithCurrency(product.price)
+		cvFloatingBuyBtn.setOnClickListener { onUserClickBuyButton() }
+
 		setupRecyclerMultimedia()
 		setupSectionPrice()
-		setupSectionBuy()
-		// Section 3
+
+		tvTagAvailableQuantity.text = String.format(getString(R.string.product_details_available_quantity_placeholder), product.quantity.available)
+		tvSoldQuantity.text = String.format(getString(R.string.product_details_sold_quantity_placeholder), product.quantity.sold)
+
 		tvDescription.text = fromHtml(product.description)
-		// Section 4
 		tvWarranty.text = product.warranty
 	}
 
@@ -171,19 +181,6 @@ class ProductDetailsActivity :
 		tvShareBtn.setOnClickListener { onUserClickShareBtn() }
 	}
 
-	private fun setupSectionBuy() {
-		tvTagAvailableQuantity.text = String.format(getString(R.string.product_details_available_quantity_placeholder), product.quantity.available)
-		tvSoldQuantity.text = String.format(getString(R.string.product_details_sold_quantity_placeholder), product.quantity.sold)
-
-		if (product.status != StatusEnum.ACTIVE) {
-			cvAddToCartBtn.visibility = View.GONE
-			cvBuyBtn.visibility = View.GONE
-		} else {
-			cvAddToCartBtn.setOnClickListener { onUserClickAddToCartButton() }
-			cvBuyBtn.setOnClickListener { onUserClickBuyButton() }
-		}
-	}
-
 	override fun onUserClickShareBtn() {
 		// TODO
 		super.showToast("Click on Share")
@@ -199,10 +196,6 @@ class ProductDetailsActivity :
 		super.showToast("Click on View All Comments")
 	}
 
-	override fun onUserClickAddToCartButton() {
-		// TODO
-		super.showToast("Click on Add To Cart")
-	}
 
 	override fun onUserClickBuyButton() {
 		// TODO

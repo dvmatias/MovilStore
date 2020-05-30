@@ -48,7 +48,7 @@ class RecyclerMultimediaAdapter(private val activity: Activity) : RecyclerView.A
 			GlideApp
 				.with(activity)
 				.load(item.url)
-				.fitCenter()
+				.centerCrop()
 				.into(itemView.findViewById<AppCompatImageView>(R.id.ivMultimedia))
 		}
 

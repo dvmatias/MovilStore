@@ -191,7 +191,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginStart="@dimen/dimen_16dp"
-		app:cardBackgroundColor="@color/colorProductDetailSaveBackground"
+		app:cardBackgroundColor="@color/colorDiscount"
 		app:cardCornerRadius="@dimen/dimen_2dp"
 		app:cardElevation="0dp"
 		app:layout_constraintBottom_toBottomOf="@id/tvPrice"

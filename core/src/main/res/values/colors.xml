@@ -7,6 +7,8 @@
 	<color name="colorAccent">@color/colorSecondaryGreen</color>
 
 	<color name="colorPrimaryPastel">#EE3A43</color>
+	<color name="colorBluePastel">#80E2FF</color>
+	<color name="colorGreenPastel">#47C751</color>
 
 	<color name="colorActivityBackground">#F5F5F5</color>
 	<color name="colorToolbarBackground">#1B1B1B</color>
@@ -67,9 +69,8 @@
 	<color name="colorDarkTextNormal">#535353</color>
 	<color name="colorDarkTextLight">#777777</color>
 	<color name="colorDarkTextLighter">#9F9F9F</color>
-	<color name="colorTextProductDiscount">#05C105</color>
-	<color name="colorProductDetailSaveBackground">#05C105</color>
-	<color name="colorProductDetailNewBackground">@color/colorSecondaryCyan</color>
+	<color name="colorDiscount">@color/colorGreenPastel</color>
+	<color name="colorProductDetailNewBackground">@color/colorBluePastel</color>
 	<color name="colorProductDetailOfferBackground">@color/colorProductDetailNewBackground</color>
 	<color name="colorProductDetailFeaturedBackground">@color/colorProductDetailNewBackground</color>
 

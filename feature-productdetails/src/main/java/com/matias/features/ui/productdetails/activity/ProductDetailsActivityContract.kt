@@ -18,7 +18,6 @@ interface ProductDetailsActivityContract {
 		fun onUserClickShareBtn()
 		fun onUserClickFavoriteBtn()
 		fun onUserClickViewAllCommentsBtn()
-		fun onUserClickAddToCartButton()
 		fun onUserClickBuyButton()
 
 	}
