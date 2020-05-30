@@ -5,12 +5,33 @@
 
 	<style name="SectionTitleText" parent="TextAppearance.AppCompat">
 		<item name="fontFamily">@font/cereal_medium</item>
-		<item name="android:textColor">@color/colorDarkTextDark</item>
+		<item name="android:textColor">@color/colorDarkTextNormal</item>
 		<item name="android:textSize">@dimen/text_21sp</item>
 		<item name="android:paddingEnd">@dimen/dimen_8dp</item>
 		<item name="android:paddingStart">@dimen/dimen_8dp</item>
 		<item name="android:paddingTop">@dimen/dimen_18dp</item>
 		<item name="android:paddingBottom">@dimen/dimen_12dp</item>
+		<item name="android:letterSpacing">0.05</item>
+	</style>
+
+	<style name="SectionTitleText.White">
+		<item name="android:textColor">@color/colorWhite</item>
+	</style>
+
+	<style name="SectionInformationText" parent="TextAppearance.AppCompat">
+		<item name="fontFamily">@font/cereal_book</item>
+		<item name="android:textColor">@color/colorDarkTextNormal</item>
+		<item name="android:textSize">@dimen/text_15sp</item>
+	</style>
+
+	<style name="SectionInformationText.White">
+		<item name="android:textColor">@color/colorWhite</item>
+	</style>
+
+	<style name="SectionInformationText.Light" parent="TextAppearance.AppCompat">
+		<item name="fontFamily">@font/cereal_book</item>
+		<item name="android:textColor">@color/colorDarkTextLight</item>
+		<item name="android:textSize">@dimen/text_15sp</item>
 	</style>
 
 	<!-- Product Offer -->
@@ -46,7 +67,7 @@
 
 	<style name="ProductOfferDiscountPercentajeText" parent="TextAppearance.AppCompat">
 		<item name="fontFamily">@font/cereal_medium</item>
-		<item name="android:textColor">@color/colorTextProductDiscount</item>
+		<item name="android:textColor">@color/colorDiscount</item>
 		<item name="android:textSize">@dimen/text_14sp</item>
 	</style>
 
@@ -79,7 +100,7 @@
 	</style>
 
 	<style name="ProductDetailSubTitle" parent="TextAppearance.AppCompat">
-		<item name="fontFamily">@font/cereal_medium</item>
+		<item name="fontFamily">@font/cereal_book</item>
 		<item name="android:textColor">@color/colorDarkTextNormal</item>
 		<item name="android:textSize">@dimen/text_16sp</item>
 	</style>
@@ -101,6 +122,17 @@
 		<item name="fontFamily">@font/cereal_medium</item>
 		<item name="android:textSize">@dimen/text_14sp</item>
 		<item name="android:includeFontPadding">false</item>
+	</style>
+
+	<style name="ProductDetailIconTextButton" parent="TextAppearance.AppCompat">
+		<item name="fontFamily">@font/cereal_medium</item>
+		<item name="android:textSize">@dimen/text_14sp</item>
+		<item name="android:includeFontPadding">false</item>
+		<item name="android:drawablePadding">@dimen/dimen_4dp</item>
+		<item name="android:ellipsize">end</item>
+		<item name="android:gravity">center_vertical</item>
+		<item name="android:textColor">@color/colorPrimaryPastel</item>
+		<item name="android:lines">1</item>
 	</style>
 
 	<style name="ProductDetailTag.Light">
@@ -147,10 +179,12 @@
 		<item name="android:textAllCaps">true</item>
 		<item name="android:includeFontPadding">false</item>
 		<item name="android:textSize">@dimen/text_16sp</item>
+		<item name="android:paddingStart">@dimen/dimen_24dp</item>
+		<item name="android:paddingEnd">@dimen/dimen_24dp</item>
 	</style>
 
 	<style name="ProductDetailButtonLabel.Light">
-		<item name="android:textColor">@color/colorPrimary</item>
+		<item name="android:textColor">@color/colorPrimaryPastel</item>
 	</style>
 
 	<style name="ProductDetailButtonLabel.Dark">

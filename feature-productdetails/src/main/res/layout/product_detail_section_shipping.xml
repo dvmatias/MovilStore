@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/colorWhite"
+	android:paddingStart="@dimen/dimen_16dp"
+	android:paddingEnd="@dimen/dimen_16dp"
+	android:paddingTop="@dimen/dimen_22dp"
+	android:paddingBottom="@dimen/dimen_22dp"
+	tools:showIn="@layout/content_product_details">
+
+	<!-- AVAILABLE QUANTITY -->
+	<androidx.cardview.widget.CardView
+		android:id="@+id/cvTagAvailableQuantity"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:cardBackgroundColor="#FFEB3B"
+		app:cardCornerRadius="2dp"
+		app:cardElevation="0dp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/tvTagAvailableQuantity"
+			style="@style/ProductDetailTag.Dark"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/dimen_12dp"
+			android:layout_marginTop="@dimen/dimen_2dp"
+			android:layout_marginEnd="@dimen/dimen_12dp"
+			android:layout_marginBottom="@dimen/dimen_2dp"
+			tools:text="Disponibles: 3" />
+	</androidx.cardview.widget.CardView>
+
+	<!-- SOLD QUANTITY -->
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/tvSoldQuantity"
+		style="@style/ProductDetailSold"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/dimen_16dp"
+		app:layout_constraintStart_toEndOf="@id/cvTagAvailableQuantity"
+		app:layout_constraintTop_toTopOf="@id/cvTagAvailableQuantity"
+		app:layout_constraintBottom_toBottomOf="@id/cvTagAvailableQuantity"
+		tools:text="3 sold"/>
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/constraintShipping"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		app:layout_constraintTop_toBottomOf="@id/cvTagAvailableQuantity"
+		android:layout_marginTop="@dimen/dimen_22dp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent">
+
+		<androidx.appcompat.widget.AppCompatImageView
+			android:id="@+id/ivShippingIcon"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="@id/tvShippingType"
+			android:src="@drawable/ic_shipping_42dp"/>
+
+		<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/tvShippingType"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:fontFamily="@font/cereal_bold"
+			android:textColor="@color/colorDarkTextDark"
+			android:textSize="@dimen/text_14sp"
+			android:lines="1"
+			android:ellipsize="end"
+			app:layout_constraintStart_toEndOf="@id/ivShippingIcon"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintEnd_toStartOf="@id/ivShippingArrowIcon"
+			android:layout_marginStart="@dimen/dimen_12dp"
+			android:text="Free Shipping"/>
+
+		<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/tvShippingAddress"
+			style="@style/SectionInformationText.Light"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/dimen_4dp"
+			android:ellipsize="end"
+			android:maxLines="2"
+			android:text="Lorem Ipsum Street Lorem, IpsumLorem Ipsum Street 567"
+			app:layout_constraintEnd_toStartOf="@id/ivShippingArrowIcon"
+			app:layout_constraintStart_toStartOf="@id/tvShippingType"
+			app:layout_constraintTop_toBottomOf="@id/tvShippingType"/>
+
+		<androidx.appcompat.widget.AppCompatImageView
+			android:id="@+id/ivShippingArrowIcon"
+			android:layout_width="wrap_content"
+			android:layout_height="0dp"
+			android:paddingStart="@dimen/dimen_4dp"
+			android:paddingEnd="@dimen/dimen_4dp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toTopOf="@id/tvShippingType"
+			app:layout_constraintBottom_toBottomOf="parent"
+			android:src="@drawable/ic_arrow_right_black_18dp"/>
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+	<View
+		android:layout_width="0dp"
+		android:layout_height="0.5dp"
+		android:background="#C6C6C6"
+		app:layout_constraintStart_toStartOf="parent"
+		android:layout_marginStart="56dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/constraintShipping"
+		app:layout_constraintBottom_toTopOf="@id/constraintBranchOffices"/>
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/constraintBranchOffices"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		app:layout_constraintTop_toBottomOf="@id/constraintShipping"
+		android:layout_marginTop="@dimen/dimen_26dp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent">
+
+		<androidx.appcompat.widget.AppCompatImageView
+			android:id="@+id/ivBranchOfficeIcon"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="@id/tvBranchOfficeTitle"
+			android:src="@drawable/ic_branch_offices_42dp"/>
+
+		<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/tvBranchOfficeTitle"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:fontFamily="@font/cereal_bold"
+			android:textColor="@color/colorDarkTextDark"
+			android:textSize="@dimen/text_14sp"
+			android:lines="1"
+			android:ellipsize="end"
+			app:layout_constraintStart_toEndOf="@id/ivBranchOfficeIcon"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintEnd_toStartOf="@id/ivBranchOfficesArrowIcon"
+			android:layout_marginStart="@dimen/dimen_12dp"
+			android:text="Branch Offices"/>
+
+		<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/tvBranchOfficeAddress"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			style="@style/SectionInformationText.Light"
+			android:layout_marginTop="@dimen/dimen_4dp"
+			android:maxLines="2"
+			android:ellipsize="end"
+			app:layout_constraintStart_toStartOf="@id/tvBranchOfficeTitle"
+			app:layout_constraintTop_toBottomOf="@id/tvBranchOfficeTitle"
+			app:layout_constraintEnd_toStartOf="@id/ivBranchOfficesArrowIcon"
+			android:text="Lorem Ipsum Street Lorem, IpsumLorem Ipsum Street 567"/>
+
+		<androidx.appcompat.widget.AppCompatImageView
+			android:id="@+id/ivBranchOfficesArrowIcon"
+			android:layout_width="wrap_content"
+			android:layout_height="0dp"
+			android:paddingStart="@dimen/dimen_4dp"
+			android:paddingEnd="@dimen/dimen_4dp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toTopOf="@id/tvBranchOfficeTitle"
+			app:layout_constraintBottom_toBottomOf="parent"
+			android:src="@drawable/ic_arrow_right_black_18dp"/>
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+	<View
+		android:background="#C6C6C6"
+		android:layout_height="0.5dp"
+		android:layout_marginStart="56dp"
+		android:layout_width="0dp"
+		app:layout_constraintBottom_toTopOf="@id/constraintBranchOffices"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/constraintReturnPolicy" />
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/constraintReturnPolicy"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dimen_26dp"
+		android:layout_width="0dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/constraintBranchOffices">
+
+		<androidx.appcompat.widget.AppCompatImageView
+			android:id="@+id/ivReturnPolicyIcon"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:src="@drawable/ic_branch_offices_42dp"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="@id/tvReturnPolicyTitle" />
+
+		<androidx.appcompat.widget.AppCompatTextView
+			android:id="@+id/tvReturnPolicyAddress"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			style="@style/SectionInformationText.Light"
+			android:layout_marginTop="@dimen/dimen_4dp"
+			android:ellipsize="end"
+			android:maxLines="2"
+			android:text="Lorem Ipsum Street Lorem, IpsumLorem Ipsum Street 567"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="@id/tvReturnPolicyTitle"
+			app:layout_constraintTop_toBottomOf="@id/tvReturnPolicyTitle" />
+
+		<androidx.appcompat.widget.AppCompatTextView
+			android:ellipsize="end"
+			android:fontFamily="@font/cereal_bold"
+			android:id="@+id/tvReturnPolicyTitle"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/dimen_12dp"
+			android:layout_width="0dp"
+			android:lines="1"
+			android:text="Return Policy"
+			android:textColor="@color/colorDarkTextDark"
+			android:textSize="@dimen/text_14sp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@id/ivReturnPolicyIcon"
+			app:layout_constraintTop_toTopOf="parent" />
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

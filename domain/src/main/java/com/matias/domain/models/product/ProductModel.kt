@@ -12,9 +12,10 @@ data class ProductModel(
 	val imageUrl: String,
 	val thumbnailUrl: String,
 	val secureThumbnailUrl: String,
+	val promotionImageUrl: String,
 	val tags: ArrayList<String>,
 	val quantity: QuantityModel,
-	val multimedia: MultimediaModel,
+	val images: List<ImageModel>,
 	val rating: RatingModel
 ) {
 
@@ -23,8 +24,8 @@ data class ProductModel(
 		val sold: Int
 	)
 
-	data class MultimediaModel(
-		val any: Any
+	data class ImageModel(
+		val url: String
 	)
 
 	data class RatingModel(
