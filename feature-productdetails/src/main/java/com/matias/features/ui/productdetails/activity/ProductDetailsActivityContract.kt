@@ -10,9 +10,14 @@ interface ProductDetailsActivityContract {
 		fun showLoadingScreen()
 		fun showErrorScreen()
 		fun showInfoScreen()
-		fun setProductInfo(product: ProductModel, isNewProduct: Boolean, isOfferProduct: Boolean, isFeaturedProduct: Boolean)
+		fun setProduct(product: ProductModel)
+		fun setIsNew(isNew: Boolean)
+		fun setIsOffer(isOffer: Boolean)
+		fun setIsFeatured(isFeatured: Boolean)
+		fun setProductInfo()
+		fun onUserClickShareBtn()
+		fun onUserClickFavoriteBtn()
 		fun onUserClickViewAllCommentsBtn()
-		fun onUserClickAddToCartButton()
 		fun onUserClickBuyButton()
 
 	}

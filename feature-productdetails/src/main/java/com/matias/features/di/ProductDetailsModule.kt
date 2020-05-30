@@ -39,20 +39,4 @@ internal class ProductDetailsModule {
 	): ProductProvider =
 		ProductProviderImpl(productApi, productCache, networkHandler)
 
-	@Provides
-	fun provideGetProductDetailUseCase(productProvider: ProductProvider): GetProductDetailUseCase =
-		GetProductDetailUseCase(productProvider)
-
-	@Provides
-	fun provideIsOfferProductUseCase(productProvider: ProductProvider): IsOfferProductUseCase =
-		IsOfferProductUseCase(productProvider)
-
-	@Provides
-	fun provideIsNewProductUseCase(productProvider: ProductProvider): IsNewProductUseCase =
-		IsNewProductUseCase(productProvider)
-
-	@Provides
-	fun provideIsFeaturedProductUseCase(productProvider: ProductProvider): IsFeaturedProductUseCase =
-		IsFeaturedProductUseCase(productProvider)
-
 }

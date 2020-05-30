@@ -17,7 +17,7 @@ data class ProductEntity (
 	@SerializedName("promotion_image_url") val promotionImageUrl: String?,
 	@SerializedName("tags") val tags : String?,
 	@SerializedName("quantity") val quantity: QuantityEntity?,
-	@SerializedName("multimedia") val multimedia: MultimediaEntity?,
+	@SerializedName("images") val images: List<ImageEntity>?,
 	@SerializedName("rating") val rating: RatingEntity?
 ) {
 	
@@ -27,8 +27,11 @@ data class ProductEntity (
 		@SerializedName("sold") val sold: Int?
 	)
 
-	data class MultimediaEntity(
-		@SerializedName("") val any: Any?
+	data class ImageEntity(
+		@SerializedName("id") val id: Long?,
+		@SerializedName("url") val url: String?,
+		@SerializedName("size") val size: String?,
+		@SerializedName("quality") val quality: String?
 	)
 
 	data class RatingEntity(

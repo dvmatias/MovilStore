@@ -15,13 +15,15 @@
 	<string name="product_details_original_price_placeholder"><![CDATA[from <strike>&nbsp;$%s&nbsp;</strike> ]]></string>
 	<string name="product_details_price_placeholder">$%s</string>
 	<string name="product_details_save_placeholder">Save %d%%</string>
+	<string name="product_details_share_label">Share it!</string>
+	<string name="product_details_add_as_favorite">Add as favorite</string>
 
 	<string name="product_details_available_quantity_placeholder">Available: %d</string>
 	<string name="product_details_sold_quantity_placeholder">%d Sold</string>
 
 	<plurals name="product_details_rating_quantity_plurals">
-		<item quantity="one">%d vote</item>
-		<item quantity="other">%d votes</item>
+		<item quantity="one">(%d vote)</item>
+		<item quantity="other">(%d votes)</item>
 	</plurals>
 
 	<string name="product_details_description_title">Description</string>
