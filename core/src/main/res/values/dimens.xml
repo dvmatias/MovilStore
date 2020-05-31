@@ -57,4 +57,6 @@
 	<item name="loginActivityBgrImgAlpha" format="float" type="dimen">0.4</item>
 	<item name="loginActivityLogoImgAlpha" format="float" type="dimen">1.0</item>
 
+	<dimen name="dimen_section_margin_top">16dp</dimen>
+
 </resources>
