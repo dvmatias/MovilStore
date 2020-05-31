@@ -8,6 +8,7 @@ import com.matias.domain.models.profile.ProfileModel
 data class MainPositionModel (
 	val profile: ProfileModel,
 	val noveltyList: List<NoveltyModel>,
+	val announcement: AnnouncementModel?,
 	val newProductList: ArrayList<NewProductModel>,
 	val offerProductList: ArrayList<OfferProductModel>
 )

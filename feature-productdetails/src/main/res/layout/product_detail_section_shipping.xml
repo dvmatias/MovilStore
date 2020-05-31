@@ -178,10 +178,10 @@
 		app:layout_constraintBottom_toTopOf="@id/constraintBranchOffices"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/constraintReturnPolicy" />
+		app:layout_constraintTop_toBottomOf="@id/constraintChangePolicy" />
 
 	<androidx.constraintlayout.widget.ConstraintLayout
-		android:id="@+id/constraintReturnPolicy"
+		android:id="@+id/constraintChangePolicy"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="@dimen/dimen_26dp"
 		android:layout_width="0dp"
@@ -190,15 +190,15 @@
 		app:layout_constraintTop_toBottomOf="@id/constraintBranchOffices">
 
 		<androidx.appcompat.widget.AppCompatImageView
-			android:id="@+id/ivReturnPolicyIcon"
+			android:id="@+id/ivChangePolicyIcon"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
-			android:src="@drawable/ic_branch_offices_42dp"
+			android:src="@drawable/ic_change_policy_42dp"
 			app:layout_constraintStart_toStartOf="parent"
-			app:layout_constraintTop_toTopOf="@id/tvReturnPolicyTitle" />
+			app:layout_constraintTop_toTopOf="@id/tvChangePolicyTitle" />
 
 		<androidx.appcompat.widget.AppCompatTextView
-			android:id="@+id/tvReturnPolicyAddress"
+			android:id="@+id/tvChangePolicyAddress"
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
 			style="@style/SectionInformationText.Light"
@@ -207,22 +207,22 @@
 			android:maxLines="2"
 			android:text="Lorem Ipsum Street Lorem, IpsumLorem Ipsum Street 567"
 			app:layout_constraintEnd_toEndOf="parent"
-			app:layout_constraintStart_toStartOf="@id/tvReturnPolicyTitle"
-			app:layout_constraintTop_toBottomOf="@id/tvReturnPolicyTitle" />
+			app:layout_constraintStart_toStartOf="@id/tvChangePolicyTitle"
+			app:layout_constraintTop_toBottomOf="@id/tvChangePolicyTitle" />
 
 		<androidx.appcompat.widget.AppCompatTextView
 			android:ellipsize="end"
 			android:fontFamily="@font/cereal_bold"
-			android:id="@+id/tvReturnPolicyTitle"
+			android:id="@+id/tvChangePolicyTitle"
 			android:layout_height="wrap_content"
 			android:layout_marginStart="@dimen/dimen_12dp"
 			android:layout_width="0dp"
 			android:lines="1"
-			android:text="Return Policy"
+			android:text="Change Policy"
 			android:textColor="@color/colorDarkTextDark"
 			android:textSize="@dimen/text_14sp"
 			app:layout_constraintEnd_toEndOf="parent"
-			app:layout_constraintStart_toEndOf="@id/ivReturnPolicyIcon"
+			app:layout_constraintStart_toEndOf="@id/ivChangePolicyIcon"
 			app:layout_constraintTop_toTopOf="parent" />
 	</androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

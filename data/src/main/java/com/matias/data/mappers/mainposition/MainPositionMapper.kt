@@ -1,10 +1,12 @@
 package com.matias.data.mappers.mainposition
 
+import com.matias.data.entities.mainposition.AnnouncementEntity
 import com.matias.data.entities.mainposition.MainPositionEntity
 import com.matias.data.entities.novelty.NoveltyEntity
 import com.matias.data.entities.product.ProductEntity
 import com.matias.data.mappers.profile.ProfileMapper
 import com.matias.domain.mapper.Mapper
+import com.matias.domain.models.mainposition.AnnouncementModel
 import com.matias.domain.models.mainposition.MainPositionModel
 import com.matias.domain.models.newproduct.NewProductModel
 import com.matias.domain.models.novelty.NoveltyModel
@@ -20,10 +22,11 @@ class MainPositionMapper : Mapper<MainPositionEntity, MainPositionModel>() {
 	override fun transformEntityToModel(e: MainPositionEntity): MainPositionModel {
 		val profile: ProfileModel = ProfileMapper().transformEntityToModel(e.profile!!)
 		val noveltyList: List<NoveltyModel> = tranformNoveltyListEntityToModel(e.noveltyList)
+		val announcement: AnnouncementModel? = tranformAnnouncementEntityToModel(e.announcement)
 		val newProductList: ArrayList<NewProductModel> = transformProductNewListEntityToModel(e.newProductList)
 		val offerProductList: ArrayList<OfferProductModel> = transformProductOfferListEntityToModel(e.offerProductList)
 
-		return MainPositionModel(profile, noveltyList, newProductList, offerProductList)
+		return MainPositionModel(profile, noveltyList, announcement, newProductList, offerProductList)
 	}
 
 	/**
@@ -50,6 +53,14 @@ class MainPositionMapper : Mapper<MainPositionEntity, MainPositionModel>() {
 			)
 		}
 	}
+
+	private fun tranformAnnouncementEntityToModel(e: AnnouncementEntity?) : AnnouncementModel? =
+		e?.let {
+			AnnouncementModel(
+				it.title ?: "",
+				it.value ?: ""
+			)
+		}
 
 	/**
 	 *
