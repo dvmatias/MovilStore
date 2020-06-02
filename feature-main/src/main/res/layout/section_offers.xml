@@ -9,15 +9,15 @@
 
 	<androidx.constraintlayout.widget.ConstraintLayout
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:paddingStart="@dimen/dimen_16dp"
-		android:paddingEnd="@dimen/dimen_16dp">
+		android:layout_height="wrap_content">
 
 		<androidx.appcompat.widget.AppCompatTextView
 			android:id="@+id/tv_offers_title"
 			style="@style/SectionTitleText"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/dimen_16dp"
+			android:layout_marginEnd="@dimen/dimen_16dp"
 			android:text="@string/offer_product_section_title"
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintTop_toTopOf="parent"

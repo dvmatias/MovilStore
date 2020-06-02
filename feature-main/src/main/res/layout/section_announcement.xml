@@ -3,6 +3,7 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
+	android:background="@color/colorWhite"
 	xmlns:app="http://schemas.android.com/apk/res-auto">
 
 	<androidx.appcompat.widget.AppCompatImageView
@@ -19,31 +20,32 @@
 		android:id="@+id/tvAnnouncementTitle"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
-		android:textSize="@dimen/text_28sp"
-		android:fontFamily="@font/cereal_book"
+		android:textSize="@dimen/text_22sp"
+		android:fontFamily="@font/cereal_bold"
 		android:layout_marginStart="@dimen/dimen_16dp"
 		android:layout_marginEnd="@dimen/dimen_16dp"
-		android:layout_marginTop="@dimen/dimen_32dp"
-		android:textColor="@color/colorDarkTextLight"
+		android:layout_marginTop="@dimen/dimen_22dp"
+		android:textColor="@color/colorBlack"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
-		android:text="Movilstore is with you: Together against COVID-19"/>
+		tools:text="Movilstore is with you: Together against COVID-19"/>
 
 	<androidx.appcompat.widget.AppCompatTextView
 		android:id="@+id/tvAnnouncementAnnounce"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
-		android:textSize="@dimen/text_16sp"
+		android:textSize="@dimen/text_14sp"
 		android:fontFamily="@font/cereal_book"
-		android:layout_marginTop="16dp"
+		android:textColor="@color/colorBlack"
+		android:layout_marginTop="12dp"
 		android:layout_marginStart="@dimen/dimen_16dp"
-		android:layout_marginBottom="@dimen/dimen_32dp"
+		android:layout_marginBottom="@dimen/dimen_22dp"
 		android:layout_marginEnd="@dimen/dimen_16dp"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/tvAnnouncementTitle"
-		android:text="Lorem ipsum dolo sato sit amet lorem ipsum dolo sato sit amet lorem ipsum. Lorem ipsum dolo sato sit amet lorem ipsum. Lorem ipsum dolo sato sit amet lorem ipsum"/>
+		tools:text="Lorem ipsum dolo sato sit amet lorem ipsum dolo sato sit amet lorem ipsum. Lorem ipsum dolo sato sit amet lorem ipsum. Lorem ipsum dolo sato sit amet lorem ipsum"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
